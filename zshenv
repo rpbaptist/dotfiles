@@ -13,8 +13,6 @@ export CABAL_PATH="$HOME/.cabal/bin"
 export GOROOT="$HOME/.local/go"
 export GOPATH="$GOROOT/bin"
 
-export RBENV_ROOT="$HOME/.rbenv"
-
 NPM_PACKAGES="$HOME/.npm-packages/bin"
 RBENV_PATH="$RBENV_ROOT/shims:$RBENV_ROOT/bin:$RBENV_ROOT/plugins/ruby-build/bin"
 GAMES_PATH="/usr/games:/usr/local/games"
