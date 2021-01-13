@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
@@ -34,8 +36,6 @@ HIST_STAMPS="yyyy-mm-dd"
 plugins=(dirhistory history-substring-search git gitfast rails bundler common-aliases colorize colored-man-pages ubuntu fzf asdf)
 
 source $ZSH/oh-my-zsh.sh
-
-eval "$(rbenv init -)"
 
 setopt noautomenu
 setopt nomenucomplete
