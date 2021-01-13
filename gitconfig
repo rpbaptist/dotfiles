@@ -1,0 +1,29 @@
+[user]
+	name = Richard Baptist
+	email = rpbaptist@gmail.com
+	signingkey = 9E79FA364ABBFFAB
+[checkout]
+  defaultRemote=origin
+[color]
+	diff = true
+	status = true
+	branch = true
+  ui = true
+[core]
+	askpass = git-gui--askpass
+	editor = subl -w
+	excludesfile = /home/richard/.gitignore
+	commentChar = ";"
+[push]
+	default = current
+	followTags = true
+[rebase]
+	autosquash = true
+[commit]
+	gpgsign = true
+[pager]
+  branch = false
+[pull]
+	ff = only
+[init]
+	defaultBranch = master
