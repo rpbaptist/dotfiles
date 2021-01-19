@@ -53,4 +53,5 @@ if [[ $TILIX_ID ]]; then
         source /etc/profile.d/vte.sh
 fi
 
-# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# Hook direnv into your shell.
+eval "$(direnv hook zsh)"
