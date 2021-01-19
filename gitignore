@@ -1,7 +1,6 @@
-.rbenv-vars
 .tags
 .tags-tmp
 .tags_lock/*
 *.sublime-project
 *.sublime-workspace
-.dotfiles
+.envrc
