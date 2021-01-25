@@ -38,3 +38,6 @@ export GPG_TTY
 export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
   --color fg:#ebdbb2,bg:#1D2021,hl:#fabd2f,fg+:#ebdbb2,bg+:#3c3836,hl+:#fabd2f
   --color info:#83a598,prompt:#bdae93,spinner:#fabd2f,pointer:#83a598,marker:#fe8019,header:#665c54'
+
+export QT_QPA_PLATFORMTHEME="gtk2"
+export QT_STYLE_OVERRIDE="gtk2"
