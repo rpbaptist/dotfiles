@@ -14,9 +14,8 @@ export GOROOT="$HOME/.local/go"
 export GOPATH="$GOROOT/bin"
 
 NPM_PACKAGES="$HOME/.npm-packages/bin"
-RBENV_PATH="$RBENV_ROOT/shims:$RBENV_ROOT/bin:$RBENV_ROOT/plugins/ruby-build/bin"
 GAMES_PATH="/usr/games:/usr/local/games"
-export PATH="$RBENV_PATH:$HOME_LOCAL_PATH:$COMMON_PATHS:$GAMES_PATH:$GOPATH:$YARN_PATH:$NPM_PACKAGES:$CABAL_PATH"
+export PATH="$HOME_LOCAL_PATH:$COMMON_PATHS:$GAMES_PATH:$GOPATH:$YARN_PATH:$NPM_PACKAGES:$CABAL_PATH"
 
 # Preferred editor for local and remote sessions
 if [ -n "$SSH_CONNECTION" ]; then
