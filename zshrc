@@ -38,7 +38,8 @@ plugins=(dirhistory history-substring-search git gitfast rake-fast bundler rails
 source "$ZSH/oh-my-zsh.sh"
 
 setopt noautomenu
-setopt nomenucomplete
+# setopt nomenucomplete
+setopt nobeep
 unsetopt nomatch
 
 eval "$(dircolors $HOME/.dircolors)"
@@ -50,7 +51,7 @@ autoload -U compinit && compinit
 zstyle ':completion:*' hosts off
 
 if [[ $TILIX_ID ]]; then
-        source /etc/profile.d/vte.sh
+  . /etc/profile.d/vte.sh
 fi
 
 # Hook direnv into your shell.

@@ -2,20 +2,20 @@
 
 export SHELLCHECK_OPTS="-e SC1090"
 
+export KERL_CONFIGURE_OPTIONS="--disable-debug --disable-silent-rules --without-javac --enable-shared-zlib --enable-dynamic-ssl-lib --enable-hipe --enable-sctp --enable-smp-support --enable-threads --enable-kernel-poll --with-ssl=/usr/lib/x86_64-linux-gnu/"
+
 COMMON_PATHS="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 HOME_LOCAL_PATH="$HOME/.local/bin"
-YARN_PATH="$HOME/.yarn-config/global/node_modules/.bin"
+# YARN_PATH="$HOME/.yarn-config/global/node_modules/.bin"
 
 # Postgres host
 export PGHOST=localhost
 
-export CABAL_PATH="$HOME/.cabal/bin"
-export GOROOT="$HOME/.local/go"
-export GOPATH="$GOROOT/bin"
+# export GOROOT="$HOME/.local/go"
+export ASDF_PATH="$HOME/.asdf/shims"
 
-NPM_PACKAGES="$HOME/.npm-packages/bin"
-GAMES_PATH="/usr/games:/usr/local/games"
-export PATH="$HOME_LOCAL_PATH:$COMMON_PATHS:$GAMES_PATH:$GOPATH:$YARN_PATH:$NPM_PACKAGES:$CABAL_PATH"
+export GAMES_PATH="/usr/games:/usr/local/games"
+export PATH="$HOME_LOCAL_PATH:$COMMON_PATHS:$GAMES_PATH:$ASDF_PATH"
 
 # Preferred editor for local and remote sessions
 if [ -n "$SSH_CONNECTION" ]; then
@@ -24,7 +24,7 @@ else
   export EDITOR="subl -w"
 fi
 
-export RTV_EDITOR="vi"
+export NOTES_PATH="$HOME/Drive/Notes"
 
 #GPG
 GPG_TTY=$(tty)
