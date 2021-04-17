@@ -5,3 +5,4 @@
 *.sublime-workspace
 .envrc
 .rake_tasks
+.mix_tasks
