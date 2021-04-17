@@ -4,6 +4,10 @@ export SHELLCHECK_OPTS="-e SC1090"
 
 export KERL_CONFIGURE_OPTIONS="--disable-debug --disable-silent-rules --without-javac --enable-shared-zlib --enable-dynamic-ssl-lib --enable-hipe --enable-sctp --enable-smp-support --enable-threads --enable-kernel-poll --with-ssl=/usr/lib/x86_64-linux-gnu/"
 
+# export ERL_AFLAGS=""
+
+export ERL_AFLAGS="-kernel shell_history enabled -kernel shell_history_path '\"$HOME/.erlang-history\"' -kernel shell_history_file_bytes 1024000"
+
 COMMON_PATHS="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 HOME_LOCAL_PATH="$HOME/.local/bin"
 # YARN_PATH="$HOME/.yarn-config/global/node_modules/.bin"
