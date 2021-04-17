@@ -33,12 +33,12 @@ HIST_STAMPS="yyyy-mm-dd"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(dirhistory history-substring-search git gitfast rake-fast bundler rails common-aliases colorize colored-man-pages ubuntu fzf asdf)
+plugins=(dirhistory history-substring-search git gitfast rake-fast bundler rails common-aliases colorize colored-man-pages ubuntu fzf asdf mix mix-fast)
 
 source "$ZSH/oh-my-zsh.sh"
 
-setopt noautomenu
-# setopt nomenucomplete
+# setopt noautomenu
+setopt nomenucomplete
 setopt nobeep
 unsetopt nomatch
 
