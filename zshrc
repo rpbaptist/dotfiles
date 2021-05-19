@@ -56,4 +56,3 @@ fi
 
 # Hook direnv into your shell.
 eval "$(direnv hook zsh)"
-eval "$(hub alias -s)"
