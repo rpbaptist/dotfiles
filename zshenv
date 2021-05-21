@@ -10,7 +10,7 @@ export ERL_AFLAGS="-kernel shell_history enabled -kernel shell_history_path '\"$
 
 COMMON_PATHS="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 HOME_LOCAL_PATH="$HOME/.local/bin"
-# YARN_PATH="$HOME/.yarn-config/global/node_modules/.bin"
+EMACS_PATH="$HOME/.emacs.d/bin"
 
 # Postgres host
 export PGHOST=localhost
@@ -19,7 +19,7 @@ export PGHOST=localhost
 export ASDF_PATH="$HOME/.asdf/shims"
 
 export GAMES_PATH="/usr/games:/usr/local/games"
-export PATH="$HOME_LOCAL_PATH:$COMMON_PATHS:$GAMES_PATH:$ASDF_PATH"
+export PATH="$HOME_LOCAL_PATH:$COMMON_PATHS:$EMACS_PATH:$GAMES_PATH:$ASDF_PATH"
 
 # Preferred editor for local and remote sessions
 if [ -n "$SSH_CONNECTION" ]; then
