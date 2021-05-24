@@ -56,6 +56,11 @@
 (setq doom-leader-alt-key "C-c"
       doom-localleader-alt-key "C-c l")
 
+(setq kill-whole-line t)
+(setq confirm-kill-emacs nil)
+(setq auto-save-default t
+      make-backup-files t)
+
 ;; Available keybinds
 ;; From navigation
 ;; C-n
