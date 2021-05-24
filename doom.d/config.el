@@ -84,6 +84,13 @@
 ;;(keyboard-translate ?\C-c ?\C-n)
 ;; (keyboard-translate ?\C-n ?\C-c)
 
+;; Available from DEL key
+;; C-d - DEL
+;; M-d - CTRL+DEL
+
+;; Available because it sucks
+;; C-z suspend frame
+
 ;; PgDn is easy
 (global-set-key (kbd "C-v") 'yank) ;; paste
 ;; Minimize? Who cares?
