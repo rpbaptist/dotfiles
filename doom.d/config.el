@@ -15,7 +15,9 @@
 ;; + `doom-variable-pitch-font'
 ;; + `doom-big-font' -- used for `doom-big-font-mode'; use this for
 ;;   presentations or streaming.
-;;
+
+(setq doom-font (font-spec :family "Source Code Pro" :size 14))
+
 ;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
 ;; font string. You generally only need these two:
 ;; (setq doom-font (font-spec :family "monospace" :size 12 :weight 'semi-light)
@@ -24,11 +26,11 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-one)
+(setq doom-theme 'gruvbox-dark-hard)
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
-(setq org-directory "~/org/")
+;; (setq org-directory "~/org/")
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
@@ -50,3 +52,47 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+
+(setq doom-leader-alt-key "C-n"
+      doom-localleader-alt-key "C-n l")
+
+;; Available keybinds
+;; From navigation
+;; C-n
+;; C-p
+;; C-b
+;; C-f
+;;
+;; M-n
+;; M-p
+;; M-b
+;; M-f
+;;
+;; C-v ;; yank
+;; M-v
+;;
+;; C-a
+;; C-e
+
+;; C-SPC
+
+;; Available due to being freed up
+;; C-_ undo
+;; C-x u undo
+;; C-/ undo
+
+;;(keyboard-translate ?\C-c ?\C-n)
+;; (keyboard-translate ?\C-n ?\C-c)
+
+;; PgDn is easy
+(global-set-key (kbd "C-v") 'yank) ;; paste
+;; Minimize? Who cares?
+;; (global-set-key (kbd "C-/") 'undo-fu-only-undo) ;; undo
+;; Since I already have undo, we now also have redo
+(global-set-key (kbd "C-?") 'undo-fu-only-redo) ;; undo
+
+(global-unset-key (kbd "C-SPC"))
+(global-set-key (kbd "C-SPC C-n")  'windmove-left)
+(global-set-key (kbd "C-SPC C-i") 'windmove-right)
+(global-set-key (kbd "C-SPC C-u")    'windmove-up)
+(global-set-key (kbd "C-SPC C-e")  'windmove-down)
