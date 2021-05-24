@@ -56,7 +56,7 @@
 (setq doom-leader-alt-key "C-n"
       doom-localleader-alt-key "C-n l")
 
-(define-key projectile-mode-map (kbd "C-n p") 'projectile-command-map)
+(define-key projectile-mode-map (kbd "C-p") 'projectile-command-map)
 
 (setq kill-whole-line t)
 (setq confirm-kill-emacs nil)
@@ -105,10 +105,25 @@
 ;; Since I already have undo, we now also have redo
 (global-set-key (kbd "C-?") 'undo-fu-only-redo) ;; undo
 
-(global-unset-key (kbd "C-SPC"))
-(global-set-key (kbd "C-SPC C-n")  'windmove-left)
-(global-set-key (kbd "C-SPC C-i") 'windmove-right)
-(global-set-key (kbd "C-SPC C-u")    'windmove-up)
-(global-set-key (kbd "C-SPC C-e")  'windmove-down)
+(global-unset-key (kbd "C-b"))
+(global-unset-key (kbd "C-f"))
+(global-unset-key (kbd "C-n"))
+(global-unset-key (kbd "C-p"))
+(global-unset-key (kbd "M-b"))
+(global-unset-key (kbd "M-f"))
+(global-unset-key (kbd "M-n"))
+(global-unset-key (kbd "M-p"))
+;; (global-unset-key (kbd "C-SPC"))
+(global-set-key (kbd "C-b n")  'windmove-left)
+(global-set-key (kbd "C-b i") 'windmove-right)
+(global-set-key (kbd "C-b u")    'windmove-up)
+(global-set-key (kbd "C-b e")  'windmove-down)
 
-(setq projectile-project-search-path '("~/code/"))
+(global-set-key (kbd "C-<tab>")  'tab-next)
+(global-set-key (kbd "C-S-<iso-lefttab>")  'tab-previous)
+
+(setq projectile-project-search-path '("~/code/" "~/.dotfiles" "~/.ansible"))
+
+;; magit
+
+(global-set-key (kbd "C-n g")  'magit-status)
