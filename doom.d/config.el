@@ -53,8 +53,10 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
-(setq doom-leader-alt-key "C-c"
-      doom-localleader-alt-key "C-c l")
+(setq doom-leader-alt-key "C-n"
+      doom-localleader-alt-key "C-n l")
+
+(define-key projectile-mode-map (kbd "C-n p") 'projectile-command-map)
 
 (setq kill-whole-line t)
 (setq confirm-kill-emacs nil)
@@ -108,3 +110,5 @@
 (global-set-key (kbd "C-SPC C-i") 'windmove-right)
 (global-set-key (kbd "C-SPC C-u")    'windmove-up)
 (global-set-key (kbd "C-SPC C-e")  'windmove-down)
+
+(setq projectile-project-search-path '("~/code/"))
