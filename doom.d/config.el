@@ -94,6 +94,9 @@
 ; (global-set-key (kbd "C-S-s") 'query-replace)
 (global-set-key (kbd "C-w") 'tab-close)
 
+;;
+(global-set-key (kbd "C-p C-f") 'counsel-projectile-rg)
+
 ;; Windmove
 (global-set-key (kbd "C-SPC n") 'windmove-left)
 (global-set-key (kbd "C-SPC i") 'windmove-right)
