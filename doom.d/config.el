@@ -53,59 +53,18 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
+(define-key projectile-mode-map (kbd "C-p") 'projectile-command-map)
+(setq projectile-project-search-path '("~/code/" "~/.dotfiles" "~/.ansible"))
+
 ;; Keybinds section
 
-(setq doom-leader-alt-key "C-n"
-      doom-localleader-alt-key "C-n l")
-
-(define-key projectile-mode-map (kbd "C-p") 'projectile-command-map)
+(setq doom-leader-alt-key "C-c"
+      doom-localleader-alt-key "C-c l")
 
 (setq kill-whole-line t)
 (setq confirm-kill-emacs nil)
 (setq auto-save-default t
       make-backup-files t)
-
-;; Available keybinds
-;; From navigation
-;; C-n
-;; C-p
-;; C-b
-;; C-f
-;;
-;; M-n
-;; M-p
-;; M-b
-;; M-f
-;;
-;; C-v ;; yank
-;; M-v
-;;
-;; C-a
-;; C-e
-
-;; C-SPC
-
-;; Available due to being freed up
-;; C-_ undo
-;; C-x u undo
-;; C-/ undo
-
-;;(keyboard-translate ?\C-c ?\C-n)
-;; (keyboard-translate ?\C-n ?\C-c)
-
-;; Available from DEL key
-;; C-d - DEL
-;; M-d - CTRL+DEL
-
-;; Available because it sucks
-;; C-z suspend frame
-
-;; PgDn is easy
-(global-set-key (kbd "C-v") 'yank) ;; paste
-;; Minimize? Who cares?
-;; (global-set-key (kbd "C-/") 'undo-fu-only-undo) ;; undo
-;; Since I already have undo, we now also have redo
-(global-set-key (kbd "C-?") 'undo-fu-only-redo) ;; undo
 
 (global-unset-key (kbd "C-b"))
 (global-unset-key (kbd "C-f"))
@@ -115,17 +74,50 @@
 (global-unset-key (kbd "M-f"))
 (global-unset-key (kbd "M-n"))
 (global-unset-key (kbd "M-p"))
-;; (global-unset-key (kbd "C-SPC"))
-(global-set-key (kbd "C-p n")  'windmove-left)
-(global-set-key (kbd "C-p i") 'windmove-right)
-(global-set-key (kbd "C-p u")    'windmove-up)
-(global-set-key (kbd "C-p e")  'windmove-down)
 
-(global-set-key (kbd "C-<tab>")  'tab-next)
-(global-set-key (kbd "C-S-<iso-lefttab>")  'tab-previous)
+(global-unset-key (kbd "C-z"))
+(global-unset-key (kbd "C-v"))
 
-(setq projectile-project-search-path '("~/code/" "~/.dotfiles" "~/.ansible"))
+(global-unset-key (kbd "C-w"))
 
-;; magit
+(global-unset-key (kbd "C-SPC"))
 
-(global-set-key (kbd "C-n g")  'magit-status)
+(global-set-key (kbd "C-z") 'undo-fu-only-undo) ;; undo
+(global-set-key (kbd "C-v") 'yank) ;; paste
+(global-set-key (kbd "M-v") 'counsel-yank-pop) ;; yank history
+
+(global-set-key (kbd "C-y") 'undo-fu-only-redo) ;; undo
+
+(global-set-key (kbd "C-b") 'kill-ring-save) ;; copy
+(global-set-key (kbd "M-b") 'kill-region) ;; cut
+
+; (global-set-key (kbd "C-S-s") 'query-replace)
+(global-set-key (kbd "C-w") 'tab-close)
+
+;; Windmove
+(global-set-key (kbd "C-SPC n") 'windmove-left)
+(global-set-key (kbd "C-SPC i") 'windmove-right)
+(global-set-key (kbd "C-SPC u") 'windmove-up)
+(global-set-key (kbd "C-SPC e") 'windmove-down)
+
+(global-set-key (kbd "C-SPC M-n") 'windmove-swap-states-left)
+(global-set-key (kbd "C-SPC M-i") 'windmove-swap-states-right)
+(global-set-key (kbd "C-SPC M-u") 'windmove-swap-states-up)
+(global-set-key (kbd "C-SPC M-e") 'windmove-swap-states-down)
+
+(global-set-key (kbd "C-SPC f n") 'windmove-display-left)
+(global-set-key (kbd "C-SPC f i") 'windmove-display-right)
+(global-set-key (kbd "C-SPC f u") 'windmove-display-up)
+(global-set-key (kbd "C-SPC f e") 'windmove-display-down)
+
+(global-set-key (kbd "C-SPC d n") 'windmove-delete-left)
+(global-set-key (kbd "C-SPC d i") 'windmove-delete-right)
+(global-set-key (kbd "C-SPC d u") 'windmove-delete-up)
+(global-set-key (kbd "C-SPC d e") 'windmove-delete-down)
+
+(global-set-key (kbd "C-<tab>") 'tab-next)
+(global-set-key (kbd "C-S-<iso-lefttab>") 'tab-previous)
+
+; ;; magit
+
+; (global-set-key (kbd "C-c g")  'magit-status)
