@@ -53,6 +53,8 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
+;; Keybinds section
+
 (setq doom-leader-alt-key "C-n"
       doom-localleader-alt-key "C-n l")
 
