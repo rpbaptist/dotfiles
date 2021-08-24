@@ -61,6 +61,8 @@ input * xkb_numlock enabled
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 output * bg $HOME/Drive/wallpapers/03649_munnarteagardens_2560x1440.jpg fill
+output eDP-1 pos 0 0 mode 1920x1080
+output DP-1 pos 1920 0 mode 2560x1440@60HZ
 #
 # Example configuration:
 #
