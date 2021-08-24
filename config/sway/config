@@ -43,9 +43,9 @@ set $gray #a89984
 set $bghard #1d2021
 set $white #ebdbb2
 
-client.focused          $yellow $bghard $yellow $purple $yellow
-client.focused_inactive $bghard $bghard $yellow $purple $bghard
-client.unfocused        $bghard $bghard $yellow $purple $bghard
+client.focused          $blue $bghard $blue $purple $blue
+client.focused_inactive $bghard $bghard $blue $purple $bghard
+client.unfocused        $bghard $bghard $blue $purple $bghard
 client.urgent           $red    $red    $white  $red    $red
 
 default_border pixel 2
@@ -276,8 +276,8 @@ bar {
         separator $bghard
         background $bg
         statusline $bg
-        focused_workspace    $yellow $bghard $yellow
-        inactive_workspace   $bg $bg $yellow
+        focused_workspace    $blue $bghard $blue
+        inactive_workspace   $bg $bg $blue
         active_workspace     $bg $bg $yellow
         urgent_workspace     $red $red $bg
     }
