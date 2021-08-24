@@ -50,8 +50,12 @@ client.urgent           $red    $red    $white  $red    $red
 
 default_border pixel 2
 
+### Input
+
 mouse_warping none
 focus_follows_mouse no
+
+input * xkb_numlock enabled
 
 ### Output configuration
 #
