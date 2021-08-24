@@ -1,16 +1,21 @@
-# Default config for sway
-#
-# Copy this to ~/.config/sway/config and edit it to your liking.
-#
 # Read `man 5 sway` for a complete reference.
 
-seat * hide_cursor 8000
+### Autostart
+exec waybar
 
-### Variables
-#
-# Logo key. Use Mod1 for Alt.
+seat * hide_cursor 8000
+seat seat0 xcursor_theme Breeze_Snow 16
+
+set $sway_config_path $HOME/.config/sway
+
+### Keys
 set $mod Mod4
 set $alt Mod1
+
+### Gaps
+gaps inner 10
+gaps outer -5
+
 # Home row direction keys, like vim
 set $left n
 set $down e
@@ -25,7 +30,7 @@ for_window [app_id="^launcher$"] floating enable, sticky enable, resize set 30 p
 
 set $menu exec $term --class=launcher -e $HOME/code/sway-launcher-desktop/sway-launcher-desktop.sh
 
-set $lockman exec /usr/bin/zsh $HOME/.config/sway/lockman.sh
+set $lockman exec /usr/bin/zsh $sway_config_path/lockman.sh
 
 set $bg #282828
 set $red #cc241d
@@ -38,12 +43,13 @@ set $gray #a89984
 set $bghard #1d2021
 set $white #ebdbb2
 
-client.focused  $yellow $bghard $yellow $purple $yellow
+client.focused          $yellow $bghard $yellow $purple $yellow
 client.focused_inactive $bghard $bghard $yellow $purple $bghard
-client.unfocused  $bghard $bghard $yellow $purple $bghard
-client.urgent $red $red $white $red $red
+client.unfocused        $bghard $bghard $yellow $purple $bghard
+client.urgent           $red    $red    $white  $red    $red
 
 default_border pixel 2
+
 mouse_warping none
 focus_follows_mouse no
 
@@ -85,34 +91,7 @@ output * bg $HOME/Drive/wallpapers/03649_munnarteagardens_2560x1440.jpg fill
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
 
-set $ws1 "1 一"
-set $ws2 "2 二"
-set $ws3 "3 三"
-set $ws4 "4 四"
-set $ws5 "5 五"
-set $ws6 "6 六"
-set $ws7 "7 七"
-set $ws8 "8 八"
-set $ws9 "9 九"
-set $ws10 "10 十"
-
 # i3status-rust
-bar {
-    font Source Code Pro Regular 12
-    position top
-    status_command /usr/bin/i3status-rs $HOME/.config/sway/i3status.toml
-    colors {
-        separator $bghard
-        background $bg
-  statusline $bg
-        focused_workspace    $yellow $bghard $yellow
-        inactive_workspace   $bg $bg $yellow
-        active_workspace     $bg $bg $yellow
-        urgent_workspace     $red $red $bg
-    }
-   # output primary
-    tray_output none
-}
 
 ### Key bindings
 #
@@ -170,27 +149,27 @@ bar {
 # Workspaces:
 #
     # Switch to workspace
-    bindsym $mod+1 workspace $ws1
-    bindsym $mod+2 workspace $ws2
-    bindsym $mod+3 workspace $ws3
-    bindsym $mod+4 workspace $ws4
-    bindsym $mod+5 workspace $ws5
-    bindsym $mod+6 workspace $ws6
-    bindsym $mod+7 workspace $ws7
-    bindsym $mod+8 workspace $ws8
-    bindsym $mod+9 workspace $ws9
-    bindsym $mod+0 workspace $ws10
+    bindsym $mod+1 workspace number 1
+    bindsym $mod+2 workspace number 2
+    bindsym $mod+3 workspace number 3
+    bindsym $mod+4 workspace number 4
+    bindsym $mod+5 workspace number 5
+    bindsym $mod+6 workspace number 6
+    bindsym $mod+7 workspace number 7
+    bindsym $mod+8 workspace number 8
+    bindsym $mod+9 workspace number 9
+    bindsym $mod+0 workspace number 10
     # Move focused container to workspace
-    bindsym $mod+Shift+1 move container to workspace $ws1
-    bindsym $mod+Shift+2 move container to workspace $ws2
-    bindsym $mod+Shift+3 move container to workspace $ws3
-    bindsym $mod+Shift+4 move container to workspace $ws4
-    bindsym $mod+Shift+5 move container to workspace $ws5
-    bindsym $mod+Shift+6 move container to workspace $ws6
-    bindsym $mod+Shift+7 move container to workspace $ws7
-    bindsym $mod+Shift+8 move container to workspace $ws8
-    bindsym $mod+Shift+9 move container to workspace $ws9
-    bindsym $mod+Shift+0 move container to workspace $ws10
+    bindsym $mod+Shift+1 move container to workspace number 1
+    bindsym $mod+Shift+2 move container to workspace number 2
+    bindsym $mod+Shift+3 move container to workspace number 3
+    bindsym $mod+Shift+4 move container to workspace number 4
+    bindsym $mod+Shift+5 move container to workspace number 5
+    bindsym $mod+Shift+6 move container to workspace number 6
+    bindsym $mod+Shift+7 move container to workspace number 7
+    bindsym $mod+Shift+8 move container to workspace number 8
+    bindsym $mod+Shift+9 move container to workspace number 9
+    bindsym $mod+Shift+0 move container to workspace number 10
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
 #
@@ -283,5 +262,21 @@ bindsym $mod+r mode "resize"
 #         inactive_workspace #32323200 #32323200 #5c5c5c
 #     }
 # }
+
+bar {
+    font Source Code Pro Regular 10
+    position top
+    colors {
+        separator $bghard
+        background $bg
+        statusline $bg
+        focused_workspace    $yellow $bghard $yellow
+        inactive_workspace   $bg $bg $yellow
+        active_workspace     $bg $bg $yellow
+        urgent_workspace     $red $red $bg
+    }
+    output primary
+    tray_output none
+}
 
 include /etc/sway/config.d/*
