@@ -1,13 +1,13 @@
 theme = "gruvbox-dark"
-icons = "awesome5"
+# icons = "awesome5"
 
 [[block]]
 block = "sound"
 step_width = 3
 
-[[block]]
-block = "backlight"
-device = "intel_backlight"
+# [[block]]
+# block = "backlight"
+# device = "intel_backlight"
 
 [[block]]
 block = "time"
