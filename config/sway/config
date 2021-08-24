@@ -68,7 +68,7 @@ default_border pixel 2
 mouse_warping none
 focus_follows_mouse no
 
-input * xkb_numlock enabled
+input * xkb_numlock enabled xkb_options compose:Caps_Lock
 
 ### Output configuration
 #
