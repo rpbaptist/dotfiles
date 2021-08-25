@@ -69,9 +69,11 @@ mouse_warping none
 focus_follows_mouse no
 
 ### Output
-#
-# Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg $HOME/Drive/wallpapers/03649_munnarteagardens_2560x1440.jpg fill
+
+### Random wallpaper from directory
+set $wallpapers_path $HOME/Drive/wallpapers
+output * bg `find $wallpapers_path -type f | shuf -n 1` fill
+
 output eDP-1 {
   pos 0 0
   mode 1920x1080
