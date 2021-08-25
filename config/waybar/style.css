@@ -1,0 +1,65 @@
+/*
+__        __          _
+\ \      / /_ _ _   _| |__   __ _ _ __
+ \ \ /\ / / _` | | | | '_ \ / _` | '__|
+  \ V  V / (_| | |_| | |_) | (_| | |
+   \_/\_/ \__,_|\__, |_.__/ \__,_|_|
+                |___/
+*/
+
+* {
+  transition-property: none;
+  animation: none;
+  font-size: 10px;
+  font-family: Source Code Pro;
+  padding: 2px;
+  border-radius: 0px;
+}
+
+window#waybar {
+  background: #1d2021;
+  border: #928374 solid 2px;
+}
+
+#custom-ewwmenu {
+  font-size: 19px;
+  margin-right: -4px;
+}
+
+#workspaces,
+#tray {
+  padding: 0px;
+}
+
+#workspaces button {
+  padding: 0px;
+  color: #458588;
+  margin-right: 2px;
+  padding: 0px 8px;
+  border: 0px;
+}
+
+#workspaces button.persistent {
+  color: #abb2bf;
+}
+
+#workspaces button.focused {
+  background: #458588;
+  color: #282c34;
+}
+
+#workspaces button:hover {
+  background: #3c3836;
+  color: #fbf1c7;
+}
+
+#clock {
+  color: #fbf1c7;
+  margin-right: 4px;
+}
+
+#pulseaudio,
+#battery {
+  color: #fbf1c7;
+  margin-right: 8px;
+}
