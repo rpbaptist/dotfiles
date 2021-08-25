@@ -184,8 +184,14 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-# Workspaces:
-#
+### Workspaces
+
+bindsym $mod+bracketright workspace next
+bindsym $mod+bracketleft  workspace prev
+
+bindsym $mod+$alt+bracketright move container to workspace next
+bindsym $mod+$alt+bracketleft  move container to workspace prev
+
 # Switch to workspace
 bindsym $mod+1 workspace number 1
 bindsym $mod+2 workspace number 2
