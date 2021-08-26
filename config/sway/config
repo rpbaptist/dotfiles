@@ -32,6 +32,8 @@ set $menu wofi --show drun
 set $lockman exec /usr/bin/zsh $sway_config_path/lockman.sh
 set $clipboard copyq show
 
+font pango:Source Code Pro Medium 10
+
 set $bg #282828
 set $red #cc241d
 set $green #98971a
