@@ -26,7 +26,7 @@ set $term tilix
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-for_window [app_id="^launcher$"] floating enable, sticky enable, resize set 30 ppt 60 ppt, border pixel 10
+for_window [app_id="^launcher$"] floating enable, sticky enable, resize set 30 ppt 60 ppt, border pixel 8
 
 set $menu wofi --show drun
 set $lockman exec /usr/bin/zsh $sway_config_path/lockman.sh
@@ -142,7 +142,8 @@ bindsym $mod+space exec $menu
 
 bindsym $mod+Ctrl+h exec $clipboard
 
-for_window [title="(.*) - Copy Q"] floating enable
+for_window [title="(.*) - Copy Q"] floating enable, resize set 30 ppt 60 ppt, border pixel 2
+for_window [title="Bitwarden"] floating enable, resize set 30 ppt 60 ppt, border pixel 2
 
 # Drag floating windows by holding down $mod and left mouse button.
 # Resize them with right mouse button + $mod.
