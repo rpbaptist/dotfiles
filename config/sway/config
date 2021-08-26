@@ -307,40 +307,6 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-#
-# Status Bar:
-#
-# Read `man 5 sway-bar` for more information about this section.
-# bar {
-#     position top
-
-#     # When the status_command prints a new line to stdout, swaybar updates.
-#     # The default just shows the current date and time.
-#     status_command while date +'%H:%M'; do sleep 1; done
-
-#     colors {
-#         statusline #ffffff
-#         background #323232
-#         inactive_workspace #32323200 #32323200 #5c5c5c
-#     }
-# }
-
-#bar {
-#    font Source Code Pro Regular 10
-#    position top
-#    colors {
-#        separator $bghard
-#        background $bg
-#        statusline $bg
-#        focused_workspace    $blue $bghard $blue
-#        inactive_workspace   $bg $bg $blue
-#        active_workspace     $bg $bg $yellow
-#        urgent_workspace     $red $red $bg
-#    }
-#    output primary
-#    tray_output none
-#}
-
 ### Theme
 set $gnome-schema org.gnome.desktop.interface
 
