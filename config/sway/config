@@ -11,8 +11,8 @@ set $mod Mod4
 set $alt Mod1
 
 ### Gaps
-gaps inner 6
-gaps outer 3
+gaps inner 4
+gaps outer 2
 
 ### Directional
 set $left n
