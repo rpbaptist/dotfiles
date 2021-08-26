@@ -11,8 +11,13 @@ set $mod Mod4
 set $alt Mod1
 
 ### Gaps
-gaps inner 4
-gaps outer 2
+smart_gaps on
+gaps inner 10
+gaps outer -10
+gaps bottom 1
+gaps top 1
+#gaps inner 4
+#gaps outer 2
 
 ### Directional
 set $left n
@@ -148,7 +153,7 @@ floating_modifier $alt normal
 bindsym $mod+Ctrl+c reload
 
 # Exit sway (logs you out of your Wayland session)
-bindsym $mod+Ctrl+q exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+bindsym $mod+Ctrl+q exec swaynag -t warning -m 'Really end Wayland session?' -b 'Yes!' 'swaymsg exit'
 
 bindsym $mod+Ctrl+l exec $lockman
 
