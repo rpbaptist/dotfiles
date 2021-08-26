@@ -9,6 +9,7 @@
     "margin-right": 0,
     "modules-left": [
         "sway/workspaces",
+        "sway/mode",
     ],
 
     "modules-center": [
@@ -21,9 +22,9 @@
         "tray"
     ],
 
-    // "sway/workspaces": {
-    //   "disable-scroll": true,
-    // "format": "{icon}",
+    "sway/workspaces": {
+      "disable-scroll": true,
+      "format": "{icon}",
     // "persistent_workspaces": {
     //     "1": ["DP-4"],
     //     "2": ["DP-2"],
@@ -48,8 +49,16 @@
     //     "9": "misc",
     //     "10": "misc",
     // }
-    // },
+    },
 
+    "wlr/taskbar": {
+      "format": "{icon}",
+      "icon-theme": "Papirus-Dark",
+      "on-click": "activate"
+    },
+
+    "sway/mode": {
+    },
     "sway/window": {
         "format": "{}",
         "max-length": 50
