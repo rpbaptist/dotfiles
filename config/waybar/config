@@ -1,83 +1,93 @@
-// -*- mode: json -*-
-
 {
     "layer": "top",
-    "position": "top",
-    "height": 26,
-    "margin-top": 0,
-    "margin-left": 0,
-    "margin-right": 0,
-    "modules-left": [
-        "sway/workspaces",
-        "sway/mode",
-    ],
-
-    "modules-center": [
-        "sway/window",
-    ],
-
-    "modules-right": [
-        "pulseaudio",
-        "clock",
-        "tray"
-    ],
-
+    "height": 25,
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-center": ["sway/window"],
+    "modules-right": ["idle_inhibitor", "pulseaudio", "network", "backlight", "battery", "clock"],
+    // Modules configuration
     "sway/workspaces": {
-      "disable-scroll": true,
-      "format": "{icon}",
-    // "persistent_workspaces": {
-    //     "1": ["DP-4"],
-    //     "2": ["DP-2"],
-    //     "3": ["DP-4"],
-    //     "4": ["DP-2"],
-    //     "5": ["DP-4"],
-    //     "6": ["DP-2"],
-    //     "7": ["DP-4"],
-    //     "8": ["DP-2"],
-    //     "9": ["DP-4"],
-    //     "10": ["DP-2"],
-    // },
-    // "format-icons": {
-    //     "1": "dev",
-    //     "2": "dev",
-    //     "3": "www",
-    //     "4": "www",
-    //     "5": "game",
-    //     "6": "obs",
-    //     "7": "virt",
-    //     "8": "virt",
-    //     "9": "misc",
-    //     "10": "misc",
-    // }
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{icon}",
+        "format-icons": {
+            "1": "1 ",
+            "2": "2 ",
+            "3": "3 ",
+            "4": "4 ",
+            "5": "5 ",
+            "6": "6 ",
+            "7": "7",
+            "8": "8",
+            "9": "9",
+            "10": "10"
+        }
     },
-
-    "wlr/taskbar": {
-      "format": "{icon}",
-      "icon-theme": "Papirus-Dark",
-      "on-click": "activate"
-    },
-
     "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>"
     },
-    "sway/window": {
-        "format": "{}",
-        "max-length": 50
-    },
-
-    "clock": {
-        "format": "{:%H:%M}",
-        "tooltip": false
-    },
-
-    "pulseaudio": {
-        "format": "vol: {volume:2}%",
-        "format-bluetooth": "vol: {volume}%",
-        "format-muted": "muted",
-        "scroll-step": 5,
-        "on-click": "pamixer -t",
-        "on-click-right": "pavucontrol"
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
     },
     "tray": {
-        "icon-size": 24
+        // "icon-size": 21,
+        "spacing": 0
+    },
+    "clock": {
+        "timezone": "Europe/Amsterdam",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
+    },
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "{percent}% {icon}",
+      //"format-icons": ["🌑","🌒","🌓","🌔","🌕"]
+        "format-icons": ["", ""]
+    },
+    "battery": {
+        "bat": "BAT0",
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        "format-good": "", // An empty format will hide the module
+        "format-full": "100% ",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "network": {
+      "format": "{ifname}",
+      "format-ethernet": "{ifname}",
+        "format-wifi": "",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "disable-scroll": true,
+        "format": "{icon} {volume}    {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": " {volume}",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
     }
 }
