@@ -341,6 +341,16 @@ bindsym $mod+r mode "resize"
 #    tray_output none
 #}
 
+### Theme
+set $gnome-schema org.gnome.desktop.interface
+
+exec_always {
+    gsettings set $gnome-schema gtk-theme "Gruvbox-Material-Dark"
+    gsettings set $gnome-schema icon-theme "Gruvbox-Material-Dark"
+    gsettings set $gnome-schema cursor-theme "Breeze_Snow"
+    gsettings set $gnome-schema font-name "Open Sans Regular"
+}
+
 exec waybar
 
 include /etc/sway/config.d/*
