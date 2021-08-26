@@ -18,12 +18,7 @@ __        __          _
 
 window#waybar {
   background: #1d2021;
-  border: #928374 solid 2px;
-}
-
-#custom-ewwmenu {
-  font-size: 19px;
-  margin-right: -4px;
+  /* border: #928374 solid 2px; */
 }
 
 #workspaces,
@@ -33,18 +28,18 @@ window#waybar {
 
 #workspaces button {
   padding: 0px;
-  color: #458588;
+  color: #BDAE93;
   margin-right: 2px;
   padding: 0px 8px;
   border: 0px;
 }
 
 #workspaces button.persistent {
-  color: #abb2bf;
+  color: #EBDBB2;
 }
 
 #workspaces button.focused {
-  background: #458588;
+  background: #BDAE93;
   color: #282c34;
 }
 
