@@ -21,7 +21,7 @@ set $up u
 set $right i
 
 ### Terminal
-set $term alacritty
+set $term kitty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
@@ -284,6 +284,8 @@ mode "resize" {
     bindsym Ctrl+Down   resize grow   height 150px
     bindsym Ctrl+Up     resize shrink height 150px
     bindsym Ctrl+Right  resize grow   width  150px
+
+    #bindsym 2 resize set
 
     # Return to default mode
     bindsym Return mode "default"
