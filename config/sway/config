@@ -27,7 +27,7 @@ set $term tilix
 # on the original workspace that the command was run on.
 for_window [app_id="^launcher$"] floating enable, sticky enable, resize set 30 ppt 60 ppt, border pixel 10
 
-set $menu exec $term --class=launcher -e $HOME/code/sway-launcher-desktop/sway-launcher-desktop.sh
+set $menu wofi --show drun
 
 set $lockman exec /usr/bin/zsh $sway_config_path/lockman.sh
 
