@@ -12,7 +12,7 @@ set $alt Mod1
 
 ### Gaps
 gaps inner 6
-gaps outer 2
+gaps outer 3
 
 ### Directional
 set $left n
@@ -21,7 +21,7 @@ set $up u
 set $right i
 
 ### Terminal
-set $term kitty
+set $term tilix
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
