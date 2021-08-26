@@ -286,7 +286,12 @@ mode "resize" {
     bindsym Ctrl+Up     resize shrink height 150px
     bindsym Ctrl+Right  resize grow   width  150px
 
-    #bindsym 2 resize set
+    # One third
+    bindsym 1 resize set 853px
+    # Half
+    bindsym 2 resize set 1280px
+    # Two third
+    bindsym 3 resize set 1706px
 
     # Return to default mode
     bindsym Return mode "default"
