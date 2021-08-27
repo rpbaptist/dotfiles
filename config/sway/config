@@ -141,9 +141,10 @@ bindsym $mod+w kill
 bindsym $mod+space exec $menu
 
 bindsym $mod+Ctrl+h exec $clipboard
+bindsym $mod+Ctrl+b exec bitwarden
 
-for_window [title="(.*) - Copy Q"] floating enable, resize set 30 ppt 60 ppt, border pixel 2
-for_window [title="Bitwarden"] floating enable, resize set 30 ppt 60 ppt, border pixel 2
+for_window [app_id="copyq"]    floating enable, resize set 40 ppt 60 ppt, border pixel 2
+for_window [title="Bitwarden"] floating enable, resize set 40 ppt 60 ppt, border pixel 2
 
 # Drag floating windows by holding down $mod and left mouse button.
 # Resize them with right mouse button + $mod.
