@@ -341,6 +341,7 @@ bindsym $mod+r mode "resize"
 set $gnome-schema org.gnome.desktop.interface
 
 exec waybar
+exec autotiling
 exec wl-paste -p -t text --watch clipman store -P --histpath="~/.local/share/clipman-primary.json"
 
 include /etc/sway/config.d/*
