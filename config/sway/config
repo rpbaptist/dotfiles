@@ -84,12 +84,12 @@ default_border pixel 2
 input * {
   repeat_delay 225
   repeat_rate 38
-  xkb_numlock enabled
-}
-
-input "18003:1:foostan_Corne_Keyboard" {
   xkb_options compose:caps
 }
+
+#input "18003:1:foostan_Corne_Keyboard" {
+#  xkb_numlock enabled
+#}
 
 input type:touchpad {
     tap enabled
