@@ -1,30 +1,26 @@
 #!/bin/sh
 swaylock \
-  --screenshots \
   --font "Source Code Pro" \
-  --text-color fe8019 \
-  --ring-color fe8019 \
+  --font-size 11 \
+  --color 282828 \
+  --ring-color ebdbb2 \
+  --line-color 458588 \
+  --text-color ebdbb2 \
   --key-hl-color 689d6a \
-  --line-clear-color 3c3836 \
-  --ring-clear-color 3c3836 \
-  --inside-clear-color 3c3836 \
-  --text-clear-color ebdbb2 \
-  --line-wrong-color fb4934 \
-  --ring-wrong-color fb4934 \
-  --text-wrong-color 1d2021 \
-  --inside-wrong-color fb4934 \
-  --line-ver-color 8ec07c \
-  --ring-ver-color 8ec07c \
-  --text-ver-color 1d2021 \
-  --inside-ver-color 8ec07c \
-  --line-color 00000000 \
-  --inside-color 1d2021 \
-  --separator-color 00000000 \
-  --clock \
-  --indicator \
   --indicator-radius 100 \
-  --indicator-thickness 7 \
-  --grace 1 \
-  --fade-in 0.2 \
-  --effect-pixelate 15 \
-  --disable-caps-lock-text \
+  --indicator-thickness 9 \
+  --inside-color d5c4a1 \
+  --inside-clear-color d79921 \
+  --inside-ver-color 689d68 \
+  --separator-color 282828 \
+  --line-clear-color 98971a \
+  --ring-clear-color 98971a \
+  # --text-clear-color 282828 \
+  # --line-wrong-color fb4934 \
+  # --ring-wrong-color fb4934 \
+  # --text-wrong-color 282828 \
+  # --inside-wrong-color fb4934 \
+  # --line-ver-color 8ec07c \
+  # --ring-ver-color 8ec07c \
+  # --text-ver-color 1d2021 \
+  # --inside-ver-color 8ec07c \
