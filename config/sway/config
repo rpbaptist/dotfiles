@@ -50,7 +50,7 @@ for_window [app_id="^launcher$"] floating enable, sticky enable, resize set 30 p
 
 set $menu wofi --show drun
 set $lockman exec /usr/bin/zsh $sway_config_path/lockman.sh
-set $clipboard copyq show
+set $clipboard copyq toggle
 
 font pango:Source Code Pro Medium 10
 
