@@ -1,5 +1,25 @@
 # Read `man 5 sway` for a complete reference.
 
+### Setup
+exec_always {
+    unset QT_STYLE_OVERRIDE
+    export CLUTTER_BACKEND=wayland
+    export XDG_SESSION_TYPE=wayland
+    export QT_QPA_PLATFORMTHEME="qt5ct"
+    export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
+    export _JAVA_AWT_WM_NONREPARENTING=1
+    export SDL_VIDEODRIVER=wayland
+    export MOZ_ENABLE_WAYLAND=1
+    export MOZ_WEBRENDER=1
+
+    gsettings set $gnome-schema gtk-theme "Gruvbox-Material-Dark"
+    gsettings set $gnome-schema icon-theme "Papirus-Dark"
+    gsettings set $gnome-schema cursor-theme "Breeze_Snow"
+    gsettings set $gnome-schema font-name "Open Sans Regular"
+
+    eval $(keychain --eval --quiet --noask --agents gpg,ssh id_rsa)
+}
+
 ### Autostart
 seat * hide_cursor 8000
 seat seat0 xcursor_theme Breeze_Snow 16
@@ -142,6 +162,8 @@ bindsym $mod+space exec $menu
 
 bindsym $mod+Ctrl+h exec $clipboard
 bindsym $mod+Ctrl+b exec bitwarden
+
+bindsym Print exec flameshot gui
 
 for_window [app_id="copyq"]    floating enable, resize set 40 ppt 60 ppt, border pixel 2
 for_window [title="Bitwarden"] floating enable, resize set 40 ppt 60 ppt, border pixel 2
@@ -313,17 +335,6 @@ bindsym $mod+r mode "resize"
 
 ### Theme
 set $gnome-schema org.gnome.desktop.interface
-
-exec_always {
-    unset QT_STYLE_OVERRIDE
-    export QT_QPA_PLATFORMTHEME="qt5ct"
-    export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
-
-    gsettings set $gnome-schema gtk-theme "Gruvbox-Material-Dark"
-    gsettings set $gnome-schema icon-theme "Papirus-Dark"
-    gsettings set $gnome-schema cursor-theme "Breeze_Snow"
-    gsettings set $gnome-schema font-name "Open Sans Regular"
-}
 
 exec waybar
 exec copyq
