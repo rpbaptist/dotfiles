@@ -50,7 +50,13 @@ for_window [app_id="^launcher$"] floating enable, sticky enable, resize set 30 p
 
 set $menu wofi --show drun
 set $lockman exec /usr/bin/zsh $sway_config_path/lockman.sh
-set $clipboard copyq toggle
+
+set $screenshot exec /usr/bin/zsh $sway_config_path/grimshot
+
+bindsym Print exec $grimshot --notify save area
+bindsym Ctrl+Print exec $grimshot --notify copy area
+bindsym Shift+Print exec $grimshot --notify save screen
+bindsym Ctrl+Shift+Print exec $grimshot --notify copy screen
 
 font pango:Source Code Pro Medium 10
 
@@ -160,10 +166,8 @@ bindsym $mod+w kill
 # Start your launcher
 bindsym $mod+space exec $menu
 
-bindsym $mod+Ctrl+h exec $clipboard
+bindsym $mod+Ctrl+h exec clipman pick -t wofi
 bindsym $mod+Ctrl+b exec bitwarden
-
-bindsym Print exec flameshot gui
 
 for_window [app_id="copyq"]    floating enable, resize set 40 ppt 60 ppt, border pixel 2
 for_window [title="Bitwarden"] floating enable, resize set 40 ppt 60 ppt, border pixel 2
@@ -286,11 +290,11 @@ bindsym $mod+a focus parent
 # You can send windows there and get them back later.
 
 # Move the currently focused window to the scratchpad
-bindsym $mod+s move scratchpad
+bindsym $mod+h move scratchpad
 
 # Show the next scratchpad window or hide the focused scratchpad window.
 # If there are multiple scratchpad windows, this command cycles through them.
-bindsym $mod+Shift+s scratchpad show
+bindsym $mod+Shift+h scratchpad show
 #
 # Resizing containers:
 #
@@ -337,6 +341,6 @@ bindsym $mod+r mode "resize"
 set $gnome-schema org.gnome.desktop.interface
 
 exec waybar
-exec copyq
+exec wl-paste -p -t text --watch clipman store -P --histpath="~/.local/share/clipman-primary.json"
 
 include /etc/sway/config.d/*
