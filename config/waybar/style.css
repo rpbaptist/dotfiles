@@ -46,7 +46,7 @@ window#waybar.solo {
 }
 
 #workspaces button.focused {
-    background-color: #d5c4a1;
+    background-color: #bdae93;
     color: #282828;
     border-bottom: none;
     border-radius: 5px;
@@ -81,22 +81,22 @@ window#waybar.solo {
 
 #clock {
     color: #1d2021;
-    background-color: #d5c4a1;
+    background-color: #bdae93;
 }
 
 #battery {
-    background-color: #d5c4a1;
+    background-color: #bdae93;
     color: #1d2021;
 }
 
 #battery.charging {
     color: #1d2021;
-    background-color: #d5c4a1;
+    background-color: #bdae93;
 }
 
 @keyframes blink {
     to {
-        background-color: #d5c4a1;
+        background-color: #bdae93;
         color: #282828;
     }
 }
@@ -116,42 +116,42 @@ label:focus {
 }
 
 #cpu {
-    background-color: #d5c4a1;
+    background-color: #bdae93;
     color: #1d2021;
 }
 
 #memory {
-    background-color: #d5c4a1;
+    background-color: #bdae93;
     color: #1d2021;
 }
 
 #backlight {
-    background-color: #d5c4a1;
+    background-color: #bdae93;
     color: #1d2021;
 }
 
 #network {
-    background-color: #d5c4a1;
+    background-color: #bdae93;
     color: #1d2021;
 }
 
 #network.disconnected {
-    background-color: #d5c4a1;
+    background-color: #bdae93;
 }
 
 #pulseaudio {
-    background-color: #d5c4a1;
+    background-color: #bdae93;
     color: #1d2021;
     border-radius: 5px 0px 0px 5px;
 }
 
 #pulseaudio.muted {
-    background-color: #d5c4a1;
+    background-color: #bdae93;
     color: #1d2021;
 }
 
 #custom-media {
-    background-color: #d5c4a1;
+    background-color: #bdae93;
     color: #282828;
     min-width: 100px;
 }
@@ -165,7 +165,7 @@ label:focus {
 }
 
 #temperature {
-    background-color: #d5c4a1;
+    background-color: #bdae93;
     color: #282828;
 }
 
@@ -174,7 +174,7 @@ label:focus {
 }
 
 #tray {
-    background-color: #d5c4a1;
+    background-color: #bdae93;
 }
 
 #idle_inhibitor {
@@ -185,7 +185,7 @@ label:focus {
 }
 
 #idle_inhibitor.activated {
-    background-color: #d5c4a1;
+    background-color: #bdae93;
     color: #282828;
     border-radius: 5px;
     margin-right: 2px;

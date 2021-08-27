@@ -46,10 +46,10 @@ set $bghard #1d2021
 set $white #ebdbb2
 set $beige #d5c4a1
 
-client.focused          $white  $bghard $white  $yellow $white
-client.focused_inactive $bghard $bghard $beige  $yellow $bghard
-client.unfocused        $bghard $bghard $beige  $yellow $bghard
-client.urgent           $red    $red    $white  $red  $red
+client.focused          $white  $bghard $white  $green  $white
+client.focused_inactive $bghard $bghard $beige  $green  $bghard
+client.unfocused        $bghard $bghard $beige  $green  $bghard
+client.urgent           $red    $red    $white  $red    $red
 
 default_border pixel 2
 
