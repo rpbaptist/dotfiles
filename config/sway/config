@@ -3,14 +3,16 @@
 ### Setup
 exec_always {
     unset QT_STYLE_OVERRIDE
-    export CLUTTER_BACKEND=wayland
-    export XDG_SESSION_TYPE=wayland
-    export QT_QPA_PLATFORMTHEME="qt5ct"
-    export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
     export _JAVA_AWT_WM_NONREPARENTING=1
-    export SDL_VIDEODRIVER=wayland
+    export CLUTTER_BACKEND=wayland
     export MOZ_ENABLE_WAYLAND=1
     export MOZ_WEBRENDER=1
+    export QT_QPA_PLATFORMTHEME="qt5ct"
+    export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
+    export SDL_VIDEODRIVER=wayland
+    export XDG_CURRENT_DESKTOP=sway
+    export XDG_DESKTOP_DESKTOP=sway
+    export XDG_SESSION_TYPE=wayland
 
     gsettings set $gnome-schema gtk-theme "Gruvbox-Material-Dark"
     gsettings set $gnome-schema icon-theme "Papirus-Dark"
@@ -53,10 +55,10 @@ set $lockman exec /usr/bin/zsh $sway_config_path/lockman.sh
 
 set $screenshot exec /usr/bin/zsh $sway_config_path/grimshot
 
-bindsym Print exec $grimshot --notify save area
-bindsym Ctrl+Print exec $grimshot --notify copy area
-bindsym Shift+Print exec $grimshot --notify save screen
-bindsym Ctrl+Shift+Print exec $grimshot --notify copy screen
+#bindsym Print exec $grimshot --notify save area
+#bindsym Ctrl+Print exec $grimshot --notify copy area
+#bindsym Shift+Print exec $grimshot --notify save screen
+#bindsym Ctrl+Shift+Print exec $grimshot --notify copy screen
 
 font pango:Source Code Pro Medium 10
 
@@ -343,5 +345,10 @@ set $gnome-schema org.gnome.desktop.interface
 exec waybar
 exec autotiling
 exec wl-paste -p -t text --watch clipman store -P --histpath="~/.local/share/clipman-primary.json"
+
+# Flameshot: https://github.com/flameshot-org/flameshot/blob/master/docs/Sway%20and%20wlroots%20support.md
+exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
+exec hash dbus-update-activation-environment 2>/dev/null && \
+     dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
 
 include /etc/sway/config.d/*
