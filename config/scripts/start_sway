@@ -21,4 +21,4 @@ gsettings set $gnome-schema font-name "Source Code Pro"
 
 eval $(keychain --eval --quiet --noask --agents gpg,ssh id_rsa)
 
-/usr/bin/start_sway
+sway
