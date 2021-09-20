@@ -1,192 +1,208 @@
-* {
-    border: none;
-    border-radius: 0;
-    font-family: Open Sans Semibold;
-    font-size: 11px;
-    min-height: 0;
-    margin: 0 0px;
-}
+/* =============================================================================
+ *
+ * Waybar configuration
+ *
+ * Configuration reference: https://github.com/Alexays/Waybar/wiki/Configuration
+ *
+ * =========================================================================== */
 
-window#waybar {
-    background-color: #282828;
-    border-bottom: none;
-    color: #d5c4a1;
-    transition-property: background-color;
-    transition-duration: .5s;
-}
-
-window#waybar.hidden {
-    opacity: 0.2;
-}
-
+/* -----------------------------------------------------------------------------
+ * Keyframes
+ * -------------------------------------------------------------------------- */
 /*
-window#waybar.empty {
-    background-color: transparent;
-}
-window#waybar.solo {
-    background-color: #FFFFFF;
-}
+Gruvbox Color Scheme
 */
 
-#workspaces button {
-    padding: 0 5px;
-    color: #d5c4a1;
-    border-radius: 5px;
-    /* background-color: transparent;
-    border-bottom: 3px solid transparent;
-    */
+@define-color bg #282828;
+@define-color red #cc241d;
+@define-color green #98971a;
+@define-color yellow #d79921;
+@define-color blue #458588;
+@define-color purple #b16286;
+@define-color aqua #689d68;
+@define-color gray #a89984;
+@define-color bghard #1d2021;
+@define-color white #ebdbb2;
+@define-color beige #d5c4a1;
+
+@keyframes blink-warning {
+  70% {
+    color: @white;
+  }
+
+  to {
+    color: @white;
+    background-color: @yellow;
+  }
 }
 
-/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
-#workspaces button:hover {
-    background: rgba(0, 0, 0, 0.2);
-    box-shadow: inherit;
-    border-bottom: none;
-    border-radius: 5px;
+@keyframes blink-critical {
+  70% {
+    color: @white;
+  }
+
+  to {
+    color: @white;
+    background-color: @red;
+  }
 }
 
-#workspaces button.focused {
-    background-color: #bdae93;
-    color: #282828;
-    border-bottom: none;
-    border-radius: 5px;
+/* -----------------------------------------------------------------------------
+ * Base styles
+ * -------------------------------------------------------------------------- */
+
+/* Reset all styles */
+* {
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+  margin: 1px;
+  padding: 0;
 }
 
-#workspaces button.urgent {
-    background-color: #2c303c;
+/* The whole bar */
+#waybar {
+  background: transparent;
+  color: @beige;
+  background-color: @bghard;
+  font-family: Source Code Pro;
+  font-size: 11px;
 }
 
-#mode {
-    background-color: #64727D;
-    border-bottom: 3px solid #ffffff;
-}
-
-#clock,
+/* Each module */
 #battery,
-#cpu,
-#memory,
-#temperature,
+#clock,
 #backlight,
+#cpu,
+#custom-keyboard-layout,
+#memory,
+#mode,
+#custom-weather,
 #network,
 #pulseaudio,
-#custom-media,
+#temperature,
 #tray,
-#mode,
 #idle_inhibitor,
-#mpd {
-    padding: 0 14px;
-    margin: 0 0px;
-    color: #ffffff;
+#custom-PBPbattery {
+  padding: 0.5rem 0.6rem;
+  margin: 1px 0px;
 }
 
-#clock {
-    color: #1d2021;
-    background-color: #bdae93;
-}
+/* -----------------------------------------------------------------------------
+ * Module styles
+ * -------------------------------------------------------------------------- */
 
 #battery {
-    background-color: #bdae93;
-    color: #1d2021;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
-#battery.charging {
-    color: #1d2021;
-    background-color: #bdae93;
+#battery.warning {
+  color: @yellow;
 }
 
-@keyframes blink {
-    to {
-        background-color: #bdae93;
-        color: #282828;
-    }
+#battery.critical {
+  color: @red;
 }
 
-#battery.critical:not(.charging) {
-    background-color: #282828;
-    color: #282828;
-    animation-name: blink;
-    animation-duration: 1s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+#battery.warning.discharging {
+  animation-name: blink-warning;
+  animation-duration: 3s;
 }
 
-label:focus {
-    background-color: #1d2021;
+#battery.critical.discharging {
+  animation-name: blink-critical;
+  animation-duration: 2s;
 }
 
 #cpu {
-    background-color: #bdae93;
-    color: #1d2021;
+}
+#cpu.warning {
+  color: @yellow;
+}
+
+#cpu.critical {
+  color: @red;
 }
 
 #memory {
-    background-color: #bdae93;
-    color: #1d2021;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
-#backlight {
-    background-color: #bdae93;
-    color: #1d2021;
+#memory.warning {
+  color: @yellow;
 }
 
-#network {
-    background-color: #bdae93;
-    color: #1d2021;
+#memory.critical {
+  color: @red;
+  animation-name: blink-critical;
+  animation-duration: 2s;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#mode {
+  background: @beige;
+  border-bottom: 3px transparent;
+  color: @white;
+  margin-left: 5px;
+  padding: 7;
 }
 
 #network.disconnected {
-    background-color: #bdae93;
+  color: @yellow;
 }
 
 #pulseaudio {
-    background-color: #bdae93;
-    color: #1d2021;
-    border-radius: 5px 0px 0px 5px;
+  padding-top: 6px;
 }
-
 #pulseaudio.muted {
-    background-color: #bdae93;
-    color: #1d2021;
-}
-
-#custom-media {
-    background-color: #bdae93;
-    color: #282828;
-    min-width: 100px;
-}
-
-#custom-media.custom-spotify {
-    background-color: #a89984;
-}
-
-#custom-media.custom-vlc {
-    background-color: #d79921;
-}
-
-#temperature {
-    background-color: #bdae93;
-    color: #282828;
+  color: @beige;
 }
 
 #temperature.critical {
-    background-color: #cc241d;
+  color: @red;
 }
 
-#tray {
-    background-color: #bdae93;
+#window {
+  font-weight: bold;
 }
 
-#idle_inhibitor {
-    background-color: rgba(0, 0, 0, 0);
-    color: #d5c4a1;
-    border-radius: 5px;
-    margin-right: 2px;
+#workspaces {
+  font-size: 13px;
+}
+#workspaces button {
+  border-bottom: 3px solid transparent;
+  margin-bottom: 0px;
+  padding: 0px;
 }
 
-#idle_inhibitor.activated {
-    background-color: #bdae93;
-    color: #282828;
-    border-radius: 5px;
-    margin-right: 2px;
+#workspaces button.focused {
+  border-bottom: 3px solid @beige;
+  margin-bottom: 1px;
+  padding-left: 0;
+}
+
+#workspaces button.urgent {
+  border-color: @red;
+  color: @red;
+}
+
+#custom-power {
+  margin-left: 15px;
+  margin-right: 15px;
+  font-size: 15px;
+}
+#custom-launcher {
+  font-size: 15px;
+  margin-left: 15px;
+  margin-right: 10px;
+}
+
+#backlight.icon {
+  padding-right: 1px;
+  font-size: 13px;
 }
