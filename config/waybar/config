@@ -7,7 +7,7 @@
      "width" : 10,
  
     	"modules-left": [
-        	"custom/launcher",
+        	// "custom/launcher",
         	"sway/workspaces",
         	"sway/mode",
 	],
