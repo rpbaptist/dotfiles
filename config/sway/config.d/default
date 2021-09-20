@@ -45,7 +45,7 @@ bindsym $mod+w kill
 bindsym $mod+space exec $menu
     
 # Activities
-#bindsym $mod+p exec ~/.config/wofi/windows.py
+bindsym $mod+tab exec ~/.config/wofi/windows.py
 
 # Drag floating windows by holding down $alt and left mouse button.
 # Resize them with right mouse button + $alt.
