@@ -16,20 +16,20 @@
       	],
  
     	"modules-right": [
-                "network",
+                // "network",
 	        "idle_inhibitor",
 	        "memory",
 	        "cpu",
 	        // "custom/weather",
 	        "pulseaudio",
-	        "custom/keyboard-layout",
+	        // "custom/keyboard-layout",
 	        "battery",
                 //"custom/PBPbattery",
 	        "backlight#icon",
                 "backlight#value",
 	        "clock",
 	        "tray",
-                "custom/weather",
+                // "custom/weather",
 	        "custom/power",
      	],
  
