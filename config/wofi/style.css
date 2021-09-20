@@ -37,9 +37,11 @@ window {
   border: 2px #282828;
   color: #ebdbb2;
 }
-#entry:selected {
+#entry:selected,
+#img:selected {
   background-color: #ebdbb2;
 }
 #text:selected {
+  background-color: #ebdbb2;
   color: #282828;
 }
