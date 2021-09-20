@@ -123,8 +123,8 @@ bindsym $mod+g splith
 bindsym $mod+v splitv
 
 # Switch the current container between different layout styles
-bindsym $mod+p layout stacking
-bindsym $mod+b layout tabbed
+bindsym $mod+shift+s layout stacking
+bindsym $mod+shift+g layout tabbed
 bindsym $mod+shift+t layout toggle split
 
 # Make the current focus fullscreen
@@ -197,7 +197,7 @@ mode "resize" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym $mod+r mode "resize"
+bindsym $mod+shift+r mode "resize"
 
 # Resize floating windows with mouse scroll:
 bindsym --whole-window --border $alt+button4 resize shrink height 5 px or 5 ppt
