@@ -1,0 +1,54 @@
+/*
+Arc-Dark Color Scheme
+*/
+
+@define-color highlight #d5c4a1;
+@define-color white ##ebdbb2;
+@define-color base1  #282828;
+@define-color base2  #1d2021;
+@define-color base3  #a89984l;
+
+*{
+    font-family: UbuntuMono;
+}
+
+#window {
+	  border: 1px solid @highlight;
+    margin: 0px 5px 0px 5px;
+
+}
+
+#inner-box {
+    background-color: @base2;
+
+}
+
+#outer-box {
+  margin: 5px;
+  padding:10px;
+  background-color: @base2;
+	margin-top: -22px;
+}
+
+#scroll {
+}
+
+#text {
+padding: 5px;
+color: @white;
+}
+
+#entry:nth-child(even){
+    background-color: @base1;
+}
+
+#entry {
+    background-color: @base3;
+}
+
+#entry:selected {
+    background-color: @highlight;
+}
+
+#text:selected {
+}
