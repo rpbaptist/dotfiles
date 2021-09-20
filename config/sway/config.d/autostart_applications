@@ -1,3 +1,6 @@
+# Load keychain
+exec eval $(keychain --eval --quiet --noask --agents gpg,ssh id_rsa)
+
 # Auth with polkit-gnome:
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
