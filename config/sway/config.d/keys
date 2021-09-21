@@ -223,8 +223,9 @@ bindsym --whole-window --border $alt+Ctrl+button5 resize grow width 5 px or 5 pp
 #
 # Screenshots
 #
-    bindsym print exec /usr/share/sway/scripts/grimshot --notify save output
-    bindsym Shift+print exec ~/.config/sway/scripts/screenshot.sh
+bindsym print exec flameshot gui
+#bindsym print exec /usr/share/sway/scripts/grimshot --notify save output
+#bindsym Shift+print exec ~/.config/sway/scripts/screenshot.sh
 #
 # Keybindings List
 #
