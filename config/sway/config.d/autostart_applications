@@ -33,3 +33,5 @@ exec swayidle -w\
 
 #exec copyq
 exec flameshot
+
+exec insync start --qt-qpa-platform=xcb
