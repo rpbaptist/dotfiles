@@ -32,3 +32,4 @@ exec swayidle -w\
 # resumed. It will also lock your screen before your computer goes to sleep.
 
 exec copyq
+exec flameshot
