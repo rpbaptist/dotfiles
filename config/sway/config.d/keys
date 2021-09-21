@@ -117,6 +117,8 @@ bindsym $mod+shift+s layout stacking
 bindsym $mod+shift+g layout tabbed
 bindsym $mod+shift+t layout toggle split
 
+bindsym $mod+Ctrl+h exec copyq toggle
+
 # Make the current focus fullscreen
 bindsym $mod+f fullscreen
 
