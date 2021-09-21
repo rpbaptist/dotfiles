@@ -2,8 +2,9 @@
 # no-unlock-indicator
 # daemonize
 indicator-caps-lock
+ignore-empty-password
 # datestr=%A
-image=$HOME/.config/sway/sway.png
+image=$HOME/.config/sway/wallpapers/arch_dark.png
 scaling=fill
 font=Source Code Pro
 font-size=18
@@ -13,12 +14,12 @@ indicator-radius=115
 # line-uses-ring
 line-color=#a89984
 text-color=#ebdbb2
-inside-color=#98971a
-inside-ver-color=#d79921
+inside-color=#282828
+inside-ver-color=#458588
 line-ver-color=#d79921
 ring-ver-color=#689d68
 ring-color=#282828
-key-hl-color=#d79921
+key-hl-color=#458588
 separator-color=#282828
 layout-text-color=#d5c4a1
 line-wrong-color=#cc241d
