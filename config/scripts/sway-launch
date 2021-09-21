@@ -1,6 +1,6 @@
 #!/bin/sh
 
-unset QT_STYLE_OVERRIDE
+# unset QT_STYLE_OVERRIDE
 export _JAVA_AWT_WM_NONREPARENTING=1
 export BEMENU_BACKEND=wayland
 export CLUTTER_BACKEND=wayland
@@ -14,11 +14,6 @@ export XDG_CURRENT_DESKTOP=sway
 export XDG_DESKTOP_DESKTOP=sway
 export XDG_SESSION_TYPE=wayland
 
-gsettings set $gnome-schema gtk-theme "Gruvbox-Material-Dark"
-gsettings set $gnome-schema icon-theme "Papirus-Dark"
-gsettings set $gnome-schema cursor-theme "Breeze_Snow"
-gsettings set $gnome-schema font-name "Source Code Pro"
-
 eval $(keychain --eval --quiet --noask --agents gpg,ssh id_rsa)
 
-sway
+exec sway
