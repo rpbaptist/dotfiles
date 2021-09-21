@@ -4,7 +4,7 @@
 indicator-caps-lock
 ignore-empty-password
 # datestr=%A
-image=$HOME/.config/sway/wallpapers/arch_dark.png
+image=$HOME/.config/sway/wallpapers/cyberpunk_city.jpg
 scaling=fill
 font=Source Code Pro
 font-size=18
