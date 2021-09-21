@@ -21,6 +21,7 @@ for_window [app_id="yad"] floating enable
 for_window [app_id="imv"] floating enable
 for_window [app_id="copyq"] floating enable
 for_window [title="Insync"] floating enable
+for_window [app_id="seahorse"] floating enable
 #for_window [name="Tilix Preferences"] floating enable
 for_window [app_id="blueman-manager"] floating enable,  resize set width 40 ppt height 30 ppt
 
