@@ -1,9 +1,9 @@
 // Global 
 {
 	"layer": "top",   
-      	"position": "top",
+	"position": "top",
 	// If height property would be not present, it'd be calculated dynamically
-     "height": 30,
+     "height": 26,
      "width" : 10,
  
     	"modules-left": [
