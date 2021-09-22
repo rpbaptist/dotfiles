@@ -14,6 +14,7 @@ Gruvbox Color Scheme
 */
 
 @define-color bg #282828;
+@define-color bg-translucent rgba(40, 40, 40, 0.95);
 @define-color red #cc241d;
 @define-color green #98971a;
 @define-color yellow #d79921;
@@ -21,7 +22,7 @@ Gruvbox Color Scheme
 @define-color purple #b16286;
 @define-color aqua #689d68;
 @define-color gray #a89984;
-@define-color bghard #1d2021;
+@define-color bg #1d2021;
 @define-color white #ebdbb2;
 @define-color beige #d5c4a1;
 
@@ -56,7 +57,7 @@ Gruvbox Color Scheme
   border: none;
   border-radius: 0;
   min-height: 0;
-  margin: 1px;
+  margin: 0;
   padding: 0;
 }
 
@@ -64,7 +65,7 @@ Gruvbox Color Scheme
 #waybar {
   background: transparent;
   color: @beige;
-  background-color: @bghard;
+  background-color: @bg-translucent;
   font-family: Open Sans Semibold;
   font-size: 10px;
 }
@@ -146,7 +147,7 @@ Gruvbox Color Scheme
 
 #mode {
   background: @beige;
-  border-bottom: 3px transparent;
+  border-bottom: 2px @bghard;
   color: @white;
   margin-left: 5px;
   padding: 7;
@@ -175,13 +176,13 @@ Gruvbox Color Scheme
   font-size: 13px;
 }
 #workspaces button {
-  border-bottom: 3px solid transparent;
+  border-bottom: 2px solid @bghard;
   margin-bottom: 0px;
   padding: 0px;
 }
 
 #workspaces button.focused {
-  border-bottom: 3px solid @beige;
+  border-bottom: 2px solid @beige;
   margin-bottom: 1px;
   padding-left: 0;
 }
