@@ -12,11 +12,8 @@ HOME_LOCAL_PATH="$HOME/.local/bin"
 # Postgres host
 export PGHOST=localhost
 
-# export GOROOT="$HOME/.local/go"
-export ASDF_PATH="$HOME/.asdf/shims"
-
 export GAMES_PATH="/usr/games:/usr/local/games"
-export PATH="$HOME_LOCAL_PATH:$COMMON_PATHS:$GAMES_PATH:$ASDF_PATH"
+export PATH="$HOME_LOCAL_PATH:$COMMON_PATHS:$GAMES_PATH"
 
 # Preferred editor for local and remote sessions
 if [ -n "$SSH_CONNECTION" ]; then
