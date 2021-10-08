@@ -10,12 +10,21 @@
                 "parameters": {
                     "basic.simultaneous_threshold_milliseconds": 50,
                     "basic.to_delayed_action_delay_milliseconds": 500,
-                    "basic.to_if_alone_timeout_milliseconds": 1000,                    "basic.to_if_held_down_threshold_milliseconds": 500,
+                    "basic.to_if_alone_timeout_milliseconds": 1000,
+                    "basic.to_if_held_down_threshold_milliseconds": 500,
                     "mouse_motion_to_scroll.speed": 100
                 },
                 "rules": [
                     {
                         "description": "Home key to the beginning of the line (Control + a)",
+                        "conditions": [
+                            {
+                                "bundle_identifiers": [
+                                    "^com\\.sublimetext\\."
+                                ],
+                                "type": "frontmost_application_unless"
+                            }
+                        ],
                         "manipulators": [
                             {
                                 "from": {
@@ -42,6 +51,14 @@
                         "description": "End key to the end of the line (Control + e)",
                         "manipulators": [
                             {
+                              "conditions": [
+                                  {
+                                      "bundle_identifiers": [
+                                          "^com\\.sublimetext\\."
+                                      ],
+                                      "type": "frontmost_application_unless"
+                                  }
+                              ],
                                 "from": {
                                     "key_code": "end",
                                     "modifiers": {
