@@ -20,7 +20,7 @@
 [rebase]
 	autosquash = true
 [commit]
-	gpgsign = true
+	gpgsign = false
 [pager]
   branch = false
 [pull]

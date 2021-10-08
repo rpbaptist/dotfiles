@@ -9,11 +9,12 @@ export ERL_AFLAGS="-kernel shell_history enabled -kernel shell_history_path '\"$
 COMMON_PATHS="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 HOME_LOCAL_PATH="$HOME/.local/bin"
 
+# export SUBLIME_PATH=/Applications/Sublime Text.app/Contents/SharedSupport/bin
+
 # Postgres host
 export PGHOST=localhost
 
-export GAMES_PATH="/usr/games:/usr/local/games"
-export PATH="$HOME_LOCAL_PATH:$COMMON_PATHS:$GAMES_PATH"
+export PATH="$HOME_LOCAL_PATH:$COMMON_PATHS:$PATH"
 
 # Preferred editor for local and remote sessions
 if [ -n "$SSH_CONNECTION" ]; then
@@ -28,7 +29,7 @@ export NOTES_PATH="$HOME/Drive/Notes"
 GPG_TTY=$(tty)
 export GPG_TTY
 
-. ~/.local/env
+# . ~/.local/env
 
 # export FZF_BASE=/usr/bin/
 

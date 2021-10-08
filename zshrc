@@ -42,7 +42,7 @@ setopt nomenucomplete
 setopt nobeep
 unsetopt nomatch
 
-eval "$(dircolors $HOME/.dircolors)"
+# eval "$(dircolors $HOME/.dircolors)"
 
 fpath=(~/.zsh/completions $fpath)
 autoload -U compinit && compinit
@@ -57,4 +57,4 @@ fi
 # Hook direnv into your shell.
 eval "$(direnv hook zsh)"
 
-source /opt/asdf-vm/asdf.sh
+# source /opt/asdf-vm/asdf.sh
