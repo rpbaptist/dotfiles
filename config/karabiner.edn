@@ -10,4 +10,6 @@
                   [:end :!Te :kitty]]}
          {:des "Delete forward in terminal"
           :rules [[:!Rdelete_forward :delete_forward :kitty]
-                  [:!Sdelete_forward :delete_forward :kitty]]}]}
+                  [:!Sdelete_forward :delete_forward :kitty]]}
+         {:des "Control+l to browser URL"
+          :rules [[:!Tl :!Cl :chrome][:!Wl :!Ql :chrome]]}]}
