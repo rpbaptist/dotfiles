@@ -1,0 +1,13 @@
+{
+  :applications {:chrome ["^com\\.google\\.Chrome$"]
+                 :sublime ["^com\\.sublimetext\\.4$"]
+                 :kitty ["^net\\.kovidgoyal\\.kitty$"]}
+  :main [{:des "Home and End keys outside terminal"
+          :rules [[:#S#Rhome :!Cleft_arrow :!kitty]
+                  [:#S#Rend :!Cright_arrow :!kitty]]}
+         {:des "Home and End keys in terminal"
+          :rules [[:home :!Ta :kitty]
+                  [:end :!Te :kitty]]}
+         {:des "Delete forward in terminal"
+          :rules [[:!Rdelete_forward :delete_forward :kitty]
+                  [:!Sdelete_forward :delete_forward :kitty]]}]}
