@@ -22,6 +22,12 @@
                   [:!Qe "/usr/local/bin/yabai -m window --focus south"]
                   [:!Qi "/usr/local/bin/yabai -m window --focus east"]
                   [:!Qu "/usr/local/bin/yabai -m window --focus north"]
+
+                  [:!QSe "/usr/local/bin/yabai -m window --warp west"]
+                  [:!QSe "/usr/local/bin/yabai -m window --warp south"]
+                  [:!QSi "/usr/local/bin/yabai -m window --warp east"]
+                  [:!QSu "/usr/local/bin/yabai -m window --warp north"]
+
                   [:!Qf "/usr/local/bin/yabai -m window --toggle zoom-fullscreen"]]}
          {:des "Home and End keys outside terminal"
           :rules [[:#SRhome :!Cleft_arrow :!term]
