@@ -18,8 +18,8 @@
                  :sublime ["^com\\.sublimetext\\.4$"]
                  :term ["^net\\.kovidgoyal\\.kitty$"]}
   :main [{:des "Home and End keys outside terminal"
-          :rules [[:#S#Rhome :!Cleft_arrow :!term]
-                  [:#S#Rend :!Cright_arrow :!term]]}
+          :rules [[:#SRhome :!Cleft_arrow :!term]
+                  [:#SRend :!Cright_arrow :!term]]}
          {:des "Home and End keys in terminal"
           :rules [[:home :!Ta :term]
                   [:end :!Te :term]]}
@@ -33,19 +33,25 @@
           :rules [[:!Tx :!Cx :!term]
                   [:!Tc :!Cc :!term]
                   [:!Tv :!Cv :!term]
-                  [:!Wx :!Qx :!term]
-                  [:!Wc :!Qc :!term]
-                  [:!Wv :!Qv :!term]]}
+                  [:!Wx :!Cx :!term]
+                  [:!Wc :!Cc :!term]
+                  [:!Wv :!Cv :!term]]}
          {:des "Window and tab control"
-          :rules [[:!T#S#Rn :!Cn :!term]
+          :rules [[:!T#SRn :!Cn :!term]
                   [:!Tt :!Ct :!term]
                   [:!Tw :!Cw :!term]
-                  [:!W#S#Rn :!Qn :!term]
-                  [:!Wt :!Qt :!term]
-                  [:!Ww :!Qw :!term]]}
+                  [:!W#SRn :!Cn :!term]
+                  [:!Wt :!Ct :!term]
+                  [:!Ww :!Cw :!term]]}
          {:des "Alt tab"
           :rules [[:!Otab :!Ctab]
-                  [:!Etab :!Qtab]]}
+                  [:!Etab :!Ctab]]}
          {:des "Ctrl + Enter"
           :rules [[:!Treturn_or_enter :!Creturn_or_enter]
-                  [:!Wreturn_or_enter :!Qreturn_or_enter]]}]}
+                  [:!Wreturn_or_enter :!Qreturn_or_enter]]}
+         {:des "Yabai commands"
+          :rules [[:!Qn "/usr/local/bin/yabai -m window --focus west"]
+                  [:!Qe "/usr/local/bin/yabai -m window --focus south"]
+                  [:!Qi "/usr/local/bin/yabai -m window --focus east"]
+                  [:!Qu "/usr/local/bin/yabai -m window --focus north"]
+                  [:!Qf "/usr/local/bin/yabai -m window --toggle zoom-fullscreen"]]}]}
