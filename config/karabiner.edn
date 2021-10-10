@@ -33,6 +33,9 @@
                   [:!Q1 "/usr/local/bin/yabai -m display --focus 1"]
                   [:!Q2 "/usr/local/bin/yabai -m display --focus 2"]
 
+                  [:!QOn "/usr/local/bin/yabai -m space --focus prev"]
+                  [:!QOi "/usr/local/bin/yabai -m space --focus next"]
+
                   [:!Qf "/usr/local/bin/yabai -m window --toggle zoom-fullscreen"]]}
          {:des "Home and End keys outside terminal"
           :rules [[:#SRhome :!Cleft_arrow :!term]
