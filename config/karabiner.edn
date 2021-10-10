@@ -1,15 +1,47 @@
+;; !  | means mandatory
+;; #  | means optional
+;; C  | left_command
+;; T  | left_control
+;; O  | left_option
+;; S  | left_shift
+;; F  | fn
+;; Q  | right_command
+;; W  | right_control
+;; E  | right_option
+;; R  | right_shift
+;; P  | caps_lock
+;; !! | mandatory command + control + optional + shift (hyper)
+;; ## | optional any
+
 {
   :applications {:chrome ["^com\\.google\\.Chrome$"]
                  :sublime ["^com\\.sublimetext\\.4$"]
-                 :kitty ["^net\\.kovidgoyal\\.kitty$"]}
+                 :term ["^net\\.kovidgoyal\\.kitty$"]}
   :main [{:des "Home and End keys outside terminal"
-          :rules [[:#S#Rhome :!Cleft_arrow :!kitty]
-                  [:#S#Rend :!Cright_arrow :!kitty]]}
+          :rules [[:#S#Rhome :!Cleft_arrow :!term]
+                  [:#S#Rend :!Cright_arrow :!term]]}
          {:des "Home and End keys in terminal"
-          :rules [[:home :!Ta :kitty]
-                  [:end :!Te :kitty]]}
+          :rules [[:home :!Ta :term]
+                  [:end :!Te :term]]}
          {:des "Delete forward in terminal"
-          :rules [[:!Rdelete_forward :delete_forward :kitty]
-                  [:!Sdelete_forward :delete_forward :kitty]]}
-         {:des "Control+l to browser URL"
-          :rules [[:!Tl :!Cl :chrome][:!Wl :!Ql :chrome]]}]}
+          :rules [[:!Rdelete_forward :delete_forward :term]
+                  [:!Sdelete_forward :delete_forward :term]]}
+         {:des "Browser options"
+          :rules [[:!Tl :!Cl :chrome]
+                  [:!Wl :!Ql :chrome]]}
+         {:des "Copy, paste, cut"
+          :rules [[:!Tx :!Cx :!term]
+                  [:!Tc :!Cc :!term]
+                  [:!Tv :!Cv :!term]
+                  [:!Wx :!Qx :!term]
+                  [:!Wc :!Qc :!term]
+                  [:!Wv :!Qv :!term]]}
+         {:des "Window and tab control"
+          :rules [[:!T#S#Rn :!Cn :!term]
+                  [:!Tt :!Ct :!term]
+                  [:!Tw :!Cw :!term]
+                  [:!W#S#Rn :!Qn :!term]
+                  [:!Wt :!Qt :!term]
+                  [:!Ww :!Qw :!term]]}
+         {:des "Alt tab"
+          :rules [:!Otab :!Ctab]}]}
