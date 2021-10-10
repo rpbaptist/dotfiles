@@ -54,7 +54,8 @@
                   [:!Wf :!Cf]]}
          {:des "Select URL in browser"
           :rules [[:!Tl :!Cl :browser]
-                  [:!Wl :!Cl :browser]]}
+                  [:!Wl :!Cl :browser]
+                  [{:pkey :button1 :modi :left_control} {:pkey :button1 :modi :left_command} :browser]]}
          {:des "Copy, paste, cut, undo, redo"
           :rules [[:!Tx :!Cx :!term]
                   [:!Tc :!Cc :!term]
