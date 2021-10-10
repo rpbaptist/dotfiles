@@ -32,6 +32,9 @@
          {:des "Home and End keys outside terminal"
           :rules [[:#SRhome :!Cleft_arrow :!term]
                   [:#SRend :!Cright_arrow :!term]]}
+         {:des "Ctrl plus arrow"
+          :rules [[:!Tleft_arrow :!Oleft_arrow]
+                  [:!Tright_arrow :!Oright_arrow]]}
          {:des "Home and End keys in terminal"
           :rules [[:home :!Ta :term]
                   [:end :!Te :term]]}
@@ -44,13 +47,17 @@
          {:des "Select URL in browser"
           :rules [[:!Tl :!Cl :browser]
                   [:!Wl :!Cl :browser]]}
-         {:des "Copy, paste, cut"
+         {:des "Copy, paste, cut, undo, redo"
           :rules [[:!Tx :!Cx :!term]
                   [:!Tc :!Cc :!term]
-                  [:!Tv :!Cv :!term]
+                  [:!T#SRv :!Cv :!term]
+                  [:!Tz :!Cz :!term]
+                  [:!Ty :!Cy :!term]
                   [:!Wx :!Cx :!term]
                   [:!Wc :!Cc :!term]
-                  [:!Wv :!Cv :!term]]}
+                  [:!Wv :!Cv :!term]
+                  [:!Wz :!Cz :!term]
+                  [:!Wy :!Cy :!term]]}
          {:des "Window and tab control"
           :rules [[:!T#SRn :!Cn :!term]
                   [:!Tt :!Ct :!term]
