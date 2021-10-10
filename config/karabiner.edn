@@ -17,7 +17,13 @@
   :applications {:browser ["^com\\.google\\.Chrome$"]
                  :sublime ["^com\\.sublimetext\\.4$"]
                  :term ["^net\\.kovidgoyal\\.kitty$"]}
-  :main [{:des "Home and End keys outside terminal"
+  :main [{:des "Yabai commands"
+          :rules [[:!Qn "/usr/local/bin/yabai -m window --focus west"]
+                  [:!Qe "/usr/local/bin/yabai -m window --focus south"]
+                  [:!Qi "/usr/local/bin/yabai -m window --focus east"]
+                  [:!Qu "/usr/local/bin/yabai -m window --focus north"]
+                  [:!Qf "/usr/local/bin/yabai -m window --toggle zoom-fullscreen"]]}
+         {:des "Home and End keys outside terminal"
           :rules [[:#SRhome :!Cleft_arrow :!term]
                   [:#SRend :!Cright_arrow :!term]]}
          {:des "Home and End keys in terminal"
@@ -26,9 +32,12 @@
          {:des "Delete forward in terminal"
           :rules [[:!Rdelete_forward :delete_forward]
                   [:!Sdelete_forward :delete_forward]]}
-         {:des "Browser options"
-          :rules [[:left_control :left_command :browser]
-                  [:right_control :right_command :browser]]}
+         {:des "Find"
+          :rules [[:!Tf :!Cf]
+                  [:!Wf :!Cf]]}
+         {:des "Select URL in browser"
+          :rules [[:!Tl :!Cl :browser]
+                  [:!Wl :!Cl :browser]]}
          {:des "Copy, paste, cut"
           :rules [[:!Tx :!Cx :!term]
                   [:!Tc :!Cc :!term]
@@ -48,10 +57,4 @@
                   [:!Etab :!Ctab]]}
          {:des "Ctrl + Enter"
           :rules [[:!Treturn_or_enter :!Creturn_or_enter]
-                  [:!Wreturn_or_enter :!Qreturn_or_enter]]}
-         {:des "Yabai commands"
-          :rules [[:!Qn "/usr/local/bin/yabai -m window --focus west"]
-                  [:!Qe "/usr/local/bin/yabai -m window --focus south"]
-                  [:!Qi "/usr/local/bin/yabai -m window --focus east"]
-                  [:!Qu "/usr/local/bin/yabai -m window --focus north"]
-                  [:!Qf "/usr/local/bin/yabai -m window --toggle zoom-fullscreen"]]}]}
+                  [:!Wreturn_or_enter :!Qreturn_or_enter]]}]}
