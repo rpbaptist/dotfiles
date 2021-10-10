@@ -14,7 +14,7 @@
 ;; ## | optional any
 
 {
-  :applications {:chrome ["^com\\.google\\.Chrome$"]
+  :applications {:browser ["^com\\.google\\.Chrome$"]
                  :sublime ["^com\\.sublimetext\\.4$"]
                  :term ["^net\\.kovidgoyal\\.kitty$"]}
   :main [{:des "Home and End keys outside terminal"
@@ -27,8 +27,8 @@
           :rules [[:!Rdelete_forward :delete_forward :term]
                   [:!Sdelete_forward :delete_forward :term]]}
          {:des "Browser options"
-          :rules [[:!Tl :!Cl :chrome]
-                  [:!Wl :!Ql :chrome]]}
+          :rules [[:left_control :left_command :browser]
+                  [:right_control :right_command :browser]]}
          {:des "Copy, paste, cut"
           :rules [[:!Tx :!Cx :!term]
                   [:!Tc :!Cc :!term]
