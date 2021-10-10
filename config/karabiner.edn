@@ -44,4 +44,8 @@
                   [:!Wt :!Qt :!term]
                   [:!Ww :!Qw :!term]]}
          {:des "Alt tab"
-          :rules [:!Otab :!Ctab]}]}
+          :rules [[:!Otab :!Ctab]
+                  [:!Etab :!Qtab]]}
+         {:des "Ctrl + Enter"
+          :rules [[:!Treturn_or_enter :!Creturn_or_enter]
+                  [:!Wreturn_or_enter :!Qreturn_or_enter]]}]}
