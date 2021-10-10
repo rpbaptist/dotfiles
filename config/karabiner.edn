@@ -24,8 +24,8 @@
           :rules [[:home :!Ta :term]
                   [:end :!Te :term]]}
          {:des "Delete forward in terminal"
-          :rules [[:!Rdelete_forward :delete_forward :term]
-                  [:!Sdelete_forward :delete_forward :term]]}
+          :rules [[:!Rdelete_forward :delete_forward]
+                  [:!Sdelete_forward :delete_forward]]}
          {:des "Browser options"
           :rules [[:left_control :left_command :browser]
                   [:right_control :right_command :browser]]}
