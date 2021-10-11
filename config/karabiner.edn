@@ -33,11 +33,21 @@
 
                   [:!Qd "/usr/local/bin/yabai -m window --toggle float"]
 
+                  [:!QSb "/usr/local/bin/yabai -m space --balance"]
+                  [:!Qr "/usr/local/bin/yabai -m space --rotate 90"]
+                  [:!QSr "/usr/local/bin/yabai -m space --rotate 270"]
+
+                  [:!QSx "/usr/local/bin/yabai -m space --mirror x-axis"]
+                  [:!QSy "/usr/local/bin/yabai -m space --mirror y-axis"]
+
                   [:!Q1 "/usr/local/bin/yabai -m display --focus 1"]
                   [:!Q2 "/usr/local/bin/yabai -m display --focus 2"]
 
-                  [:!QOn "/usr/local/bin/yabai -m space --focus prev"]
-                  [:!QOi "/usr/local/bin/yabai -m space --focus next"]
+                  [:!QOc "/usr/local/bin/yabai -m space --create"]
+                  [:!QOx "/usr/local/bin/yabai -m space --destroy"]
+
+                  [:!QOopen_bracket "/usr/local/bin/yabai -m space --focus prev"]
+                  [:!QOclose_bracket "/usr/local/bin/yabai -m space --focus next"]
 
                   [:!Qf "/usr/local/bin/yabai -m window --toggle zoom-fullscreen"]]}
          {:des "Home and End keys outside terminal"
@@ -73,12 +83,12 @@
                   [:!Wz :!Cz :!term]
                   [:!Wy :!Cy :!term]]}
          {:des "Window and tab control"
-          :rules [[:!T#SRn :!Cn :!term]
-                  [:!Tt :!Ct :!term]
-                  [:!Tw :!Cw :!term]
-                  [:!W#SRn :!Cn :!term]
-                  [:!Wt :!Ct :!term]
-                  [:!Ww :!Cw :!term]]}
+          :rules [[:!T#SRn :!Cn :general]
+                  [:!T#SRt :!Ct :general]
+                  [:!Tw :!Cw :general]
+                  [:!W#SRn :!Cn :general]
+                  [:!W#SRt :!Ct :general]
+                  [:!Ww :!Cw :general]]}
          {:des "Alt tab"
           :rules [[:!O#SRtab :!Ctab]
                   [:!E#SRtab :!Ctab]]}
