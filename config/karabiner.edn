@@ -17,6 +17,7 @@
   :applications {:general ["^com\\.google\\.Chrome$"
                            "^com\\.tinyspeck\\.slackmacgap$"]
                  :browser ["^com\\.google\\.Chrome$"]
+                 :bitwarden ["^com\\.bitwarden\\.desktop$"]
                  :slack ["^com\\.tinyspeck\\.slackmacgap$"]
                  :editor ["^com\\.sublimetext\\.4$"]
                  :term ["^net\\.kovidgoyal\\.kitty$"]}
@@ -71,6 +72,11 @@
          {:des "Find"
           :rules [[:!Tf :!Cf]
                   [:!Wf :!Cf]]}
+         {:des "Copy password from Bitwarden"
+          :rules [[:!Tp :!Cp :bitwarden]
+                  [:!Qp :!Cp :bitwarden]
+                  [:!Tu :!Cu :bitwarden]
+                  [:!Qu :!Cu :bitwarden]]}
          {:des "Select URL in browser"
           :rules [[:!Tl :!Cl :browser]
                   [:!Wl :!Cl :browser]
@@ -80,13 +86,13 @@
                   [:!Ta :!Ca :!term]
                   [:!Tc :!Cc :!term]
                   [:!T#SRv :!Cv :!term]
-                  [:!Tz :!Cz :!term]
+                  [:!T#SRz :!Cz :!term]
                   [:!Ty :!Cy :!term]
                   [:!Wx :!Cx :!term]
                   [:!Wa :!Ca :!term]
                   [:!Wc :!Cc :!term]
                   [:!Wv :!Cv :!term]
-                  [:!Wz :!Cz :!term]
+                  [:!W#SRz :!Cz :!term]
                   [:!Wy :!Cy :!term]]}
          {:des "Window and tab control"
           :rules [[:!T#SRn :!Cn :general]
