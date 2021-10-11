@@ -35,6 +35,11 @@
                   [:!QSi [:yabai_window "--warp east"]]
                   [:!QSu [:yabai_window "--warp north"]]
 
+                  [:!QTn [:yabai_window "--insert west"]]
+                  [:!QTe [:yabai_window "--insert south"]]
+                  [:!QTi [:yabai_window "--insert east"]]
+                  [:!QTu [:yabai_window "--insert north"]]
+
                   [:!Qd [:yabai_window "--toggle float"]]
 
                   [:!QSb [:yabai_space "--balance"]]
@@ -57,6 +62,7 @@
                   [:!QOclose_bracket [:yabai_space "--focus next"]]
 
                   [:!Qf [:yabai_window "--toggle zoom-fullscreen"]]]}
+
          {:des "Home and End keys outside terminal"
           :rules [[:#SRhome :!Cleft_arrow :!term]
                   [:#SRend :!Cright_arrow :!term]]}
