@@ -95,6 +95,10 @@
          {:des "Select URL in browser"
           :rules [[:!Tl :!Cl :browser]
                   [:!Wl :!Cl :browser]
+                  [:!Tj :!CSj :browser]
+                  [:!Wj :!CSj :browser]
+                  [:!Tr :!Cr :browser]
+                  [:!Wr :!Cr :browser]
                   [{:pkey :button1 :modi :left_control} {:pkey :button1 :modi :left_command} :browser]]}
          {:des "Copy, paste, cut, undo, redo, select"
           :rules [[:!Tx :!Cx :!term]
@@ -126,4 +130,6 @@
                   [:!Wdelete_or_backspace :!Cdelete_or_backspace]]}
          {:des "Slack shortcuts"
           :rules [[:!Tk :!Ck :slack]
-                  [:!Tcomma :!Ccomma :slack]]}]}
+                  [:!Wk :!Ck :slack]
+                  [:!Tcomma :!Ccomma :slack]
+                  [:!Wcomma :!Ccomma :slack]]}]}
