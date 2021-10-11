@@ -26,7 +26,7 @@
                   [:!Qi "/usr/local/bin/yabai -m window --focus east"]
                   [:!Qu "/usr/local/bin/yabai -m window --focus north"]
 
-                  [:!QSe "/usr/local/bin/yabai -m window --warp west"]
+                  [:!QSn "/usr/local/bin/yabai -m window --warp west"]
                   [:!QSe "/usr/local/bin/yabai -m window --warp south"]
                   [:!QSi "/usr/local/bin/yabai -m window --warp east"]
                   [:!QSu "/usr/local/bin/yabai -m window --warp north"]
