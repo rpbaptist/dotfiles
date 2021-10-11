@@ -65,13 +65,10 @@
          {:des "Find"
           :rules [[:!Tf :!Cf]
                   [:!Wf :!Cf]]}
-;         {:des "Select URL in browser"
-;          :rules [[:!Tl :!Cl :browser]
-;                  [:!Wl :!Cl :browser]
-;                  [{:pkey :button1 :modi :left_control} {:pkey :button1 :modi :left_command} :browser]]}
-         {:des "Control is always command in browser"
-          :rules [[:left_control :left_command :browser]
-                  [:right_control :left_command :browser]]}
+         {:des "Select URL in browser"
+          :rules [[:!Tl :!Cl :browser]
+                  [:!Wl :!Cl :browser]
+                  [{:pkey :button1 :modi :left_control} {:pkey :button1 :modi :left_command} :browser]]}
          {:des "Copy, paste, cut, undo, redo, select"
           :rules [[:!Tx :!Cx :!term]
                   [:!Ta :!Ca :!term]
