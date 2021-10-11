@@ -9,12 +9,12 @@
 #  |___/
 
 # general space settings
-yabai -m config layout                       bsp
-yabai -m config top_padding                  07
-yabai -m config bottom_padding               07
-yabai -m config left_padding                 07
-yabai -m config right_padding                07
-yabai -m config window_gap                   07
+yabai -m config layout         bsp
+yabai -m config top_padding    6
+yabai -m config bottom_padding 6
+yabai -m config left_padding   6
+yabai -m config right_padding  6
+yabai -m config window_gap     6
 
 # Spaces
 yabai -m space 1 --label one
