@@ -34,6 +34,7 @@ yabai -m rule --add app="^Logi Options$" manage=off
 yabai -m rule --add app="^Alfred Preferences$" manage=off
 yabai -m rule --add app="^Discord$" manage=off
 yabai -m rule --add app="^Slack$" manage=off
+yabai -m rule --add app="^1Password 7$" manage=off
 yabai -m rule --add app="^Messages$" manage=off
 yabai -m rule --add app="^Bitwarden$" manage=off
 yabai -m rule --add app="^Zoom$" manage=off
