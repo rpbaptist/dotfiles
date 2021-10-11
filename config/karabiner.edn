@@ -20,39 +20,42 @@
                  :slack ["^com\\.tinyspeck\\.slackmacgap$"]
                  :editor ["^com\\.sublimetext\\.4$"]
                  :term ["^net\\.kovidgoyal\\.kitty$"]}
+  :templates {:yabai_window "/usr/local/bin/yabai -m window %s"
+              :yabai_space "/usr/local/bin/yabai -m space %s"
+              :yabai_display "/usr/local/bin/yabai -m display %s"}
   :main [{:des "Yabai commands"
-          :rules [[:!Qn "/usr/local/bin/yabai -m window --focus west"]
-                  [:!Qe "/usr/local/bin/yabai -m window --focus south"]
-                  [:!Qi "/usr/local/bin/yabai -m window --focus east"]
-                  [:!Qu "/usr/local/bin/yabai -m window --focus north"]
+          :rules [[:!Qn [:yabai_window "--focus west"]]
+                  [:!Qe [:yabai_window "--focus south"]]
+                  [:!Qi [:yabai_window "--focus east"]]
+                  [:!Qu [:yabai_window "--focus north"]]
 
-                  [:!QSn "/usr/local/bin/yabai -m window --warp west"]
-                  [:!QSe "/usr/local/bin/yabai -m window --warp south"]
-                  [:!QSi "/usr/local/bin/yabai -m window --warp east"]
-                  [:!QSu "/usr/local/bin/yabai -m window --warp north"]
+                  [:!QSn [:yabai_window "--warp west"]]
+                  [:!QSe [:yabai_window "--warp south"]]
+                  [:!QSi [:yabai_window "--warp east"]]
+                  [:!QSu [:yabai_window "--warp north"]]
 
-                  [:!Qd "/usr/local/bin/yabai -m window --toggle float"]
+                  [:!Qd [:yabai_window "--toggle float"]]
 
-                  [:!QSb "/usr/local/bin/yabai -m space --balance"]
-                  [:!Qr "/usr/local/bin/yabai -m space --rotate 90"]
-                  [:!QSr "/usr/local/bin/yabai -m space --rotate 270"]
+                  [:!QSb [:yabai_space "--balance"]]
+                  [:!Qr [:yabai_space "--rotate 90"]]
+                  [:!QSr [:yabai_space "--rotate 270"]]
 
-                  [:!QSx "/usr/local/bin/yabai -m space --mirror x-axis"]
-                  [:!QSy "/usr/local/bin/yabai -m space --mirror y-axis"]
+                  [:!QSx [:yabai_space "--mirror x-axis"]]
+                  [:!QSy [:yabai_space "--mirror y-axis"]]
 
-                  [:!Q1 "/usr/local/bin/yabai -m display --focus 1"]
-                  [:!Q2 "/usr/local/bin/yabai -m display --focus 2"]
+                  [:!Q1 [:yabai_display "--focus 1"]]
+                  [:!Q2 [:yabai_display "--focus 2"]]
 
-                  [:!QOc "/usr/local/bin/yabai -m space --create; /usr/local/bin/yabai -m space --focus next"]
-                  [:!QOx "/usr/local/bin/yabai -m space --destroy"]
+                  [:!QOc [[:yabai_space "--create"] [:yabai_space "--focus next"]]]
+                  [:!QOx [:yabai_space "--destroy"]]
 
-                  [:!QOn "/usr/local/bin/yabai -m window --space prev"]
-                  [:!QOn "/usr/local/bin/yabai -m window --space next"]
+                  [:!QOn [:yabai_window "--space prev"]]
+                  [:!QOi [:yabai_window "--space next"]]
 
-                  [:!QOopen_bracket "/usr/local/bin/yabai -m space --focus prev"]
-                  [:!QOclose_bracket "/usr/local/bin/yabai -m space --focus next"]
+                  [:!QOopen_bracket [:yabai_space "--focus prev"]]
+                  [:!QOclose_bracket [:yabai_space "--focus next"]]
 
-                  [:!Qf "/usr/local/bin/yabai -m window --toggle zoom-fullscreen"]]}
+                  [:!Qf [:yabai_window "--toggle zoom-fullscreen"]]]}
          {:des "Home and End keys outside terminal"
           :rules [[:#SRhome :!Cleft_arrow :!term]
                   [:#SRend :!Cright_arrow :!term]]}
