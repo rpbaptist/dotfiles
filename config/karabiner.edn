@@ -49,17 +49,26 @@
                   [:!QSx [:yabai_space "--mirror x-axis"]]
                   [:!QSy [:yabai_space "--mirror y-axis"]]
 
-                  [:!Q1 [:yabai_display "--focus 1"]]
-                  [:!Q2 [:yabai_display "--focus 2"]]
+                  [:!Q1 [:yabai_space "--focus 1"]]
+                  [:!Q2 [:yabai_space "--focus 2"]]
+                  [:!Q3 [:yabai_space "--focus 3"]]
+                  [:!Q4 [:yabai_space "--focus 4"]]
+                  [:!Q5 [:yabai_space "--focus 5"]]
 
-                  [:!QOc [[:yabai_space "--create"] [:yabai_space "--focus next"]]]
+                  [:!QS1 [:yabai_window "--space 1"]]
+                  [:!QS2 [:yabai_window "--space 2"]]
+                  [:!QS3 [:yabai_window "--space 3"]]
+                  [:!QS4 [:yabai_window "--space 4"]]
+                  [:!QS5 [:yabai_window "--space 5"]]
+
+                  [:!QOc [:yabai_space "--create"]]
                   [:!QOx [:yabai_space "--destroy"]]
 
-                  [:!QOn [:yabai_window "--space prev"]]
-                  [:!QOi [:yabai_window "--space next"]]
+                  [:!QOopen_bracket [:yabai_window "--space prev"]]
+                  [:!QOclose_bracket [:yabai_window "--space next"]]
 
-                  [:!QOopen_bracket [:yabai_space "--focus prev"]]
-                  [:!QOclose_bracket [:yabai_space "--focus next"]]
+                  [:!Qopen_bracket [:yabai_space "--focus prev"]]
+                  [:!Qclose_bracket [:yabai_space "--focus next"]]
 
                   [:!Qf [:yabai_window "--toggle zoom-fullscreen"]]]}
 
