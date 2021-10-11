@@ -14,8 +14,11 @@
 ;; ## | optional any
 
 {
-  :applications {:browser ["^com\\.google\\.Chrome$"]
-                 :sublime ["^com\\.sublimetext\\.4$"]
+  :applications {:general ["^com\\.google\\.Chrome$"
+                           "^com\\.tinyspeck\\.slackmacgap$"]
+                 :browser ["^com\\.google\\.Chrome$"]
+                 :slack ["^com\\.tinyspeck\\.slackmacgap$"]
+                 :editor ["^com\\.sublimetext\\.4$"]
                  :term ["^net\\.kovidgoyal\\.kitty$"]}
   :main [{:des "Yabai commands"
           :rules [[:!Qn "/usr/local/bin/yabai -m window --focus west"]
@@ -56,13 +59,15 @@
           :rules [[:!Tl :!Cl :browser]
                   [:!Wl :!Cl :browser]
                   [{:pkey :button1 :modi :left_control} {:pkey :button1 :modi :left_command} :browser]]}
-         {:des "Copy, paste, cut, undo, redo"
+         {:des "Copy, paste, cut, undo, redo, select"
           :rules [[:!Tx :!Cx :!term]
+                  [:!Ta :!Ca :!term]
                   [:!Tc :!Cc :!term]
                   [:!T#SRv :!Cv :!term]
                   [:!Tz :!Cz :!term]
                   [:!Ty :!Cy :!term]
                   [:!Wx :!Cx :!term]
+                  [:!Wa :!Ca :!term]
                   [:!Wc :!Cc :!term]
                   [:!Wv :!Cv :!term]
                   [:!Wz :!Cz :!term]
@@ -75,8 +80,11 @@
                   [:!Wt :!Ct :!term]
                   [:!Ww :!Cw :!term]]}
          {:des "Alt tab"
-          :rules [[:!Otab :!Ctab]
-                  [:!Etab :!Ctab]]}
+          :rules [[:!O#SRtab :!Ctab]
+                  [:!E#SRtab :!Ctab]]}
          {:des "Ctrl + Enter"
           :rules [[:!Treturn_or_enter :!Creturn_or_enter]
-                  [:!Wreturn_or_enter :!Qreturn_or_enter]]}]}
+                  [:!Wreturn_or_enter :!Creturn_or_enter]]}
+         {:des "Slack shortcuts"
+          :rules [[:!Tk :!Ck :slack]
+                  [:!Tcomma :!Ccomma :slack]]}]}
