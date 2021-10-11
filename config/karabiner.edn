@@ -43,8 +43,11 @@
                   [:!Q1 "/usr/local/bin/yabai -m display --focus 1"]
                   [:!Q2 "/usr/local/bin/yabai -m display --focus 2"]
 
-                  [:!QOc "/usr/local/bin/yabai -m space --create"]
+                  [:!QOc "/usr/local/bin/yabai -m space --create; /usr/local/bin/yabai -m space --focus next"]
                   [:!QOx "/usr/local/bin/yabai -m space --destroy"]
+
+                  [:!QOn "/usr/local/bin/yabai -m window --space prev"]
+                  [:!QOn "/usr/local/bin/yabai -m window --space next"]
 
                   [:!QOopen_bracket "/usr/local/bin/yabai -m space --focus prev"]
                   [:!QOclose_bracket "/usr/local/bin/yabai -m space --focus next"]
