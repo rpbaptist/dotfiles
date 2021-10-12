@@ -42,6 +42,11 @@
                   [:!QTi [:yabai_window "--insert east"]]
                   [:!QTu [:yabai_window "--insert north"]]
 
+                  [:!QOn [:yabai_window "--stack west"]]
+                  [:!QOe [:yabai_window "--stack south"]]
+                  [:!QOi [:yabai_window "--stack east"]]
+                  [:!QOu [:yabai_window "--stack north"]]
+
                   [:!Qd [:yabai_window "--toggle float"]]
 
                   [:!QSb [:yabai_space "--balance"]]
