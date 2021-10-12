@@ -15,7 +15,8 @@
 
 {
   :applications {:general ["^com\\.google\\.Chrome$"
-                           "^com\\.tinyspeck\\.slackmacgap$"]
+                           "^com\\.tinyspeck\\.slackmacgap$"
+                           "^com\\.apple\\.finder$"]
                  :browser ["^com\\.google\\.Chrome$"]
                  :bitwarden ["^com\\.bitwarden\\.desktop$"]
                  :slack ["^com\\.tinyspeck\\.slackmacgap$"]
@@ -98,8 +99,9 @@
                   [:!Tj :!CSj :browser]
                   [:!Wj :!CSj :browser]
                   [:!Tr :!Cr :browser]
-                  [:!Wr :!Cr :browser]
-                  [{:pkey :button1 :modi :left_control} {:pkey :button1 :modi :left_command} :browser]]}
+                  [:!Wr :!Cr :browser]]}
+         {:des "Mouse control"
+          :rules [[{:pkey :button1 :modi :left_control} {:pkey :button1 :modi :left_command} :general]]}
          {:des "Copy, paste, cut, undo, redo, select"
           :rules [[:!Tx :!Cx :!term]
                   [:!Ta :!Ca :!term]
