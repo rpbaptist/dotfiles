@@ -17,11 +17,11 @@ yabai -m config right_padding  6
 yabai -m config window_gap     6
 
 # Spaces
-yabai -m space 1 --label one
-yabai -m space 2 --label two
-yabai -m space 3 --label three
-yabai -m space 4 --label four
-yabai -m space 5 --label five
+# yabai -m space 1 --label one
+# yabai -m space 2 --label two
+# yabai -m space 3 --label three
+# yabai -m space 4 --label four
+# yabai -m space 5 --label five
 
 # float preferences
 yabai -m rule --add app="^System Preferences$" sticky=on layer=above manage=off
@@ -32,6 +32,7 @@ yabai -m rule --add app="^Activity Monitor$" sticky=on layer=above manage=off
 # yabai -m rule --add app="^Spotify$" manage=off
 yabai -m rule --add app="^Logi Options$" manage=off
 yabai -m rule --add app="^Alfred Preferences$" manage=off
+yabai -m rule --add app="^Archive Utility$" manage=off
 yabai -m rule --add app="^App Store$" manage=off
 yabai -m rule --add app="^Discord$" manage=off
 yabai -m rule --add app="^Slack$" manage=off
@@ -72,6 +73,6 @@ yabai -m config mouse_action1                move
 yabai -m config mouse_action2                resize
 yabai -m config mouse_drop_action            swap
 
-#yabai -m config external_bar all:26:0
+yabai -m config external_bar all:26:0
 
 # echo "yabai configuration loaded.."
