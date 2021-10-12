@@ -16,6 +16,7 @@
 {
   :applications {:general ["^com\\.google\\.Chrome$"
                            "^com\\.tinyspeck\\.slackmacgap$"
+                           "^com\\.agilebits\\.onepassword7$"
                            "^com\\.apple\\.finder$"]
                  :browser ["^com\\.google\\.Chrome$"]
                  :bitwarden ["^com\\.bitwarden\\.desktop$"]
