@@ -59,7 +59,7 @@
                   [:!QS1 [:yabai_window "--space 1"]]
                   [:!QS2 [:yabai_window "--space 2"]]
                   [:!QS3 [:yabai_window "--space 3"]]
-                  ;[:!QS4 [:yabai_window "--space 4"]]
+                  [:!QS4 [:yabai_window "--space 4"]]
                   ;[:!QS5 [:yabai_window "--space 5"]]
 
                   ;[:!QOc [:yabai_space "--create"]]
@@ -76,12 +76,12 @@
          {:des "Home and End keys outside terminal"
           :rules [[:#SRhome :!Cleft_arrow :!term]
                   [:#SRend :!Cright_arrow :!term]]}
+         {:des "Ctrl+Super+L to lock screen"
+          :rules [[:!TQl :!TCq]
+                  [:!WQl :!TCq]]}
          {:des "Ctrl plus arrow"
-          :rules [[:!Tleft_arrow :!Oleft_arrow]
-                  [:!Tright_arrow :!Oright_arrow]]}
-         {:des "Home and End keys in terminal"
-          :rules [[:home :!Ta :term]
-                  [:end :!Te :term]]}
+          :rules [[:!Tleft_arrow :!Oleft_arrow :!editor]
+                  [:!Tright_arrow :!Oright_arrow :!editor]]}
          {:des "Delete forward in terminal"
           :rules [[:!Rdelete_forward :delete_forward]
                   [:!Sdelete_forward :delete_forward]]}
@@ -93,6 +93,16 @@
                   [:!Qp :!Cp :bitwarden]
                   [:!Tu :!Cu :bitwarden]
                   [:!Qu :!Cu :bitwarden]]}
+         {:des "Text manipulation"
+          :rules [[:!Tb :!Cb :!term]
+                  [:!Wb :!Cb :!term]
+                  [:!Ti :!Ci :!term]
+                  [:!Wi :!Ci :!term]
+                  [:!Tu :!Cu :!term]
+                  [:!Wu :!Cu :!term]]}
+         {:des "Ctrl+F to find"
+          :rules [[:!Tf :!Cf :!term]
+                  [:!Wf :!Cf :!term]]}
          {:des "Select URL in browser"
           :rules [[:!Tl :!Cl :browser]
                   [:!Wl :!Cl :browser]
@@ -102,19 +112,21 @@
                   [:!Wr :!Cr :browser]]}
          {:des "Mouse control"
           :rules [[{:pkey :button1 :modi :left_control} {:pkey :button1 :modi :left_command} :general]]}
-         {:des "Copy, paste, cut, undo, redo, select"
+         {:des "Copy, paste, cut, undo, redo, select, save"
           :rules [[:!Tx :!Cx :!term]
                   [:!Ta :!Ca :!term]
                   [:!Tc :!Cc :!term]
                   [:!T#SRv :!Cv :!term]
                   [:!T#SRz :!Cz :!term]
                   [:!Ty :!Cy :!term]
+                  [:!Ts :!Cs :!term]
                   [:!Wx :!Cx :!term]
                   [:!Wa :!Ca :!term]
                   [:!Wc :!Cc :!term]
                   [:!Wv :!Cv :!term]
                   [:!W#SRz :!Cz :!term]
-                  [:!Wy :!Cy :!term]]}
+                  [:!Wy :!Cy :!term]
+                  [:!Ws :!Cs :!term]]}
          {:des "Window and tab control"
           :rules [[:!T#SRn :!Cn :general]
                   [:!T#SRt :!Ct :general]
