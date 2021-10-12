@@ -103,6 +103,12 @@
          {:des "Ctrl+F to find"
           :rules [[:!Tf :!Cf :!term]
                   [:!Wf :!Cf :!term]]}
+         {:des "Screenshots"
+          :rules [[:print_screen :!QS7]     ; selection to clipboard
+                  [:!Tprint_screen :!QST7]  ; selection to file
+                  [:!Sprint_screen :!QS6]   ; full screen to clipboard
+                  [:!STSprint_screen :!QST6] ; full screen to file
+                  [:!Oprint_screen :!QS8]]} ; menu
          {:des "Select URL in browser"
           :rules [[:!Tl :!Cl :browser]
                   [:!Wl :!Cl :browser]
