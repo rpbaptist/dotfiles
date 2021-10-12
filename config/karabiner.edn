@@ -88,8 +88,8 @@
                   [:!QTb [:launch "Bitwarden"]]
                   [:!QWb [:launch "Bitwarden"]]]}
          {:des "Home and End keys outside terminal"
-          :rules [[:#SRhome :!Cleft_arrow :!term]
-                  [:#SRend :!Cright_arrow :!term]]}
+          :rules [[:#SRhome :!Cleft_arrow :general]
+                  [:#SRend :!Cright_arrow :general]]}
          {:des "Ctrl+Super+L to lock screen"
           :rules [[:!TQl :!TCq]
                   [:!WQl :!TCq]]}
@@ -110,15 +110,15 @@
                   [:!Tu :!Cu :bitwarden]
                   [:!Qu :!Cu :bitwarden]]}
          {:des "Text manipulation"
-          :rules [[:!Tb :!Cb :!term]
-                  [:!Wb :!Cb :!term]
-                  [:!Ti :!Ci :!term]
-                  [:!Wi :!Ci :!term]
-                  [:!Tu :!Cu :!term]
-                  [:!Wu :!Cu :!term]]}
+          :rules [[:!Tb :!Cb :general]
+                  [:!Wb :!Cb :general]
+                  [:!Ti :!Ci :general]
+                  [:!Wi :!Ci :general]
+                  [:!Tu :!Cu :general]
+                  [:!Wu :!Cu :general]]}
          {:des "Ctrl+F to find"
-          :rules [[:!Tf :!Cf :!term]
-                  [:!Wf :!Cf :!term]]}
+          :rules [[:!Tf :!Cf :general]
+                  [:!Wf :!Cf :general]]}
          {:des "Screenshots"
           :rules [[:print_screen :!QS7]     ; selection to clipboard
                   [:!Tprint_screen :!QST7]  ; selection to file
@@ -138,20 +138,20 @@
          {:des "Mouse control"
           :rules [[{:pkey :button1 :modi :left_control} {:pkey :button1 :modi :left_command} :general]]}
          {:des "Copy, paste, cut, undo, redo, select, save"
-          :rules [[:!Tx :!Cx :!term]
-                  [:!Ta :!Ca :!term]
-                  [:!Tc :!Cc :!term]
-                  [:!T#SRv :!Cv :!term]
-                  [:!T#SRz :!Cz :!term]
-                  [:!Ty :!Cy :!term]
-                  [:!Ts :!Cs :!term]
-                  [:!Wx :!Cx :!term]
-                  [:!Wa :!Ca :!term]
-                  [:!Wc :!Cc :!term]
-                  [:!Wv :!Cv :!term]
-                  [:!W#SRz :!Cz :!term]
-                  [:!Wy :!Cy :!term]
-                  [:!Ws :!Cs :!term]]}
+          :rules [[:!Tx :!Cx :general]
+                  [:!Ta :!Ca :general]
+                  [:!Tc :!Cc :general]
+                  [:!T#SRv :!Cv :general]
+                  [:!T#SRz :!Cz :general]
+                  [:!Ty :!Cy :general]
+                  [:!Ts :!Cs :general]
+                  [:!Wx :!Cx :general]
+                  [:!Wa :!Ca :general]
+                  [:!Wc :!Cc :general]
+                  [:!Wv :!Cv :general]
+                  [:!W#SRz :!Cz :general]
+                  [:!Wy :!Cy :general]
+                  [:!Ws :!Cs :general]]}
          {:des "Window and tab control"
           :rules [[:!T#SRn :!Cn :general]
                   [:!T#SRt :!Ct :general]
