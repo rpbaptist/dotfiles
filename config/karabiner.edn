@@ -118,13 +118,14 @@
                   [:!Sprint_screen :!QS6]   ; full screen to clipboard
                   [:!STSprint_screen :!QST6] ; full screen to file
                   [:!Oprint_screen :!QS8]]} ; menu
-         {:des "Select URL in browser"
+         {:des "Browser specific controls"
           :rules [[:!Tl :!Cl :browser]
                   [:!Wl :!Cl :browser]
                   [:!Tj :!CSj :browser]
                   [:!Wj :!CSj :browser]
                   [:!Tr :!Cr :browser]
-                  [:!Wr :!Cr :browser]]}
+                  [:!Oleft_arrow :!Cleft_arrow :browser]
+                  [:!Oright_arrow :!Cright_arrow :browser]]}
          {:des "Mouse control"
           :rules [[{:pkey :button1 :modi :left_control} {:pkey :button1 :modi :left_command} :general]]}
          {:des "Copy, paste, cut, undo, redo, select, save"
