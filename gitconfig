@@ -1,7 +1,6 @@
 [user]
 	name = Richard Baptist
-	email = code@richardbaptist.nl
-	signingkey = 9E79FA364ABBFFAB
+	email = richard@remote.com
 [checkout]
   defaultRemote=origin
 [color]
