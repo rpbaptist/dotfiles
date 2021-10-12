@@ -46,6 +46,8 @@
                   [:!QOe [:yabai_window "--stack south"]]
                   [:!QOi [:yabai_window "--stack east"]]
                   [:!QOu [:yabai_window "--stack north"]]
+                  [:!QOj [:yabai_window "--focus stack.prev"]]
+                  [:!QOm [:yabai_window "--focus stack.next"]]
 
                   [:!Qd [:yabai_window "--toggle float"]]
 
