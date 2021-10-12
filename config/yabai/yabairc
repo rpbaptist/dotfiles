@@ -32,6 +32,7 @@ yabai -m rule --add app="^Activity Monitor$" sticky=on layer=above manage=off
 # yabai -m rule --add app="^Spotify$" manage=off
 yabai -m rule --add app="^Logi Options$" manage=off
 yabai -m rule --add app="^Alfred Preferences$" manage=off
+yabai -m rule --add app="^App Store$" manage=off
 yabai -m rule --add app="^Discord$" manage=off
 yabai -m rule --add app="^Slack$" manage=off
 yabai -m rule --add app="^1Password 7$" manage=off
