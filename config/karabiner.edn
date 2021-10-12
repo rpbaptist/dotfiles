@@ -128,8 +128,8 @@
          {:des "Ctrl + Enter"
           :rules [[:!Treturn_or_enter :!Creturn_or_enter]
                   [:!Wreturn_or_enter :!Creturn_or_enter]
-                  [:!Tdelete_or_backspace :!Cdelete_or_backspace]
-                  [:!Wdelete_or_backspace :!Cdelete_or_backspace]]}
+                  [:!Tdelete_or_backspace :!Odelete_or_backspace]
+                  [:!Wdelete_or_backspace :!Odelete_or_backspace]]}
          {:des "Slack shortcuts"
           :rules [[:!Tk :!Ck :slack]
                   [:!Wk :!Ck :slack]
