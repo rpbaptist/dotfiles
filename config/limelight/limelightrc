@@ -1,0 +1,5 @@
+limelight -m config radius 2
+limelight -m config width 3
+limelight -m config placement interior
+limelight -m config active_color  0xffebdbb2
+limelight -m config normal_color  0xff3c3836

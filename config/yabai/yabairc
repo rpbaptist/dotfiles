@@ -77,3 +77,7 @@ yabai -m config mouse_drop_action            swap
 yabai -m config external_bar all:26:0
 
 # echo "yabai configuration loaded.."
+
+# Limelight
+killall limelight &> /dev/null
+/usr/local/bin/limelight &> /dev/null &
