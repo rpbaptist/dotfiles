@@ -1,14 +1,14 @@
 ;; !  | means mandatory
 ;; #  | means optional
 ;; C  | left_command
-;; T  | left_control
-;; O  | left_option
-;; S  | left_shift
-;; F  | fn
 ;; Q  | right_command
-;; W  | right_control
+;; O  | left_option
 ;; E  | right_option
+;; T  | left_control
+;; W  | right_control
+;; S  | left_shift
 ;; R  | right_shift
+;; F  | fn
 ;; P  | caps_lock
 ;; !! | mandatory command + control + optional + shift (hyper)
 ;; ## | optional any
@@ -22,7 +22,8 @@
                  :slack ["^com\\.tinyspeck\\.slackmacgap$"]
                  :editor ["^com\\.sublimetext\\.4$"]
                  :term ["^net\\.kovidgoyal\\.kitty$"]}
-  :templates {:yabai_window "/usr/local/bin/yabai -m window %s"
+  :templates {:launch "open -a %s.app"
+              :yabai_window "/usr/local/bin/yabai -m window %s"
               :yabai_space "/usr/local/bin/yabai -m space %s"
               :yabai_display "/usr/local/bin/yabai -m display %s"}
   :main [{:des "Yabai commands"
@@ -72,7 +73,13 @@
                   ;[:!Qclose_bracket [:yabai_space "--focus next"]]
 
                   [:!Qf [:yabai_window "--toggle zoom-fullscreen"]]]}
-
+         {:des "Launch apps"
+          :rules [[:!QTt [:launch "kitty"]]
+                  [:!QWt [:launch "kitty"]]
+                  [:!QTs [:launch "Slack"]]
+                  [:!QWs [:launch "Slack"]]
+                  [:!QTb [:launch "Bitwarden"]]
+                  [:!QWb [:launch "Bitwarden"]]]}
          {:des "Home and End keys outside terminal"
           :rules [[:#SRhome :!Cleft_arrow :!term]
                   [:#SRend :!Cright_arrow :!term]]}
