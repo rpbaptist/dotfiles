@@ -88,6 +88,8 @@
          {:des "Find"
           :rules [[:!Tf :!Cf]
                   [:!Wf :!Cf]]}
+         {:des "Alt+F4"
+          :rules [[:!Of4 :!Cq]]}
          {:des "Copy password from Bitwarden"
           :rules [[:!Tp :!Cp :bitwarden]
                   [:!Qp :!Cp :bitwarden]
