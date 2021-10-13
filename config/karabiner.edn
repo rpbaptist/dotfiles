@@ -175,4 +175,6 @@
           :rules [[:!Tk :!Ck :slack]
                   [:!Wk :!Ck :slack]
                   [:!Tcomma :!Ccomma :slack]
-                  [:!Wcomma :!Ccomma :slack]]}]}
+                  [:!Wcomma :!Ccomma :slack]]}
+         {:des "Sleep"
+          :rules [[:!OQz :!TSeject]]}]}
