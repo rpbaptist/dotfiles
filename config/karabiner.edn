@@ -43,12 +43,12 @@
                   [:!QTi [:yabai_window "insert east"]]
                   [:!QTu [:yabai_window "insert north"]]
 
-                  [:!QOn [:yabai_window "stack west"]]
-                  [:!QOe [:yabai_window "stack south"]]
-                  [:!QOi [:yabai_window "stack east"]]
-                  [:!QOu [:yabai_window "stack north"]]
-                  [:!QOj [:yabai_window "focus stack.prev"]]
-                  [:!QOm [:yabai_window "focus stack.next"]]
+                  [:!QSTn [:yabai_window "stack west"]]
+                  [:!QSTe [:yabai_window "stack south"]]
+                  [:!QSTi [:yabai_window "stack east"]]
+                  [:!QSTu [:yabai_window "stack north"]]
+                  [:!QSTj [:yabai_window "focus stack.prev"]]
+                  [:!QSTm [:yabai_window "focus stack.next"]]
 
                   [:!Qd [:yabai_window "toggle float"]]
 
