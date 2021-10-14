@@ -27,7 +27,8 @@
   :templates {:launch "open -a %s.app"
               :yabai_window "/usr/local/bin/yabai -m window --%s"
               :yabai_space "/usr/local/bin/yabai -m space --%s"
-              :yabai_display "/usr/local/bin/yabai -m display --%s"}
+              :yabai_display "/usr/local/bin/yabai -m display --%s"
+              :yabai_move_and_follow "$HOME/.config/yabai/scripts/move_window_and_follow.sh %s"}
   :main [{:des "Yabai commands"
           :rules [[:!Qn [:yabai_window "focus west"]]
                   [:!Qe [:yabai_window "focus south"]]
@@ -66,17 +67,17 @@
                   ;[:!Q4 [:yabai_space "focus 4"]]
                   ;[:!Q5 [:yabai_space "focus 5"]]
 
-                  [:!QS1 [:yabai_window "space 1"]]
-                  [:!QS2 [:yabai_window "space 2"]]
-                  [:!QS3 [:yabai_window "space 3"]]
-                  [:!QS4 [:yabai_window "space 4"]]
-                  ;[:!QS5 [:yabai_window "space 5"]]
+                  [:!QS1 [:yabai_move_and_follow "1"]]
+                  [:!QS2 [:yabai_move_and_follow "2"]]
+                  [:!QS3 [:yabai_move_and_follow "3"]]
+                  [:!QS4 [:yabai_move_and_follow "4"]]
+                  ;[:!QS5 [:yabai_move_and_follow "5"]]
 
                   ;[:!QOc [:yabai_space "create"]]
                   ;[:!QOx [:yabai_space "destroy"]]
 
-                  [:!QOopen_bracket [:yabai_window "space prev"]]
-                  [:!QOclose_bracket [:yabai_window "space next"]]
+                  [:!QOopen_bracket [:yabai_move_and_follow "prev"]]
+                  [:!QOclose_bracket [:yabai_move_and_follow "next"]]
 
                   ;[:!Qopen_bracket [:yabai_space "focus prev"]]
                   ;[:!Qclose_bracket [:yabai_space "focus next"]]
