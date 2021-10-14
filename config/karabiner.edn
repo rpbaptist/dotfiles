@@ -17,6 +17,7 @@
   :applications {:general ["^com\\.google\\.Chrome$"
                            "^com\\.tinyspeck\\.slackmacgap$"
                            "^com\\.agilebits\\.onepassword7$"
+                           "^us\\.zoom\\.xos$"
                            "^com\\.apple\\.finder$"]
                  :browser ["^com\\.google\\.Chrome$"]
                  :bitwarden ["^com\\.bitwarden\\.desktop$"]
@@ -134,6 +135,7 @@
                   [:!Th :!Cy :browser]
                   [:!Wh :!Cy :browser]
                   [:!Tr :!Cr :browser]
+                  [:!Wr :!Cr :browser]
                   [:!Oleft_arrow :!Cleft_arrow :browser]
                   [:!Oright_arrow :!Cright_arrow :browser]]}
          {:des "Mouse control"
