@@ -167,8 +167,8 @@
           :rules [[:!O#SRtab :!Ctab]
                   [:!E#SRtab :!Ctab]]}
          {:des "Sublime fixes"
-          :rules [[:!TOe :!TOdown_arrow :editor]
-                  [:!TOe :!TOdown_arrow :editor]]}
+          :rules [[:!O##e :!Odown_arrow :editor]
+                  [:!O##e :!Odown_arrow :editor]]}
          {:des "Ctrl + Enter"
           :rules [[:!Treturn_or_enter :!Creturn_or_enter]
                   [:!Wreturn_or_enter :!Creturn_or_enter]
