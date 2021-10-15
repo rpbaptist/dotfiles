@@ -27,6 +27,7 @@ yabai -m config external_bar all:27:0
 
 # float preferences
 yabai -m rule --add app="^Calculator$" manage=off
+yabai -m rule --add app="^Tandem$" manage=off
 yabai -m rule --add app="^Software Update$" manage=off
 yabai -m rule --add app="^System Preferences$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Finder$" sticky=on layer=above manage=off
