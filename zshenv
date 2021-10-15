@@ -29,7 +29,7 @@ export NOTES_PATH="$HOME/Drive/Notes"
 GPG_TTY=$(tty)
 export GPG_TTY
 
-# . ~/.local/env
+. ~/.local/env
 
 # export FZF_BASE=/usr/bin/
 
