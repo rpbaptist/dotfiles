@@ -20,6 +20,7 @@
                            "^us\\.zoom\\.xos$"
                            "^com\\.apple\\.finder$"]
                  :browser ["^com\\.google\\.Chrome$"]
+                 :finder ["^com\\.apple\\.finder$"]
                  :bitwarden ["^com\\.bitwarden\\.desktop$"]
                  :slack ["^com\\.tinyspeck\\.slackmacgap$"]
                  :editor ["^com\\.sublimetext\\.4$"]
@@ -110,6 +111,9 @@
                   [:!Wf :!Cf]]}
          {:des "Alt+F4"
           :rules [[:!Of4 :!Cq]]}
+         {:des "Show hidden files in finder"
+          :rules [[:!Th :!CSperiod :finder]
+                  [:!Wh :!CSperiod :finder]]}
          {:des "Copy password from Bitwarden"
           :rules [[:!Tp :!Cp :bitwarden]
                   [:!Qp :!Cp :bitwarden]
