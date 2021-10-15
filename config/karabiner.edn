@@ -29,7 +29,8 @@
               :yabai_window "/usr/local/bin/yabai -m window --%s"
               :yabai_space "/usr/local/bin/yabai -m space --%s"
               :yabai_display "/usr/local/bin/yabai -m display --%s"
-              :yabai_move_and_follow "$HOME/.config/yabai/scripts/move_window_and_follow.sh %s"}
+              :yabai_move_and_follow "$HOME/.config/yabai/scripts/move_window_and_follow.sh %s"
+              :yabai_deminimize_all "$HOME/.config/yabai/scripts/deminimize_all.sh %s"}
   :main [{:des "Yabai commands"
           :rules [[:!Qn [:yabai_window "focus west"]]
                   [:!Qe [:yabai_window "focus south"]]
@@ -53,11 +54,17 @@
                   [:!QSTj [:yabai_window "focus stack.prev"]]
                   [:!QSTm [:yabai_window "focus stack.next"]]
 
+                  [:!Qm [:yabai_window "minimize"]]
+                  [:!QSm [:yabai_deminimize_all]]
+
                   [:!Qd [:yabai_window "toggle float"]]
 
                   [:!QSb [:yabai_space "balance"]]
                   [:!Qr [:yabai_space "rotate 90"]]
                   [:!QSr [:yabai_space "rotate 270"]]
+
+                  [:!QSs [:yabai_space "layout stack"]]
+                  [:!QSt [:yabai_space "layout bsp"]]
 
                   [:!QSx [:yabai_space "mirror x-axis"]]
                   [:!QSy [:yabai_space "mirror y-axis"]]
@@ -86,7 +93,8 @@
                   [:!QOopen_bracket [:yabai_move_and_follow "prev"]]
                   [:!QOclose_bracket [:yabai_move_and_follow "next"]]
 
-                  [:!Qf [:yabai_window "toggle zoom-fullscreen"]]]}
+                  [:!Qf [:yabai_window "toggle zoom-fullscreen"]]
+                  [:!QSf [:yabai_window "toggle native-fullscreen"]]]}
          {:des "Launch apps"
           :rules [[:!QTt [:launch "kitty"]]
                   [:!QWt [:launch "kitty"]]
