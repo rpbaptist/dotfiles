@@ -51,8 +51,12 @@
                   [:!QSTe [:yabai_window "stack south"]]
                   [:!QSTi [:yabai_window "stack east"]]
                   [:!QSTu [:yabai_window "stack north"]]
-                  [:!QSTj [:yabai_window "focus stack.prev"]]
-                  [:!QSTm [:yabai_window "focus stack.next"]]
+
+                  ;[:!QSTl ["/usr/local/bin/yabai -m window --focus stack.prev | /usr/local/bin/yabai -m window --focus stack.last"]]
+                  ;[:!QSTy ["/usr/local/bin/yabai -m window --focus stack.next | /usr/local/bin/yabai -m window --focus stack.first"]]
+
+                  [:!QTSl [:yabai_window "focus stack.prev"]]
+                  [:!QTSy [:yabai_window "focus stack.next"]]
 
                   [:!Qm [:yabai_window "minimize"]]
                   [:!QSm [:yabai_deminimize_all]]
