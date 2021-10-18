@@ -19,7 +19,7 @@
   "process": { "displayOnlyCurrent": false, "showCurrentSpaceMode": false },
   "spacesDisplay": {
     "exclusions": "",
-    "titleExclusions": "",
+    "titleExclusions": "Alfred",
     "exclusionsAsRegex": false,
     "displayAllSpacesOnAllScreens": false,
     "hideDuplicateAppsInSpaces": true,
