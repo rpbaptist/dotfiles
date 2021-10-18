@@ -1,5 +1,6 @@
 limelight -m config radius 2
 limelight -m config width 3
 limelight -m config placement inset
-limelight -m config normal_color  0xff3c3836
+# limelight -m config normal_color  0xff3c3836
+limelight -m config normal_color  0xff1d2021
 limelight -m config active_color  0xffd5c4a1
