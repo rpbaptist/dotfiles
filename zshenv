@@ -6,6 +6,7 @@ export KERL_CONFIGURE_OPTIONS="--without-javac --with-ssl=/usr/local/Cellar/open
 
 export ERL_AFLAGS="-kernel shell_history enabled -kernel shell_history_path '\"$HOME/.erlang-history\"' -kernel shell_history_file_bytes 1024000"
 
+PG_PATH="/usr/local/opt/libpq/bin"
 COMMON_PATHS="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 HOME_LOCAL_PATH="$HOME/.local/bin"
 
@@ -14,7 +15,7 @@ HOME_LOCAL_PATH="$HOME/.local/bin"
 # Postgres host
 export PGHOST=localhost
 
-export PATH="$HOME_LOCAL_PATH:$COMMON_PATHS:$PATH"
+export PATH="$HOME_LOCAL_PATH:$COMMON_PATHS:$PG_PATH:$PATH"
 
 # Preferred editor for local and remote sessions
 if [ -n "$SSH_CONNECTION" ]; then
