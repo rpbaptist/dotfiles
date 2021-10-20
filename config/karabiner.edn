@@ -30,7 +30,8 @@
               :yabai_space "/usr/local/bin/yabai -m space --%s"
               :yabai_display "/usr/local/bin/yabai -m display --%s"
               :yabai_move_and_follow "$HOME/.config/yabai/scripts/move_window_and_follow.sh %s"
-              :yabai_deminimize_all "$HOME/.config/yabai/scripts/deminimize_all.sh %s"}
+              :yabai_deminimize_all "$HOME/.config/yabai/scripts/deminimize_all.sh %s"
+              :yabai_resize_windows "$HOME/.config/yabai/scripts/resize_windows.sh %s"}
   :main [{:des "Yabai commands"
           :rules [[:!Qn [:yabai_window "focus west"]]
                   [:!Qe [:yabai_window "focus south"]]
@@ -42,10 +43,15 @@
                   [:!QSi [:yabai_window "warp east"]]
                   [:!QSu [:yabai_window "warp north"]]
 
-                  [:!QTn [:yabai_window "insert west"]]
-                  [:!QTe [:yabai_window "insert south"]]
-                  [:!QTi [:yabai_window "insert east"]]
-                  [:!QTu [:yabai_window "insert north"]]
+                  [:!QTn [:yabai_resize_windows "left"]]
+                  [:!QTe [:yabai_resize_windows "down"]]
+                  [:!QTi [:yabai_resize_windows "right"]]
+                  [:!QTu [:yabai_resize_windows "up"]]
+
+                  [:!QOTn [:yabai_window "insert west"]]
+                  [:!QOTe [:yabai_window "insert south"]]
+                  [:!QOTi [:yabai_window "insert east"]]
+                  [:!QOTu [:yabai_window "insert north"]]
 
                   [:!QSTn [:yabai_window "stack west"]]
                   [:!QSTe [:yabai_window "stack south"]]
