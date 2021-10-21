@@ -43,10 +43,10 @@
                   [:!QSi [:yabai_window "warp east"]]
                   [:!QSu [:yabai_window "warp north"]]
 
-                  [:!QTn [:yabai_resize_windows "left"]]
-                  [:!QTe [:yabai_resize_windows "down"]]
-                  [:!QTi [:yabai_resize_windows "right"]]
-                  [:!QTu [:yabai_resize_windows "up"]]
+                  [:!QTn [:yabai_resize_windows "left 200"]]
+                  [:!QTe [:yabai_resize_windows "down 200"]]
+                  [:!QTi [:yabai_resize_windows "right 200"]]
+                  [:!QTu [:yabai_resize_windows "up 200"]]
 
                   [:!QOTn [:yabai_window "insert west"]]
                   [:!QOTe [:yabai_window "insert south"]]
