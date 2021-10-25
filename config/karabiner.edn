@@ -31,7 +31,8 @@
               :yabai_display "/usr/local/bin/yabai -m display --%s"
               :yabai_move_and_follow "$HOME/.config/yabai/scripts/move_window_and_follow.sh %s"
               :yabai_deminimize_all "$HOME/.config/yabai/scripts/deminimize_all.sh %s"
-              :yabai_resize_windows "$HOME/.config/yabai/scripts/resize_windows.sh %s"}
+              :yabai_resize_windows "$HOME/.config/yabai/scripts/resize_windows.sh %s"
+              :yabai_detach_and_center "/usr/local/bin/yabai -m window --toggle float; /usr/local/bin/yabai -m window --move abs:800:400; /usr/local/bin/yabai -m window --resize abs:1000:700"}
   :main [{:des "Yabai commands"
           :rules [[:!Qn [:yabai_window "focus west"]]
                   [:!Qe [:yabai_window "focus south"]]
@@ -58,16 +59,13 @@
                   [:!QSTi [:yabai_window "stack east"]]
                   [:!QSTu [:yabai_window "stack north"]]
 
-                  ;[:!QSTl ["/usr/local/bin/yabai -m window --focus stack.prev | /usr/local/bin/yabai -m window --focus stack.last"]]
-                  ;[:!QSTy ["/usr/local/bin/yabai -m window --focus stack.next | /usr/local/bin/yabai -m window --focus stack.first"]]
-
                   [:!QTSl [:yabai_window "focus stack.prev"]]
                   [:!QTSy [:yabai_window "focus stack.next"]]
 
                   [:!Qm [:yabai_window "minimize"]]
                   [:!QSm [:yabai_deminimize_all]]
 
-                  [:!Qd [:yabai_window "toggle float"]]
+                  [:!Qd [:yabai_detach_and_center]]
 
                   [:!QSb [:yabai_space "balance"]]
                   [:!Qr [:yabai_space "rotate 90"]]
