@@ -156,6 +156,10 @@
                   [:!Wh :!Cy :browser]
                   [:!Tr :!Cr :browser]
                   [:!Wr :!Cr :browser]
+                  [:!TSi :!COi :browser]
+                  [:!TRi :!COi :browser]
+                  [:!WSi :!COi :browser]
+                  [:!WRi :!COi :browser]
                   [:!Oleft_arrow :!Cleft_arrow :browser]
                   [:!Oright_arrow :!Cright_arrow :browser]]}
          {:des "Mouse control"
