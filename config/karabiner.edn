@@ -59,6 +59,8 @@
                   [:!QSTi [:yabai_window "stack east"]]
                   [:!QSTu [:yabai_window "stack north"]]
 
+                  [:!Otab [:yabai_window "focus recent"]]
+
                   [:!QTSl [:yabai_window "focus stack.prev"]]
                   [:!QTSy [:yabai_window "focus stack.next"]]
 
@@ -186,9 +188,6 @@
                   [:!W#SRn :!Cn :general]
                   [:!W#SRt :!Ct :general]
                   [:!Ww :!Cw :general]]}
-         {:des "Alt tab"
-          :rules [[:!O#SRtab :!Ctab]
-                  [:!E#SRtab :!Ctab]]}
          {:des "Sublime fixes"
           :rules [[:!O##e :!Odown_arrow :editor]
                   [:!O##e :!Odown_arrow :editor]]}
