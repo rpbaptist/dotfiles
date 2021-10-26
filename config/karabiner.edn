@@ -119,8 +119,8 @@
           :rules [[:!TQl :!TCq]
                   [:!WQl :!TCq]]}
          {:des "Ctrl plus arrow"
-          :rules [[:!Tleft_arrow :!Oleft_arrow :general]
-                  [:!Tright_arrow :!Oright_arrow :general]]}
+          :rules [[:!T#SRleft_arrow :!Oleft_arrow :general]
+                  [:!T#SRright_arrow :!Oright_arrow :general]]}
          {:des "Delete forward in terminal"
           :rules [[:!Rdelete_forward :delete_forward]
                   [:!Sdelete_forward :delete_forward]]}
