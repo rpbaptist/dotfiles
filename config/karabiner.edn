@@ -59,7 +59,7 @@
                   [:!QSTi [:yabai_window "stack east"]]
                   [:!QSTu [:yabai_window "stack north"]]
 
-                  [:!Otab [:yabai_window "focus recent"]]
+                  [:!Otab "/usr/local/bin/yabai -m window --focus recent || /usr/local/bin/yabai -m window --focus first"]
 
                   [:!QTSl [:yabai_window "focus stack.prev"]]
                   [:!QTSy [:yabai_window "focus stack.next"]]
