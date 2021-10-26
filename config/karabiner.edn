@@ -39,10 +39,10 @@
                   [:!Qi [:yabai_window "focus east"]]
                   [:!Qu [:yabai_window "focus north"]]
 
-                  [:!QSn [:yabai_window "warp west"]]
-                  [:!QSe [:yabai_window "warp south"]]
-                  [:!QSi [:yabai_window "warp east"]]
-                  [:!QSu [:yabai_window "warp north"]]
+                  [:!QSn [:yabai_window "swap west"]]
+                  [:!QSe [:yabai_window "swap south"]]
+                  [:!QSi [:yabai_window "swap east"]]
+                  [:!QSu [:yabai_window "swap north"]]
 
                   [:!QTn [:yabai_resize_windows "left 200"]]
                   [:!QTe [:yabai_resize_windows "down 200"]]
