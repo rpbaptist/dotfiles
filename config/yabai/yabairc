@@ -26,8 +26,9 @@ yabai -m config external_bar all:27:0
 # yabai -m space 5 --label five
 
 # float preferences
+yabai -m rule --add app="^Spotify$" space=4
 yabai -m rule --add app="^Calculator$" manage=off
-yabai -m rule --add app="^Preferences$" manage=off
+yabai -m rule --add title="Preferences" manage=off
 yabai -m rule --add app="^Docker Desktop$" manage=off
 yabai -m rule --add app="^Tandem$" manage=off
 yabai -m rule --add app="^Software Update$" manage=off
@@ -37,7 +38,6 @@ yabai -m rule --add app="^Disk Utility$" sticky=on layer=above manage=off
 yabai -m rule --add app="^System Information$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Activity Monitor$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Logi Options$" manage=off
-yabai -m rule --add app="^Alfred Preferences$" manage=off
 yabai -m rule --add app="^Archive Utility$" manage=off
 yabai -m rule --add app="^App Store$" manage=off
 yabai -m rule --add app="^Discord$" manage=off
@@ -68,7 +68,7 @@ yabai -m config window_opacity               off
 yabai -m config insert_feedback_color        0xffd79921
 yabai -m config window_border                off
 yabai -m config split_ratio                  0.5
-yabai -m config auto_balance                 on
+yabai -m config auto_balance                 off
 
 yabai -m config mouse_follows_focus          off
 yabai -m config focus_follows_mouse          off
