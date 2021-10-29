@@ -18,7 +18,8 @@
                            "^com\\.tinyspeck\\.slackmacgap$"
                            "^com\\.agilebits\\.onepassword7$"
                            "^us\\.zoom\\.xos$"
-                           "^com\\.apple\\.finder$"]
+                           "^com\\.apple\\.finder$"
+                           "^com\\.postmanlabs\\.mac$"]
                  :browser ["^com\\.google\\.Chrome$"]
                  :finder ["^com\\.apple\\.finder$"]
                  :bitwarden ["^com\\.bitwarden\\.desktop$"]
@@ -49,15 +50,15 @@
                   [:!QTi [:yabai_resize_windows "right 200"]]
                   [:!QTu [:yabai_resize_windows "up 200"]]
 
-                  [:!QOTn [:yabai_window "insert west"]]
-                  [:!QOTe [:yabai_window "insert south"]]
-                  [:!QOTi [:yabai_window "insert east"]]
-                  [:!QOTu [:yabai_window "insert north"]]
+                  [:!QTSn [:yabai_window "insert west"]]
+                  [:!QTSe [:yabai_window "insert south"]]
+                  [:!QTSi [:yabai_window "insert east"]]
+                  [:!QTSu [:yabai_window "insert north"]]
 
-                  [:!QSTn [:yabai_window "stack west"]]
-                  [:!QSTe [:yabai_window "stack south"]]
-                  [:!QSTi [:yabai_window "stack east"]]
-                  [:!QSTu [:yabai_window "stack north"]]
+                  [:!QOn [:yabai_window "stack west"]]
+                  [:!QOe [:yabai_window "stack south"]]
+                  [:!QOi [:yabai_window "stack east"]]
+                  [:!QOu [:yabai_window "stack north"]]
 
                   [:!Otab "/usr/local/bin/yabai -m window --focus recent || /usr/local/bin/yabai -m window --focus first"]
 
@@ -69,15 +70,15 @@
 
                   [:!Qd [:yabai_detach_and_center]]
 
-                  [:!QSb [:yabai_space "balance"]]
+                  [:!Qb [:yabai_space "balance"]]
                   [:!Qr [:yabai_space "rotate 90"]]
                   [:!QSr [:yabai_space "rotate 270"]]
 
-                  [:!QSs [:yabai_space "layout stack"]]
-                  [:!QSt [:yabai_space "layout bsp"]]
+                  [:!Qs [:yabai_space "layout stack"]]
+                  [:!Qt [:yabai_space "layout bsp"]]
 
-                  [:!QSx [:yabai_space "mirror x-axis"]]
-                  [:!QSy [:yabai_space "mirror y-axis"]]
+                  [:!Qx [:yabai_space "mirror x-axis"]]
+                  [:!Qy [:yabai_space "mirror y-axis"]]
 
                   [:!QS1 [:yabai_move_and_follow "1"]]
                   [:!QS2 [:yabai_move_and_follow "2"]]
