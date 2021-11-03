@@ -112,7 +112,9 @@
                   [:!QTs [:launch "Slack"]]
                   [:!QWs [:launch "Slack"]]
                   [:!QTb [:launch "Bitwarden"]]
-                  [:!QWb [:launch "Bitwarden"]]]}
+                  [:!QWb [:launch "Bitwarden"]]
+                  [:!QTz [:launch "zoom.us"]]
+                  [:!QWz [:launch "zoom.us"]]]}
          {:des "Home and End keys outside terminal"
           :rules [[:#SRhome :!Cleft_arrow :general]
                   [:#SRend :!Cright_arrow :general]]}
