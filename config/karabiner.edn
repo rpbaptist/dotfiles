@@ -60,10 +60,11 @@
                   [:!QOi [:yabai_window "stack east"]]
                   [:!QOu [:yabai_window "stack north"]]
 
-                  [:!Otab "/usr/local/bin/yabai -m window --focus recent || /usr/local/bin/yabai -m window --focus first"]
+                  [:!QOl [:yabai_window "focus stack.prev"]]
+                  [:!QOy [:yabai_window "focus stack.next"]]
 
-                  [:!QTSl [:yabai_window "focus stack.prev"]]
-                  [:!QTSy [:yabai_window "focus stack.next"]]
+                  [:!Otab "/usr/local/bin/yabai -m window --focus prev || /usr/local/bin/yabai -m window --focus last"]
+                  [:!ORtab "/usr/local/bin/yabai -m window --focus next || /usr/local/bin/yabai -m window --focus first"]
 
                   [:!Qm [:yabai_window "minimize"]]
                   [:!QSm [:yabai_deminimize_all]]
