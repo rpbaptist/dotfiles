@@ -11,7 +11,7 @@
 [core]
 	askpass = git-gui--askpass
 	editor = subl -w
-	excludesfile = /home/richard/.gitignore
+	excludesfile = ~/.gitignore
 	commentChar = ";"
 [push]
 	default = current
