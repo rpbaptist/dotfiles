@@ -128,9 +128,6 @@
          {:des "Delete forward in terminal"
           :rules [[:!Rdelete_forward :delete_forward]
                   [:!Sdelete_forward :delete_forward]]}
-         {:des "Find"
-          :rules [[:!Tf :!Cf]
-                  [:!Wf :!Cf]]}
          {:des "Alt+F4"
           :rules [[:!Of4 :!Cq]]}
          {:des "Show hidden files in finder"
