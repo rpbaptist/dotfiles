@@ -50,18 +50,18 @@
                   [:!QTi [:yabai_resize_windows "right 200"]]
                   [:!QTu [:yabai_resize_windows "up 200"]]
 
-                  [:!QTSn [:yabai_window "insert west"]]
-                  [:!QTSe [:yabai_window "insert south"]]
-                  [:!QTSi [:yabai_window "insert east"]]
-                  [:!QTSu [:yabai_window "insert north"]]
+                  [:!QOn [:yabai_window "insert west"]]
+                  [:!QOe [:yabai_window "insert south"]]
+                  [:!QOi [:yabai_window "insert east"]]
+                  [:!QOu [:yabai_window "insert north"]]
 
-                  [:!QOn [:yabai_window "stack west"]]
-                  [:!QOe [:yabai_window "stack south"]]
-                  [:!QOi [:yabai_window "stack east"]]
-                  [:!QOu [:yabai_window "stack north"]]
+                  [:!QTSn [:yabai_window "stack west"]]
+                  [:!QTSe [:yabai_window "stack south"]]
+                  [:!QTSi [:yabai_window "stack east"]]
+                  [:!QTSu [:yabai_window "stack north"]]
 
-                  [:!QOl [:yabai_window "focus stack.prev"]]
-                  [:!QOy [:yabai_window "focus stack.next"]]
+                  [:!QSl [:yabai_window "focus stack.prev"]]
+                  [:!QSy [:yabai_window "focus stack.next"]]
 
                   [:!Otab "/usr/local/bin/yabai -m window --focus prev || /usr/local/bin/yabai -m window --focus last"]
                   [:!ORtab "/usr/local/bin/yabai -m window --focus next || /usr/local/bin/yabai -m window --focus first"]
