@@ -167,6 +167,9 @@
                   [:!Oright_arrow :!Cright_arrow :browser]]}
          {:des "Mouse control"
           :rules [[{:pkey :button1 :modi :left_control} {:pkey :button1 :modi :left_command} :general]]}
+         {:des "Mouse workspace switch"
+          :rules [[{:pkey :button4} {:key :open_bracket :modi :right_command}]
+                  [{:pkey :button5} {:key :close_bracket :modi :right_command}]]}
          {:des "Copy, paste, cut, undo, redo, select, save"
           :rules [[:!Tx :!Cx :general]
                   [:!Ta :!Ca :general]
