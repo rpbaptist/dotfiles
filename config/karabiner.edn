@@ -24,7 +24,8 @@
                  :finder ["^com\\.apple\\.finder$"]
                  :bitwarden ["^com\\.bitwarden\\.desktop$"]
                  :slack ["^com\\.tinyspeck\\.slackmacgap$"]
-                 :editor ["^com\\.sublimetext\\.4$"]
+                 :sublime ["^com\\.sublimetext\\.4$"]
+                 :vscode ["^com\\.microsoft\\.VSCode$"]
                  :term ["^net\\.kovidgoyal\\.kitty$"]}
   :templates {:launch "open -a %s.app"
               :yabai_window "/usr/local/bin/yabai -m window --%s"
@@ -166,7 +167,8 @@
                   [:!Oleft_arrow :!Cleft_arrow :browser]
                   [:!Oright_arrow :!Cright_arrow :browser]]}
          {:des "Mouse control"
-          :rules [[{:pkey :button1 :modi :left_control} {:pkey :button1 :modi :left_command} :general]]}
+          :rules [[{:pkey :button1 :modi :left_control} {:pkey :button1 :modi :left_command} :general]
+                  [{:pkey :button1 :modi :left_control} {:pkey :button1 :modi :left_command} :vscode]]}
          {:des "Mouse workspace switch"
           :rules [[{:pkey :button4} {:key :open_bracket :modi :right_command}]
                   [{:pkey :button5} {:key :close_bracket :modi :right_command}]]}
