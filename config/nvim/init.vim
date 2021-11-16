@@ -1,3 +1,10 @@
+call plug#begin('~/.vim/plugged')
+Plug 'machakann/vim-sandwich'
+if !exists('g:vscode')
+  Plug 'tpope/vim-commentary'
+endif
+call plug#end()
+
 let mapleader="\<Space>"
 
 " " Copy to clipboard
@@ -18,7 +25,9 @@ vnoremap <leader>P "+P
 map ; :
 noremap ;; ;
 
-call plug#begin('~/.vim/plugged')
-Plug 'machakann/vim-sandwich'
-call plug#end()
-
+if exists('g:vscode')
+  xmap gc  <Plug>VSCodeCommentary
+  nmap gc  <Plug>VSCodeCommentary
+  omap gc  <Plug>VSCodeCommentary
+  nmap gcc <Plug>VSCodeCommentaryLine
+endif
