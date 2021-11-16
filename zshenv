@@ -21,7 +21,7 @@ export PATH="$HOME_LOCAL_PATH:$COMMON_PATHS:$PG_PATH:$PATH"
 if [ -n "$SSH_CONNECTION" ]; then
   export EDITOR="vi"
 else
-  export EDITOR="code -w"
+  export EDITOR="code"
 fi
 
 export NOTES_PATH="$HOME/Drive/Notes"
