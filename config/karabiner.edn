@@ -51,10 +51,10 @@
                   [:!QTi [:yabai_resize_windows "right 200"]]
                   [:!QTu [:yabai_resize_windows "up 200"]]
 
-                  [:!QOn [:yabai_window "insert west"]]
-                  [:!QOe [:yabai_window "insert south"]]
-                  [:!QOi [:yabai_window "insert east"]]
-                  [:!QOu [:yabai_window "insert north"]]
+                  ;; [:!QOn [:yabai_window "insert west"]]
+                  ;; [:!QOe [:yabai_window "insert south"]]
+                  ;; [:!QOi [:yabai_window "insert east"]]
+                  ;; [:!QOu [:yabai_window "insert north"]]
 
                   [:!QTSn [:yabai_window "stack west"]]
                   [:!QTSe [:yabai_window "stack south"]]
