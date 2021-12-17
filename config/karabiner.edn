@@ -183,7 +183,7 @@
                   [:!Wx :!Cx :general]
                   [:!Wa :!Ca :general]
                   [:!Wc :!Cc :general]
-                  [:!Wv :!Cv :general]
+                  [:!W#SRv :!Cv :general]
                   [:!W#SRz :!Cz :general]
                   [:!Wy :!Cy :general]
                   [:!Ws :!Cs :general]]}
