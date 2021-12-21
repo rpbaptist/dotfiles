@@ -17,14 +17,16 @@ export PGHOST=localhost
 
 export PATH="$HOME_LOCAL_PATH:$COMMON_PATHS:$PG_PATH:$PATH"
 
-export VISUAL="code --wait"
+export $LOCAL_EDITOR="subl"
 
 # Preferred editor for local and remote sessions
 if [ -n "$SSH_CONNECTION" ]; then
   export EDITOR="vi"
 else
-  export EDITOR="code"
+  export EDITOR="$LOCAL_EDITOR"
 fi
+
+export VISUAL="$LOCAL_EDITOR --wait"
 
 export NOTES_PATH="$HOME/Drive/Notes"
 
@@ -42,5 +44,3 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 
 # unset QT_STYLE_OVERRIDE
 # export QT_QPA_PLATFORMTHEME="qt5ct"
-
-
