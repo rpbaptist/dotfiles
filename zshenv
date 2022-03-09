@@ -17,16 +17,14 @@ export PGHOST=localhost
 
 export PATH="$HOME_LOCAL_PATH:$COMMON_PATHS:$PG_PATH:$PATH"
 
-export $LOCAL_EDITOR="subl"
-
 # Preferred editor for local and remote sessions
 if [ -n "$SSH_CONNECTION" ]; then
   export EDITOR="vi"
 else
-  export EDITOR="$LOCAL_EDITOR"
+  export EDITOR="code"
 fi
 
-export VISUAL="$LOCAL_EDITOR --wait"
+export VISUAL="$EDITOR --wait"
 
 export NOTES_PATH="$HOME/Drive/Notes"
 
