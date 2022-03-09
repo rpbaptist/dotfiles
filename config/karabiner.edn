@@ -149,8 +149,6 @@
          {:des "Ctrl+F to find"
           :rules [[:!Tf :!Cf :general]
                   [:!Wf :!Cf :general]]}
-         {:des "Screenshot with Flameshot"
-          :rules [[:print_screen :!CSO4]]}
          {:des "Browser specific controls"
           :rules [[:!Tl :!Cl :browser]
                   [:!Wl :!Cl :browser]
