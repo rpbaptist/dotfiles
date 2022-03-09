@@ -26,7 +26,7 @@ yabai -m config external_bar all:27:0
 # yabai -m space 5 --label five
 
 # float preferences
-yabai -m rule --add app="^Spotify$" space=4
+yabai -m rule --add app="^Spotify$" space=3
 yabai -m rule --add app="^Calculator$" manage=off
 yabai -m rule --add title="Preferences" manage=off
 yabai -m rule --add app="^Docker Desktop$" manage=off
