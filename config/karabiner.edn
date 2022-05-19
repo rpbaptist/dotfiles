@@ -27,87 +27,95 @@
                  :sublime ["^com\\.sublimetext\\.4$"]
                  :vscode ["^com\\.microsoft\\.VSCode$"]
                  :term ["^net\\.kovidgoyal\\.kitty$"]}
-  :templates {:launch "open -a %s.app"
-              :yabai_window "/usr/local/bin/yabai -m window --%s"
-              :yabai_space "/usr/local/bin/yabai -m space --%s"
-              :yabai_display "/usr/local/bin/yabai -m display --%s"
-              :yabai_move_and_follow "$HOME/.config/yabai/scripts/move_window_and_follow.sh %s"
-              :yabai_deminimize_all "$HOME/.config/yabai/scripts/deminimize_all.sh %s"
-              :yabai_resize_windows "$HOME/.config/yabai/scripts/resize_windows.sh %s"
-              :yabai_detach_and_center "/usr/local/bin/yabai -m window --toggle float; /usr/local/bin/yabai -m window --move abs:800:400; /usr/local/bin/yabai -m window --resize abs:1000:700"}
-  :main [{:des "Yabai commands"
-          :rules [[:!Qn [:yabai_window "focus west"]]
-                  [:!Qe [:yabai_window "focus south"]]
-                  [:!Qi [:yabai_window "focus east"]]
-                  [:!Qu [:yabai_window "focus north"]]
+  :templates {:launch "open -a %s.app"}
+              ;; :yabai_window "/usr/local/bin/yabai -m window --%s"
+              ;; :yabai_space "/usr/local/bin/yabai -m space --%s"
+              ;; :yabai_display "/usr/local/bin/yabai -m display --%s"
+              ;; :yabai_move_and_follow "$HOME/.config/yabai/scripts/move_window_and_follow.sh %s"
+              ;; :yabai_deminimize_all "$HOME/.config/yabai/scripts/deminimize_all.sh %s"
+              ;; :yabai_resize_windows "$HOME/.config/yabai/scripts/resize_windows.sh %s"
+              ;; :yabai_detach_and_center "/usr/local/bin/yabai -m window --toggle float; /usr/local/bin/yabai -m window --move abs:800:400; /usr/local/bin/yabai -m window --resize abs:1000:700"}
+  :main [
+    {:des "Amethyst commands"
+    :rules [
+      ;; [:!Qy :!COTSy] ;; Cycle layout forward
+      ;; [:!Ql :!COTSl]
+     ]} ;; Cycle layout backward
+      ;; [:!Qi :!COTSi] ;; Move focus clockwise
+      ;; [:!Qn :!COTSn] ;; Move focues counter clockwise
+      ;; [:!Qd :!COTSd]]} ;; Hover/tile
+  ;;         :rules [[:!Qn [:yabai_window "focus west"]]
+  ;;                 [:!Qe [:yabai_window "focus south"]]
+  ;;                 [:!Qi [:yabai_window "focus east"]]
+  ;;                 [:!Qu [:yabai_window "focus north"]]
 
-                  [:!QSn [:yabai_window "swap west"]]
-                  [:!QSe [:yabai_window "swap south"]]
-                  [:!QSi [:yabai_window "swap east"]]
-                  [:!QSu [:yabai_window "swap north"]]
+  ;;                 [:!QSn [:yabai_window "swap west"]]
+  ;;                 [:!QSe [:yabai_window "swap south"]]
+  ;;                 [:!QSi [:yabai_window "swap east"]]
+  ;;                 [:!QSu [:yabai_window "swap north"]]
 
-                  [:!QTn [:yabai_resize_windows "left 200"]]
-                  [:!QTe [:yabai_resize_windows "down 200"]]
-                  [:!QTi [:yabai_resize_windows "right 200"]]
-                  [:!QTu [:yabai_resize_windows "up 200"]]
+  ;;                 [:!QTn [:yabai_resize_windows "left 200"]]
+  ;;                 [:!QTe [:yabai_resize_windows "down 200"]]
+  ;;                 [:!QTi [:yabai_resize_windows "right 200"]]
+  ;;                 [:!QTu [:yabai_resize_windows "up 200"]]
 
-                  ;; [:!QOn [:yabai_window "insert west"]]
-                  ;; [:!QOe [:yabai_window "insert south"]]
-                  ;; [:!QOi [:yabai_window "insert east"]]
-                  ;; [:!QOu [:yabai_window "insert north"]]
+  ;;                 ;; [:!QOn [:yabai_window "insert west"]]
+  ;;                 ;; [:!QOe [:yabai_window "insert south"]]
+  ;;                 ;; [:!QOi [:yabai_window "insert east"]]
+  ;;                 ;; [:!QOu [:yabai_window "insert north"]]
 
-                  [:!QTSn [:yabai_window "stack west"]]
-                  [:!QTSe [:yabai_window "stack south"]]
-                  [:!QTSi [:yabai_window "stack east"]]
-                  [:!QTSu [:yabai_window "stack north"]]
+  ;;                 [:!QTSn [:yabai_window "stack west"]]
+  ;;                 [:!QTSe [:yabai_window "stack south"]]
+  ;;                 [:!QTSi [:yabai_window "stack east"]]
+  ;;                 [:!QTSu [:yabai_window "stack north"]]
 
-                  [:!QSl [:yabai_window "focus stack.prev"]]
-                  [:!QSy [:yabai_window "focus stack.next"]]
+  ;;                 [:!QSl [:yabai_window "focus stack.prev"]]
+  ;;                 [:!QSy [:yabai_window "focus stack.next"]]
 
-                  [:!Otab "/usr/local/bin/yabai -m window --focus prev || /usr/local/bin/yabai -m window --focus last"]
-                  [:!ORtab "/usr/local/bin/yabai -m window --focus next || /usr/local/bin/yabai -m window --focus first"]
+  ;;                 [:!Otab "/usr/local/bin/yabai -m window --focus prev || /usr/local/bin/yabai -m window --focus last"]
+  ;;                 [:!ORtab "/usr/local/bin/yabai -m window --focus next || /usr/local/bin/yabai -m window --focus first"]
 
-                  [:!Qm [:yabai_window "minimize"]]
-                  [:!QSm [:yabai_deminimize_all]]
+  ;;                 [:!Qm [:yabai_window "minimize"]]
+  ;;                 [:!QSm [:yabai_deminimize_all]]
 
-                  [:!Qd [:yabai_detach_and_center]]
+  ;;                 [:!Qd [:yabai_detach_and_center]]
 
-                  [:!Qb [:yabai_space "balance"]]
-                  [:!Qr [:yabai_space "rotate 90"]]
-                  [:!QSr [:yabai_space "rotate 270"]]
+  ;;                 [:!Qb [:yabai_space "balance"]]
+  ;;                 [:!Qr [:yabai_space "rotate 90"]]
+  ;;                 [:!QSr [:yabai_space "rotate 270"]]
 
-                  [:!Qs [:yabai_space "layout stack"]]
-                  [:!Qt [:yabai_space "layout bsp"]]
+  ;;                 [:!Qs [:yabai_space "layout stack"]]
+  ;;                 [:!Qt [:yabai_space "layout bsp"]]
 
-                  [:!Qx [:yabai_space "mirror x-axis"]]
-                  [:!Qy [:yabai_space "mirror y-axis"]]
+  ;;                 [:!Qx [:yabai_space "mirror x-axis"]]
+  ;;                 [:!Qy [:yabai_space "mirror y-axis"]]
 
-                  [:!QS1 [:yabai_move_and_follow "1"]]
-                  [:!QS2 [:yabai_move_and_follow "2"]]
-                  [:!QS3 [:yabai_move_and_follow "3"]]
-                  [:!QS4 [:yabai_move_and_follow "4"]]
+  ;;                 [:!QS1 [:yabai_move_and_follow "1"]]
+  ;;                 [:!QS2 [:yabai_move_and_follow "2"]]
+  ;;                 [:!QS3 [:yabai_move_and_follow "3"]]
+  ;;                 [:!QS4 [:yabai_move_and_follow "4"]]
 
-                  ; Only move window to other space
-                  [:!QTS1 [:yabai_window "space 1"]]
-                  [:!QTS2 [:yabai_window "space 2"]]
-                  [:!QTS3 [:yabai_window "space 3"]]
-                  [:!QTS4 [:yabai_window "space 4"]]
+  ;;                 ; Only move window to other space
+  ;;                 [:!QTS1 [:yabai_window "space 1"]]
+  ;;                 [:!QTS2 [:yabai_window "space 2"]]
+  ;;                 [:!QTS3 [:yabai_window "space 3"]]
+  ;;                 [:!QTS4 [:yabai_window "space 4"]]
 
-                  [:!QWS1 [:yabai_window "space 1"]]
-                  [:!QWS2 [:yabai_window "space 2"]]
-                  [:!QWS3 [:yabai_window "space 3"]]
-                  [:!QWS4 [:yabai_window "space 4"]]
+  ;;                 [:!QWS1 [:yabai_window "space 1"]]
+  ;;                 [:!QWS2 [:yabai_window "space 2"]]
+  ;;                 [:!QWS3 [:yabai_window "space 3"]]
+  ;;                 [:!QWS4 [:yabai_window "space 4"]]
 
-                  [:!QTOopen_bracket [:yabai_window "space prev"]]
-                  [:!QTOclose_bracket [:yabai_window "space next"]]
-                  [:!QWOopen_bracket [:yabai_window "space prev"]]
-                  [:!QWOclose_bracket [:yabai_window "space next"]]
+  ;;                 [:!QTOopen_bracket [:yabai_window "space prev"]]
+  ;;                 [:!QTOclose_bracket [:yabai_window "space next"]]
+  ;;                 [:!QWOopen_bracket [:yabai_window "space prev"]]
+  ;;                 [:!QWOclose_bracket [:yabai_window "space next"]]
 
-                  [:!QOopen_bracket [:yabai_move_and_follow "prev"]]
-                  [:!QOclose_bracket [:yabai_move_and_follow "next"]]
+  ;;                 [:!QOopen_bracket [:yabai_move_and_follow "prev"]]
+  ;;                 [:!QOclose_bracket [:yabai_move_and_follow "next"]]
 
-                  [:!Qf [:yabai_window "toggle zoom-fullscreen"]]
-                  [:!QSf [:yabai_window "toggle native-fullscreen"]]]}
+  ;;                 [:!Qf [:yabai_window "toggle zoom-fullscreen"]]
+  ;;                 [:!QSf [:yabai_window "toggle native-fullscreen"]]]}
          {:des "Launch apps"
           :rules [[:!QTt [:launch "kitty"]]
                   [:!QWt [:launch "kitty"]]
