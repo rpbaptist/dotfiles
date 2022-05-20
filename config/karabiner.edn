@@ -38,7 +38,12 @@
   :main [
     {:des "Amethyst commands"
     :rules [
-      ;; [:!Qy :!COTSy] ;; Cycle layout forward
+      [:!Qi :!CTOi] ;; Move focus clockwise
+      [:!Qn :!CTOn] ;; Move focus counter clockwise
+      [:!Q#SRi :!CTOSi] ;; Swap focused window clockwise
+      [:!Q#SRn :!CTOSn] ;; Swap focused counter clockwise
+      [:!Qd :!CTOd] ;; Toggle float for focused window
+      [:!Qr :!CTOr] ;; Re-evaluate tiling
       ;; [:!Ql :!COTSl]
      ]} ;; Cycle layout backward
       ;; [:!Qi :!COTSi] ;; Move focus clockwise
@@ -197,6 +202,8 @@
           :rules [[:!T#SRn :!Cn :general]
                   [:!T#SRt :!Ct :general]
                   [:!Tw :!Cw :general]
+                  [:!Tt :!Ct :general]
+                  [:!Wt :!Ct :general]
                   [:!W#SRn :!Cn :general]
                   [:!W#SRt :!Ct :general]
                   [:!Ww :!Cw :general]]}
