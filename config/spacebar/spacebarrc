@@ -30,7 +30,7 @@ spacebar -m config space_icon_color     0xfffb4934
 spacebar -m config title                on
 
 spacebar -m config dnd                  on
-spacebar -m config dnd_icon             
+spacebar -m config dnd_icon             
 spacebar -m config dnd_icon_color       0xff83a598
 
 spacebar -m config power                on
@@ -43,10 +43,10 @@ spacebar -m config clock_icon           
 spacebar -m config clock_icon_color     0xffebdbb2
 spacebar -m config clock_format         "%H:%M"
 
-spacebar -m config right_shell          on
-spacebar -m config right_shell_icon     
-spacebar -m right_shell_icon_color      0xffd75f5f
-spacebar -m config right_shell_command  "$HOME/.config/spacebar/network.sh"
+spacebar -m config right_shell          off
+# spacebar -m config right_shell_icon     
+# spacebar -m right_shell_icon_color      0xffd75f5f
+# spacebar -m config right_shell_command  "$HOME/.config/spacebar/network.sh"
 
 echo "spacebar configuration loaded.."
 
