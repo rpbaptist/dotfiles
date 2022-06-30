@@ -1,9 +1,12 @@
 call plug#begin('~/.vim/plugged')
 Plug 'machakann/vim-sandwich'
 if !exists('g:vscode')
-  Plug 'tpope/vim-commentary'
+ Plug 'tpope/vim-commentary'
 endif
+  Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 call plug#end()
+
+
 
 let mapleader="\<Space>"
 
@@ -26,8 +29,8 @@ map ; :
 noremap ;; ;
 
 if exists('g:vscode')
-  xmap gc  <Plug>VSCodeCommentary
-  nmap gc  <Plug>VSCodeCommentary
-  omap gc  <Plug>VSCodeCommentary
-  nmap gcc <Plug>VSCodeCommentaryLine
+ xmap gc  <Plug>VSCodeCommentary
+ nmap gc  <Plug>VSCodeCommentary
+ omap gc  <Plug>VSCodeCommentary
+ nmap gcc <Plug>VSCodeCommentaryLine
 endif
