@@ -12,6 +12,8 @@ HOME_LOCAL_PATH="$HOME/.local/bin"
 
 # export SUBLIME_PATH=/Applications/Sublime Text.app/Contents/SharedSupport/bin
 
+export TERM=xterm-kitty
+
 # Postgres host
 export PGHOST=localhost
 
@@ -26,7 +28,7 @@ fi
 
 export VISUAL="$EDITOR --wait"
 
-export NOTES_PATH="$HOME/Drive/Notes"
+export NOTES_PATH="$HOME/Google Drive/My Drive/Notes"
 
 #GPG
 GPG_TTY=$(tty)
