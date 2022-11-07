@@ -43,13 +43,13 @@ spacebar -m config clock_icon           
 spacebar -m config clock_icon_color     0xffebdbb2
 spacebar -m config clock_format         "%H:%M"
 
-spacebar -m config right_shell          off
-# spacebar -m config right_shell_icon     
-# spacebar -m right_shell_icon_color      0xffd75f5f
-# spacebar -m config right_shell_command  "$HOME/.config/spacebar/network.sh"
+spacebar -m config right_shell          on
+spacebar -m config right_shell_icon     
+spacebar -m right_shell_icon_color      0xffd75f5f
+spacebar -m config right_shell_command  "$HOME/.config/spacebar/network.sh"
 
-echo "spacebar configuration loaded.."
+echo "spacebar configuration loaded.."]
 
 # Limelight
-killall limelight &> /dev/null
-/usr/local/bin/limelight &> /dev/null &
+# killall limelight &> /dev/null
+# /usr/local/bin/limelight &> /dev/null &
