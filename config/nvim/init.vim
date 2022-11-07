@@ -28,6 +28,9 @@ vnoremap <leader>P "+P
 map ; :
 noremap ;; ;
 
+:noremap ' "
+:noremap " '
+
 if exists('g:vscode')
  xmap gc  <Plug>VSCodeCommentary
  nmap gc  <Plug>VSCodeCommentary
