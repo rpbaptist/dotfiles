@@ -37,6 +37,7 @@
       [:!Q#SRn :!CTOSn] ;; Swap focused counter clockwise
       [:!Qd :!CTOd] ;; Toggle float for focused window
       [:!Qr :!CTOr] ;; Re-evaluate tiling
+     ]}
          {:des "Launch apps"
           :rules [[:!QTt [:launch "kitty"]]
                   [:!QWt [:launch "kitty"]]
