@@ -9,7 +9,7 @@
 #     |_|
 
 spacebar -m config position             top
-spacebar -m config height               22
+spacebar -m config height               20
 
 spacebar -m config padding_left         15
 spacebar -m config padding_right        15
