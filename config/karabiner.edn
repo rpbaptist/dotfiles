@@ -125,8 +125,8 @@
                   [:!W#SRt :!Ct :general]
                   [:!Ww :!Cw :general]]}
          {:des "Sublime fixes"
-          :rules [[:!O##e :!Odown_arrow :editor]
-                  [:!O##e :!Odown_arrow :editor]]}
+          :rules [[:!O##e :!Odown_arrow :sublime]
+                  [:!O##e :!Odown_arrow :sublime]]}
          {:des "Ctrl + Enter"
           :rules [[:!Treturn_or_enter :!Creturn_or_enter]
                   [:!Wreturn_or_enter :!Creturn_or_enter]
