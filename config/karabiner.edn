@@ -87,6 +87,8 @@
                   [:!Th :!Cy :browser]
                   [:!Wh :!Cy :browser]
                   [:!Tr :!Cr :browser]
+                  [:!Tk :!Ck :browser]
+                  [:!Wk :!Ck :browser]
                   [:!Wr :!Cr :browser]
                   [:!TSi :!COi :browser]
                   [:!TRi :!COi :browser]
