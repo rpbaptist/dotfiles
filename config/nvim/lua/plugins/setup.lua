@@ -20,28 +20,6 @@ return {
     },
   },
   {
-    "elixir-tools/elixir-tools.nvim",
-    event = { "BufReadPre", "BufNewFile" },
-    config = function()
-      local elixir = require("elixir")
-      local elixirls = require("elixir.elixirls")
-
-      elixir.setup {
-        credo = {},
-        elixirls = {
-          enabled = true,
-          settings = elixirls.settings {
-            dialyzerEnabled = false,
-            enableTestLenses = false,
-          },
-        }
-      }
-    end,
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-    }
-  },
-  {
      "nvim-treesitter/nvim-treesitter",
      opts = {
        ensure_installed = {
@@ -71,5 +49,81 @@ return {
       },
     },
   },
-  { "tpope/vim-projectionist" }
+  {
+    "otavioschwanck/telescope-alternate",
+    event = { "BufReadPre", "BufNewFile" },
+    -- setup = function()
+    --   require("telescope").load_extension('telescope-alternate')
+
+      -- local alternate = require("telescope-alternate")
+
+      -- alternate.setup(
+  --       mappings = {
+  -- "lib/tiger_web/views/api/*_view.ex": {
+  --   "type": "view",
+  --   "related": [
+  --     "lib/tiger_web/controllers/api/{}_controller.ex"
+  --   ],
+  --   "template": [
+  --     "defmodule TigerWeb.API.{dirname|camelcase|capitalize|dot}.{basename|camelcase|capitalize}View do",
+  --     "  @moduledoc false",
+  --     "",
+  --     "  use TigerWeb, :view",
+  --     "end"
+  --   ]
+  -- },
+  -- "lib/tiger_web/controllers/api/*_controller.ex": {
+  --   "type": "controller",
+  --   "alternate": "test/tiger_web/controllers/{basename}_controller_test.exs",
+  --   "related": [
+  --     "lib/tiger_web/views/api/{}_view.ex"
+  --   ],
+  --   "template": [
+  --     "defmodule TigerWeb.API.{dirname|camelcase|capitalize|dot}.{basename|camelcase|capitalize}Controller do",
+  --     "  @moduledoc false",
+  --     "",
+  --     "  use TigerWeb, :api_controller",
+  --     "end"
+  --   ]
+  -- },
+  -- "test/tiger_web/controllers/api/*_controller_test.exs": {
+  --   "alternate": "lib/tiger_web/controllers/{basename}_controller.ex",
+  --   "type": "test",
+  --   "related": [
+  --     "lib/tiger_web/views/api/{}_view.ex"
+  --   ],
+  --   "template": [
+  --     "defmodule TigerWeb.API.{dirname|camelcase|capitalize|dot}.{basename|camelcase|capitalize}ControllerTest do",
+  --     "  @moduledoc false",
+  --     "",
+  --     "  use TigerWeb.ConnCase, async: true",
+  --     "end"
+  --   ]
+  -- },
+  -- "lib/*.ex": {
+  --   "alternate": "test/{}_test.exs",
+  --   "type": "source",
+  --   "template": [
+  --     "defmodule {camelcase|capitalize|dot} do",
+  --     "  @moduledoc \"\"\"",
+  --     "",
+  --     "  \"\"\"",
+  --     "end"
+  --   ]
+  -- },
+  -- "test/*_test.exs": {
+  --   "alternate": "lib/{}.ex",
+  --   "type": "test",
+  --   "template": [
+  --     "defmodule {camelcase|capitalize|dot}Test do",
+  --     "  use Tiger.DataCase, async: true",
+  --     "",
+  --     "  alias {camelcase|capitalize|dot}",
+  --     "end"
+  --   ]
+  -- }
+-- }
+    --   )
+    -- end
+  },
 }
