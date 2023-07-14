@@ -19,7 +19,8 @@
                            "^com\\.agilebits\\.onepassword7$"
                            "^us\\.zoom\\.xos$"
                            "^com\\.apple\\.finder$"
-                           "^com\\.postmanlabs\\.mac$"]
+                           "^com\\.postmanlabs\\.mac$"
+                           "^org\\.jkiss\\.dbeaver\\.core\\.product$"]
                  :browser ["^com\\.google\\.Chrome$"]
                  :finder ["^com\\.apple\\.finder$"]
                  :bitwarden ["^com\\.bitwarden\\.desktop$"]
