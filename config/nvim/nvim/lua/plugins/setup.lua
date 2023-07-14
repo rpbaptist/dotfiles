@@ -70,5 +70,6 @@ return {
         ["<leader>t"] = { name = "+test" },
       },
     },
-  }
+  },
+  { "tpope/vim-projectionist" }
 }
