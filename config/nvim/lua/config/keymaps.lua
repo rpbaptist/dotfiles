@@ -20,26 +20,20 @@ local function map(mode, lhs, rhs, opts)
   end
 end
 
-map({"n", "x"}, "<Up>", "k", { remap = true})
-map({"n", "x"}, "<Down>", "j", { remap = true})
-map({"n", "x"}, "<Left>", "h", { remap = true})
-map({"n", "x"}, "<Right>", "l", { remap = true})
+map({ "n", "x" }, "<Up>", "k", { remap = true })
+map({ "n", "x" }, "<Down>", "j", { remap = true })
+map({ "n", "x" }, "<Left>", "h", { remap = true })
+map({ "n", "x" }, "<Right>", "l", { remap = true })
 
 -- better up/down
 map({ "n", "x" }, "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 map({ "n", "x" }, "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 
--- Move to window using the <ctrl> hjkl keys
-map("n", "<C-h>", "<C-w>h", { desc = "Go to left window", remap = true })
-map("n", "<C-j>", "<C-w>j", { desc = "Go to lower window", remap = true })
-map("n", "<C-k>", "<C-w>k", { desc = "Go to upper window", remap = true })
-map("n", "<C-l>", "<C-w>l", { desc = "Go to right window", remap = true })
-
 -- Resize window using <ctrl> arrow keys
-map("n", "<C-Up>", "<cmd>resize +2<cr>", { desc = "Increase window height" })
-map("n", "<C-Down>", "<cmd>resize -2<cr>", { desc = "Decrease window height" })
-map("n", "<C-Left>", "<cmd>vertical resize -2<cr>", { desc = "Decrease window width" })
-map("n", "<C-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase window width" })
+map("n", "<C-Up>", "<C-w>k", { desc = "Go to upper window", remap = true })
+map("n", "<C-Down>", "<C-w>j", { desc = "Go to lower window", remap = true})
+map("n", "<C-Left>", "<C-w>h", { desc = "Go to left window", remap = true})
+map("n", "<C-Right>", "<C-w>l", { desc = "Go to right window", remap = true})
 
 -- Move Lines
 map("n", "<A-j>", "<cmd>m .+1<cr>==", { desc = "Move down" })

@@ -1,36 +1,10 @@
 return {
-    {
-    "elixir-tools/elixir-tools.nvim",
-    event = { "BufReadPre", "BufNewFile" },
-    config = function()
-      local elixir = require("elixir")
-      local elixirls = require("elixir.elixirls")
-
-      elixir.setup {
-        credo = {},
-        elixirls = {
-          enabled = true,
-          settings = elixirls.settings {
-            dialyzerEnabled = false,
-            enableTestLenses = false,
-          },
-        }
-      }
-    end,
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-    }
-  },
   {
-  "nvim-neotest/neotest",
-  optional = true,
-  dependencies = {
-    "jfpedroza/neotest-elixir",
+    "williamboman/mason.nvim",
+    opts = function(_, opts)
+      vim.list_extend(opts.ensure_installed, {
+        "elixir-ls",
+      })
+    end,
   },
-  opts = {
-    adapters = {
-      ["neotest-elixir"] = {},
-    },
-  },
-}
 }
