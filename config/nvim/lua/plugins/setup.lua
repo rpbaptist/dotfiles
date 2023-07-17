@@ -4,15 +4,20 @@
 -- * override the configuration of LazyVim plugins
 return {
   -- add gruvbox
-  { "ellisonleao/gruvbox.nvim" },
+  { "ellisonleao/gruvbox.nvim",
+    opts = {
+      contrast = "hard",
+    }
+   },
 
-  -- Configure LazyVim to load gruvbox
   {
     "LazyVim/LazyVim",
     opts = {
       colorscheme = "gruvbox",
     },
   },
+
+  -- Configure LazyVim to load gruvbox
   {
      "nvim-treesitter/nvim-treesitter",
      opts = {
@@ -46,5 +51,14 @@ return {
       end,
     },
   },
+  {
+    "williamboman/mason.nvim",
+    opts = function(_, opts)
+      vim.list_extend(opts.ensure_installed, {
+        "stylua"
+      })
+    end,
+  },
+
     "tpope/vim-projectionist",
 }
