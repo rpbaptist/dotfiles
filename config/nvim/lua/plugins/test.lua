@@ -6,9 +6,10 @@ return {
     dependencies = {
       "jfpedroza/neotest-elixir",
     },
-    opts = { adapters = {
-    "neotest-plenary",
-    ["neotest-elixir"] = {}, } },
+    opts = {
+      adapters = {
+        ["neotest-elixir"] = {}, }
+    },
   },
   {
   "jfpedroza/neotest-elixir",
