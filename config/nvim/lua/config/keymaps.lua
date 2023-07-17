@@ -12,10 +12,8 @@ vim.keymap.del("n", "<C-Right>")
 vim.keymap.del({ "n", "i", "v"}, "<A-j>")
 vim.keymap.del({ "n", "i", "v"}, "<A-k>")
 
-vim.keymap.set("n", "<C-s>", ":w<CR>")
-vim.keymap.set("i", "<C-s>", "<ESC>:w<CR>")
-
--- inoremap <expr> <TAB> pumvisible() ? "<C-y>" : "<TAB>"
+-- vim.keymap.set("n", "<C-s>", ":w<CR>")
+-- vim.keymap.set("i", "<C-s>", "<ESC>:w<CR>")
 
 -- Move Lines
 vim.keymap.set("n", "<A-Down>", "<cmd>m .+1<cr>==", { desc = "Move down" })
@@ -26,3 +24,9 @@ vim.keymap.set({ "n", "x", "v" }, "<Up>", "k", { remap = true })
 vim.keymap.set({ "n", "x", "v" }, "<Down>", "j", { remap = true })
 vim.keymap.set({ "n", "x", "v" }, "<Left>", "h", { remap = true })
 vim.keymap.set({ "n", "x", "v" }, "<Right>", "l", { remap = true })
+
+-- Undo
+vim.keymap.set({ "i", "s" }, "<C-z>", "<cmd>u<cr>", { desc = "Undo" })
+
+-- LSP autocomplete
+-- inoremap <expr> <TAB> pumvisible() ? "<C-y>" : "<TAB>"
