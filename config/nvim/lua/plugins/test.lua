@@ -7,13 +7,14 @@ return {
     },
     opts = {
       adapters = {
-        ["neotest-elixir"] = {}, }
+        ["neotest-elixir"] = {},
+      },
     },
   },
   {
-  "jfpedroza/neotest-elixir",
-  }
-     {
+    "jfpedroza/neotest-elixir",
+  },
+  {
     "folke/which-key.nvim",
     optional = true,
     opts = {
@@ -22,5 +23,4 @@ return {
       },
     },
   },
-  }
 }

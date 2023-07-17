@@ -4,11 +4,17 @@
 -- * override the configuration of LazyVim plugins
 return {
   -- add gruvbox
-  { "ellisonleao/gruvbox.nvim",
-    opts = {
-      contrast = "hard",
-    }
-   },
+  { "ellisonleao/gruvbox.nvim", opts = {
+    contrast = "hard",
+    bold = false
+  } },
+
+  -- {"sainnhe/gruvbox-material",
+  --   opts = {
+  --     gruvbox_material_background = "hard",
+  --     gruvbox_material_foreground = "original",
+  --   }
+  -- },
 
   {
     "LazyVim/LazyVim",
@@ -19,27 +25,27 @@ return {
 
   -- Configure LazyVim to load gruvbox
   {
-     "nvim-treesitter/nvim-treesitter",
-     opts = {
-       ensure_installed = {
-         "bash",
-         "eex",
-         "elixir",
-         "heex",
-         "html",
-         "javascript",
-         "json",
-         "lua",
-         "markdown",
-         "markdown_inline",
-         "python",
-         "query",
-         "regex",
-         "tsx",
-         "typescript",
-         "vim",
-       },
-     },
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        "bash",
+        "eex",
+        "elixir",
+        "heex",
+        "html",
+        "javascript",
+        "json",
+        "lua",
+        "markdown",
+        "markdown_inline",
+        "python",
+        "query",
+        "regex",
+        "tsx",
+        "typescript",
+        "vim",
+      },
+    },
   },
   {
     "telescope.nvim",
@@ -55,10 +61,12 @@ return {
     "williamboman/mason.nvim",
     opts = function(_, opts)
       vim.list_extend(opts.ensure_installed, {
-        "stylua"
+        "elixir-ls",
+        "stylua",
       })
     end,
   },
 
-    "tpope/vim-projectionist",
+  "mg979/vim-visual-multi",
+  "tpope/vim-projectionist",
 }

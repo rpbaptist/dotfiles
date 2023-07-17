@@ -3,7 +3,12 @@
 -- Add any additional options here
 
 vim.opt.relativenumber = false
-vim.opt.swapfile = false
+-- vim.opt.swapfile = false
+
+-- let vimtmp = $HOME . '/.vimtmp//'
+-- silent! call mkdir(vimtmp, "p", 0700)
+-- let &backupdir=vimtmp
+-- let &directory=vimtmp
 
 vim.g.projectionist_heuristics = {
   ["mix.exs"] = {

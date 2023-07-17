@@ -18,6 +18,11 @@ local function map(mode, lhs, rhs, opts)
   end
 end
 
+vim.keymap.del("n", "<C-Up>")
+vim.keymap.del("n", "<C-Down>")
+vim.keymap.del("n", "<C-Left>")
+vim.keymap.del("n", "<C-Right>")
+
 map("n", "<C-s>", ":w<CR>")
 map("i", "<C-s>", "<ESC>:w<CR>")
 
@@ -32,12 +37,6 @@ map({ "n", "x", "v" }, "<Right>", "l", { remap = true })
 -- better up/down
 map({ "n", "x" }, "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 map({ "n", "x" }, "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
-
--- Resize window using <ctrl> arrow keys
-map("n", "<C-Up>", "<C-w>k", { desc = "Go to upper window", remap = true })
-map("n", "<C-Down>", "<C-w>j", { desc = "Go to lower window", remap = true})
-map("n", "<C-Left>", "<C-w>h", { desc = "Go to left window", remap = true})
-map("n", "<C-Right>", "<C-w>l", { desc = "Go to right window", remap = true})
 
 -- Move Lines
 map("n", "<A-j>", "<cmd>m .+1<cr>==", { desc = "Move down" })
