@@ -4,22 +4,17 @@
 -- * override the configuration of LazyVim plugins
 return {
   -- add gruvbox
-  { "ellisonleao/gruvbox.nvim", opts = {
-    contrast = "hard",
-    bold = false
-  } },
+  -- { "ellisonleao/gruvbox.nvim", opts = {
+  --   contrast = "hard",
+  --   bold = false
+  -- } },
 
-  -- {"sainnhe/gruvbox-material",
-  --   opts = {
-  --     gruvbox_material_background = "hard",
-  --     gruvbox_material_foreground = "original",
-  --   }
-  -- },
+  {"sainnhe/gruvbox-material" },
 
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "gruvbox",
+      colorscheme = "gruvbox-material",
     },
   },
 
