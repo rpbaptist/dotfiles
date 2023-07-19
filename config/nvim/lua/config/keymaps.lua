@@ -17,6 +17,42 @@ vim.keymap.del("n", "<C-j>")
 vim.keymap.del("n", "<C-k>")
 vim.keymap.del("n", "<C-l>")
 
+vim.keymap.del("n", "<S-h>")
+vim.keymap.del("n", "<S-l>")
+-- vim.keymap.del("n", "[b")
+-- vim.keymap.del("n", "]b")
+
+vim.keymap.del("n", "<leader>`")
+
+-- Bind arrow keys to VIM nav
+vim.keymap.set({ "n", "x", "v" }, "<Up>", "k", { remap = true })
+vim.keymap.set({ "n", "x", "v" }, "<Down>", "j", { remap = true })
+vim.keymap.set({ "n", "x", "v" }, "<Left>", "h", { remap = true })
+vim.keymap.set({ "n", "x", "v" }, "<Right>", "l", { remap = true })
+
+-- -- buffers
+-- if Util.has("bufferline.nvim") then
+--   vim.keymap.set("n", "<S-Left>", "<cmd>BufferLineCyclePrev<cr>", { desc = "Prev buffer" })
+--   vim.keymap.set("n", "<S-Right>", "<cmd>BufferLineCycleNext<cr>", { desc = "Next buffer" })
+  -- map("n", "[b", "<cmd>BufferLineCyclePrev<cr>", { desc = "Prev buffer" })
+  -- map("n", "]b", "<cmd>BufferLineCycleNext<cr>", { desc = "Next buffer" })
+-- else
+  vim.keymap.set("n", "<S-Left>", "<cmd>bprevious<cr>", { desc = "Prev buffer" })
+  vim.keymap.set("n", "<S-Right>", "<cmd>bnext<cr>", { desc = "Next buffer" })
+
+  vim.keymap.set("n", "<leader>bn", "<cmd>bprevious<cr>", { desc = "Prev buffer" })
+  vim.keymap.set("n", "<leader>bi", "<cmd>bnext<cr>", { desc = "Next buffer" })
+  -- map("n", "[b", "<cmd>bprevious<cr>", { desc = "Prev buffer" })
+  -- map("n", "]b", "<cmd>bnext<cr>", { desc = "Next buffer" })
+-- end
+
+-- Resize windows
+vim.keymap.set("n", "<leader>wu", "<cmd>resize +10<cr>", { desc = "Increase window height" })
+vim.keymap.set("n", "<leader>we", "<cmd>resize -10<cr>", { desc = "Decrease window height" })
+vim.keymap.set("n", "<leader>wn", "<cmd>vertical resize -10<cr>", { desc = "Decrease window width" })
+vim.keymap.set("n", "<leader>wi", "<cmd>vertical resize +10<cr>", { desc = "Increase window width" })
+
+-- Navigate windows
 vim.keymap.set("n", "<A-Left>", "<C-w>h", { desc = "Go to left window", remap = true })
 vim.keymap.set("n", "<A-Down>", "<C-w>j", { desc = "Go to lower window", remap = true })
 vim.keymap.set("n", "<A-Up>", "<C-w>k", { desc = "Go to upper window", remap = true })
@@ -25,12 +61,6 @@ vim.keymap.set("n", "<A-Right>", "<C-w>l", { desc = "Go to right window", remap 
 -- Move Lines
 vim.keymap.set("n", "<C-S-Down>", "<cmd>m .+1<cr>==", { desc = "Move down" })
 vim.keymap.set("n", "<C-S-Up>", "<cmd>m .-2<cr>==", { desc = "Move up" })
-
--- Bind arrow keys to VIM nav
-vim.keymap.set({ "n", "x", "v" }, "<Up>", "k", { remap = true })
-vim.keymap.set({ "n", "x", "v" }, "<Down>", "j", { remap = true })
-vim.keymap.set({ "n", "x", "v" }, "<Left>", "h", { remap = true })
-vim.keymap.set({ "n", "x", "v" }, "<Right>", "l", { remap = true })
 
 -- Undo
 vim.keymap.set({ "i", "s" }, "<C-z>", "<cmd>u<cr>", { desc = "Undo" })
