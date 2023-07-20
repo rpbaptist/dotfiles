@@ -11,6 +11,8 @@ return {
 
   {"sainnhe/gruvbox-material" },
 
+  {"knubie/vim-kitty-navigator"},
+
   {
     "LazyVim/LazyVim",
     opts = {
