@@ -9,6 +9,15 @@ return {
       adapters = {
         ["neotest-elixir"] = {},
       },
+      quickfix = {
+        open = function()
+          if require("lazyvim.util").has("trouble.nvim") then
+            vim.cmd("Trouble quickfix")
+          else
+            vim.cmd("copen")
+          end
+        end,
+      },
     },
   },
   {
