@@ -26,15 +26,6 @@ return {
       end,
     },
   },
-  {
-    "williamboman/mason.nvim",
-    opts = function(_, opts)
-      vim.list_extend(opts.ensure_installed, {
-        "stylua",
-      })
-    end,
-  },
-
   {"mg979/vim-visual-multi"},
   {"tpope/vim-projectionist"},
     {
@@ -77,6 +68,7 @@ return {
         end
       end
     },
+    { "mhanberg/elixir.nvim", requires = { "nvim-lua/plenary.nvim" } },
     {
       "mhanberg/output-panel.nvim",
       event = "VeryLazy",
