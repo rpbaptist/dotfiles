@@ -58,10 +58,10 @@ vim.keymap.set("n", "<A-S-Right>", "<cmd>vertical resize +10<cr>", { desc = "Inc
 -- vim.keymap.set("n", "<A-Up>", "<C-w>k", { desc = "Go to upper window", remap = true })
 -- vim.keymap.set("n", "<A-Right>", "<C-w>l", { desc = "Go to right window", remap = true })
 
-vim.keymap.set("n", "<C-A-u>", ":KittyNavigateUp<cr>", { desc = "Go to upper window", silent = true, remap = true })
-vim.keymap.set("n", "<C-A-e>", ":KittyNavigateDown<cr>", { desc = "Go to lower window", silent = true, remap = true })
-vim.keymap.set("n", "<C-A-n>", ":KittyNavigateLeft<cr>", { desc = "Go to left window", silent = true, remap = true })
-vim.keymap.set("n", "<C-A-i>", ":KittyNavigateRight<cr>", { desc = "Go to right window", silent = true, remap = true })
+vim.keymap.set("n", "<C-A-u>", ":KittyNavigateUp<cr>", { desc = "Go to upper window", silent = true})
+vim.keymap.set("n", "<C-A-e>", ":KittyNavigateDown<cr>", { desc = "Go to lower window", silent = true})
+vim.keymap.set("n", "<C-A-n>", ":KittyNavigateLeft<cr>", { desc = "Go to left window", silent = true})
+vim.keymap.set("n", "<C-A-i>", ":KittyNavigateRight<cr>", { desc = "Go to right window", silent = true})
 
 -- Move Lines
 vim.keymap.set("n", "<C-S-Down>", "<cmd>m .+1<cr>==", { desc = "Move down" })

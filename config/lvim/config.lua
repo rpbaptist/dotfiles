@@ -12,6 +12,8 @@ vim.cmd("let g:gruvbox_material_statusline_style = 'original'")
 vim.cmd("let g:gruvbox_material_enable_italic = 1")
 lvim.colorscheme = "gruvbox-material"
 
+vim.cmd("let g:kitty_navigator_no_mappings = 1")
+
 -- require("gruvbox").setup({
 --   undercurl = true,
 --   underline = true,
@@ -45,13 +47,28 @@ lvim.keys.normal_mode["<C-h>"] = false
 lvim.keys.normal_mode["<C-j>"] = false
 lvim.keys.normal_mode["<C-k>"] = false
 lvim.keys.normal_mode["<C-l>"] = false
+lvim.keys.normal_mode["<C-w>"] = false
 lvim.keys.normal_mode["<C-Tab>"] = false
 lvim.keys.normal_mode["<C-S-Tab>"] = false
-lvim.keys.normal_mode["<M>-k"] = false
-lvim.keys.normal_mode["<M>-j"] = false
+lvim.keys.normal_mode["<M-k>"] = false
+lvim.keys.normal_mode["<M-j>"] = false
+lvim.keys.normal_mode["<Space-c>"] = false
+lvim.keys.normal_mode["<M-Up>"] = false
+lvim.keys.normal_mode["<M-Down>"] = false
+lvim.keys.normal_mode["<M-Left>"] = false
+lvim.keys.normal_mode["<M-Right>"] = false
+lvim.keys.normal_mode["<C-Up>"] = false
+lvim.keys.normal_mode["<C-Down>"] = false
+lvim.keys.normal_mode["<C-Left>"] = false
+lvim.keys.normal_mode["<C-Right>"] = false
+
+lvim.keys.normal_mode["<C-A-u>"] = ":KittyNavigateUp<cr>"
+lvim.keys.normal_mode["<C-A-e>"] = ":KittyNavigateDown<cr>"
+lvim.keys.normal_mode["<C-A-n>"] = ":KittyNavigateLeft<cr>"
+lvim.keys.normal_mode["<C-A-i>"] = ":KittyNavigateRight<cr>"
 
 lvim.keys.normal_mode["<C-S-Up>"] = ":m .-2<CR>=="
-lvim.keys.normal_mode["<C-S-Down>"] = "<:m .+1<CR>=="
+lvim.keys.normal_mode["<C-S-Down>"] = ":m .+1<CR>=="
 
 lvim.keys.normal_mode["<C-s>"] = ":w<CR>"
 lvim.keys.insert_mode["<C-s>"] = "<ESC>:w<CR>"
@@ -62,41 +79,87 @@ lvim.keys.normal_mode["<C-S-Tab>"] = ":bp<CR>"
 
 -- Projectionist
 vim.api.nvim_set_var('projectionist_heuristics', {
-  ['mix.exs|lib/*.ex'] = {
-    ['lib/**/live/*_live.ex'] = {
-      alternate = 'lib/{dirname}/live/{basename}_live.html.heex',
-      type = 'source',
+   ["mix.exs"] = {
+    ["lib/**/views/*_view.ex"] = {
+      type = "view",
+      alternate = "test/{dirname}/views/{basename}_view_test.exs",
       template = {
-        "defmodule {dirname|camelcase|capitalize}.{basename|camelcase|capitalize}Live do",
-        "  use {dirname|camelcase|capitalize}, :live_view",
+        "defmodule {dirname|camelcase|capitalize}.{basename|camelcase|capitalize}View do",
+        "  use {dirname|camelcase|capitalize}, :view",
+        "end",
+      },
+    },
+    ["test/**/views/*_view_test.exs"] = {
+      alternate = "lib/{dirname}/views/{basename}_view.ex",
+      type = "test",
+      template = {
+        "defmodule {dirname|camelcase|capitalize}.{basename|camelcase|capitalize}ViewTest do",
+        "  use ExUnit.Case, async: true",
         "",
-        "  def mount(_params, _session, socket) do",
-        "    {open}:ok, socket{close}",
-        "  end",
-        "end"
+        "  alias {dirname|camelcase|capitalize}.{basename|camelcase|capitalize}View",
+        "end",
       },
     },
-    ['lib/**/live/*_live.html.heex'] = {
-      alternate = 'lib/{dirname}/live/{basename}_live.ex',
-      type = 'template',
-    },
-    ['lib/*.ex'] = {
-      alternate = 'test/{}_test.exs',
-      type = 'source',
+    ["lib/**/controllers/*_controller.ex"] = {
+      type = "controller",
+      alternate = "test/{dirname}/controllers/{basename}_controller_test.exs",
       template = {
-        "defmodule {camelcase|capitalize|dot} do",
-        "end"
+        "defmodule {dirname|camelcase|capitalize}.{basename|camelcase|capitalize}Controller do",
+        "  use {dirname|camelcase|capitalize}, :controller",
+        "end",
       },
     },
-    ['test/*_test.exs'] = {
-      alternate = 'lib/{}.ex',
-      type = 'source',
+    ["test/**/controllers/*_controller_test.exs"] = {
+      alternate = "lib/{dirname}/controllers/{basename}_controller.ex",
+      type = "test",
+      template = {
+        "defmodule {dirname|camelcase|capitalize}.{basename|camelcase|capitalize}ControllerTest do",
+        "  use {dirname|camelcase|capitalize}.ConnCase, async: true",
+        "end",
+      },
+    },
+    ["lib/**/channels/*_channel.ex"] = {
+      type = "channel",
+      alternate = "test/{dirname}/channels/{basename}_channel_test.exs",
+      template = {
+        "defmodule {dirname|camelcase|capitalize}.{basename|camelcase|capitalize}Channel do",
+        "  use {dirname|camelcase|capitalize}, :channel",
+        "end",
+      },
+    },
+    ["test/**/channels/*_channel_test.exs"] = {
+      alternate = "lib/{dirname}/channels/{basename}_channel.ex",
+      type = "test",
+      template = {
+        "defmodule {dirname|camelcase|capitalize}.{basename|camelcase|capitalize}ChannelTest do",
+        "  use {dirname|camelcase|capitalize}.ChannelCase, async = true",
+        "",
+        "  alias {dirname|camelcase|capitalize}.{basename|camelcase|capitalize}Channel",
+        "end",
+      },
+    },
+    ["test/**/features/*_test.exs"] = {
+      type = "feature",
+      template = {
+        "defmodule {dirname|camelcase|capitalize}.{basename|camelcase|capitalize}Test do",
+        "  use {dirname|camelcase|capitalize}.FeatureCase, async = true",
+        "end",
+      },
+    },
+    ["lib/*.ex"] = {
+      alternate = "test/{}_test.exs",
+      type = "source",
+      template = { "defmodule {camelcase|capitalize|dot} do", "end" },
+    },
+    ["test/*_test.exs"] = {
+      alternate = "lib/{}.ex",
+      type = "test",
       template = {
         "defmodule {camelcase|capitalize|dot}Test do",
         "  use ExUnit.Case, async: true",
         "",
         "  alias {camelcase|capitalize|dot}",
-        "end"
+        "end",
       },
     },
   },
@@ -122,6 +185,9 @@ lvim.plugins = {
         require("output_panel").setup()
       end
     },
+
+  {"knubie/vim-kitty-navigator"},
+
 }
 
 lvim.builtin.treesitter.ensure_installed = {
