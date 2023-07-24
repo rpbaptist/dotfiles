@@ -44,3 +44,5 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 
 # unset QT_STYLE_OVERRIDE
 # export QT_QPA_PLATFORMTHEME="qt5ct"
+
+export XDG_CONFIG_HOME="$HOME/.config"

@@ -10,7 +10,7 @@
   ui = true
 [core]
 	askpass = git-gui--askpass
-	editor = "$EDITOR -w"
+	editor = "$VISUAL"
 	excludesfile = ~/.gitignore
 	commentChar = ";"
 [push]
