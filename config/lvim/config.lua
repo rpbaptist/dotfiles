@@ -3,42 +3,42 @@
 -- Forum: https://www.reddit.com/r/lunarvim/
 -- Discord: https://discord.com/invite/Xb9B4Nyo
 
-vim.cmd("let g:gruvbox_material_background = 'hard'")
-vim.cmd("let g:gruvbox_material_foreground = 'mix'")
--- vim.cmd("let g:gruvbox_material_enable_bold = 1")
-vim.cmd("let g:gruvbox_material_enable_italic = 1")
-vim.cmd("let g:gruvbox_material_dim_inactive_windows = 1")
-vim.cmd("let g:gruvbox_material_statusline_style = 'original'")
-vim.cmd("let g:gruvbox_material_enable_italic = 1")
-lvim.colorscheme = "gruvbox-material"
+-- vim.cmd("let g:gruvbox_material_background = 'hard'")
+-- vim.cmd("let g:gruvbox_material_foreground = 'mix'")
+-- -- vim.cmd("let g:gruvbox_material_enable_bold = 1")
+-- vim.cmd("let g:gruvbox_material_enable_italic = 1")
+-- vim.cmd("let g:gruvbox_material_dim_inactive_windows = 1")
+-- vim.cmd("let g:gruvbox_material_statusline_style = 'original'")
+-- vim.cmd("let g:gruvbox_material_enable_italic = 1")
+-- lvim.colorscheme = "gruvbox-material"
 
 vim.cmd("let g:kitty_navigator_no_mappings = 1")
 
--- require("gruvbox").setup({
---   undercurl = true,
---   underline = true,
---   bold = true,
---   italic = {
---     strings = true,
---     comments = true,
---     operators = false,
---     folds = true,
---   },
---   strikethrough = true,
---   invert_selection = false,
---   invert_signs = false,
---   invert_tabline = false,
---   invert_intend_guides = false,
---   inverse = true,    -- invert background for search, diffs, statuslines and errors
---   contrast = "hard", -- can be "hard", "soft" or empty string
---   palette_overrides = {},
---   overrides = {},
---   dim_inactive = false,
---   transparent_mode = false,
--- })
--- vim.cmd("let g:gruvbox_contrast = 'hard'")
--- vim.cmd("let g:gruvbox_dim_inactive = 1")
--- lvim.colorscheme = "gruvbox"
+require("gruvbox").setup({
+  undercurl = true,
+  underline = true,
+  bold = true,
+  italic = {
+    strings = true,
+    comments = true,
+    operators = false,
+    folds = true,
+  },
+  strikethrough = true,
+  invert_selection = false,
+  invert_signs = false,
+  invert_tabline = false,
+  invert_intend_guides = false,
+  inverse = true,    -- invert background for search, diffs, statuslines and errors
+  contrast = "hard", -- can be "hard", "soft" or empty string
+  palette_overrides = {},
+  overrides = {},
+  dim_inactive = false,
+  transparent_mode = false,
+})
+vim.cmd("let g:gruvbox_contrast = 'hard'")
+vim.cmd("let g:gruvbox_dim_inactive = 1")
+lvim.colorscheme = "gruvbox"
 
 lvim.format_on_save = true
 lvim.lint_on_save = true
@@ -192,36 +192,13 @@ lvim.plugins = {
 
 lvim.builtin.treesitter.ensure_installed = {
   "bash",
+  "css",
   "elixir",
   "heex",
   "javascript",
   "json",
   "lua",
-  "css",
+  "python",
+  "yaml",
 }
-
 lvim.format_on_save = true
-
-lvim.builtin.treesitter.ensure_installed = {
-  "javascript",
-  "json",
-  "lua",
-  "typescript",
-  "tsx",
-  "css",
-  "elixir",
-  "heex",
-}
-
-vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "tailwindcss" })
-local opts = {
-  root_dir = function(fname)
-    local util = require "lspconfig/util"
-    return util.root_pattern("assets/tailwind.config.js", "tailwind.config.js", "tailwind.config.cjs", "tailwind.js",
-      "tailwind.cjs")(fname)
-  end,
-  init_options = {
-    userLanguages = { heex = "html", elixir = "html" }
-  },
-}
-require("lvim.lsp.manager").setup("tailwindcss", opts)
