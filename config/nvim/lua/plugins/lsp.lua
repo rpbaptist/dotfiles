@@ -24,15 +24,15 @@ return {
       }
     end,
   },
-  {
-    "neovim/nvim-lspconfig",
-       elixirls = {},
-    opts = {
-      servers = {
-        elixirls = {
-          cmd = { "/Users/richard/.elixir-ls/language_server.sh" },
-        },
-      },
-    },
-  },
+  -- {
+  --   "neovim/nvim-lspconfig",
+  --      elixirls = {},
+  --   opts = {
+  --     servers = {
+  --       elixirls = {
+  --         cmd = { "/Users/richard/.elixir-ls/language_server.sh" },
+  --       },
+  --     },
+  --   },
+  -- },
 }

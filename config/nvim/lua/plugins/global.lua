@@ -1,31 +1,29 @@
 return {
   -- add gruvbox
-  -- { "ellisonleao/gruvbox.nvim", opts = {
-  --   contrast = "hard",
-  --   bold = false
-  -- } },
+  { "ellisonleao/gruvbox.nvim", opts = {
+    contrast = "hard",
+    bold = false
+  } },
 
-  {"sainnhe/gruvbox-material" },
-
-  {"knubie/vim-kitty-navigator"},
+  {"knubie/vim-kitty-navigator" },
 
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "gruvbox-material",
+      colorscheme = "gruvbox",
     },
   },
 
-  {
-    "telescope.nvim",
-    dependencies = {
-      "nvim-telescope/telescope-fzf-native.nvim",
-      build = "make",
-      config = function()
-        require("telescope").load_extension("fzf")
-      end,
-    },
-  },
+  -- {
+  --   "telescope.nvim",
+  --   dependencies = {
+  --     "nvim-telescope/telescope-fzf-native.nvim",
+  --     build = "make",
+  --     config = function()
+  --       require("telescope").load_extension("fzf")
+  --     end,
+  --   },
+  -- },
   {"mg979/vim-visual-multi"},
   {"tpope/vim-projectionist"},
     {
@@ -68,7 +66,7 @@ return {
         end
       end
     },
-    { "mhanberg/elixir.nvim", requires = { "nvim-lua/plenary.nvim" } },
+    -- { "mhanberg/elixir.nvim", requires = { "nvim-lua/plenary.nvim" } },
     {
       "mhanberg/output-panel.nvim",
       event = "VeryLazy",
