@@ -62,6 +62,9 @@ lvim.keys.normal_mode["<C-Down>"] = false
 lvim.keys.normal_mode["<C-Left>"] = false
 lvim.keys.normal_mode["<C-Right>"] = false
 
+lvim.keys.normal_mode["<space>|"] = ":vsplit<CR>"
+lvim.keys.normal_mode["<space>-"] = ":split<CR>"
+
 lvim.keys.normal_mode["<C-A-u>"] = ":KittyNavigateUp<cr>"
 lvim.keys.normal_mode["<C-A-e>"] = ":KittyNavigateDown<cr>"
 lvim.keys.normal_mode["<C-A-n>"] = ":KittyNavigateLeft<cr>"
@@ -74,8 +77,8 @@ lvim.keys.normal_mode["<C-s>"] = ":w<CR>"
 lvim.keys.insert_mode["<C-s>"] = "<ESC>:w<CR>"
 
 -- Buffers
-lvim.keys.normal_mode["<C-Tab>"] = ":bn<CR>"
-lvim.keys.normal_mode["<C-S-Tab>"] = ":bp<CR>"
+lvim.keys.normal_mode["<C-A-Tab>"] = ":bn<CR>"
+lvim.keys.normal_mode["<C-A-S-Tab>"] = ":bp<CR>"
 
 -- Projectionist
 vim.api.nvim_set_var('projectionist_heuristics', {
