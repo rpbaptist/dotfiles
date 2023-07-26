@@ -19,9 +19,9 @@ vim.keymap.del("n", "<C-l>")
 
 vim.keymap.del("n", "<S-h>")
 vim.keymap.del("n", "<S-l>")
+-- vim.keymap.del("n", "<C-w>")
 -- vim.keymap.del("n", "[b")
 -- vim.keymap.del("n", "]b")
-
 vim.keymap.del("n", "<leader>`")
 
 -- Bind arrow keys to VIM nav
@@ -32,9 +32,11 @@ vim.keymap.set({ "n", "x", "v" }, "<Right>", "l", { remap = true })
 
 vim.keymap.set("n", "<C-A-Tab>", "<cmd>bnext<cr>", { desc = "Next buffer" })
 vim.keymap.set("n", "<C-A-S-Tab>", "<cmd>bprevious<cr>", { desc = "Prev buffer" })
+vim.keymap.set("n", "<C-w>", "<Space>bd", { desc = "Delete buffer" })
 
-vim.keymap.set("n", "<leader>bn", "<cmd>bprevious<cr>", { desc = "Prev buffer" })
-vim.keymap.set("n", "<leader>bi", "<cmd>bnext<cr>", { desc = "Next buffer" })
+-- vim.keymap.set("n", "<leader>bn", "<cmd>bprevious<cr>", { desc = "Prev buffer" })
+-- vim.keymap.set("n", "<leader>bi", "<cmd>bnext<cr>", { desc = "Next buffer" })
+vim.keymap.set("n", "<C-w>", "<cmd>bd<cr>", { desc = "Next buffer" })
 vim.keymap.set("n", "<C-t><C-t>", ":OTest<cr>", { desc = "Open test file" })
 
 -- Resize windows
