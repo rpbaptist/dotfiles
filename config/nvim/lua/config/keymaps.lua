@@ -30,22 +30,11 @@ vim.keymap.set({ "n", "x", "v" }, "<Down>", "j", { remap = true })
 vim.keymap.set({ "n", "x", "v" }, "<Left>", "h", { remap = true })
 vim.keymap.set({ "n", "x", "v" }, "<Right>", "l", { remap = true })
 
--- -- buffers
--- if Util.has("bufferline.nvim") then
---   vim.keymap.set("n", "<S-Left>", "<cmd>BufferLineCyclePrev<cr>", { desc = "Prev buffer" })
---   vim.keymap.set("n", "<S-Right>", "<cmd>BufferLineCycleNext<cr>", { desc = "Next buffer" })
--- map("n", "[b", "<cmd>BufferLineCyclePrev<cr>", { desc = "Prev buffer" })
--- map("n", "]b", "<cmd>BufferLineCycleNext<cr>", { desc = "Next buffer" })
--- else
 vim.keymap.set("n", "<C-A-Tab>", "<cmd>bnext<cr>", { desc = "Next buffer" })
 vim.keymap.set("n", "<C-A-S-Tab>", "<cmd>bprevious<cr>", { desc = "Prev buffer" })
 
 vim.keymap.set("n", "<leader>bn", "<cmd>bprevious<cr>", { desc = "Prev buffer" })
 vim.keymap.set("n", "<leader>bi", "<cmd>bnext<cr>", { desc = "Next buffer" })
--- map("n", "[b", "<cmd>bprevious<cr>", { desc = "Prev buffer" })
--- map("n", "]b", "<cmd>bnext<cr>", { desc = "Next buffer" })
--- end
-
 vim.keymap.set("n", "<C-t><C-t>", ":OTest<cr>", { desc = "Open test file" })
 
 -- Resize windows
@@ -55,11 +44,6 @@ vim.keymap.set("n", "<A-S-Left>", "<cmd>vertical resize -10<cr>", { desc = "Decr
 vim.keymap.set("n", "<A-S-Right>", "<cmd>vertical resize +10<cr>", { desc = "Increase window width" })
 
 -- Navigate windows
--- vim.keymap.set("n", "<A-Left>", "<C-w>h", { desc = "Go to left window", remap = true })
--- vim.keymap.set("n", "<A-Down>", "<C-w>j", { desc = "Go to lower window", remap = true })
--- vim.keymap.set("n", "<A-Up>", "<C-w>k", { desc = "Go to upper window", remap = true })
--- vim.keymap.set("n", "<A-Right>", "<C-w>l", { desc = "Go to right window", remap = true })
-
 vim.keymap.set("n", "<C-A-u>", ":KittyNavigateUp<cr>", { desc = "Go to upper window", noremap = true, silent = true })
 vim.keymap.set("n", "<C-A-e>", ":KittyNavigateDown<cr>", { desc = "Go to lower window", noremap = true, silent = true })
 vim.keymap.set("n", "<C-A-n>", ":KittyNavigateLeft<cr>", { desc = "Go to left window", noremap = true, silent = true })
