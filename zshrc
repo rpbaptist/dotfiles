@@ -44,7 +44,7 @@ unsetopt nomatch
 
 eval "$(dircolors $HOME/.dircolors)"
 
-fpath=(~/.zsh/completions $fpath)
+fpath=(${ASDF_DIR}/completions ~/.zsh/completions $fpath)
 autoload -U compinit && compinit
 
 # Don't try to ssh to hosts file
