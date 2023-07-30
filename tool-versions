@@ -1,6 +1,4 @@
-direnv 2.28.0
-ruby 2.6.6
-elixir 1.12.3-otp-24
-erlang 24.1
-nodejs 16.9.1
-rust 1.54.0
+direnv 2.30.3
+erlang 25.2
+elixir 1.14.3-otp-25
+nodejs 18.14.0
