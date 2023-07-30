@@ -1,7 +1,6 @@
 [user]
 	name = Richard Baptist
 	email = code@richardbaptist.nl
-	signingkey = 9E79FA364ABBFFAB
 [checkout]
   defaultRemote=origin
 [color]
@@ -11,8 +10,8 @@
   ui = true
 [core]
 	askpass = git-gui--askpass
-	editor = subl -w
-	excludesfile = /home/richard/.gitignore
+	editor = "$VISUAL"
+	excludesfile = ~/.gitignore
 	commentChar = ";"
 [push]
 	default = current
@@ -20,7 +19,7 @@
 [rebase]
 	autosquash = true
 [commit]
-	gpgsign = true
+	gpgsign = false
 [pager]
   branch = false
 [pull]

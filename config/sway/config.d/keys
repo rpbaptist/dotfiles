@@ -9,7 +9,7 @@ set $up u
 set $right i
 ### Terminal
 
-set $term tilix
+set $term kitty
 
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
