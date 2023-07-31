@@ -13,7 +13,7 @@ HOME_LOCAL_PATH="$HOME/.local/bin"
 export PGHOST=localhost
 
 export GAMES_PATH="/usr/games:/usr/local/games"
-export PATH="$HOME_LOCAL_PATH:$COMMON_PATHS:$GAMES_PATH"
+export PATH="$HOME_LOCAL_PATH:$COMMON_PATHS:$GAMES_PATH:/snap/bin"
 
 # Preferred editor for local and remote sessions
 if [ -n "$SSH_CONNECTION" ]; then
