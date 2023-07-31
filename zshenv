@@ -39,3 +39,7 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 
 unset QT_STYLE_OVERRIDE
 export QT_QPA_PLATFORMTHEME="qt5ct"
+
+export XCURSOR_PATH=${XCURSOR_PATH}:~/.local/share/icons
+export XCURSOR_THEME="Gruvbox-Light"
+export XCURSOR_SIZE=16
