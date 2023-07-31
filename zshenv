@@ -19,9 +19,10 @@ export PATH="$HOME_LOCAL_PATH:$COMMON_PATHS:$GAMES_PATH"
 if [ -n "$SSH_CONNECTION" ]; then
   export EDITOR="vi"
 else
-  export EDITOR="subl -w"
+  export EDITOR="subl"
 fi
 
+export VISUAL="$EDITOR -w"
 export NOTES_PATH="$HOME/Drive/Notes"
 
 #GPG
