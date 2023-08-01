@@ -3142,7 +3142,7 @@ headerbar
 
 .titlebar.default-decoration {
   min-height: 24px;
-  padding: 8px 20px;
+  padding: 8px 15px;
   border-radius: 12px 12px 0 0;
 }
 
@@ -3172,7 +3172,7 @@ headerbar
 
 headerbar {
   min-height: 48px;
-  padding: 1px 20px;
+  padding: 1px 15px;
 }
 
 headerbar:not(.titlebar) {
@@ -6007,7 +6007,7 @@ colorchooser .popover.osd:backdrop {
  **********************/
 decoration {
   transition: box-shadow 75ms cubic-bezier(0, 0, 0.2, 1);
-  border-radius: 12px;
+  border-radius: 0px;
   box-shadow: 0 8px 6px -5px rgba(0, 0, 0, 0.2),
     0 16px 14.4px 2px rgba(0, 0, 0, 0.14), 0 6px 18px 5px rgba(0, 0, 0, 0.12),
     0 0 0 100px transparent;
@@ -6080,97 +6080,22 @@ messagedialog.background.csd decoration {
 }
 
 button.titlebutton:not(.suggested-action):not(.destructive-action) {
-  min-height: 12px;
-  min-width: 12px;
+  min-height: 24px;
+  min-width: 24px;
   padding: 0;
-  margin: 0 2px;
+  margin: 0 3px;
 }
 
-button.titlebutton:not(.suggested-action):not(.destructive-action).minimize,
-button.titlebutton:not(.suggested-action):not(.destructive-action).maximize,
-button.titlebutton:not(.suggested-action):not(.destructive-action).close {
-  color: transparent;
+button.titlebutton.close:not(.suggested-action):not(.destructive-action):hover {
+  background-color: #89b482;
+  color: #1d2021;
 }
 
-button.titlebutton:not(.suggested-action):not(.destructive-action).minimize,
-button.titlebutton:not(.suggested-action):not(
+button.titlebutton.close:not(.suggested-action):not(
     .destructive-action
-  ).minimize:active,
-button.titlebutton:not(.suggested-action):not(
-    .destructive-action
-  ).minimize:backdrop:hover,
-button.titlebutton:not(.suggested-action):not(
-    .destructive-action
-  ).minimize:backdrop:active {
-  background-color: #d8a657;
-  color: transparent;
-}
-
-button.titlebutton:not(.suggested-action):not(
-    .destructive-action
-  ).minimize:hover,
-button.titlebutton:not(.suggested-action):not(
-    .destructive-action
-  ).minimize:active {
-  background-color: shade(#d8a657, 0.5);
-  color: transparent;
-}
-
-button.titlebutton:not(.suggested-action):not(.destructive-action).maximize,
-button.titlebutton:not(.suggested-action):not(
-    .destructive-action
-  ).maximize:active,
-button.titlebutton:not(.suggested-action):not(
-    .destructive-action
-  ).maximize:backdrop:hover,
-button.titlebutton:not(.suggested-action):not(
-    .destructive-action
-  ).maximize:backdrop:active {
-  background-color: #a9b665;
-  color: transparent;
-}
-
-button.titlebutton:not(.suggested-action):not(
-    .destructive-action
-  ).maximize:hover,
-button.titlebutton:not(.suggested-action):not(
-    .destructive-action
-  ).maximize:active {
-  background-color: shade(#a9b665, 0.5);
-  color: transparent;
-}
-
-button.titlebutton:not(.suggested-action):not(.destructive-action).close,
-button.titlebutton:not(.suggested-action):not(.destructive-action).close:active,
-button.titlebutton:not(.suggested-action):not(
-    .destructive-action
-  ).close:backdrop:hover,
-button.titlebutton:not(.suggested-action):not(
-    .destructive-action
-  ).close:backdrop:active {
+  ):active {
   background-color: #ea6962;
-  color: transparent;
-}
-
-button.titlebutton:not(.suggested-action):not(.destructive-action).close:hover,
-button.titlebutton:not(.suggested-action):not(
-    .destructive-action
-  ).close:active {
-  background-color: shade(#ea6962, 0.5);
-  color: transparent;
-}
-
-button.titlebutton:not(.suggested-action):not(
-    .destructive-action
-  ).minimize:backdrop,
-button.titlebutton:not(.suggested-action):not(
-    .destructive-action
-  ).maximize:backdrop,
-button.titlebutton:not(.suggested-action):not(
-    .destructive-action
-  ).close:backdrop {
-  background-color: #473c29;
-  color: transparent;
+  color: #1d2021;
 }
 
 .monospace {
