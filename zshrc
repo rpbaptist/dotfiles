@@ -31,8 +31,10 @@ eval "$(dircolors $HOME/.dircolors)"
 # Don't try to ssh to hosts file
 zstyle ':completion:*' hosts off
 
-fpath=("$ASDF_DIR/completions" ~/.zsh/completions $fpath)
+source "$HOME/.asdf/asdf.sh"
 
+# append completions to fpath
+fpath=(${ASDF_DIR}/completions $fpath)
 autoload -Uz compinit && compinit
 
 eval "$(starship init zsh)"
