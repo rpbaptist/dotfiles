@@ -6,6 +6,7 @@ $git_status\\] )\
 $elixir\
 $c\
 $shell\
+$nodejs\
 $line_break\
 $character
 """
@@ -30,7 +31,7 @@ disabled = true
 
 [git_status]
 style = "green"
-format = "[($stashed)( $ahead_behind)[( $conflicted$untracked$modified$staged$renamed$deleted)](218)]($style)"
+format = "[( $stashed)( $ahead_behind)[( $conflicted$untracked$modified$staged$renamed$deleted)](218)]($style)"
 up_to_date = "✔"
 modified = "≠"
 stashed = "≡"
@@ -119,6 +120,7 @@ symbol = " "
 
 [nodejs]
 symbol = " "
+format = '[$symbol($version )]($style)'
 
 [os.symbols]
 Alpaquita = " "
