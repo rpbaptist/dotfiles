@@ -31,7 +31,7 @@ eval "$(dircolors $HOME/.dircolors)"
 # Don't try to ssh to hosts file
 zstyle ':completion:*' hosts off
 
-fpath=(${ASDF_DIR}/completions ~/.zsh/completions $fpath)
+fpath=("$ASDF_DIR/completions" ~/.zsh/completions $fpath)
 
 autoload -Uz compinit && compinit
 
