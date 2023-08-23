@@ -26,6 +26,8 @@ HIST_STAMPS="yyyy-mm-dd"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
+HISTFILE="$HOME/.zsh_history"
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
@@ -39,47 +41,18 @@ setopt nomenucomplete
 setopt nobeep
 unsetopt nomatch
 
-eval "$(dircolors $HOME/.dircolors)"
-
-fpath=(${ASDF_DIR}/completions ~/.zsh/completions $fpath)
-autoload -U compinit && compinit
-
-# Don't try to ssh to hosts file
-zstyle ':completion:*' hosts off
-
 # Hook direnv into your shell.
 eval "$(direnv hook zsh)"
 
 export ZSH="$HOME/.zsh"
-export ZSH_THEME="$ZSH/themes/richard.zsh-theme"
+# export ZSH_THEME="$ZSH/themes/richard.zsh-theme"
 export ZSH_PLUGINS="$ZSH/plugins"
 
-source "$ZSH_THEME"
-
-function source-plugin() {
-  local plugin
-
-  plugin="$1"
-
-  source "$ZSH_PLUGINS/$plugin/$plugin.plugin.zsh"
-}
+# source "$ZSH_THEME"
 
 source "$ZSH/aliases.zsh"
 source "$ZSH/functions.zsh"
 
-# source "$ZSH_PLUGINS/asdf"
-# source "$ZSH_PLUGINS/colorize"
-# source "$ZSH_PLUGINS/common-aliases"
-# source "$ZSH_PLUGINS/dirhistory"
-# source "$ZSH_PLUGINS/fzf"
-# source "$ZSH_PLUGINS/git"
-# source "$ZSH_PLUGINS/gitfast"
-# source "$ZSH_PLUGINS/history-substring-search"
-# source "$ZSH_PLUGINS/mix"
-# source "$ZSH_PLUGINS/mix-fast"
-# source "$ZSH_PLUGINS/ubuntu"
-
-source-plugin "asdf"
 source-plugin "colorize"
 source-plugin "common-aliases"
 source-plugin "dirhistory"
@@ -90,3 +63,15 @@ source-plugin "history-substring-search"
 source-plugin "mix"
 source-plugin "mix-fast"
 source-plugin "ubuntu"
+
+eval "$(dircolors $HOME/.dircolors)"
+
+# Don't try to ssh to hosts file
+zstyle ':completion:*' hosts off
+
+fpath=(${ASDF_DIR}/completions ~/.zsh/completions $fpath)
+# fpath=(~/.zsh/completions $fpath)
+
+autoload -Uz compinit && compinit
+
+eval "$(starship init zsh)"

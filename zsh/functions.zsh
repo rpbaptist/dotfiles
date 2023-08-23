@@ -1,5 +1,13 @@
 #! /bin/bash
 
+function source-plugin() {
+  local plugin
+
+  plugin="$1"
+
+  source "$ZSH_PLUGINS/$plugin/$plugin.plugin.zsh"
+}
+
 # function mysql-restore() {
 #     (
 #         echo "SET AUTOCOMMIT=0;"
