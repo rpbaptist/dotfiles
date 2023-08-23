@@ -1,13 +1,11 @@
 #! /bin/bash
 
-export ZSH_PLUGINS="$ZSH/plugins"
-
 function source-plugin() {
   local plugin
 
   plugin="$1"
 
-  source "$ZSH_PLUGINS/$plugin/$plugin.plugin.zsh"
+  source "$ZSH/plugins/$plugin/$plugin.plugin.zsh"
 }
 
 source-plugin "common-aliases"
