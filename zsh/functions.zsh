@@ -10,3 +10,4 @@ function source-function() {
 
 source-function "completion"
 source-function "custom"
+source-function "key-bindings"
