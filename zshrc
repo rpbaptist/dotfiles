@@ -1,11 +1,8 @@
 #!/bin/sh
 
-# Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
-
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
-ZSH_THEME="richard"
+# ZSH_THEME="richard"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -33,9 +30,9 @@ HIST_STAMPS="yyyy-mm-dd"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(dirhistory history-substring-search git gitfast common-aliases colorize colored-man-pages fzf asdf mix mix-fast ubuntu)
+# plugins=(dirhistory history-substring-search git gitfast common-aliases colorize colored-man-pages fzf asdf mix mix-fast ubuntu)
 
-source "$ZSH/oh-my-zsh.sh"
+# source "$ZSH/oh-my-zsh.sh"
 
 # setopt noautomenu
 setopt nomenucomplete
@@ -52,3 +49,44 @@ zstyle ':completion:*' hosts off
 
 # Hook direnv into your shell.
 eval "$(direnv hook zsh)"
+
+export ZSH="$HOME/.zsh"
+export ZSH_THEME="$ZSH/themes/richard.zsh-theme"
+export ZSH_PLUGINS="$ZSH/plugins"
+
+source "$ZSH_THEME"
+
+function source-plugin() {
+  local plugin
+
+  plugin="$1"
+
+  source "$ZSH_PLUGINS/$plugin/$plugin.plugin.zsh"
+}
+
+source "$ZSH/aliases.zsh"
+source "$ZSH/functions.zsh"
+
+# source "$ZSH_PLUGINS/asdf"
+# source "$ZSH_PLUGINS/colorize"
+# source "$ZSH_PLUGINS/common-aliases"
+# source "$ZSH_PLUGINS/dirhistory"
+# source "$ZSH_PLUGINS/fzf"
+# source "$ZSH_PLUGINS/git"
+# source "$ZSH_PLUGINS/gitfast"
+# source "$ZSH_PLUGINS/history-substring-search"
+# source "$ZSH_PLUGINS/mix"
+# source "$ZSH_PLUGINS/mix-fast"
+# source "$ZSH_PLUGINS/ubuntu"
+
+source-plugin "asdf"
+source-plugin "colorize"
+source-plugin "common-aliases"
+source-plugin "dirhistory"
+source-plugin "fzf"
+source-plugin "git"
+source-plugin "gitfast"
+source-plugin "history-substring-search"
+source-plugin "mix"
+source-plugin "mix-fast"
+source-plugin "ubuntu"
