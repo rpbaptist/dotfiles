@@ -7,6 +7,7 @@ alias zshrc="$EDITOR ~/.zshrc"
 # alias fd="fdfind"
 # alias bat="batcat"
 
+alias ls="ls --color=auto"
 alias sudo="sudo "
 alias sl="subl"
 alias scp="noglob scp"
