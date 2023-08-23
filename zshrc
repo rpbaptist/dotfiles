@@ -18,10 +18,7 @@ unsetopt nomatch
 eval "$(direnv hook zsh)"
 
 export ZSH="$HOME/.zsh"
-# export ZSH_THEME="$ZSH/themes/richard.zsh-theme"
-export ZSH_PLUGINS="$ZSH/plugins"
 
-# source "$ZSH_THEME"
 source "$ZSH/plugins.zsh"
 source "$ZSH/functions.zsh"
 source "$ZSH/aliases.zsh"
