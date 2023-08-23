@@ -26,7 +26,9 @@ HIST_STAMPS="yyyy-mm-dd"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
+HISTSIZE=10000
 HISTFILE="$HOME/.zsh_history"
+setopt appendhistory
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -59,7 +61,6 @@ eval "$(dircolors $HOME/.dircolors)"
 zstyle ':completion:*' hosts off
 
 fpath=(${ASDF_DIR}/completions ~/.zsh/completions $fpath)
-# fpath=(~/.zsh/completions $fpath)
 
 autoload -Uz compinit && compinit
 
