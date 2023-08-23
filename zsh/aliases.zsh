@@ -3,7 +3,6 @@
 alias resh=". ~/.zshrc"
 alias zshenv="$EDITOR ~/.zshenv"
 alias zshrc="$EDITOR ~/.zshrc"
-alias omz="$EDITOR ~/.oh-my-zsh"
 
 # alias fd="fdfind"
 # alias bat="batcat"
