@@ -40,13 +40,6 @@ alias dud='du -d 1 -h'
 # alias duf='du -sh *'
 alias ff='find . -type f -name'
 
-alias h='history'
-alias hgrep="fc -El 0 | grep"
-alias help='man'
-alias p='ps -f'
-alias sortnr='sort -n -r'
-alias unexport='unset'
-
 alias rm='rm -I'
 alias cp='cp -i'
 alias mv='mv -i'
