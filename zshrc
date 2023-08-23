@@ -50,9 +50,5 @@ autoload -U compinit && compinit
 # Don't try to ssh to hosts file
 zstyle ':completion:*' hosts off
 
-if [[ $TILIX_ID ]]; then
-  . /etc/profile.d/vte.sh
-fi
-
 # Hook direnv into your shell.
 eval "$(direnv hook zsh)"
