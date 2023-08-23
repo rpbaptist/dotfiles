@@ -1,10 +1,11 @@
 format = """
 \\[$username$hostname: $directory\\] \
-\\[$git_branch\
+(\\[$git_branch\
 $git_state\
-$git_status\\] \
+$git_status\\] )\
 $elixir\
 $c\
+$shell\
 $line_break\
 $character
 """
@@ -28,9 +29,11 @@ style = "green"
 disabled = true
 
 [git_status]
-up_to_date = "✔"
-format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](218) ($ahead_behind$stashed)]($style)"
 style = "green"
+format = "[($stashed)( $ahead_behind)[( $conflicted$untracked$modified$staged$renamed$deleted)](218)]($style)"
+up_to_date = "✔"
+modified = "≠"
+stashed = "≡"
 
 [git_state]
 format = '\([$state( $progress_current/$progress_total)]($style)\) '
