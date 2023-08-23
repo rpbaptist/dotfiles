@@ -1,8 +1,10 @@
 format = """
 \\[$username$hostname: $directory\\] \
-$git_branch\
+\\[$git_branch\
 $git_state\
-$git_status\
+$git_status\\] \
+$elixir\
+$c\
 $line_break\
 $character
 """
@@ -11,8 +13,6 @@ $character
 read_only = " 󰌾"
 style = "yellow"
 format = '[$path]($style)[$read_only]($read_only_style)'
-
-[directory.substitutions]
 
 [character]
 success_symbol = "[❯](blue)"
@@ -31,7 +31,6 @@ disabled = true
 up_to_date = "✔"
 format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](218) ($ahead_behind$stashed)]($style)"
 style = "green"
-stashed = "≡"
 
 [git_state]
 format = '\([$state( $progress_current/$progress_total)]($style)\) '
@@ -58,6 +57,7 @@ symbol = " "
 
 [c]
 symbol = " "
+format = '[$symbol($version(-$name) )]($style)'
 
 [conda]
 symbol = " "
@@ -70,6 +70,7 @@ symbol = " "
 
 [elixir]
 symbol = " "
+format = '[$symbol($version \(OTP $otp_version\) )]($style)'
 
 [elm]
 symbol = " "
