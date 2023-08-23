@@ -49,20 +49,9 @@ export ZSH="$HOME/.zsh"
 export ZSH_PLUGINS="$ZSH/plugins"
 
 # source "$ZSH_THEME"
-
-source "$ZSH/aliases.zsh"
+source "$ZSH/plugins.zsh"
 source "$ZSH/functions.zsh"
-
-source-plugin "colorize"
-source-plugin "common-aliases"
-source-plugin "dirhistory"
-source-plugin "fzf"
-source-plugin "git"
-source-plugin "gitfast"
-source-plugin "history-substring-search"
-source-plugin "mix"
-source-plugin "mix-fast"
-source-plugin "ubuntu"
+source "$ZSH/aliases.zsh"
 
 eval "$(dircolors $HOME/.dircolors)"
 
