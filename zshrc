@@ -17,7 +17,10 @@ unsetopt nomatch
 # Hook direnv into your shell.
 eval "$(direnv hook zsh)"
 
-export ZSH="$HOME/.zsh"
+ZSH_CACHE_DIR="$HOME/.zsh_cache"
+CASE_SENSITIVE=true
+
+ZSH="$HOME/.zsh"
 
 source "$ZSH/plugins.zsh"
 source "$ZSH/functions.zsh"
@@ -27,6 +30,7 @@ eval "$(dircolors $HOME/.dircolors)"
 
 # Don't try to ssh to hosts file
 zstyle ':completion:*' hosts off
+zstyle ':completion:*:*:git:*' script "$ZSH/scripts/git-completion.bash"
 
 source "$HOME/.asdf/asdf.sh"
 
