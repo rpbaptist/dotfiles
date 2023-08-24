@@ -68,4 +68,7 @@ source "$HOME/.asdf/asdf.sh"
 fpath=(${ASDF_DIR}/completions $fpath)
 autoload -Uz compinit && compinit
 
+znap function _lab lab 'eval "$( lab completion -s zsh )"'
+compctl -K _lab lab
+
 skip_global_compinit=1
