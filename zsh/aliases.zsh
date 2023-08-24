@@ -77,3 +77,5 @@ alias mps='mix phx.server'
 
 alias bat="batcat"
 alias fd="fdfind"
+
+alias dot="cd $HOME/.dotfiles"
