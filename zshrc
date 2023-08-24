@@ -56,7 +56,7 @@ zstyle ':completion:*:*:git:*' script "$ZSH/scripts/git-completion.bash"
 source "$HOME/.asdf/asdf.sh"
 
 # append completions to fpath
-fpath=(${ASDF_DIR}/completions $fpath)
+fpath=(${ASDF_DIR}/completions $ZSH/completions $fpath)
 autoload -Uz compinit && compinit
 
 znap function _lab lab 'eval "$( lab completion -s zsh )"'
