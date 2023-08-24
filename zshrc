@@ -6,9 +6,8 @@ ZSH="$HOME/.zsh"
 ZSH_CACHE_DIR="$HOME/.zsh_cache"
 
 ZREPOS="$ZSH/repos"
-ZNAP="$ZREPOS/znap"
 
-source "$ZNAP/znap.zsh"
+source "$ZREPOS/znap/znap.zsh"
 
 zstyle ':znap:*' repos-dir $ZREPOS
 
@@ -18,8 +17,6 @@ znap prompt
 unsetopt nomatch
 
 znap source ohmyzsh/ohmyzsh lib/{completion,key-bindings}
-bindkey -M menuselect '\t' menu-complete "$terminfo[kcbt]" reverse-menu-complete
-
 znap source ohmyzsh/ohmyzsh plugins/{fzf,dirhistory}
 
 znap source zsh-users/zsh-history-substring-search
