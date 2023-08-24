@@ -1,5 +1,24 @@
 #!/bin/sh
 
+ZSH="$HOME/.zsh"
+ZSH_CACHE_DIR="$HOME/.zsh_cache"
+
+ZREPOS="$ZSH/repos"
+ZNAP="$ZREPOS/znap"
+
+source "$ZNAP/znap.zsh"
+
+zstyle ':znap:*' repos-dir $ZREPOS
+
+znap eval starship 'starship init zsh --print-full-init'
+znap prompt
+
+# ZSH_AUTOSUGGEST_STRATEGY=( history )
+# znap source zsh-users/zsh-autosuggestions
+
+znap source marlonrichert/zcolors
+znap eval   marlonrichert/zcolors "zcolors ${(q)LS_COLORS}"
+
 HISTSIZE=10000
 HISTFILE="$HOME/.zsh_history"
 setopt appendhistory
@@ -17,10 +36,7 @@ unsetopt nomatch
 # Hook direnv into your shell.
 eval "$(direnv hook zsh)"
 
-ZSH_CACHE_DIR="$HOME/.zsh_cache"
 CASE_SENSITIVE=true
-
-ZSH="$HOME/.zsh"
 
 source "$ZSH/plugins.zsh"
 source "$ZSH/functions.zsh"
@@ -38,4 +54,4 @@ source "$HOME/.asdf/asdf.sh"
 fpath=(${ASDF_DIR}/completions $fpath)
 autoload -Uz compinit && compinit
 
-eval "$(starship init zsh)"
+# eval "$(starship init zsh)"
