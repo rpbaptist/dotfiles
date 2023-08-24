@@ -10,8 +10,6 @@ function source-plugin() {
 
 source-plugin "common-aliases"
 source-plugin "dirhistory"
-source-plugin "fzf"
 source-plugin "git"
-source-plugin "history-substring-search"
 source-plugin "mix-fast"
 source-plugin "ubuntu"
