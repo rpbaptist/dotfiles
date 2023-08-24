@@ -84,11 +84,3 @@
 	HEAD = 6 normal italic
 [diff]
 	colorMoved = zebra
-[maintenance]
-	repo = /home/richard/.zsh/repos/znap/repos/marlonrichert/zcolors
-	repo = /home/richard/.zsh/repos/marlonrichert/zcolors
-	repo = /home/richard/.zsh/repos/marlonrichert/zsh-autocomplete
-	repo = /home/richard/.zsh/repos/zsh-users/zsh-autosuggestions
-	repo = /home/richard/.zsh/repos/marlonrichert/zsh-edit
-	repo = /home/richard/.zsh/repos/ohmyzsh/ohmyzsh
-	repo = /home/richard/.zsh/repos/zsh-users/zsh-history-substring-search
