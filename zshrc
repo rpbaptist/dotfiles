@@ -13,20 +13,24 @@ zstyle ':znap:*' repos-dir $ZREPOS
 znap eval starship 'starship init zsh --print-full-init'
 znap prompt
 
-znap source marlonrichert/zsh-autocomplete
-
-zstyle ':autocomplete:*complete*:*' insert-unambiguous yes
-zstyle ':autocomplete:*history*:*' insert-unambiguous yes
-zstyle ':autocomplete:menu-search:*' insert-unambiguous yes
-
-bindkey '\t' menu-select "$terminfo[kcbt]" menu-select
-bindkey -M menuselect '\t' menu-complete "$terminfo[kcbt]" reverse-menu-complete
-
-znap source marlonrichert/zsh-edit
+# znap source marlonrichert/zsh-autocomplete
 
 setopt nomenucomplete
 setopt nobeep
 unsetopt nomatch
+
+znap source ohmyzsh/ohmyzsh lib/completion
+bindkey -M menuselect '\t' menu-complete "$terminfo[kcbt]" reverse-menu-complete
+
+# znap source zsh-users/zsh-history-substring-search
+
+# zstyle ':autocomplete:*complete*:*' insert-unambiguous yes
+# zstyle ':autocomplete:*history*:*' insert-unambiguous yes
+# zstyle ':autocomplete:menu-search:*' insert-unambiguous yes
+
+# bindkey '\t' menu-select "$terminfo[kcbt]" menu-select
+
+znap source marlonrichert/zsh-edit
 
 znap source marlonrichert/zcolors
 znap eval   marlonrichert/zcolors "zcolors ${(q)LS_COLORS}"
