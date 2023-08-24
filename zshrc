@@ -71,4 +71,7 @@ autoload -Uz compinit && compinit
 znap function _lab lab 'eval "$( lab completion -s zsh )"'
 compctl -K _lab lab
 
+znap function _rctl rctl 'eval "$( rctl completion zsh )"'
+compctl -K _rctl rctl
+
 skip_global_compinit=1
