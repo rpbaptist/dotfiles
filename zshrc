@@ -37,8 +37,6 @@ setopt share_history          # share command history data
 # Hook direnv into your shell.
 eval "$(direnv hook zsh)"
 
-CASE_SENSITIVE=true
-
 source "$ZSH/plugins.zsh"
 source "$ZSH/functions.zsh"
 source "$ZSH/aliases.zsh"
