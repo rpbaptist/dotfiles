@@ -1,5 +1,5 @@
 format = """
-\\[$username$hostname$directory\\] \
+$username$hostname$directory \
 (\\[$git_branch\
 $git_state\
 $git_status\\] )\
@@ -73,7 +73,7 @@ symbol = " "
 
 [elixir]
 symbol = " "
-format = '[$symbol($version \(OTP $otp_version\))]($style)'
+format = '[$symbol$version]($style)'
 
 [elm]
 symbol = " "
