@@ -21,6 +21,8 @@ znap source ohmyzsh/ohmyzsh plugins/{fzf,dirhistory}
 
 znap source zsh-users/zsh-history-substring-search
 
+zstyle ':znap:*:<glob pattern>' git-maintenance off
+
 HISTSIZE=10000
 HISTFILE="$HOME/.zsh_history"
 setopt appendhistory
