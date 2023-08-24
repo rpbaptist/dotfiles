@@ -18,12 +18,14 @@ znap source zsh-users/zsh-autosuggestions
 
 znap source marlonrichert/zsh-autocomplete
 
-bindkey '\t' menu-select "$terminfo[kcbt]" menu-select
-bindkey -M menuselect '\t' menu-complete "$terminfo[kcbt]" reverse-menu-complete
-
 zstyle ':autocomplete:*complete*:*' insert-unambiguous yes
 zstyle ':autocomplete:*history*:*' insert-unambiguous yes
 zstyle ':autocomplete:menu-search:*' insert-unambiguous yes
+
+zstyle ':autocomplete:*' delay 0.5  # seconds (float)
+
+bindkey '\t' menu-select "$terminfo[kcbt]" menu-select
+bindkey -M menuselect '\t' menu-complete "$terminfo[kcbt]" reverse-menu-complete
 
 znap source marlonrichert/zsh-edit
 
