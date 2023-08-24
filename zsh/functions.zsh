@@ -24,36 +24,36 @@ function source-plugin() {
 #
 # Some usefull kubectl commands
 #
-# function kube-find-namespace() {
-#   kubectl get namespaces | tail -n +2 | fzf -q "$1" | awk '/(.*)/ {print $1}'
-# }
+function kube-find-namespace() {
+  kubectl get namespaces | tail -n +2 | fzf -q "$1" | awk '/(.*)/ {print $1}'
+}
 
-# function kube-pod() {
-#   local namespace
-#   local pod_type
-#   namespace="$1"
-#   pod_type="$2"
-#   kubectl get pods -n "$namespace" | awk -v pattern=".+-$pod_type-.+Running" '$0 ~ pattern {print $1}' | head -n 1
-# }
+function kube-pod() {
+  local namespace
+  local pod_type
+  namespace="$1"
+  pod_type="$2"
+  kubectl get pods -n "$namespace" | awk -v pattern=".+-$pod_type-.+Running" '$0 ~ pattern {print $1}' | head -n 1
+}
 
-# function kube() {
-#   local cmd
-#   local pod_type
-#   local namespace
-#   cmd="$1"
-#   pod_type="$2"
-#   namespace="$(kube-find-namespace "$3")"
-#   pod="$(kube-pod "$namespace" "$pod_type")"
+function kube() {
+  local cmd
+  local pod_type
+  local namespace
+  cmd="$1"
+  pod_type="$2"
+  namespace="$(kube-find-namespace "$3")"
+  pod="$(kube-pod "$namespace" "$pod_type")"
 
-#   case "$cmd" in
-#     "rc")  echo "Dropping into rails console on $pod in $namespace"
-#            kubectl exec -it "$pod" -n "$namespace" -- rails c;;
-#     "ssh") echo "Dropping into shell on $pod in $namespace"
-#            kubectl exec -it "$pod" -n "$namespace" -- bash;;
-#     "log") echo "Tailing logs on $pod in $namespace"
-#            kubectl logs "$pod" -n "$namespace" -f;;
-#   esac
-# }
+  case "$cmd" in
+    "rc")  echo "Dropping into rails console on $pod in $namespace"
+           kubectl exec -it "$pod" -n "$namespace" -- rails c;;
+    "ssh") echo "Dropping into shell on $pod in $namespace"
+           kubectl exec -it "$pod" -n "$namespace" -- bash;;
+    "log") echo "Tailing logs on $pod in $namespace"
+           kubectl logs "$pod" -n "$namespace" -f;;
+  esac
+}
 
 function git-get-branch() {
   git branch -vv | fzf -q "$1" | awk '/(.*)/ {print $1}'
