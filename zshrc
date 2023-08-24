@@ -13,9 +13,6 @@ zstyle ':znap:*' repos-dir $ZREPOS
 znap eval starship 'starship init zsh --print-full-init'
 znap prompt
 
-ZSH_AUTOSUGGEST_STRATEGY=( history )
-znap source zsh-users/zsh-autosuggestions
-
 znap source marlonrichert/zsh-autocomplete
 
 zstyle ':autocomplete:*complete*:*' insert-unambiguous yes
