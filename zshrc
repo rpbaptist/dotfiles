@@ -21,9 +21,6 @@ znap source ohmyzsh/ohmyzsh plugins/{fzf,dirhistory}
 
 znap source zsh-users/zsh-history-substring-search
 
-znap source marlonrichert/zcolors
-znap eval   marlonrichert/zcolors "zcolors ${(q)LS_COLORS}"
-
 HISTSIZE=10000
 HISTFILE="$HOME/.zsh_history"
 setopt appendhistory
