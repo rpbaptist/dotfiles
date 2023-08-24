@@ -13,8 +13,23 @@ zstyle ':znap:*' repos-dir $ZREPOS
 znap eval starship 'starship init zsh --print-full-init'
 znap prompt
 
-# ZSH_AUTOSUGGEST_STRATEGY=( history )
-# znap source zsh-users/zsh-autosuggestions
+ZSH_AUTOSUGGEST_STRATEGY=( history )
+znap source zsh-users/zsh-autosuggestions
+
+znap source marlonrichert/zsh-autocomplete
+
+bindkey '\t' menu-select "$terminfo[kcbt]" menu-select
+bindkey -M menuselect '\t' menu-complete "$terminfo[kcbt]" reverse-menu-complete
+
+zstyle ':autocomplete:*complete*:*' insert-unambiguous yes
+zstyle ':autocomplete:*history*:*' insert-unambiguous yes
+zstyle ':autocomplete:menu-search:*' insert-unambiguous yes
+
+znap source marlonrichert/zsh-edit
+
+setopt nomenucomplete
+setopt nobeep
+unsetopt nomatch
 
 znap source marlonrichert/zcolors
 znap eval   marlonrichert/zcolors "zcolors ${(q)LS_COLORS}"
@@ -29,9 +44,6 @@ setopt hist_verify            # show command with history expansion to user befo
 setopt share_history          # share command history data
 
 # setopt noautomenu
-setopt nomenucomplete
-setopt nobeep
-unsetopt nomatch
 
 # Hook direnv into your shell.
 eval "$(direnv hook zsh)"
@@ -54,4 +66,4 @@ source "$HOME/.asdf/asdf.sh"
 fpath=(${ASDF_DIR}/completions $fpath)
 autoload -Uz compinit && compinit
 
-# eval "$(starship init zsh)"
+skip_global_compinit=1
