@@ -59,6 +59,7 @@ symbol = " "
 
 [c]
 symbol = " "
+version_format = '${raw}'
 format = '[$symbol($version(-$name))]($style)'
 
 [conda]
@@ -72,6 +73,7 @@ symbol = " "
 
 [elixir]
 symbol = " "
+version_format = '${raw}'
 format = '[$symbol$version]($style)'
 
 [elm]
@@ -118,6 +120,7 @@ symbol = " "
 
 [nodejs]
 symbol = " "
+version_format = '${raw}'
 format = '[$symbol($version)]($style)'
 
 [os.symbols]
