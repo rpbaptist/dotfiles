@@ -17,6 +17,7 @@ continuation_prompt = ''
 [directory]
 read_only = " 󰌾"
 style = "yellow"
+read_only_style = "red"
 format = '[$path]($style)[$read_only]($read_only_style)'
 
 [character]
@@ -26,8 +27,8 @@ vimcmd_symbol = "[❮](green)"
 
 [git_branch]
 symbol = " "
-format = "[$branch]($style)"
 style = "green"
+format = "[$symbol $branch]($style)"
 
 [git_commit]
 disabled = true
@@ -83,7 +84,7 @@ format = '[$symbol$version]($style)'
 
 [custom.elixir]
 symbol = " "
-style = 'bold purple'
+style = 'purple'
 command = "$ASDF_DIR/shims/elixir --short-version"
 format = '[$symbol$output]($style)'
 when = "test -f mix.exs"
