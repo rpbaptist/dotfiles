@@ -38,8 +38,18 @@ znap source zsh-users/zsh-autosuggestions
 bindkey '\t' menu-select "$terminfo[kcbt]" reverse-menu-complete
 bindkey -M menuselect '\r' .accept-line
 
-# bindkey '\t' menu-select "$terminfo[kcbt]" menu-select
-# bindkey -M menuselect '\t' menu-complete "$terminfo[kcbt]" reverse-menu-complete
+# Restore left and right keys
+() {
+   local -a prefix=( '\e'{\[,O} )
+   local -a up=( ${^prefix}A ) down=( ${^prefix}B ) left=( ${^prefix}D ) right=( ${^prefix}C )
+   local key=
+   for key in $left[@]; do
+      bindkey "$key" backward-char
+   done
+   for key in $right[@]; do
+      bindkey "$key" forward-char
+   done
+}
 
 # setopt noautomenu
 
