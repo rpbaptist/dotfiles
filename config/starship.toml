@@ -1,8 +1,8 @@
 format = """
 $username$hostname$directory \
-(\\[$git_branch\
+([\\[](green)$git_branch\
 $git_state\
-$git_status\\] )\
+$git_status[\\]](green) )\
 $elixir\
 $custom\
 $c\
@@ -28,7 +28,7 @@ vimcmd_symbol = "[❮](green)"
 [git_branch]
 symbol = "󰘬 "
 style = "green"
-format = "[$symbol$branch]($style)"
+format = "[$branch]($style)"
 
 [git_commit]
 disabled = true
