@@ -42,7 +42,6 @@ bindkey -M menuselect '\r' .accept-line
 
 # setopt noautomenu
 
-# Hook direnv into your shell.
 znap eval direnv "direnv hook zsh"
 znap eval dircolors "dircolors $HOME/.dircolors"
 
@@ -59,5 +58,9 @@ source "$HOME/.asdf/asdf.sh"
 # append completions to fpath
 fpath=(${ASDF_DIR}/completions $ZSH/completions $fpath)
 autoload -Uz compinit && compinit
+
+znap fpath _glab      'glab      completion -s zsh'
+znap fpath _kubectl   'kubectl   completion zsh'
+znap fpath _remotectl 'remotectl completion zsh'
 
 skip_global_compinit=1
