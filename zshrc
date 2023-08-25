@@ -57,7 +57,6 @@ source "$HOME/.asdf/asdf.sh"
 
 # append completions to fpath
 fpath=(${ASDF_DIR}/completions $ZSH/completions $fpath)
-autoload -Uz compinit && compinit
 
 znap fpath _glab      'glab      completion -s zsh'
 znap fpath _kubectl   'kubectl   completion zsh'
