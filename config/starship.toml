@@ -12,7 +12,7 @@ $line_break\
 $character
 """
 
-continuation_prompt = ''
+continuation_prompt = ''
 
 [directory]
 read_only = " 󰌾"
@@ -26,9 +26,9 @@ error_symbol = "[❯](red)"
 vimcmd_symbol = "[❮](green)"
 
 [git_branch]
-symbol = " "
+symbol = "󰘬 "
 style = "green"
-format = "[$symbol $branch]($style)"
+format = "[$symbol$branch]($style)"
 
 [git_commit]
 disabled = true
