@@ -27,13 +27,13 @@ znap prompt
 
 zstyle ':autocomplete:*' fzf-completion yes
 zstyle ':autocomplete:*' insert-unambiguous yes
-zstyle ':autocomplete:*' widget-style menu-complete
+zstyle ':autocomplete:*' widget-style menu-select
 
 znap source marlonrichert/zsh-edit
 znap source marlonrichert/zsh-autocomplete
 
 bindkey '\t' menu-select "$terminfo[kcbt]" reverse-menu-complete
-bindkey -M menuselect '\r' .accept-line
+# bindkey -M menuselect '\r' .accept-line
 
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 znap source zsh-users/zsh-autosuggestions
