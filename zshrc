@@ -28,6 +28,8 @@ znap prompt
 znap source marlonrichert/zsh-edit
 znap source marlonrichert/zsh-autocomplete
 
+zstyle ':autocomplete:*' fzf-completion yes
+
 # all Tab widgets
 zstyle ':autocomplete:*complete*:*' insert-unambiguous yes
 # all history widgets
