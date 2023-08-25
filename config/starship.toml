@@ -4,6 +4,7 @@ $username$hostname$directory \
 $git_state\
 $git_status\\] )\
 $elixir\
+$custom\
 $c\
 $nodejs\
 $jobs\
@@ -73,9 +74,17 @@ symbol = " "
 symbol = " "
 
 [elixir]
+disabled = true
 symbol = " "
 version_format = '${raw}'
 format = '[$symbol$version]($style)'
+
+[custom.elixir]
+symbol = " "
+style = 'bold purple'
+command = "$ASDF_DIR/shims/elixir --short-version"
+format = '[$symbol$output]($style)'
+when = "test -f mix.exs"
 
 [elm]
 symbol = " "
