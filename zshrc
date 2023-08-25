@@ -43,13 +43,12 @@ bindkey -M menuselect '\r' .accept-line
 # setopt noautomenu
 
 # Hook direnv into your shell.
-eval "$(direnv hook zsh)"
+znap eval direnv "direnv hook zsh"
+znap eval dircolors "dircolors $HOME/.dircolors"
 
 source "$ZSH/plugins.zsh"
 source "$ZSH/functions.zsh"
 source "$ZSH/aliases.zsh"
-
-eval "$(dircolors $HOME/.dircolors)"
 
 # Don't try to ssh to hosts file
 zstyle ':completion:*' hosts off
