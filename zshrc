@@ -27,8 +27,7 @@ znap prompt
 
 zstyle ':autocomplete:*' fzf-completion yes
 zstyle ':autocomplete:*' insert-unambiguous yes
-# zstyle ':autocomplete:*' widget-style menu-complete
-zstyle ':autocomplete:*' widget-style menu-select
+zstyle ':autocomplete:*' widget-style menu-complete
 
 znap source marlonrichert/zsh-autocomplete
 znap source marlonrichert/zsh-edit
