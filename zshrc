@@ -27,15 +27,9 @@ znap prompt
 
 znap source marlonrichert/zsh-edit
 
-# # all Tab widgets
-zstyle ':autocomplete:tab' insert-unambiguous yes
-zstyle ':autocomplete:*complete*:*' insert-unambiguous yes
-# # all history widgets
-zstyle ':autocomplete:*history*:*' insert-unambiguous yes
-# # ^S
-zstyle ':autocomplete:menu-search:*' insert-unambiguous yes
-
 zstyle ':autocomplete:*' fzf-completion yes
+zstyle ':autocomplete:*' insert-unambiguous yes
+# zstyle ':autocomplete:*' widget-style menu-complete
 zstyle ':autocomplete:*' widget-style menu-select
 
 znap source marlonrichert/zsh-autocomplete
