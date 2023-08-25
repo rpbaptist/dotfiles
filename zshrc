@@ -67,8 +67,9 @@ source "$HOME/.asdf/asdf.sh"
 # Append local completions to fpath
 fpath=(${ASDF_DIR}/completions $ZSH/completions $fpath)
 
-znap fpath _glab      'glab      completion -s zsh'
-znap fpath _kubectl   'kubectl   completion zsh'
-znap fpath _remotectl 'remotectl completion zsh'
+znap fpath _glab      'glab      completion  -s zsh'
+znap fpath _kubectl   'kubectl   completion  zsh'
+znap fpath _remotectl 'remotectl completion  zsh'
+znap fpath _starship  'starship  completions zsh'
 
 skip_global_compinit=1
