@@ -20,6 +20,7 @@ ZREPOS="$ZSH/repos"
 source "$ZREPOS/znap/znap.zsh"
 
 zstyle ':znap:*' repos-dir $ZREPOS
+zstyle ':znap:*:<glob pattern>' git-maintenance off
 
 znap eval starship 'starship init zsh --print-full-init'
 znap prompt
@@ -38,8 +39,6 @@ bindkey '\t' menu-complete "$terminfo[kcbt]" reverse-menu-complete
 
 # bindkey '\t' menu-select "$terminfo[kcbt]" menu-select
 # bindkey -M menuselect '\t' menu-complete "$terminfo[kcbt]" reverse-menu-complete
-
-zstyle ':znap:*:<glob pattern>' git-maintenance off
 
 # setopt noautomenu
 
