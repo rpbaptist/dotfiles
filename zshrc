@@ -29,14 +29,14 @@ zstyle ':autocomplete:*' fzf-completion yes
 zstyle ':autocomplete:*' insert-unambiguous yes
 zstyle ':autocomplete:*' widget-style menu-complete
 
-znap source marlonrichert/zsh-autocomplete
 znap source marlonrichert/zsh-edit
-
-ZSH_AUTOSUGGEST_STRATEGY=(history completion)
-znap source zsh-users/zsh-autosuggestions
+znap source marlonrichert/zsh-autocomplete
 
 bindkey '\t' menu-select "$terminfo[kcbt]" reverse-menu-complete
 bindkey -M menuselect '\r' .accept-line
+
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+znap source zsh-users/zsh-autosuggestions
 
 # Restore left and right keys
 () {
@@ -51,8 +51,6 @@ bindkey -M menuselect '\r' .accept-line
    done
 }
 
-# setopt noautomenu
-
 znap eval direnv "direnv hook zsh"
 znap eval dircolors "dircolors $HOME/.dircolors"
 
@@ -66,7 +64,7 @@ zstyle ':completion:*:*:git:*' script "$ZSH/scripts/git-completion.bash"
 
 source "$HOME/.asdf/asdf.sh"
 
-# append completions to fpath
+# Append local completions to fpath
 fpath=(${ASDF_DIR}/completions $ZSH/completions $fpath)
 
 znap fpath _glab      'glab      completion -s zsh'
