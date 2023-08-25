@@ -16,10 +16,20 @@ znap prompt
 
 unsetopt nomatch
 
-znap source ohmyzsh/ohmyzsh lib/{completion,key-bindings}
-znap source ohmyzsh/ohmyzsh plugins/{fzf,dirhistory}
+znap source marlonrichert/zsh-edit
+znap source marlonrichert/zsh-autocomplete
 
-znap source zsh-users/zsh-history-substring-search
+# all Tab widgets
+zstyle ':autocomplete:*complete*:*' insert-unambiguous yes
+# all history widgets
+zstyle ':autocomplete:*history*:*' insert-unambiguous yes
+# ^S
+zstyle ':autocomplete:menu-search:*' insert-unambiguous yes
+
+bindkey '\t' menu-complete "$terminfo[kcbt]" reverse-menu-complete
+
+# bindkey '\t' menu-select "$terminfo[kcbt]" menu-select
+# bindkey -M menuselect '\t' menu-complete "$terminfo[kcbt]" reverse-menu-complete
 
 zstyle ':znap:*:<glob pattern>' git-maintenance off
 
