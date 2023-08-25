@@ -12,6 +12,8 @@ $line_break\
 $character
 """
 
+continuation_prompt = ''
+
 [directory]
 read_only = " 󰌾"
 style = "yellow"
