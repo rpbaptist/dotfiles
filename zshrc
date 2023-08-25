@@ -26,18 +26,22 @@ znap eval starship 'starship init zsh --print-full-init'
 znap prompt
 
 znap source marlonrichert/zsh-edit
-znap source marlonrichert/zsh-autocomplete
 
-zstyle ':autocomplete:*' fzf-completion yes
-
-# all Tab widgets
+# # all Tab widgets
+zstyle ':autocomplete:tab' insert-unambiguous yes
 zstyle ':autocomplete:*complete*:*' insert-unambiguous yes
-# all history widgets
+# # all history widgets
 zstyle ':autocomplete:*history*:*' insert-unambiguous yes
-# ^S
+# # ^S
 zstyle ':autocomplete:menu-search:*' insert-unambiguous yes
 
-bindkey '\t' menu-complete "$terminfo[kcbt]" reverse-menu-complete
+zstyle ':autocomplete:*' fzf-completion yes
+zstyle ':autocomplete:*' widget-style menu-select
+
+znap source marlonrichert/zsh-autocomplete
+
+bindkey '\t' menu-select "$terminfo[kcbt]" reverse-menu-complete
+bindkey -M menuselect '\r' .accept-line
 
 # bindkey '\t' menu-select "$terminfo[kcbt]" menu-select
 # bindkey -M menuselect '\t' menu-complete "$terminfo[kcbt]" reverse-menu-complete
