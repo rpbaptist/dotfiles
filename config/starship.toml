@@ -14,16 +14,16 @@ $character
 
 continuation_prompt = ''
 
+[character]
+success_symbol = "[❯](blue)"
+error_symbol = "[❯](red)"
+vimcmd_symbol = "[❮](green)"
+
 [directory]
 read_only = " 󰌾"
 style = "yellow"
 read_only_style = "red"
 format = '[$path]($style)[$read_only]($read_only_style)'
-
-[character]
-success_symbol = "[❯](blue)"
-error_symbol = "[❯](red)"
-vimcmd_symbol = "[❮](green)"
 
 [git_branch]
 symbol = "󰘬 "
@@ -35,10 +35,18 @@ disabled = true
 
 [git_status]
 style = "green"
-format = "[( $stashed)( $ahead_behind)[( $conflicted$untracked$modified$staged$renamed$deleted)](218)]($style)"
+format = "[( $ahead_behind)]($style)[( $staged)](bold green)[( $deleted)](bold #fb4934)[( $modified)( $renamed)( $untracked)](bold #FABD2F)"
+stashed = ""
 up_to_date = "✔"
+diverged = "✘"
+ahead = ''
+behind = ''
+staged = '+'
+deleted = '-'
+untracked = '?'
+renamed = '»'
 modified = "≠"
-stashed = "≡"
+typechanged = ''
 
 [git_state]
 format = '\([$state( $progress_current/$progress_total)]($style)\) '
