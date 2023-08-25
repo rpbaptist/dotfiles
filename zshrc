@@ -25,14 +25,16 @@ zstyle ':znap:*:<glob pattern>' git-maintenance off
 znap eval starship 'starship init zsh --print-full-init'
 znap prompt
 
-znap source marlonrichert/zsh-edit
-
 zstyle ':autocomplete:*' fzf-completion yes
 zstyle ':autocomplete:*' insert-unambiguous yes
 # zstyle ':autocomplete:*' widget-style menu-complete
 zstyle ':autocomplete:*' widget-style menu-select
 
 znap source marlonrichert/zsh-autocomplete
+znap source marlonrichert/zsh-edit
+
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+znap source zsh-users/zsh-autosuggestions
 
 bindkey '\t' menu-select "$terminfo[kcbt]" reverse-menu-complete
 bindkey -M menuselect '\r' .accept-line
