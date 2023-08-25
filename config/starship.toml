@@ -1,6 +1,7 @@
 format = """
 $username$hostname$directory \
 ([\\[](green)$git_branch\
+$git_commit\
 $git_state\
 $git_status[\\]](green) )\
 $elixir\
@@ -31,7 +32,9 @@ style = "green"
 format = "[$branch]($style)"
 
 [git_commit]
-disabled = true
+tag_symbol = " 󰓹 "
+style = "green"
+format = '[\($hash$tag\)]($style)'
 
 [git_status]
 style = "green"
