@@ -1,6 +1,16 @@
 #!/bin/sh
 
 setopt nobeep
+unsetopt nomatch
+
+HISTSIZE=10000
+HISTFILE="$HOME/.zsh_history"
+setopt appendhistory
+setopt hist_expire_dups_first # delete duplicates first when HISTFILE size exceeds HISTSIZE
+setopt hist_ignore_dups       # ignore duplicated commands history list
+setopt hist_ignore_space      # ignore commands that start with space
+setopt hist_verify            # show command with history expansion to user before running it
+setopt share_history          # share command history data
 
 ZSH="$HOME/.zsh"
 ZSH_CACHE_DIR="$HOME/.zsh_cache"
@@ -13,8 +23,6 @@ zstyle ':znap:*' repos-dir $ZREPOS
 
 znap eval starship 'starship init zsh --print-full-init'
 znap prompt
-
-unsetopt nomatch
 
 znap source marlonrichert/zsh-edit
 znap source marlonrichert/zsh-autocomplete
@@ -32,15 +40,6 @@ bindkey '\t' menu-complete "$terminfo[kcbt]" reverse-menu-complete
 # bindkey -M menuselect '\t' menu-complete "$terminfo[kcbt]" reverse-menu-complete
 
 zstyle ':znap:*:<glob pattern>' git-maintenance off
-
-HISTSIZE=10000
-HISTFILE="$HOME/.zsh_history"
-setopt appendhistory
-setopt hist_expire_dups_first # delete duplicates first when HISTFILE size exceeds HISTSIZE
-setopt hist_ignore_dups       # ignore duplicated commands history list
-setopt hist_ignore_space      # ignore commands that start with space
-setopt hist_verify            # show command with history expansion to user before running it
-setopt share_history          # share command history data
 
 # setopt noautomenu
 
