@@ -20,7 +20,6 @@ ZREPOS="$ZSH/repos"
 source "$ZREPOS/znap/znap.zsh"
 
 zstyle ':znap:*' repos-dir $ZREPOS
-zstyle ':znap:*:<glob pattern>' git-maintenance off
 
 znap eval starship 'starship init zsh --print-full-init'
 znap prompt
