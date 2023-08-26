@@ -38,17 +38,17 @@ format = '[\($hash$tag\)]($style)'
 
 [git_status]
 style = "green"
-format = "[( $ahead_behind)]($style)[( $staged)](bold green)[( $deleted)](bold #fb4934)[( $modified)( $renamed)( $untracked)](bold #FABD2F)"
+format = "( $ahead_behind)( $all_status)"
 stashed = ""
-up_to_date = "✔"
-diverged = "✘"
-ahead = ''
-behind = ''
-staged = '+'
-deleted = '-'
-untracked = '?'
-renamed = '»'
-modified = "≠"
+up_to_date = "[✔](green)"
+diverged = "[✘](red)"
+ahead = '[](bold green)'
+behind = '[](bold red)'
+staged = '[+](bold green)'
+deleted = '[-](bold red)'
+untracked = '[?](bold #FABD2F)'
+renamed = '[»](bold #FABD2F)'
+modified = "[≠](bold #FABD2F)"
 typechanged = ''
 
 [git_state]
