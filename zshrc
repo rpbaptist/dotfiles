@@ -39,19 +39,6 @@ bindkey '\t' menu-select "$terminfo[kcbt]" reverse-menu-complete
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 znap source zsh-users/zsh-autosuggestions
 
-# Restore left and right keys
-() {
-   local -a prefix=( '\e'{\[,O} )
-   local -a up=( ${^prefix}A ) down=( ${^prefix}B ) left=( ${^prefix}D ) right=( ${^prefix}C )
-   local key=
-   for key in $left[@]; do
-      bindkey "$key" backward-char
-   done
-   for key in $right[@]; do
-      bindkey "$key" forward-char
-   done
-}
-
 znap eval direnv "direnv hook zsh"
 znap eval dircolors "dircolors $HOME/.dircolors"
 
