@@ -110,7 +110,8 @@ symbol = " "
 style = 'fg:#d3869b bg:#3c3836'
 command = "$ASDF_DIR/shims/elixir --short-version"
 format = '[$symbol$output]($style)'
-when = "test -f mix.exs"
+# when = "test -f mix.exs"
+detect_files = ['mix.exs']
 
 [elm]
 symbol = " "
