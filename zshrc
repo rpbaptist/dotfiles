@@ -34,10 +34,10 @@ zstyle ':autocomplete:history-incremental-search-*:*' list-lines 16
 znap source marlonrichert/zsh-edit
 znap source marlonrichert/zsh-autocomplete
 
-bindkey '\t' menu-select "$terminfo[kcbt]" reverse-menu-complete
+# ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+# znap source zsh-users/zsh-autosuggestions
 
-ZSH_AUTOSUGGEST_STRATEGY=(history completion)
-znap source zsh-users/zsh-autosuggestions
+bindkey '\t' menu-select "$terminfo[kcbt]" reverse-menu-complete
 
 znap eval direnv "direnv hook zsh"
 znap eval dircolors "dircolors $HOME/.dircolors"
