@@ -28,6 +28,9 @@ zstyle ':autocomplete:*' fzf-completion yes
 zstyle ':autocomplete:*' insert-unambiguous yes
 zstyle ':autocomplete:*' widget-style menu-select
 
+zstyle ':autocomplete:history-search:*' list-lines 16
+zstyle ':autocomplete:history-incremental-search-*:*' list-lines 16  
+
 znap source marlonrichert/zsh-edit
 znap source marlonrichert/zsh-autocomplete
 
