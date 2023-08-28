@@ -51,6 +51,16 @@ zstyle ':completion:*' hosts off
 zstyle ':completion:*:*:git:*' script "$ZSH/scripts/git-completion.bash"
 
 source "$HOME/.asdf/asdf.sh"
+source "$HOME/.fzf.zsh"
+
+zle -N up-line-or-search
+up-line-or-search() {
+  if [[ $LBUFFER == *$'\n'* ]] then
+    zle up-line
+  else
+    fzf-history-widget
+  fi
+}
 
 # Append local completions to fpath
 fpath=(${ASDF_DIR}/completions $ZSH/completions $fpath)
