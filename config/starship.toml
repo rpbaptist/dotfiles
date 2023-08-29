@@ -45,7 +45,7 @@ format = '[\($hash$tag\)]($style)'
 
 [git_status]
 format = "( $ahead_behind)( $all_status)"
-stashed = ""
+stashed = "≡"
 ahead = '[](fg:bold #689d6a bg:#3c3836)'
 up_to_date = "[✔](fg:#689d6a bg:#3c3836)"
 behind = '[](fg:bold #fb4934 bg:#3c3836)'
