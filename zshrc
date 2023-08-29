@@ -70,4 +70,5 @@ znap fpath _kubectl   'kubectl   completion  zsh'
 znap fpath _remotectl 'remotectl completion  zsh'
 znap fpath _starship  'starship  completions zsh'
 
+# Necessary for ubuntu somehow
 skip_global_compinit=1
