@@ -42,14 +42,11 @@ bindkey '\t' menu-select "$terminfo[kcbt]" reverse-menu-complete
 znap eval direnv "direnv hook zsh"
 znap eval dircolors "dircolors $HOME/.dircolors"
 
-source "$ZSH/plugins.zsh"
-source "$ZSH/functions.zsh"
-source "$ZSH/aliases.zsh"
-
 # Don't try to ssh to hosts file
 zstyle ':completion:*' hosts off
 zstyle ':completion:*:*:git:*' script "$ZSH/scripts/git-completion.bash"
 
+source "$ZSH/custom.zsh"
 source "$HOME/.asdf/asdf.sh"
 source "$HOME/.fzf.zsh"
 

@@ -1,5 +1,6 @@
 #! /bin/bash
 
+# Copied over from omz
 function source-plugin() {
   local plugin
 
@@ -10,3 +11,6 @@ function source-plugin() {
 
 source-plugin "git"
 source-plugin "ubuntu"
+
+source "$ZSH/functions.zsh"
+source "$ZSH/aliases.zsh"
