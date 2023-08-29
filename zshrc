@@ -38,6 +38,7 @@ znap source marlonrichert/zsh-autocomplete
 # znap source zsh-users/zsh-autosuggestions
 
 bindkey '\t' menu-select "$terminfo[kcbt]" reverse-menu-complete
+bindkey -M menuselect '\r' .accept-line
 
 znap eval direnv "direnv hook zsh"
 znap eval dircolors "dircolors $HOME/.dircolors"
@@ -69,3 +70,11 @@ znap fpath _starship  'starship  completions zsh'
 
 # Necessary for ubuntu somehow
 skip_global_compinit=1
+
+DISABLE_AUTO_TITLE=1
+
+function stitle() {
+    echo -en "\033]0;$(pwd|cut -d "/" -f 4-100)\a"
+}
+
+precmd_functions+=(stitle)
