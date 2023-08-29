@@ -54,12 +54,17 @@ staged = '[+](fg:bold #689d6a bg:#3c3836)'
 deleted = '[-](fg:bold #fb4934 bg:#3c3836)'
 untracked = '[?](fg:bold #fabd2f bg:#3c3836)'
 renamed = '[»](fg:bold #fabd2f bg:#3c3836)'
-modified = "[≠](fg:bold #fabd2f bg:#3c3836)"
+modified = "[≠](fg:#fabd2f bg:#3c3836)"
 typechanged = ''
 
 [git_state]
-format = '\([$state( $progress_current/$progress_total)]($style)\) '
-style = "bright-black"
+# repase = 'rebasing'
+# merge = 'merging'
+# revert = 'reverting'
+# cherry_pick = 'cherry picking'
+# bisect = 'bisecting'
+style = "fg:#fabd2f bg:#3c3836"
+format = ' [$state( $progress_current/$progress_total)]($style)'
 
 [cmd_duration]
 disabled = true
