@@ -70,5 +70,3 @@ znap fpath _glab      'glab      completion  -s zsh'
 znap fpath _kubectl   'kubectl   completion  zsh'
 znap fpath _remotectl 'remotectl completion  zsh'
 znap fpath _starship  'starship  completions zsh'
-
-DISABLE_AUTO_TITLE=1
