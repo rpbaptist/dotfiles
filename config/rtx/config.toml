@@ -1,0 +1,3 @@
+[settings]
+asdf_compat = true
+disable_tools = ['redis', 'postgres']
