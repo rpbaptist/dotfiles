@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Prevent Ubuntu form performing useless overhead
+skip_global_compinit=1
+
 setopt nobeep
 unsetopt nomatch
 
@@ -67,8 +70,5 @@ znap fpath _glab      'glab      completion  -s zsh'
 znap fpath _kubectl   'kubectl   completion  zsh'
 znap fpath _remotectl 'remotectl completion  zsh'
 znap fpath _starship  'starship  completions zsh'
-
-# Necessary for ubuntu somehow
-skip_global_compinit=1
 
 DISABLE_AUTO_TITLE=1
