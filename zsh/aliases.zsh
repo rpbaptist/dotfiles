@@ -1,6 +1,5 @@
 #! /bin/bash
 
-alias resh=". ~/.zshrc"
 alias zshenv="$EDITOR ~/.zshenv"
 alias zshrc="$EDITOR ~/.zshrc"
 
