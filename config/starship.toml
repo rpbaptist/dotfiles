@@ -114,9 +114,9 @@ format = '[$symbol$version]($style)'
 [custom.elixir]
 symbol = " "
 style = 'fg:#d3869b bg:#3c3836'
-command = "$ASDF_DIR/shims/elixir --short-version"
+command = "cat .tool-versions | rg elixir |  awk -F ' ' '{print $2}'"
+# command = "$ASDF_DIR/shims/elixir --short-version"
 format = '[$symbol$output]($style)'
-# when = "test -f mix.exs"
 detect_files = ['mix.exs']
 
 [elm]
