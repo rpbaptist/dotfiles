@@ -35,6 +35,7 @@ format = '[$path]($style)[$read_only]($read_only_style)'
 
 [git_branch]
 symbol = "󰘬 "
+truncation_length = 40
 style = "fg:#8ec07c bg:#3c3836"
 format = "$symbol$branch"
 
