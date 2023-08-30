@@ -72,9 +72,3 @@ znap fpath _starship  'starship  completions zsh'
 skip_global_compinit=1
 
 DISABLE_AUTO_TITLE=1
-
-function stitle() {
-    echo -en "\033]0;$(pwd|cut -d "/" -f 4-100)\a"
-}
-
-precmd_functions+=(stitle)
