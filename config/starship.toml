@@ -47,14 +47,14 @@ format = '[\($hash$tag\)]($style)'
 [git_status]
 format = "( $ahead_behind)( $all_status)"
 stashed = "≡"
-ahead = '[](fg:bold #689d6a bg:#3c3836)'
+ahead = '[](fg:#689d6a bg:#3c3836)'
 up_to_date = "[✔](fg:#689d6a bg:#3c3836)"
-behind = '[](fg:bold #fb4934 bg:#3c3836)'
+behind = '[](fg:#fb4934 bg:#3c3836)'
 diverged = "[✘](fg:#fb4934 bg:#3c3836)"
 staged = '[+](fg:bold #689d6a bg:#3c3836)'
 deleted = '[-](fg:bold #fb4934 bg:#3c3836)'
 untracked = '[?](fg:bold #fabd2f bg:#3c3836)'
-renamed = '[»](fg:bold #fabd2f bg:#3c3836)'
+renamed = '[»](fg:#fabd2f bg:#3c3836)'
 modified = "[≠](fg:#fabd2f bg:#3c3836)"
 typechanged = ''
 
