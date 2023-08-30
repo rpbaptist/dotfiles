@@ -45,13 +45,13 @@ bindkey -M menuselect '\r' .accept-line
 
 znap eval direnv "direnv hook zsh"
 znap eval dircolors "dircolors $HOME/.dircolors"
+znap eval rtx "rtx activate zsh"
 
 # Don't try to ssh to hosts file
 zstyle ':completion:*' hosts off
 zstyle ':completion:*:*:git:*' script "$ZSH/scripts/git-completion.bash"
 
 source "$ZSH/custom.zsh"
-source "$HOME/.asdf/asdf.sh"
 source "$HOME/.fzf.zsh"
 
 zle -N up-line-or-search
@@ -63,10 +63,10 @@ up-line-or-search() {
   fi
 }
 
-# Append local completions to fpath
-fpath=(${ASDF_DIR}/completions $ZSH/completions $fpath)
+fpath=($ZSH/completions $fpath)
 
 znap fpath _glab      'glab      completion  -s zsh'
 znap fpath _kubectl   'kubectl   completion  zsh'
 znap fpath _remotectl 'remotectl completion  zsh'
+znap fpath _rtx       'rtx       completion  zsh'
 znap fpath _starship  'starship  completions zsh'

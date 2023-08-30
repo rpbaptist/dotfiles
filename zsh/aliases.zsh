@@ -57,8 +57,6 @@ alias dockerprune='docker rmi $(docker images -f "dangling=true" -q)'
 alias qmkr="cd $HOME/code/qmk_firmware"
 alias qmkm="subl -n -a $HOME/code/qmk_firmware $HOME/code/qmk_firmware/keyboards/crkbd/keymaps/rpbaptist/keymap.c"
 
-alias arst="asdf"
-
 # git
 
 alias gs='git status'
