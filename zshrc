@@ -43,7 +43,6 @@ znap source marlonrichert/zsh-autocomplete
 bindkey '\t' menu-select "$terminfo[kcbt]" reverse-menu-complete
 bindkey -M menuselect '\r' .accept-line
 
-znap eval direnv "direnv hook zsh"
 znap eval dircolors "dircolors $HOME/.dircolors"
 znap eval rtx "rtx activate zsh"
 

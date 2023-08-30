@@ -7,3 +7,4 @@
 .rake_tasks
 .mix_tasks
 .obsidian
+.rtx.toml
