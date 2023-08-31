@@ -1,5 +1,6 @@
 #!/bin/sh
 
+export RIPGREP_CONFIG_PATH="$HOME/.config/ripgreprc"
 export SHELLCHECK_OPTS="-e SC1090"
 
 export KERL_CONFIGURE_OPTIONS="--disable-debug --disable-silent-rules --without-javac --enable-shared-zlib --enable-dynamic-ssl-lib --enable-hipe --enable-sctp --enable-smp-support --enable-threads --enable-kernel-poll --with-ssl=/usr/local/ssl"
