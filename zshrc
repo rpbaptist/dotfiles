@@ -6,6 +6,7 @@ skip_global_compinit=1
 setopt nobeep
 unsetopt nomatch
 
+SAVEHIST=1000
 HISTSIZE=10000
 HISTFILE="$HOME/.zsh_history"
 setopt appendhistory
