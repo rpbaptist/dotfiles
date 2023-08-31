@@ -35,6 +35,8 @@ zstyle ':autocomplete:*' widget-style menu-select
 zstyle ':autocomplete:history-search:*' list-lines 16
 zstyle ':autocomplete:history-incremental-search-*:*' list-lines 16  
 
+source "$HOME/.fzf.zsh"
+
 znap source marlonrichert/zsh-edit
 znap source marlonrichert/zsh-autocomplete
 
@@ -42,7 +44,7 @@ znap source marlonrichert/zsh-autocomplete
 # znap source zsh-users/zsh-autosuggestions
 
 bindkey '\t' menu-select "$terminfo[kcbt]" reverse-menu-complete
-bindkey -M menuselect '\r' .accept-line
+# bindkey -M menuselect '\r' .accept-line
 
 znap eval dircolors "dircolors $HOME/.dircolors"
 znap eval rtx "rtx activate zsh"
@@ -52,16 +54,15 @@ zstyle ':completion:*' hosts off
 zstyle ':completion:*:*:git:*' script "$ZSH/scripts/git-completion.bash"
 
 source "$ZSH/custom.zsh"
-source "$HOME/.fzf.zsh"
 
-zle -N up-line-or-search
-up-line-or-search() {
-  if [[ $LBUFFER == *$'\n'* ]] then
-    zle up-line
-  else
-    fzf-history-widget
-  fi
-}
+# zle -N up-line-or-search
+# up-line-or-search() {
+#   if [[ $LBUFFER == *$'\n'* ]] then
+#     zle up-line
+#   else
+#     fzf-history-widget
+#   fi
+# }
 
 fpath=($ZSH/completions $fpath)
 
