@@ -62,3 +62,5 @@ znap fpath _kubectl   'kubectl   completion  zsh'
 znap fpath _remotectl 'remotectl completion  zsh'
 znap fpath _rtx       'rtx       completion  zsh'
 znap fpath _starship  'starship  completions zsh'
+
+znap eval trapd00r/LS_COLORS 'dircolors -b LS_COLORS'
