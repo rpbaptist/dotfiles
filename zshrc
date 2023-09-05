@@ -28,14 +28,15 @@ zstyle ':znap:*' repos-dir $ZREPOS
 znap eval starship 'starship init zsh --print-full-init'
 znap prompt
 
-znap install junegunn/fzf
-
 zstyle ':autocomplete:*' fzf-completion yes
 zstyle ':autocomplete:*' insert-unambiguous yes
 zstyle ':autocomplete:*' widget-style menu-select
 
 zstyle ':autocomplete:history-search:*' list-lines 16
 zstyle ':autocomplete:history-incremental-search-*:*' list-lines 16  
+
+znap install junegunn/fzf
+source "$ZSH/scripts/fzf.zsh"
 
 znap source marlonrichert/zsh-edit
 
