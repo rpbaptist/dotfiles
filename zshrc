@@ -38,6 +38,10 @@ zstyle ':autocomplete:history-search:*' list-lines 16
 zstyle ':autocomplete:history-incremental-search-*:*' list-lines 16  
 
 znap source marlonrichert/zsh-edit
+
+bindkey -M emacs -r '^[/' \
+                    '^[Y'
+
 znap source marlonrichert/zsh-autocomplete
 
 ZSH_AUTOSUGGEST_STRATEGY=(completion history)
@@ -64,3 +68,4 @@ znap fpath _rtx       'rtx       completion  zsh'
 znap fpath _starship  'starship  completions zsh'
 
 znap eval trapd00r/LS_COLORS 'dircolors -b LS_COLORS'
+znap source zsh-users/zsh-syntax-highlighting
