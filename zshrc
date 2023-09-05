@@ -55,15 +55,6 @@ zstyle ':completion:*:*:git:*' script "$ZSH/scripts/git-completion.bash"
 
 source "$ZSH/custom.zsh"
 
-# zle -N up-line-or-search
-# up-line-or-search() {
-#   if [[ $LBUFFER == *$'\n'* ]] then
-#     zle up-line
-#   else
-#     fzf-history-widget
-#   fi
-# }
-
 fpath=($ZSH/completions $fpath)
 
 znap fpath _glab      'glab      completion  -s zsh'
