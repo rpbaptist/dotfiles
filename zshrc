@@ -35,9 +35,6 @@ zstyle ':autocomplete:*' widget-style menu-select
 zstyle ':autocomplete:history-search:*' list-lines 16
 zstyle ':autocomplete:history-incremental-search-*:*' list-lines 16  
 
-znap install junegunn/fzf
-source "$ZSH/scripts/fzf.zsh"
-
 znap source marlonrichert/zsh-edit
 
 bindkey -M emacs -r '^[/' \
@@ -45,11 +42,23 @@ bindkey -M emacs -r '^[/' \
 
 znap source marlonrichert/zsh-autocomplete
 
+znap clone junegunn/fzf
+source "$ZSH/scripts/fzf.zsh"
+
 ZSH_AUTOSUGGEST_STRATEGY=(completion history)
 znap source zsh-users/zsh-autosuggestions
 
 bindkey '\t' menu-select "$terminfo[kcbt]" reverse-menu-complete
 # bindkey -M menuselect '\r' .accept-line
+
+zle -N up-line-or-search
+up-line-or-search() {
+  if [[ $LBUFFER == *$'\n'* ]] then
+    zle up-line
+  else
+    fzf-history-widget
+  fi
+}
 
 znap eval dircolors "dircolors $HOME/.dircolors"
 znap eval rtx "rtx activate zsh"

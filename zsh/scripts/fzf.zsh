@@ -1,11 +1,8 @@
 #! /bin/bash
 
-if [ ! ~[junegunn/fzf]/bin/fzf ]; then
+if [ ! $(command -v fzf) ]; then
   ~[junegunn/fzf]/install --bin
-fi
-
-if [[ ! "$PATH" == *~[junegunn/fzf]/bin* ]]; then
-  PATH="${PATH:+${PATH}:}~[junegunn/fzf]/bin"
+  cp ~[junegunn/fzf]/bin/fzf "$HOME_LOCAL_PATH"
 fi
 
 # Auto-completion
