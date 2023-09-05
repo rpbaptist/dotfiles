@@ -28,9 +28,6 @@ zstyle ':znap:*' repos-dir $ZREPOS
 znap eval starship 'starship init zsh --print-full-init'
 znap prompt
 
-znap clone junegunn/fzf
-source "$ZSH/scripts/fzf.zsh"
-
 zstyle ':autocomplete:*' insert-unambiguous yes
 zstyle ':autocomplete:*' widget-style menu-select
 
@@ -38,16 +35,15 @@ zstyle ':autocomplete:history-search:*' list-lines 16
 zstyle ':autocomplete:history-incremental-search-*:*' list-lines 16  
 
 znap source marlonrichert/zsh-edit
-
 bindkey -M emacs -r '^[/' \
                     '^[Y'
 
 znap source marlonrichert/zsh-autocomplete
-ZSH_AUTOSUGGEST_STRATEGY=(completion history)
-znap source zsh-users/zsh-autosuggestions
-
 bindkey '\t' menu-select "$terminfo[kcbt]" reverse-menu-complete
 bindkey -M menuselect '\r' .accept-line
+
+znap clone junegunn/fzf
+source "$ZSH/scripts/fzf.zsh"
 
 zle -N up-line-or-search
 up-line-or-search() {
@@ -57,6 +53,9 @@ up-line-or-search() {
     fzf-history-widget
   fi
 }
+
+ZSH_AUTOSUGGEST_STRATEGY=(completion history)
+znap source zsh-users/zsh-autosuggestions
 
 znap eval dircolors "dircolors $HOME/.dircolors"
 znap eval rtx "rtx activate zsh"
