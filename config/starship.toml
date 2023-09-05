@@ -115,7 +115,7 @@ format = '[$symbol$version]($style)'
 [custom.elixir]
 symbol = " "
 style = 'fg:#d3869b bg:#3c3836'
-command = "cat .tool-versions | rg elixir |  awk -F ' ' '{print $2}'"
+command = "elixir --short-version"
 format = '[$symbol$output]($style)'
 detect_files = ['mix.exs']
 
