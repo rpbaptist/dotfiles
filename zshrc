@@ -35,7 +35,8 @@ zstyle ':autocomplete:*' widget-style menu-select
 zstyle ':autocomplete:history-search:*' list-lines 16
 zstyle ':autocomplete:history-incremental-search-*:*' list-lines 16  
 
-source "$HOME/.fzf.zsh"
+znap install junegunn/fzf
+source "$ZSH/scripts/fzf.zsh"
 
 znap source marlonrichert/zsh-edit
 znap source marlonrichert/zsh-autocomplete
