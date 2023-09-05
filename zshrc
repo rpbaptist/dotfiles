@@ -40,8 +40,8 @@ source "$HOME/.fzf.zsh"
 znap source marlonrichert/zsh-edit
 znap source marlonrichert/zsh-autocomplete
 
-# ZSH_AUTOSUGGEST_STRATEGY=(history completion)
-# znap source zsh-users/zsh-autosuggestions
+ZSH_AUTOSUGGEST_STRATEGY=(completion history)
+znap source zsh-users/zsh-autosuggestions
 
 bindkey '\t' menu-select "$terminfo[kcbt]" reverse-menu-complete
 # bindkey -M menuselect '\r' .accept-line
