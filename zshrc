@@ -28,7 +28,10 @@ zstyle ':znap:*' repos-dir $ZREPOS
 znap eval starship 'starship init zsh --print-full-init'
 znap prompt
 
-zstyle ':autocomplete:*' fzf-completion yes
+znap clone junegunn/fzf
+source "$ZSH/scripts/fzf.zsh"
+
+zstyle ':autocomplete:tab*' fzf-completion yes
 zstyle ':autocomplete:*' insert-unambiguous yes
 zstyle ':autocomplete:*' widget-style menu-select
 
@@ -41,10 +44,6 @@ bindkey -M emacs -r '^[/' \
                     '^[Y'
 
 znap source marlonrichert/zsh-autocomplete
-
-znap clone junegunn/fzf
-source "$ZSH/scripts/fzf.zsh"
-
 ZSH_AUTOSUGGEST_STRATEGY=(completion history)
 znap source zsh-users/zsh-autosuggestions
 
