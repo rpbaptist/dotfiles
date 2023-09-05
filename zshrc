@@ -31,7 +31,6 @@ znap prompt
 znap clone junegunn/fzf
 source "$ZSH/scripts/fzf.zsh"
 
-zstyle ':autocomplete:tab*' fzf-completion yes
 zstyle ':autocomplete:*' insert-unambiguous yes
 zstyle ':autocomplete:*' widget-style menu-select
 
@@ -48,7 +47,7 @@ ZSH_AUTOSUGGEST_STRATEGY=(completion history)
 znap source zsh-users/zsh-autosuggestions
 
 bindkey '\t' menu-select "$terminfo[kcbt]" reverse-menu-complete
-# bindkey -M menuselect '\r' .accept-line
+bindkey -M menuselect '\r' .accept-line
 
 zle -N up-line-or-search
 up-line-or-search() {
