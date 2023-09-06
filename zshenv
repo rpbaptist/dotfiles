@@ -44,3 +44,5 @@ export QT_STYLE_OVERRIDE="kvantum"
 export XCURSOR_PATH=${XCURSOR_PATH}:~/.local/share/icons
 export XCURSOR_THEME="Gruvbox-Light"
 export XCURSOR_SIZE=16
+
+export NNN_OPTS="C"
