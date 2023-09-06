@@ -1,15 +1,15 @@
 format = """
 ([ $username$hostname ](bg:#3c3836)\
-[ ](fg:#1d2021 bg:#3c3836))\
+[ ](fg:black bg:#3c3836))\
 \
 [ $directory ](bg:#3c3836)\
-[([ ](fg:#1d2021 bg:#3c3836)\
+[([ ](fg:black bg:#3c3836)\
 $git_branch\
 $git_commit\
 $git_state\
-$git_status )](fg:#8ec07c bg:#3c3836)\
+$git_status )](fg:bright-cyan bg:#3c3836)\
 \
-[([ ](fg:#1d2021 bg:#3c3836)\
+[([ ](fg:black bg:#3c3836)\
 $elixir\
 $custom\
 $c\
@@ -23,39 +23,39 @@ $character
 continuation_prompt = ''
 
 [character]
-success_symbol = "[❯](#458588)"
-error_symbol = "[❯](#cc241d)"
+success_symbol = "[❯](blue)"
+error_symbol = "[❯](red)"
 vimcmd_symbol = "[❮](green)"
 
 [directory]
 read_only = " 󰌾"
-read_only_style = "fg:#fb4934 bg:#3c3836"
-style = "fg:#d79921 bg:#3c3836"
+read_only_style = "fg:bright-red bg:#3c3836"
+style = "fg:yellow bg:#3c3836"
 format = '[$path]($style)[$read_only]($read_only_style)'
 
 [git_branch]
 symbol = "󰘬 "
 truncation_length = 40
-style = "fg:#8ec07c bg:#3c3836"
+style = "fg:bright-cyan bg:#3c3836"
 format = "$symbol$branch"
 
 [git_commit]
 tag_symbol = " 󰓹 "
-style = "fg:#8ec07c bg:#3c3836"
+style = "fg:bright-cyan bg:#3c3836"
 format = '[\($hash$tag\)]($style)'
 
 [git_status]
 format = "( $ahead_behind)( $all_status)"
 stashed = "≡"
-ahead = '[](fg:#689d6a bg:#3c3836)'
-up_to_date = "[✔](fg:#689d6a bg:#3c3836)"
-behind = '[](fg:#fb4934 bg:#3c3836)'
-diverged = "[✘](fg:#fb4934 bg:#3c3836)"
-staged = '[+](fg:bold #689d6a bg:#3c3836)'
-deleted = '[-](fg:bold #fb4934 bg:#3c3836)'
-untracked = '[?](fg:bold #fabd2f bg:#3c3836)'
-renamed = '[»](fg:#fabd2f bg:#3c3836)'
-modified = "[≠](fg:#fabd2f bg:#3c3836)"
+ahead = '[](fg:cyan bg:#3c3836)'
+up_to_date = "[✔](fg:cyan bg:#3c3836)"
+behind = '[](fg:bright-red bg:#3c3836)'
+diverged = "[✘](fg:bright-red bg:#3c3836)"
+staged = '[+](fg:bold cyan bg:#3c3836)'
+deleted = '[-](fg:bold bright-red bg:#3c3836)'
+untracked = '[?](fg:bold bright-yellow bg:#3c3836)'
+renamed = '[»](fg:bright-yellow bg:#3c3836)'
+modified = "[≠](fg:bright-yellow bg:#3c3836)"
 typechanged = ''
 
 [git_state]
@@ -64,7 +64,7 @@ typechanged = ''
 # revert = 'reverting'
 # cherry_pick = 'cherry picking'
 # bisect = 'bisecting'
-style = "fg:#fabd2f bg:#3c3836"
+style = "fg:bright-yellow bg:#3c3836"
 format = ' [$state( $progress_current/$progress_total)]($style)'
 
 [cmd_duration]
@@ -73,14 +73,14 @@ format = "[$duration]($style) "
 style = "yellow"
 
 [username]
-style_user = "fg:#83a598 bg:#3c3836"
-style_root = "fg:bold #cc241d bg:#3c3836"
+style_user = "fg:bright-blue bg:#3c3836"
+style_root = "fg:bold red bg:#3c3836"
 format = "[$user]($style)"
 # show_always = true
 
 [hostname]
 # ssh_only = false
-style = "fg:#fe8019 bg:#3c3836"
+style = "fg:bright-yellow bg:#3c3836"
 ssh_symbol = " "
 format = "[@$hostname]($style)"
 
@@ -92,7 +92,7 @@ symbol = " "
 
 [c]
 symbol = " "
-style = 'fg:#fabd2f bg:#3c3836'
+style = 'fg:bright-yellow bg:#3c3836'
 version_format = '${raw}'
 format = '[$symbol($version(-$name))]($style)'
 
@@ -108,13 +108,13 @@ symbol = " "
 [elixir]
 disabled = true
 symbol = " "
-style = 'fg:#d3869b04945'
 version_format = '${raw}'
+style = 'fg:bright-purple bg:#3c3836'
 format = '[$symbol$version]($style)'
 
 [custom.elixir]
 symbol = " "
-style = 'fg:#d3869b bg:#3c3836'
+style = 'fg:bright-purple bg:#3c3836'
 command = "elixir --short-version"
 format = '[$symbol$output]($style)'
 detect_files = ['mix.exs']
@@ -163,7 +163,7 @@ symbol = " "
 
 [nodejs]
 symbol = " "
-style = "fg:#98971a bg:#3c3836"
+style = "fg:green bg:#3c3836"
 version_format = '${raw}'
 format = '[$symbol($version)]($style)'
 
