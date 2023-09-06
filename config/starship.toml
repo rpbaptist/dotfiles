@@ -37,7 +37,7 @@ format = '[$path]($style)[$read_only]($read_only_style)'
 symbol = "󰘬 "
 truncation_length = 40
 style = "fg:bright-cyan bg:#3c3836"
-format = "$symbol$branch"
+format = "[$symbol$branch]($style)"
 
 [git_commit]
 tag_symbol = " 󰓹 "
@@ -45,7 +45,6 @@ style = "fg:bright-cyan bg:#3c3836"
 format = '[\($hash$tag\)]($style)'
 
 [git_status]
-format = "( $ahead_behind)( $all_status)"
 stashed = "≡"
 ahead = '[](fg:cyan bg:#3c3836)'
 up_to_date = "[✔](fg:cyan bg:#3c3836)"
@@ -57,13 +56,10 @@ untracked = '[?](fg:bold bright-yellow bg:#3c3836)'
 renamed = '[»](fg:bright-yellow bg:#3c3836)'
 modified = "[≠](fg:bright-yellow bg:#3c3836)"
 typechanged = ''
+style = 'bg:#3c3836'
+format = "[( $ahead_behind)( $all_status)]($style)"
 
 [git_state]
-# repase = 'rebasing'
-# merge = 'merging'
-# revert = 'reverting'
-# cherry_pick = 'cherry picking'
-# bisect = 'bisecting'
 style = "fg:bright-yellow bg:#3c3836"
 format = ' [$state( $progress_current/$progress_total)]($style)'
 
