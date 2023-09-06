@@ -15,6 +15,12 @@ IEx.configure(
     doc_headings: [:cyan, :underline],
     doc_title: [:cyan, :bright, :underline],
   ],
-  inspect: [pretty: true, limit: :infinity],
+  inspect: [
+    pretty: true,
+    limit: :infinity,
+    width: 80,
+    custom_options: [sort_maps: true]
+  ],
+  width: 80,
   history_size: 500
 )
