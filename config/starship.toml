@@ -17,10 +17,16 @@ $nodejs )](bg:#3c3836)\
 \
 [](#3c3836)\
 $line_break\
-$character
+($sudo )$character
 """
 
 continuation_prompt = ''
+
+[sudo]
+disabled = false
+style = 'purple'
+symbol = '󰫜'
+format = '[$symbol]($style)'
 
 [character]
 success_symbol = "[❯](blue)"
