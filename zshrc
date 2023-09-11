@@ -78,7 +78,7 @@ znap eval trapd00r/LS_COLORS 'dircolors -b LS_COLORS'
 
 ZSH_HIGHLIGHT_HIGHLIGHTERS+=(main brackets regexp)
 typeset -A ZSH_HIGHLIGHT_STYLES
-ZSH_HIGHLIGHT_STYLES[path]='fg=#8EC07C'
+ZSH_HIGHLIGHT_STYLES[path]='fg=#83A598'
 ZSH_HIGHLIGHT_STYLES[arg0]='fg=#B8BB26'
 
 znap source zsh-users/zsh-syntax-highlighting
