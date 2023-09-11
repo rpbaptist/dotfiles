@@ -31,7 +31,7 @@ export NOTES_PATH="$HOME/Drive/Notes"
 GPG_TTY=$(tty)
 export GPG_TTY
 
-. ~/.local/env
+source "$HOME/.local/env"
 
 export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
   --color fg:#ebdbb2,bg:#1D2021,hl:#fabd2f,fg+:#ebdbb2,bg+:#3c3836,hl+:#fabd2f

@@ -91,4 +91,3 @@ alias bat="batcat"
 alias fd="fdfind"
 
 alias dot="cd $HOME/.dotfiles"
-alias rctl="remotectl"
