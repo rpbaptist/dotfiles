@@ -67,7 +67,7 @@ zstyle ':completion:*:*:git:*' script "$ZSH/scripts/git-completion.bash"
 
 source "$ZSH/custom.zsh"
 
-fpath=($ZSH/completions $fpath)
+fpath+=($ZSH/completions)
 
 znap fpath _glab      'glab      completion  -s zsh'
 znap fpath _kubectl   'kubectl   completion  zsh'
