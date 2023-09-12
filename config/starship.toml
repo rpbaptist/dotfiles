@@ -89,64 +89,31 @@ format = "[@$hostname]($style)"
 [aws]
 symbol = "  "
 
-[buf]
-symbol = " "
-
 [c]
 symbol = " "
 style = 'fg:bright-yellow bg:#3c3836'
 version_format = '${raw}'
 format = '[$symbol($version(-$name))]($style)'
 
-[conda]
-symbol = " "
-
-[dart]
-symbol = " "
-
 [docker_context]
 symbol = " "
 
 [elixir]
 disabled = true
-symbol = " "
+symbol = " "
 version_format = '${raw}'
 style = 'fg:bright-purple bg:#3c3836'
 format = '[$symbol$version]($style)'
 
 [custom.elixir]
-symbol = " "
+symbol = " "
 style = 'fg:bright-purple bg:#3c3836'
 command = "elixir --short-version"
 format = '[$symbol$output]($style)'
 detect_files = ['mix.exs']
 
-[elm]
-symbol = " "
-
-[fossil_branch]
-symbol = " "
-
 [golang]
 symbol = " "
-
-[guix_shell]
-symbol = " "
-
-[haskell]
-symbol = " "
-
-[haxe]
-symbol = " "
-
-[hg_branch]
-symbol = " "
-
-[java]
-symbol = " "
-
-[julia]
-symbol = " "
 
 [lua]
 symbol = " "
@@ -156,9 +123,6 @@ symbol = "󰍛 "
 
 [meson]
 symbol = "󰔷 "
-
-[nim]
-symbol = "󰆥 "
 
 [nix_shell]
 symbol = " "
@@ -170,16 +134,10 @@ version_format = '${raw}'
 format = '[$symbol($version)]($style)'
 
 [os.symbols]
-Alpaquita = " "
 Alpine = " "
-Amazon = " "
-Android = " "
 Arch = " "
 Artix = " "
-CentOS = " "
 Debian = " "
-DragonFly = " "
-Emscripten = " "
 EndeavourOS = " "
 Fedora = " "
 FreeBSD = " "
@@ -189,44 +147,24 @@ HardenedBSD = "󰞌 "
 Illumos = "󰈸 "
 Linux = " "
 Mabox = " "
-Macos = " "
 Manjaro = " "
-Mariner = " "
-MidnightBSD = " "
-Mint = " "
-NetBSD = " "
 NixOS = " "
 OpenBSD = "󰈺 "
 openSUSE = " "
-OracleLinux = "󰌷 "
-Pop = " "
 Raspbian = " "
-Redhat = " "
-RedHatEnterprise = " "
 Redox = "󰀘 "
 Solus = "󰠳 "
 SUSE = " "
 Ubuntu = " "
-Unknown = " "
-Windows = "󰍲 "
 
 [package]
 symbol = "󰏗 "
 
-[pijul_channel]
-symbol = " "
-
 [python]
-symbol = " "
-
-[rlang]
-symbol = "󰟔 "
+symbol = " "
 
 [ruby]
 symbol = " "
 
 [rust]
 symbol = " "
-
-[scala]
-symbol = " "
