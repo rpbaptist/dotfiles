@@ -40,7 +40,6 @@ bindkey -M emacs -r '^[/' \
 
 znap source marlonrichert/zsh-autocomplete
 bindkey '\t' menu-select "$terminfo[kcbt]" reverse-menu-complete
-bindkey -M menuselect '\r' .accept-line
 
 znap clone junegunn/fzf
 source "$ZSH/scripts/fzf.zsh"
@@ -53,6 +52,8 @@ up-line-or-search() {
     fzf-history-widget
   fi
 }
+
+bindkey -M menuselect '\r' .accept-line
 
 ZSH_AUTOSUGGEST_STRATEGY=(completion history)
 znap source zsh-users/zsh-autosuggestions
