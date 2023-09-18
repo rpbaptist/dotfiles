@@ -53,9 +53,9 @@ format = '[\($hash$tag\)]($style)'
 [git_status]
 stashed = "≡"
 ahead = '[](fg:cyan bg:#3c3836)'
-up_to_date = "[✔](fg:cyan bg:#3c3836)"
+up_to_date = "[✔](bold fg:cyan bg:#3c3836)"
 behind = '[](fg:bright-red bg:#3c3836)'
-diverged = "[✘](fg:bright-red bg:#3c3836)"
+diverged = "[✗](fg:bold bright-red bg:#3c3836)"
 staged = '[+](fg:bold cyan bg:#3c3836)'
 deleted = '[-](fg:bold bright-red bg:#3c3836)'
 untracked = '[?](fg:bold bright-yellow bg:#3c3836)'
