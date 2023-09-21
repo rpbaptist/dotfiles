@@ -2,7 +2,9 @@
 disable_tools = ['redis', 'postgres']
 
 [tools]
-erlang = 'latest'
 elixir = 'latest'
+erlang = 'latest'
+node = "20.5.1"
 nodejs = 'latest'
+python = 'latest'
 rust = 'latest'
