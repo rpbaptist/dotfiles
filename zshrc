@@ -53,7 +53,7 @@ up-line-or-search() {
   fi
 }
 
-bindkey -M menuselect '\r' .accept-line
+# bindkey -M menuselect '\r' .accept-line
 
 ZSH_AUTOSUGGEST_STRATEGY=(completion history)
 znap source zsh-users/zsh-autosuggestions
