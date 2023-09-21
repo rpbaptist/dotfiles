@@ -23,7 +23,7 @@ $line_break\
 continuation_prompt = ''
 
 [sudo]
-disabled = false
+disabled = true
 style = 'bright-purple'
 symbol = ''
 format = '[$symbol]($style)'
@@ -41,7 +41,7 @@ format = '[$path]($style)[$read_only]($read_only_style)'
 
 [git_branch]
 symbol = "󰘬 "
-truncation_length = 40
+truncation_length = 50
 style = "fg:bright-cyan bg:#3c3836"
 format = "[$symbol$branch]($style)"
 
@@ -58,7 +58,7 @@ behind = '[](fg:bright-red bg:#3c3836)'
 diverged = "[✗](fg:bold bright-red bg:#3c3836)"
 staged = '[+](fg:bold cyan bg:#3c3836)'
 deleted = '[-](fg:bold bright-red bg:#3c3836)'
-untracked = '[?](fg:bold bright-yellow bg:#3c3836)'
+untracked = '[?](fg:bright-yellow bg:#3c3836)'
 renamed = '[»](fg:bright-yellow bg:#3c3836)'
 modified = "[≠](fg:bright-yellow bg:#3c3836)"
 typechanged = ''
@@ -106,6 +106,7 @@ style = 'fg:bright-purple bg:#3c3836'
 format = '[$symbol$version]($style)'
 
 [custom.elixir]
+disabled = true
 symbol = " "
 style = 'fg:bright-purple bg:#3c3836'
 command = "elixir --short-version"
