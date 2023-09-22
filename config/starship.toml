@@ -41,7 +41,7 @@ format = '[$path]($style)[$read_only]($read_only_style)'
 
 [git_branch]
 symbol = "󰘬 "
-truncation_length = 50
+truncation_length = 40
 style = "fg:bright-cyan bg:#3c3836"
 format = "[$symbol$branch]($style)"
 
@@ -106,7 +106,6 @@ style = 'fg:bright-purple bg:#3c3836'
 format = '[$symbol$version]($style)'
 
 [custom.elixir]
-disabled = true
 symbol = " "
 style = 'fg:bright-purple bg:#3c3836'
 command = "elixir --short-version"
