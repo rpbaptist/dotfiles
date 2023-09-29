@@ -55,7 +55,7 @@ up-line-or-search() {
 
 # bindkey -M menuselect '\r' .accept-line
 
-ZSH_AUTOSUGGEST_STRATEGY=(completion history)
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 znap source zsh-users/zsh-autosuggestions
 
 znap eval dircolors "dircolors $HOME/.dircolors"
