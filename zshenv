@@ -21,10 +21,10 @@ export PATH="$HOME_LOCAL_PATH:$COMMON_PATHS:$GAMES_PATH:$SNAP_PATH:$RTX_SHIM_PAT
 if [ -n "$SSH_CONNECTION" ]; then
   export EDITOR="vi"
 else
-  export EDITOR="subl"
+  export EDITOR="subl -w"
 fi
 
-export VISUAL="$EDITOR -w"
+export VISUAL="$EDITOR"
 export NOTES_PATH="$HOME/Drive/Notes"
 
 #GPG
