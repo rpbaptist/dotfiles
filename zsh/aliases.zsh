@@ -3,9 +3,6 @@
 alias zshenv="$EDITOR ~/.zshenv"
 alias zshrc="$EDITOR ~/.zshrc"
 
-# alias fd="fdfind"
-# alias bat="batcat"
-
 alias ls="ls --color=auto"
 alias la='ls -lAFh'   #long list,show almost all,show type,human readable
 alias lr='ls -tRFh'   #sorted by date,recursive,show type,human readable
@@ -87,7 +84,6 @@ alias mps='mix phx.server'
 
 # aliases
 
-alias bat="batcat"
 alias fd="fdfind"
 
 alias dot="cd $HOME/.dotfiles"
