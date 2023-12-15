@@ -4,6 +4,7 @@
 
 vim.opt.relativenumber = false
 vim.opt.clipboard = "unnamedplus"
+vim.opt.textwidth = 120
 
 -- vim.opt.swapfile = false
 
