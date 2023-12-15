@@ -26,25 +26,30 @@ return {
   },
   {
     "neovim/nvim-lspconfig",
-    config = function()
-      local lspconfig = require("lspconfig")
-      local configs = require("lspconfig.configs")
-
-      if not configs.lexical then
-        configs.lexical = {
-          default_config = {
-            filetypes = { "elixir", "eelixir", "heex", "surface" },
-            cmd = { os.getenv("HOME") .. "/code/lexical/_build/dev/package/lexical/bin/start_lexical.sh" },
-            root_dir = function(fname)
-              return lspconfig.util.root_pattern("mix.exs", ".git")(fname) or vim.loop.os_homedir()
-            end,
-            -- optional settings
-            settings = {},
-          },
-        }
-      end
-
-      lspconfig.lexical.setup({})
-    end,
+    opts = {
+      servers = {
+        lexical = {
+          mason = false,
+          filetypes = { "elixir", "eelixir", "heex", "surface" },
+          settings = {},
+        },
+      },
+      setup = {
+        lexical = function(_, _)
+          local lspconfig = require("lspconfig")
+          local configs = require("lspconfig.configs")
+          configs.lexical = {
+            default_config = {
+              filetypes = { "elixir", "eelixir", "heex", "surface" },
+              root_dir = function(fname)
+                return lspconfig.util.root_pattern("mix.exs", ".git")(fname) or vim.loop.os_homedir()
+              end,
+              cmd = { os.getenv("HOME") .. "/code/lexical/_build/dev/package/lexical/bin/start_lexical.sh" },
+            },
+          }
+          return false
+        end,
+      },
+    },
   },
 }
