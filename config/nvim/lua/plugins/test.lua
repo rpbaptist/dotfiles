@@ -22,7 +22,17 @@ return {
   -- },
   -- {
   --   "jfpedroza/neotest-elixir",
-  -- },
+  -- }
+  --
+  "nvim-lua/plenary.nvim",
+
+  {
+    "nvim-neotest/neotest",
+    dependencies = {
+      -- "nvim-lua/plenary.nvim",
+      "nvim-treesitter/nvim-treesitter",
+    },
+  },
   {
     "folke/which-key.nvim",
     optional = true,
@@ -31,5 +41,16 @@ return {
         ["<leader>t"] = { name = "+test" },
       },
     },
+  },
+
+  {
+    "jfpedroza/neotest-elixir",
+    dependencies = { "nvim-neotest/neotest" },
+  },
+
+  {
+    "nvim-telescope/telescope.nvim",
+    tag = "0.1.2",
+    dependencies = { { "nvim-lua/plenary.nvim" } },
   },
 }
