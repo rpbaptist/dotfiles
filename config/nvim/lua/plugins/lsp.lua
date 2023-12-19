@@ -123,7 +123,7 @@ return {
         return { capabilities = capabilities, on_attach = on_attach, cmd = { get_ls_cmd(ls), ... } }
       end
 
-      lspconfig.efm.setup({ filetypes = { "elixir" }, cmd = { get_ls_cmd("efm-langserver") } })
+      -- lspconfig.efm.setup({ filetypes = { "elixir" }, cmd = { get_ls_cmd("efm-langserver") } })
       lspconfig.clangd.setup(config("clangd"))
 
       lspconfig.lua_ls.setup({
