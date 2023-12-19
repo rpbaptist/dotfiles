@@ -5,8 +5,6 @@ return {
     bold = false,
   } },
 
-  { "knubie/vim-kitty-navigator" },
-
   {
     "LazyVim/LazyVim",
     opts = {
@@ -14,16 +12,17 @@ return {
     },
   },
 
-  -- {
-  --   "telescope.nvim",
-  --   dependencies = {
-  --     "nvim-telescope/telescope-fzf-native.nvim",
-  --     build = "make",
-  --     config = function()
-  --       require("telescope").load_extension("fzf")
-  --     end,
-  --   },
-  -- },
+  { "knubie/vim-kitty-navigator" },
+  {
+    "telescope.nvim",
+    dependencies = {
+      "nvim-telescope/telescope-fzf-native.nvim",
+      build = "make",
+      config = function()
+        require("telescope").load_extension("fzf")
+      end,
+    },
+  },
   { "mg979/vim-visual-multi" },
   { "tpope/vim-projectionist" },
   {
@@ -73,5 +72,18 @@ return {
     config = function()
       require("output_panel").setup()
     end,
+  },
+
+  {
+    "akinsho/toggleterm.nvim",
+    opts = {
+      -- open_mapping = [[<c-/>]],
+
+      direction = "float",
+      shade_terminals = false,
+      float_opts = {
+        border = "single",
+      },
+    },
   },
 }
