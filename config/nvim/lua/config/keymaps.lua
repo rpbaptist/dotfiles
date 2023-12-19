@@ -19,6 +19,7 @@ vim.keymap.del("n", "<C-l>")
 
 vim.keymap.del("n", "<S-h>")
 vim.keymap.del("n", "<S-l>")
+vim.keymap.del("n", "<C-/>")
 -- vim.keymap.del("n", "<C-w>")
 -- vim.keymap.del("n", "[b")
 -- vim.keymap.del("n", "]b")
@@ -59,3 +60,5 @@ vim.keymap.set(
 -- Move Lines
 vim.keymap.set("n", "<C-S-Down>", "<cmd>m .+1<cr>==", { desc = "Move down" })
 vim.keymap.set("n", "<C-S-Up>", "<cmd>m .-2<cr>==", { desc = "Move up" })
+
+vim.keymap.set("n", "<C-/>", ":ToggleTerm<cr>", { desc = "Toggle terminal" })
