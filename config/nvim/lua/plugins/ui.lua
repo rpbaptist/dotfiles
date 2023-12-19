@@ -26,6 +26,16 @@ return {
   },
 
   {
+    "nvim-lualine/lualine.nvim",
+    opts = function()
+      return {
+        sections = {
+          lualine_z = {},
+        },
+      }
+    end,
+  },
+  {
     "rcarriga/nvim-notify",
     opts = {
       timeout = 10000,
