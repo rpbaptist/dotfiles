@@ -90,7 +90,7 @@ return {
         -- Mappings.
         -- See `:help vim.lsp.*` for documentation on any of the below functions
         vim.keymap.set("n", "gD", vim.lsp.buf.declaration, bufopts)
-        -- vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
+        vim.keymap.set("n", "gd", vim.lsp.buf.definition, bufopts)
         vim.keymap.set("n", "<C-w>gv", ":vs<CR><cmd>lua vim.lsp.buf.definition()<CR>", bufopts)
         vim.keymap.set("n", "<C-w>gs", ":sp<CR><cmd>lua vim.lsp.buf.definition()<CR>", bufopts)
         vim.keymap.set("n", "K", vim.lsp.buf.hover, bufopts)
