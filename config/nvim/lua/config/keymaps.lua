@@ -31,14 +31,11 @@ vim.keymap.set({ "n", "x", "v" }, "<Down>", "j", { remap = true })
 vim.keymap.set({ "n", "x", "v" }, "<Left>", "h", { remap = true })
 vim.keymap.set({ "n", "x", "v" }, "<Right>", "l", { remap = true })
 
-vim.keymap.set("n", "<C-A-Tab>", "<cmd>bnext<cr>", { desc = "Next buffer" })
-vim.keymap.set("n", "<C-A-S-Tab>", "<cmd>bprevious<cr>", { desc = "Prev buffer" })
+vim.keymap.set("n", "<C-Tab>", ":bn<CR>", { desc = "Next buffer" })
+vim.keymap.set("n", "<C-S-Tab>", ":bp<CR>", { desc = "Prev buffer" })
 vim.keymap.set("n", "<C-w>", "<Space>bd", { desc = "Delete buffer" })
 
--- vim.keymap.set("n", "<leader>bn", "<cmd>bprevious<cr>", { desc = "Prev buffer" })
--- vim.keymap.set("n", "<leader>bi", "<cmd>bnext<cr>", { desc = "Next buffer" })
-vim.keymap.set("n", "<C-w>", "<cmd>bd<cr>", { desc = "Next buffer" })
-vim.keymap.set("n", "<C-t><C-t>", ":OTest<cr>", { desc = "Open test file" })
+-- vim.keymap.set("n", "<C-t><C-t>", ":OTest<cr>", { desc = "Open test file" })
 
 -- Resize windows
 vim.keymap.set("n", "<A-S-Up>", "<cmd>resize +10<cr>", { desc = "Increase window height" })
@@ -58,7 +55,8 @@ vim.keymap.set(
 )
 
 -- Move Lines
-vim.keymap.set("n", "<C-S-Down>", "<cmd>m .+1<cr>==", { desc = "Move down" })
-vim.keymap.set("n", "<C-S-Up>", "<cmd>m .-2<cr>==", { desc = "Move up" })
+vim.keymap.set("n", "<C-S-Down>", ":m +1<cr>==", { desc = "Move down", silent = true })
+vim.keymap.set("n", "<C-S-Up>", ":m -2<cr>==", { desc = "Move up", silent = true })
 
-vim.keymap.set("n", "<C-/>", ":ToggleTerm<cr>", { desc = "Toggle terminal" })
+vim.keymap.set("n", "<C-/>", ":ToggleTerm<cr>", { desc = "Toggle terminal", silent = true })
+vim.keymap.set("n", "<leader>p", ":Telescope possession list", { desc = "Session list", silent = true })
