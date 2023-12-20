@@ -1,4 +1,6 @@
 return {
+  { "folke/tokyonight.nvim", enabled = false },
+  { "catppuccin/nvim", enabled = false },
   -- add gruvbox
   { "ellisonleao/gruvbox.nvim", opts = {
     contrast = "hard",
@@ -11,15 +13,25 @@ return {
       colorscheme = "gruvbox",
     },
   },
-
+  { "fladson/vim-kitty" },
   { "knubie/vim-kitty-navigator" },
+  {
+    "stevearc/oil.nvim",
+    opts = {
+      use_default_keymaps = false,
+    },
+    -- Optional dependencies
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+  },
   {
     "telescope.nvim",
     dependencies = {
       "nvim-telescope/telescope-fzf-native.nvim",
+      "jedrzejboczar/possession.nvim",
       build = "make",
       config = function()
         require("telescope").load_extension("fzf")
+        require("telescope").load_extension("possession")
       end,
     },
   },
