@@ -23,6 +23,7 @@ return {
     -- Optional dependencies
     dependencies = { "nvim-tree/nvim-web-devicons" },
   },
+  { "tpope/vim-fugitive" },
   {
     "telescope.nvim",
     dependencies = {
