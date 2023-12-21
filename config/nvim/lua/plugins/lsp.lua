@@ -5,6 +5,7 @@ return {
     opts = function(_, opts)
       vim.list_extend(opts.ensure_installed, {
         "stylua",
+        "elixir-ls",
       })
     end,
   },
@@ -16,10 +17,10 @@ return {
       local nls = require("null-ls")
       return {
         sources = {
-          -- nls.builtins.diagnostics.credo,
+          nls.builtins.diagnostics.credo,
           nls.builtins.formatting.prettierd,
           nls.builtins.formatting.stylua,
-          -- nls.builtins.formatting.mix,
+          nls.builtins.formatting.mix,
         },
       }
     end,
@@ -51,7 +52,6 @@ return {
   {
     "neovim/nvim-lspconfig",
     dependencies = {
-      "lukas-reineke/lsp-format.nvim",
       { "j-hui/fidget.nvim", config = true, tag = "legacy" },
     },
     config = function()
@@ -64,28 +64,10 @@ return {
         return orig_util_open_floating_preview(contents, syntax, opts, ...)
       end
 
-      require("lsp-format").setup({})
-
       local function on_attach(client, buffer)
         local bufopts = { noremap = true, silent = true, buffer = buffer }
 
-        -- Set up alternative keymap to format file
-        if client.name == lspconfig.elixirls.name then
-          vim.keymap.set(
-            "n",
-            "<leader>li",
-            ":Format<CR>",
-            { noremap = true, desc = "Format current buffer with formatter.nvim" }
-          )
-        else
-          vim.keymap.set("n", "<leader>li", function()
-            vim.lsp.buf.format({ async = true })
-          end, bufopts)
-        end
-
         require("lsp_signature").on_attach({ bind = true, handler_opts = { border = "rounded" } }, buffer)
-
-        require("lsp-format").on_attach(client)
 
         -- Mappings.
         -- See `:help vim.lsp.*` for documentation on any of the below functions
