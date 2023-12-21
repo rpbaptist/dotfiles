@@ -60,3 +60,8 @@ vim.keymap.set("n", "<C-S-Up>", ":m -2<cr>==", { desc = "Move up", silent = true
 
 vim.keymap.set("n", "<C-/>", ":ToggleTerm<cr>", { desc = "Toggle terminal", silent = true })
 vim.keymap.set("n", "<leader>p", ":Telescope possession list", { desc = "Session list", silent = true })
+
+vim.keymap.del("n", "<leader>gs")
+vim.keymap.set("n", "<leader>gs", function()
+  require("telescope.builtin").git_status()
+end, { desc = "Git status" })
