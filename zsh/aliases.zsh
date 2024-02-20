@@ -87,3 +87,5 @@ alias mps='mix phx.server'
 alias fd="fdfind"
 
 alias dot="cd $HOME/.dotfiles"
+
+alias rtx=mise
