@@ -14,7 +14,7 @@ vim.keymap.del({ "n", "i", "v" }, "<A-k>")
 
 vim.keymap.del("n", "<C-h>")
 vim.keymap.del("n", "<C-j>")
-vim.keymap.del("n", "<C-k>")
+-- vim.keymap.del("n", "<C-k>")
 vim.keymap.del("n", "<C-l>")
 
 vim.keymap.del("n", "<S-h>")
@@ -61,7 +61,25 @@ vim.keymap.set("n", "<C-S-Up>", ":m -2<cr>==", { desc = "Move up", silent = true
 vim.keymap.set("n", "<C-/>", ":ToggleTerm<cr>", { desc = "Toggle terminal", silent = true })
 vim.keymap.set("n", "<leader>p", ":Telescope possession list", { desc = "Session list", silent = true })
 
+-- Git
 vim.keymap.del("n", "<leader>gs")
 vim.keymap.set("n", "<leader>gs", function()
   require("telescope.builtin").git_status()
 end, { desc = "Git status" })
+-- vim.keymap.set("n", "<leader>gs", ":Neogit<CR>", { desc = "Git status", silent = true })
+
+-- LSP
+vim.keymap.set("n", "gD", vim.lsp.buf.declaration, bufopts, { desc = "Go to declaration" })
+vim.keymap.set("n", "gd", vim.lsp.buf.definition, bufopts, { desc = "Go to definition" })
+-- vim.keymap.set("n", "<C-w>gv", ":vs<CR><cmd>lua vim.lsp.buf.definition()<CR>", bufopts)
+-- vim.keymap.set("n", "<C-w>gs", ":sp<CR><cmd>lua vim.lsp.buf.definition()<CR>", bufopts)
+vim.keymap.set("n", "K", vim.lsp.buf.hover, bufopts)
+vim.keymap.set("i", "<C-k>", vim.lsp.buf.signature_help, bufopts)
+vim.keymap.set("i", "<C-q>", vim.lsp.buf.signature_help, bufopts)
+-- vim.keymap.set("n", "<leader>D", vim.lsp.buf.type_definition, bufopts)
+-- vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, bufopts)
+-- vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, bufopts)
+-- vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
+-- vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, bufopts)
+-- vim.keymap.set("n", "[e", vim.diagnostic.goto_prev, bufopts)
+-- vim.keymap.set("n", "]e", vim.diagnostic.goto_next, bufopts)
