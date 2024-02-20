@@ -59,7 +59,7 @@ ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 znap source zsh-users/zsh-autosuggestions
 
 znap eval dircolors "dircolors $HOME/.dircolors"
-znap eval rtx "rtx activate zsh"
+znap eval mise "mise activate zsh"
 
 # Don't try to ssh to hosts file
 zstyle ':completion:*' hosts off
@@ -72,7 +72,7 @@ fpath+=($ZSH/completions)
 znap fpath _glab      'glab      completion  -s zsh'
 znap fpath _kubectl   'kubectl   completion  zsh'
 znap fpath _remotectl 'remotectl completion  zsh'
-znap fpath _rtx       'rtx       completion  zsh'
+znap fpath _mise      'mise      completion  zsh'
 znap fpath _starship  'starship  completions zsh'
 
 ZSH_HIGHLIGHT_HIGHLIGHTERS+=(main brackets regexp)
