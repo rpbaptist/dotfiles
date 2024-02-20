@@ -6,6 +6,9 @@ return {
     opts = {
       autosave = {
         current = true,
+        tmp = function()
+          vim.fn.getcwd()
+        end,
       },
     },
   },
