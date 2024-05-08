@@ -8,3 +8,4 @@ node = "20.5.1"
 nodejs = 'latest'
 python = 'latest'
 rust = 'latest'
+usage = "latest"
