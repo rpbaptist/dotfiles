@@ -5,12 +5,12 @@ return {
     opts = function(_, opts)
       vim.list_extend(opts.ensure_installed, {
         "stylua",
-        "lexical",
+        -- "lexical",
         -- "elixir-ls",
       })
     end,
   },
-  { "williamboman/mason-lspconfig.nvim" },
+  -- { "williamboman/mason-lspconfig.nvim" },
   {
     "nvimtools/none-ls.nvim",
     event = "BufReadPre",
