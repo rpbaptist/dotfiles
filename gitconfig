@@ -35,3 +35,8 @@
 	repo = /home/richard/.zsh/repos/ohmyzsh/ohmyzsh
 	repo = /home/richard/.zsh/repos/zsh-users/zsh-autosuggestions
 	repo = /home/richard/.zsh/repos/zsh-users/zsh-history-substring-search
+	repo = /home/richard/.zsh/repos/Aloxaf/fzf-tab
+	repo = /home/richard/.zsh/repos/junegunn/fzf
+	repo = /home/richard/.zsh/repos/trapd00r/LS_COLORS
+	repo = /home/richard/.zsh/repos/zsh-users/zsh-syntax-highlighting
+	repo = /home/richard/.zsh/repos/znap
