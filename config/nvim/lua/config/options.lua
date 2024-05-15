@@ -16,6 +16,12 @@ vim.opt.textwidth = 120
 -- let &backupdir=vimtmp
 -- let &directory=vimtmp
 
+vim.g.gruvbox_material_background = "hard"
+vim.g.gruvbox_material_foreground = "mix"
+vim.g.gruvbox_material_enable_bold = 1
+vim.g.gruvbox_material_enable_italic = 1
+vim.g.gruvbox_material_dim_inactive_window = 1
+
 vim.g.kitty_navigator_no_mappings = 1
 vim.g.kitty_navigator_password = "nvimwindows"
 

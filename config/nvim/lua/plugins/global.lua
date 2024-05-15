@@ -2,15 +2,17 @@ return {
   { "folke/tokyonight.nvim", enabled = false },
   { "catppuccin/nvim", enabled = false },
   -- add gruvbox
-  { "ellisonleao/gruvbox.nvim", opts = {
-    contrast = "hard",
-    bold = false,
-  } },
+  { "sainnhe/gruvbox-material" },
 
+  -- { "ellisonleao/gruvbox.nvim", opts = {
+  --   contrast = "hard",
+  --   bold = false,
+  -- } },
+  --
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "gruvbox",
+      colorscheme = "gruvbox-material",
     },
   },
   { "fladson/vim-kitty" },
