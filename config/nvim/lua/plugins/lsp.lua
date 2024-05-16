@@ -22,28 +22,20 @@ return {
           -- nls.builtins.diagnostics.credo,
           nls.builtins.formatting.prettierd,
           nls.builtins.formatting.stylua,
+          nls.builtins.diagnostics.markdownlint,
           -- nls.builtins.formatting.mix,
         },
       }
     end,
   },
   -- {
-  --   "elixir-tools/elixir-tools.nvim",
-  --   version = "*",
-  --   event = { "BufReadPre", "BufNewFile" },
-  --   config = function()
-  --     local elixir = require("elixir")
-  --     local elixirls = require("elixir.elixirls")
-  --
-  --     elixir.setup({
-  --       nextls = { enable = true },
-  --       credo = { enable = true },
-  --       elixirls = { enable = false },
-  --     })
+  --   "stevearc/conform.nvim",
+  --   opts = function()
+  --     formatters_by_ft = {
+  --       lua = { "stylua" },
+  --       -- elixir = { "mix" },
+  --     }
   --   end,
-  --   dependencies = {
-  --     "nvim-lua/plenary.nvim",
-  --   },
   -- },
   {
     "neovim/nvim-lspconfig",
