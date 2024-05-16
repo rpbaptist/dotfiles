@@ -30,7 +30,9 @@ return {
     opts = function()
       return {
         sections = {
-          lualine_z = {},
+          lualine_x = { "encoding", "filetype" },
+          lualine_y = { "progress" },
+          lualine_z = { "location" },
         },
       }
     end,
