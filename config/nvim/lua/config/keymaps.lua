@@ -62,11 +62,12 @@ vim.keymap.set("n", "<C-/>", ":ToggleTerm<cr>", { desc = "Toggle terminal", sile
 vim.keymap.set("n", "<leader>p", ":Telescope possession list", { desc = "Session list", silent = true })
 
 -- Git
+vim.keymap.del("n", "<leader>gf")
+vim.keymap.set("n", "<leader>gf", require("telescope.builtin").git_status, { desc = "Git files" })
 vim.keymap.del("n", "<leader>gs")
-vim.keymap.set("n", "<leader>gs", function()
-  require("telescope.builtin").git_status()
-end, { desc = "Git status" })
--- vim.keymap.set("n", "<leader>gs", ":Neogit<CR>", { desc = "Git status", silent = true })
+vim.keymap.set("n", "<leader>gs", ":Neogit<CR>", { desc = "Neogit", silent = true })
+vim.keymap.del("n", "<leader>gg")
+vim.keymap.del("n", "<leader>gG")
 
 -- LSP
 vim.keymap.set("n", "gD", vim.lsp.buf.declaration, bufopts, { desc = "Go to declaration" })
