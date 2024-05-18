@@ -9,3 +9,4 @@ nodejs = 'latest'
 python = 'latest'
 rust = 'latest'
 usage = "latest"
+go = "1.22.3"
