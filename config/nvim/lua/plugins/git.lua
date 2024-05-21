@@ -8,5 +8,5 @@ return {
     },
     config = true,
   },
-  -- { "tpope/vim-fugitive" },
+  { "tpope/vim-fugitive" },
 }
