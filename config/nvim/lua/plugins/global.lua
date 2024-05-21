@@ -15,19 +15,6 @@ return {
       colorscheme = "gruvbox-material",
     },
   },
-  {
-    "mrjones2014/legendary.nvim",
-    priority = 10000,
-    lazy = false,
-    opts = function()
-      return {
-        extensions = {
-          lazy_nvim = true,
-          which_key = { auto_register = true },
-        },
-      }
-    end,
-  },
   { "fladson/vim-kitty" },
   { "knubie/vim-kitty-navigator" },
   {

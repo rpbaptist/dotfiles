@@ -36,7 +36,6 @@ vim.keymap.set("n", "<C-S-Tab>", ":bp<CR>", { desc = "Prev buffer" })
 vim.keymap.set("n", "<C-w>", "<Space>bd", { desc = "Delete buffer" })
 
 -- vim.keymap.set("n", "<C-t><C-t>", ":OTest<cr>", { desc = "Open test file" })
-vim.keymap.set("n", "<C-S-p>", ":Legendary<cr>", { desc = "Display commands", silent = true })
 
 -- Resize windows
 vim.keymap.set("n", "<A-S-Up>", "<cmd>resize +10<cr>", { desc = "Increase window height" })
@@ -84,4 +83,4 @@ vim.keymap.set("i", "<C-q>", vim.lsp.buf.signature_help, bufopts)
 -- vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
 -- vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, bufopts)
 -- vim.keymap.set("n", "[e", vim.diagnostic.goto_prev, bufopts)
--- vim.keymap.set("n", "]e", vim.diagnostic.goto_next, bufopts)
+vim.keymap.set("n", "]e", vim.diagnostic.goto_next, bufopts)
