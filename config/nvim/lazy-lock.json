@@ -1,4 +1,5 @@
 {
+  "CopilotChat.nvim": { "branch": "canary", "commit": "f694ccae14a6f45b783cb386f17431b05162e8d0" },
   "LazyVim": { "branch": "main", "commit": "6aae99e76df387507dadcaaa93af97191aace714" },
   "LuaSnip": { "branch": "master", "commit": "03c8e67eb7293c404845b3982db895d59c0d1538" },
   "SchemaStore.nvim": { "branch": "main", "commit": "de73a884679a2461c53f96035894ef073a5a7f4f" },
@@ -20,7 +21,6 @@
   "friendly-snippets": { "branch": "main", "commit": "dd2fd1281d4b22e7b4a5bfafa3e142d958e251f2" },
   "gitsigns.nvim": { "branch": "main", "commit": "76927d14d3fbd4ba06ccb5246e79d93b5442c188" },
   "gruvbox-baby": { "branch": "main", "commit": "ea71b4225d0140103d99748ca4a33ecf22c03f62" },
-  "gruvbox-material": { "branch": "master", "commit": "30e9f4b0fa24c25980df1690a8c47c36e40b6673" },
   "harpoon": { "branch": "harpoon2", "commit": "0378a6c428a0bed6a2781d459d7943843f374bce" },
   "headlines.nvim": { "branch": "master", "commit": "618ef1b2502c565c82254ef7d5b04402194d9ce3" },
   "indent-blankline.nvim": { "branch": "master", "commit": "ece00d5fb44d196680a81fd2761062d2fa44663b" },

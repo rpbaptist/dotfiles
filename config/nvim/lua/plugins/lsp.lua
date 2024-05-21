@@ -28,15 +28,6 @@ return {
       }
     end,
   },
-  -- {
-  --   "stevearc/conform.nvim",
-  --   opts = function()
-  --     formatters_by_ft = {
-  --       lua = { "stylua" },
-  --       -- elixir = { "mix" },
-  --     }
-  --   end,
-  -- },
   {
     "neovim/nvim-lspconfig",
     config = function()
