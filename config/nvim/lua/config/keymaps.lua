@@ -36,6 +36,7 @@ vim.keymap.set("n", "<C-S-Tab>", ":bp<CR>", { desc = "Prev buffer" })
 vim.keymap.set("n", "<C-w>", "<Space>bd", { desc = "Delete buffer" })
 
 -- vim.keymap.set("n", "<C-t><C-t>", ":OTest<cr>", { desc = "Open test file" })
+vim.keymap.set("n", "<C-S-p>", ":Legendary<cr>", { desc = "Display commands", silent = true })
 
 -- Resize windows
 vim.keymap.set("n", "<A-S-Up>", "<cmd>resize +10<cr>", { desc = "Increase window height" })
