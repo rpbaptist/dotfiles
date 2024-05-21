@@ -2,27 +2,21 @@ return {
   { "folke/tokyonight.nvim", enabled = false },
   { "catppuccin/nvim", enabled = false },
   -- add gruvbox
-  { "sainnhe/gruvbox-material" },
-
-  -- { "ellisonleao/gruvbox.nvim", opts = {
-  --   contrast = "hard",
-  --   bold = false,
-  -- } },
-  --
+  { "luisiacc/gruvbox-baby" },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "gruvbox-material",
+      colorscheme = "gruvbox-baby",
     },
   },
   { "fladson/vim-kitty" },
   { "knubie/vim-kitty-navigator" },
   {
     "stevearc/oil.nvim",
-    opts = {
-      use_default_keymaps = false,
-    },
-    -- Optional dependencies
+    -- opts = {
+    --   use_default_keymaps = false,
+    -- },
+    -- -- Optional dependencies
     dependencies = { "nvim-tree/nvim-web-devicons" },
   },
   -- { "tpope/vim-fugitive" },
