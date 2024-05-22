@@ -57,12 +57,12 @@ return {
             client.server_capabilities.documentFormattingProvider = false
           end
 
-          vim.keymap.set("n", "gd", function()
-            vim.lsp.buf.definition()
-          end, { desc = "Go to definition", silent = true, remap = false, buffer = bufnr })
-          vim.keymap.set("n", "gr", function()
-            vim.lsp.buf.references()
-          end, { desc = "Go to references", silent = true, remap = false, buffer = bufnr })
+          -- vim.keymap.set("n", "gd", function()
+          --   vim.lsp.buf.definition()
+          -- end, { desc = "Go to definition", silent = true, remap = false, buffer = bufnr })
+          -- vim.keymap.set("n", "gr", function()
+          --   vim.lsp.buf.references()
+          -- end, { desc = "Go to references", silent = true, remap = false, buffer = bufnr })
           -- vim.keymap.set("n", "<C-w>gv", ":vs<CR><cmd>lua vim.lsp.buf.definition()<CR>")
           -- vim.keymap.set("n", "<C-w>gs", ":sp<CR><cmd>lua vim.lsp.buf.definition()<CR>")
           -- vim.keymap.set("n", "K", vim.lsp.buf.hover)
