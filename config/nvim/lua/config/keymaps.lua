@@ -55,8 +55,6 @@ vim.keymap.set(
 )
 
 -- Move Lines
-vim.keymap.set("n", "<C-S-Down>", ":m +1<cr>==", { desc = "Move down", silent = true })
-vim.keymap.set("n", "<C-S-Up>", ":m -2<cr>==", { desc = "Move up", silent = true })
 
 vim.keymap.set("n", "<C-/>", ":ToggleTerm<cr>", { desc = "Toggle terminal", silent = true })
 vim.keymap.set("n", "<leader>p", ":Telescope possession list", { desc = "Session list", silent = true })
