@@ -46,7 +46,12 @@ vim.keymap.set("n", "<A-S-Right>", "<cmd>vertical resize +10<cr>", { desc = "Inc
 -- Navigate windows
 vim.keymap.set("n", "<C-A-u>", ":KittyNavigateUp<cr>", { desc = "Go to upper window", noremap = true, silent = true })
 vim.keymap.set("n", "<C-A-e>", ":KittyNavigateDown<cr>", { desc = "Go to lower window", noremap = true, silent = true })
-vim.keymap.set("n", "<C-A-n>", ":KittyNavigateLeft<cr>", { desc = "Go to left window", noremap = true, silent = true })
+vim.keymap.set(
+  "n",
+  "<C-A-n>",
+  ":KittyNavigateLeft<cr>",
+  { desc = "Go to leonindowindow", noremap = true, silent = true }
+)
 vim.keymap.set(
   "n",
   "<C-A-i>",
@@ -63,22 +68,19 @@ vim.keymap.set("n", "<leader>p", ":Telescope possession list", { desc = "Session
 vim.keymap.del("n", "<leader>gf")
 vim.keymap.set("n", "<leader>gf", require("telescope.builtin").git_status, { desc = "Git files" })
 vim.keymap.del("n", "<leader>gs")
-vim.keymap.set("n", "<leader>gs", ":Neogit<CR>", { desc = "Neogit", silent = true })
+vim.keymap.set("n", "<leader>gs", ":Git<CR>", { desc = "Git status", silent = true })
 vim.keymap.del("n", "<leader>gg")
 vim.keymap.del("n", "<leader>gG")
+vim.keymap.set("n", "<leader>gd", ":Git diff<CR>", { desc = "Git diff", silent = true })
 
--- LSP
-vim.keymap.set("n", "gD", vim.lsp.buf.declaration, bufopts, { desc = "Go to declaration" })
-vim.keymap.set("n", "gd", vim.lsp.buf.definition, bufopts, { desc = "Go to definition" })
--- vim.keymap.set("n", "<C-w>gv", ":vs<CR><cmd>lua vim.lsp.buf.definition()<CR>", bufopts)
--- vim.keymap.set("n", "<C-w>gs", ":sp<CR><cmd>lua vim.lsp.buf.definition()<CR>", bufopts)
-vim.keymap.set("n", "K", vim.lsp.buf.hover, bufopts)
-vim.keymap.set("i", "<C-k>", vim.lsp.buf.signature_help, bufopts)
-vim.keymap.set("i", "<C-q>", vim.lsp.buf.signature_help, bufopts)
--- vim.keymap.set("n", "<leader>D", vim.lsp.buf.type_definition, bufopts)
--- vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, bufopts)
--- vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, bufopts)
--- vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
--- vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, bufopts)
--- vim.keymap.set("n", "[e", vim.diagnostic.goto_prev, bufopts)
-vim.keymap.set("n", "]e", vim.diagnostic.goto_next, bufopts)
+vim.keymap.set({ "n", "x", "v" }, "<leader>fP", function()
+  local path = vim.fn.expand("%:p")
+  vim.fn.setreg("+", path)
+  vim.notify("Copied " .. path .. " to clipboard")
+end, { desc = "Copy absolute file path" })
+
+vim.keymap.set({ "n", "x", "v" }, "<leader>fp", function()
+  local path = vim.fn.expand("%:.")
+  vim.fn.setreg("+", path)
+  vim.notify("Copied " .. path .. " to clipboard")
+end, { desc = "Copy relative file path" })
