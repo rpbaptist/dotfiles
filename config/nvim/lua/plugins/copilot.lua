@@ -1,5 +1,5 @@
 return {
-  { "copilot-cmp", enabled = false },
+  { "copilot-cmp", enabled = true },
   {
     "zbirenbaum/copilot.lua",
     opts = {
@@ -16,6 +16,7 @@ return {
   },
   {
     "CopilotC-Nvim/CopilotChat.nvim",
+    branch = "canary",
     dependencies = {
       { "zbirenbaum/copilot.lua" },
       { "nvim-lua/plenary.nvim" },
@@ -55,6 +56,25 @@ return {
         "<cmd>CopilotChatReset<cr>", -- Reset chat history and clear buffer.
         desc = "CopilotChat - Reset chat history and clear buffer",
       },
+    },
+    cmd = {
+      "CopilotChat",
+      "CopilotChatOpen",
+      "CopilotChatClose",
+      "CopilotChatToggle",
+      "CopilotChatReset",
+      "CopilotChatSave",
+      "CopilotChatLoad",
+      "CopilotChatDebugInfo",
+      "CopilotChatExplain",
+      "CopilotChatReview",
+      "CopilotChatFix",
+      "CopilotChatOptimize",
+      "CopilotChatDocs",
+      "CopilotChatTests",
+      "CopilotChatFixDiagnostic",
+      "CopilotChatCommit",
+      "CopilotChatCommitStaged",
     },
   },
 }

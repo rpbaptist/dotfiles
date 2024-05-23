@@ -57,21 +57,32 @@ return {
             client.server_capabilities.documentFormattingProvider = false
           end
 
-          -- vim.keymap.set("n", "gd", function()
-          --   vim.lsp.buf.definition()
-          -- end, { desc = "Go to definition", silent = true, remap = false, buffer = bufnr })
-          -- vim.keymap.set("n", "gr", function()
-          --   vim.lsp.buf.references()
-          -- end, { desc = "Go to references", silent = true, remap = false, buffer = bufnr })
-          -- vim.keymap.set("n", "<C-w>gv", ":vs<CR><cmd>lua vim.lsp.buf.definition()<CR>")
-          -- vim.keymap.set("n", "<C-w>gs", ":sp<CR><cmd>lua vim.lsp.buf.definition()<CR>")
-          -- vim.keymap.set("n", "K", vim.lsp.buf.hover)
-          -- vim.keymap.set("i", "<C-k>", vim.lsp.buf.signature_help)
-          -- vim.keymap.set("i", "<C-q>", vim.lsp.buf.signature_help)
-          -- vim.keymap.set("n", "<leader>D", vim.lsp.buf.type_definition)
-          -- vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename)
-          -- vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
-          -- vim.keymap.set('n', 'gr', vim.lsp.buf.references)
+          vim.keymap.set("n", "gd", function()
+            vim.lsp.buf.definition()
+          end, { desc = "Goto Definition", silent = true, remap = false, buffer = bufnr, has = "defintion" })
+
+          vim.keymap.set("n", "gD", function()
+            vim.lsp.buf.declaration()
+          end, { desc = "Goto Declaration", silent = true, remap = false, buffer = bufnr })
+
+          vim.keymap.set("n", "gI", function()
+            require("telescope.builtin").lsp_implementations({ reuse_win = true })
+          end, { desc = "Goto Implementations", silent = true, remap = false, buffer = bufnr })
+
+          vim.keymap.set("n", "gy", function()
+            require("telescope.builtin").lsp_type_definitions({ reuse_win = true })
+          end, { desc = "Goto T[y]pe defintions", silent = true, remap = false, buffer = bufnr })
+
+          vim.keymap.set("n", "gr", "<cmd>Telescope lsp_references<cr>", { desc = "References" })
+          vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code Action" })
+          vim.keymap.set("n", "<leader>cA", function()
+            vim.lsp.buf.code_action({
+              context = {
+                only = { "source" },
+                diagnostics = {},
+              },
+            })
+          end, { desc = "Code Action" })
           -- vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)
           -- vim.keymap.set("n", "[e", vim.diagnostic.goto_prev)
           -- vim.keymap.set("n", "]e", vim.diagnostic.goto_next)

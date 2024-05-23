@@ -29,6 +29,10 @@ return {
     },
   },
   {
+    "jedrzejboczar/possession.nvim",
+    requires = { "nvim-lua/plenary.nvim" },
+  },
+  {
     "telescope.nvim",
     dependencies = {
       "nvim-telescope/telescope-fzf-native.nvim",

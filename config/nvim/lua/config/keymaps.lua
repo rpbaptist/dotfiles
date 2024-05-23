@@ -35,7 +35,13 @@ vim.keymap.set("n", "<C-Tab>", ":bn<CR>", { desc = "Next buffer", silent = true 
 vim.keymap.set("n", "<C-S-Tab>", ":bp<CR>", { desc = "Prev buffer", silent = true })
 vim.keymap.set("n", "<C-w>", "<Space>bd", { desc = "Delete buffer" })
 
--- vim.keymap.set("n", "<C-t><C-t>", ":OTest<cr>", { desc = "Open test file" })
+-- vim.keymap.set({"n", "x", "v"}, "<Home>", function()
+--   local column = col('.')
+--   normal! ^
+--   if column == col('.') then
+--     normal! 0
+--   end
+-- end, { desc = "Move to beginning of line", remap = true })
 
 -- Resize windows
 vim.keymap.set("n", "<A-S-Up>", "<cmd>resize +10<cr>", { desc = "Increase window height" })
@@ -62,7 +68,7 @@ vim.keymap.set(
 -- Move Lines
 
 vim.keymap.set("n", "<C-/>", ":ToggleTerm<cr>", { desc = "Toggle terminal", silent = true })
-vim.keymap.set("n", "<leader>p", ":Telescope possession list", { desc = "Session list", silent = true })
+-- vim.keymap.set("n", "<leader>p", ":Telescope possession list", { desc = "Session list", silent = true })
 
 -- Git
 vim.keymap.del("n", "<leader>gf")
