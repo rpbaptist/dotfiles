@@ -21,11 +21,15 @@ ZSH_CACHE_DIR="$HOME/.zsh_cache"
 
 ZREPOS="$ZSH/repos"
 
+[[ -r "$ZREPOS/znap/znap.zsh" ]] ||
+    git clone --depth 1 -- \
+        https://github.com/marlonrichert/zsh-snap.git "$ZREPOS/znap"
+
 source "$ZREPOS/znap/znap.zsh"
 
 zstyle ':znap:*' repos-dir $ZREPOS
 
-znap eval starship 'starship init zsh --print-full-init'
+znap eval starship "starship init zsh --print-full-init"
 znap prompt
 
 zstyle ':autocomplete:*' insert-unambiguous yes
@@ -81,3 +85,4 @@ ZSH_HIGHLIGHT_STYLES[path]='fg=#83A598'
 ZSH_HIGHLIGHT_STYLES[arg0]='fg=green'
 
 znap source zsh-users/zsh-syntax-highlighting
+
