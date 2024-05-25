@@ -14,8 +14,8 @@ HOME_LOCAL_PATH="$HOME/.local/bin"
 GAMES_PATH="/usr/games:/usr/local/games"
 MISE_SHIM_PATH="$HOME/.local/share/mise/shims:$PATH"
 SNAP_PATH="/snap/bin"
-
-export PATH="$HOME_LOCAL_PATH:$COMMON_PATHS:$GAMES_PATH:$SNAP_PATH:$MISE_SHIM_PATH"
+NEOVIM_PATH="/opt/nvim-linux64/bin"
+export PATH="$HOME_LOCAL_PATH:$COMMON_PATHS:$GAMES_PATH:$SNAP_PATH:$MISE_SHIM_PATH:$NEOVIM_PATH"
 
 # Preferred editor for local and remote sessions
 if [ -n "$SSH_CONNECTION" ]; then
