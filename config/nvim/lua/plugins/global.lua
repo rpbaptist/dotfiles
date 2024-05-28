@@ -43,6 +43,9 @@ return {
         require("telescope").load_extension("possession")
       end,
     },
+    keys = {
+      { "<leader>gs", false },
+    },
   },
   { "mg979/vim-visual-multi" },
   { "tpope/vim-projectionist" },

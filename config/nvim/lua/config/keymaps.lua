@@ -73,11 +73,11 @@ vim.keymap.set("n", "<C-/>", ":ToggleTerm<cr>", { desc = "Toggle terminal", sile
 -- Git
 vim.keymap.del("n", "<leader>gf")
 vim.keymap.set("n", "<leader>gf", require("telescope.builtin").git_status, { desc = "Git files" })
-vim.keymap.del("n", "<leader>gs")
-vim.keymap.set("n", "<leader>gs", ":Git<CR>", { desc = "Git status", silent = true })
+-- vim.keymap.del("n", "<leader>gs")
+-- vim.keymap.set("n", "<leader>gs", ":Git<CR>", { desc = "Git status", silent = true })
 vim.keymap.del("n", "<leader>gg")
 vim.keymap.del("n", "<leader>gG")
-vim.keymap.set("n", "<leader>gd", ":Git diff<CR>", { desc = "Git diff", silent = true })
+-- vim.keymap.set("n", "<leader>gd", ":Git diff<CR>", { desc = "Git diff", silent = true })
 
 vim.keymap.set({ "n", "x", "v" }, "<leader>fP", function()
   local path = vim.fn.expand("%:p")
