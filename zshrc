@@ -27,16 +27,16 @@ ZREPOS="$ZSH/repos"
 
 source "$ZREPOS/znap/znap.zsh"
 
-zstyle ':znap:*' repos-dir $ZREPOS
+zstyle ":znap:*" repos-dir $ZREPOS
 
 znap eval starship "starship init zsh --print-full-init"
 znap prompt
 
-zstyle ':autocomplete:*' insert-unambiguous yes
-zstyle ':autocomplete:*' widget-style menu-select
+zstyle ":autocomplete:*" insert-unambiguous yes
+zstyle ":autocomplete:*" widget-style menu-select
 
-zstyle ':autocomplete:history-search:*' list-lines 16
-zstyle ':autocomplete:history-incremental-search-*:*' list-lines 16  
+zstyle ":autocomplete:history-search:*" list-lines 16
+zstyle ":autocomplete:history-incremental-search-*:*" list-lines 16  
 
 znap source marlonrichert/zsh-edit
 bindkey -M emacs -r '^[/' \
@@ -66,18 +66,18 @@ znap eval dircolors "dircolors $HOME/.dircolors"
 znap eval mise "mise activate zsh"
 
 # Don't try to ssh to hosts file
-zstyle ':completion:*' hosts off
-zstyle ':completion:*:*:git:*' script "$ZSH/scripts/git-completion.bash"
+zstyle ":completion:*" hosts off
+zstyle ":completion:*:*:git:*" script "$ZSH/scripts/git-completion.bash"
 
 source "$ZSH/custom.zsh"
 
 fpath+=($ZSH/completions)
 
-znap fpath _glab      'glab      completion  -s zsh'
-znap fpath _kubectl   'kubectl   completion  zsh'
-znap fpath _remotectl 'remotectl completion  zsh'
-znap fpath _mise      'mise      completion  zsh'
-znap fpath _starship  'starship  completions zsh'
+znap fpath _glab      "glab      completion  -s zsh"
+znap fpath _kubectl   "kubectl   completion  zsh"
+znap fpath _remotectl "remotectl completion  zsh"
+znap fpath _mise      "mise      completion  zsh"
+znap fpath _starship  "starship  completions zsh"
 
 ZSH_HIGHLIGHT_HIGHLIGHTERS+=(main brackets regexp)
 typeset -A ZSH_HIGHLIGHT_STYLES
