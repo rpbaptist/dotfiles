@@ -24,6 +24,19 @@ function source-plugin() {
 #
 # Some usefull kubectl commands
 #
+#
+# fg-bg toggle via c-z
+function fg-bg {
+    if [[ $#BUFFER -eq 0 ]]; then
+        BUFFER=fg
+        zle accept-line
+    else
+        zle push-input
+    fi
+}
+zle -N fg-bg
+bindkey '^z' fg-bg
+
 function kube-find-namespace() {
   kubectl get namespaces | tail -n +2 | fzf -q "$1" | awk '/(.*)/ {print $1}'
 }
