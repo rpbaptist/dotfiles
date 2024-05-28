@@ -1,5 +1,5 @@
 return {
-  { "copilot-cmp", enabled = true },
+  { "copilot-cmp", enabled = false },
   {
     "zbirenbaum/copilot.lua",
     opts = {
