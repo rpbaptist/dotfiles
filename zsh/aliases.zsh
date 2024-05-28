@@ -21,6 +21,7 @@ alias ff='find . -type f -name'
 
 alias sudo="sudo "
 alias sl="subl"
+alias nv="nvim"
 alias scp="noglob scp"
 alias lab="glab"
 alias code="code --goto"
