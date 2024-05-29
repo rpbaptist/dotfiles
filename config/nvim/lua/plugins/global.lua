@@ -9,8 +9,6 @@ return {
       colorscheme = "gruvbox-baby",
     },
   },
-  { "fladson/vim-kitty" },
-  { "knubie/vim-kitty-navigator" },
   {
     "echasnovski/mini.move",
     opts = {

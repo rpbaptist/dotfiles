@@ -44,28 +44,10 @@ vim.keymap.set("n", "<C-w>", "<Space>bd", { desc = "Delete buffer" })
 -- end, { desc = "Move to beginning of line", remap = true })
 
 -- Resize windows
-vim.keymap.set("n", "<A-S-Up>", "<cmd>resize +10<cr>", { desc = "Increase window height" })
-vim.keymap.set("n", "<A-S-Down>", "<cmd>resize -10<cr>", { desc = "Decrease window height" })
-vim.keymap.set("n", "<A-S-Left>", "<cmd>vertical resize -10<cr>", { desc = "Decrease window width" })
-vim.keymap.set("n", "<A-S-Right>", "<cmd>vertical resize +10<cr>", { desc = "Increase window width" })
-
--- Navigate windows
-vim.keymap.set("n", "<C-A-u>", ":KittyNavigateUp<cr>", { desc = "Go to upper window", noremap = true, silent = true })
-vim.keymap.set("n", "<C-A-e>", ":KittyNavigateDown<cr>", { desc = "Go to lower window", noremap = true, silent = true })
-vim.keymap.set(
-  "n",
-  "<C-A-n>",
-  ":KittyNavigateLeft<cr>",
-  { desc = "Go to leonindowindow", noremap = true, silent = true }
-)
-vim.keymap.set(
-  "n",
-  "<C-A-i>",
-  ":KittyNavigateRight<cr>",
-  { desc = "Go to right window", noremap = true, silent = true }
-)
-
--- Move Lines
+vim.keymap.set("n", "<A-S-u>", "<cmd>resize +10<cr>", { desc = "Increase window height" })
+vim.keymap.set("n", "<A-S-e>", "<cmd>resize -10<cr>", { desc = "Decrease window height" })
+vim.keymap.set("n", "<A-S-n>", "<cmd>vertical resize -10<cr>", { desc = "Decrease window width" })
+vim.keymap.set("n", "<A-S-i>", "<cmd>vertical resize +10<cr>", { desc = "Increase window width" })
 
 vim.keymap.set("n", "<C-/>", ":ToggleTerm<cr>", { desc = "Toggle terminal", silent = true })
 -- vim.keymap.set("n", "<leader>p", ":Telescope possession list", { desc = "Session list", silent = true })
