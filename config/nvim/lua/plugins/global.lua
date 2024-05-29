@@ -87,21 +87,10 @@ return {
       end
     end,
   },
-  -- { "mhanberg/elixir.nvim", requires = { "nvim-lua/plenary.nvim" } },
-  {
-    "mhanberg/output-panel.nvim",
-    event = "VeryLazy",
-    config = function()
-      require("output_panel").setup()
-    end,
-  },
-
   {
     "akinsho/toggleterm.nvim",
     opts = {
-      -- open_mapping = [[<c-/>]],
-
-      direction = "float",
+      direction = "tab",
       shade_terminals = false,
       float_opts = {
         border = "single",
