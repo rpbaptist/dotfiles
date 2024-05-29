@@ -13,11 +13,12 @@ return {
           if not entry then
             cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })
           end
-          cmp.confirm()
+          cmp.confirm({ beahvior = cmp.ConfirmBehavior.Replace })
         else
           fallback()
         end
       end, { "i", "s", "c" }),
+      -- ["<S-Tab>"] = cmp.confirm({ beahvior = cmp.ConfirmBehavior.Replace }),
       ["<Esc>"] = cmp.mapping.abort(),
     })
   end,
