@@ -35,6 +35,7 @@ vim.keymap.set("n", "<C-Tab>", ":bn<CR>", { desc = "Next buffer", silent = true 
 vim.keymap.set("n", "<C-S-Tab>", ":bp<CR>", { desc = "Prev buffer", silent = true })
 vim.keymap.set("n", "<C-w>", "<Space>bd", { desc = "Delete buffer" })
 
+vim.keymap.set({ "n", "x", "v" }, "<leader>tf", "<cmd>A<cr>", { desc = "Jump to test file", silent = true })
 -- vim.keymap.set({"n", "x", "v"}, "<Home>", function()
 --   local column = col('.')
 --   normal! ^
