@@ -14,16 +14,9 @@ vim.keymap.del({ "n", "i", "v" }, "<A-k>")
 
 vim.keymap.del("n", "<C-h>")
 vim.keymap.del("n", "<C-j>")
--- vim.keymap.del("n", "<C-k>")
 vim.keymap.del("n", "<C-l>")
 
-vim.keymap.del("n", "<S-h>")
-vim.keymap.del("n", "<S-l>")
-vim.keymap.del("n", "<C-/>")
--- vim.keymap.del("n", "<C-w>")
--- vim.keymap.del("n", "[b")
--- vim.keymap.del("n", "]b")
-vim.keymap.del("n", "<leader>`")
+-- vim.keymap.del("n", "<leader>`")
 
 -- Bind arrow keys to VIM nav
 vim.keymap.set({ "n", "x", "v" }, "<Up>", "k", { remap = true })
@@ -33,9 +26,7 @@ vim.keymap.set({ "n", "x", "v" }, "<Right>", "l", { remap = true })
 
 vim.keymap.set("n", "<C-Tab>", ":bn<CR>", { desc = "Next buffer", silent = true })
 vim.keymap.set("n", "<C-S-Tab>", ":bp<CR>", { desc = "Prev buffer", silent = true })
-vim.keymap.set("n", "<C-w>", "<Space>bd", { desc = "Delete buffer" })
 
--- vim.keymap.set({ "n", "x", "v" }, "<leader>tf", "<cmd>A<cr>", { desc = "Jump to test file", silent = true })
 -- vim.keymap.set({"n", "x", "v"}, "<Home>", function()
 --   local column = col('.')
 --   normal! ^
@@ -50,17 +41,7 @@ vim.keymap.set("n", "<A-S-e>", "<cmd>resize -10<cr>", { desc = "Decrease window 
 vim.keymap.set("n", "<A-S-n>", "<cmd>vertical resize -10<cr>", { desc = "Decrease window width" })
 vim.keymap.set("n", "<A-S-i>", "<cmd>vertical resize +10<cr>", { desc = "Increase window width" })
 
-vim.keymap.set("n", "<C-/>", ":ToggleTerm<cr>", { desc = "Toggle terminal", silent = true })
 -- vim.keymap.set("n", "<leader>p", ":Telescope possession list", { desc = "Session list", silent = true })
-
--- Git
-vim.keymap.del("n", "<leader>gf")
-vim.keymap.set("n", "<leader>gf", require("telescope.builtin").git_status, { desc = "Git files" })
--- vim.keymap.del("n", "<leader>gs")
--- vim.keymap.set("n", "<leader>gs", ":Git<CR>", { desc = "Git status", silent = true })
-vim.keymap.del("n", "<leader>gg")
-vim.keymap.del("n", "<leader>gG")
--- vim.keymap.set("n", "<leader>gd", ":Git diff<CR>", { desc = "Git diff", silent = true })
 
 vim.keymap.set({ "n", "x", "v" }, "<leader>fP", function()
   local path = vim.fn.expand("%:p")

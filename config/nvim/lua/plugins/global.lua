@@ -43,6 +43,7 @@ return {
     },
     keys = {
       { "<leader>gs", false },
+      { "<leader>gf", "<cmd>Telescope git_status<cr>", desc = "Git files" },
     },
   },
   { "mg979/vim-visual-multi" },
