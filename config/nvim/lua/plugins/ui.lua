@@ -2,9 +2,10 @@ return {
   {
     "echasnovski/mini.animate",
     event = "VeryLazy",
+    -- speed up scroll duration
     opts = function()
-      -- don't use animate when scrolling with the mouse
       local animate = require("mini.animate")
+      local mouse_scrolled = false
       return {
         resize = {
           timing = animate.gen_timing.linear({ duration = 100, unit = "total" }),
@@ -31,9 +32,6 @@ return {
     dependencies = {
       "SmiteshP/nvim-navic",
       "nvim-tree/nvim-web-devicons", -- optional dependency
-    },
-    opts = {
-      -- configurations go here
     },
   },
   {
