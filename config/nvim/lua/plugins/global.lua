@@ -47,41 +47,16 @@ return {
   },
   { "mg979/vim-visual-multi" },
   {
-    "folke/trouble.nvim",
-    dependencies = { "nvim-tree/nvim-web-devicons" },
-    opts = {
-      -- your configuration comes here
-      -- or leave it empty to use the default settings
-      -- refer to the configuration section below
-    },
-  },
-  {
     "nvim-treesitter/nvim-treesitter",
     opts = function(_, opts)
       if type(opts.ensure_installed) == "table" then
         vim.list_extend(opts.ensure_installed, {
-          "bash",
-          "diff",
-          "eex",
-          "elixir",
           "git_rebase",
           "gitattributes",
           "gitcommit",
           "gitignore",
-          "heex",
-          "html",
-          "javascript",
-          "json",
-          "lua",
-          "markdown",
-          "markdown_inline",
-          "python",
-          "query",
-          "regex",
           "sql",
           "tsx",
-          "typescript",
-          "vim",
         })
       end
     end,
