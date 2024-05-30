@@ -25,5 +25,4 @@ return {
       { "<leader>gs", "<cmd>Neogit<cr>", desc = "(neo)Git status" },
     },
   },
-  -- { "tpope/vim-fugitive" },
 }

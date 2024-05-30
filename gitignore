@@ -7,4 +7,5 @@
 .rake_tasks
 .mix_tasks
 .obsidian
+.projectionist.json
 .rtx.toml

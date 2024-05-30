@@ -46,7 +46,6 @@ return {
     },
   },
   { "mg979/vim-visual-multi" },
-  { "tpope/vim-projectionist" },
   {
     "folke/trouble.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
