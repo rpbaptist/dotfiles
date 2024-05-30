@@ -30,12 +30,6 @@ alias code="code --goto"
 alias ghostscript="/usr/bin/gs"
 # alias toclip="xclip -sel clip <"
 
-# alias todo="subl ~/Drive/Notes/my.tasks"
-
-# alias dirsize="du -sch ./* | sort -h"
-
-# alias git="lab"
-
 alias ssh="kitty +kitten ssh"
 
 # Save files, save lives
@@ -43,16 +37,6 @@ alias tp="trash-put"
 alias rm='echo "Careful now!"; false'
 
 alias dockerprune='docker rmi $(docker images -f "dangling=true" -q)'
-
-# alias crontab='EDITOR=vi crontab'
-
-# alias ansible-update="ANSIBLE_CONFIG=$HOME/.ansible/ansible.cfg \
-#                       ansible-playbook $HOME/.ansible/main.yml \
-#                       --inventory $HOME/.ansible/hosts \
-#                       --vault-password-file $HOME/.ansible/vault-pass.txt"
-
-alias qmkr="cd $HOME/code/qmk_firmware"
-alias qmkm="subl -n -a $HOME/code/qmk_firmware $HOME/code/qmk_firmware/keyboards/crkbd/keymaps/rpbaptist/keymap.c"
 
 # git
 
@@ -90,3 +74,5 @@ alias fd="fdfind"
 alias dot="cd $HOME/.dotfiles"
 
 alias rtx=mise
+
+alias bat="batcat"
