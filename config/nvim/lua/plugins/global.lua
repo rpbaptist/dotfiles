@@ -90,7 +90,7 @@ return {
   {
     "akinsho/toggleterm.nvim",
     opts = {
-      direction = "tab",
+      direction = "float",
       shade_terminals = false,
       float_opts = {
         border = "single",
