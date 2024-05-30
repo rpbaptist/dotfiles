@@ -21,7 +21,6 @@ export PATH="$HOME_LOCAL_PATH:$COMMON_PATHS:$GAMES_PATH:$SNAP_PATH:$MISE_SHIM_PA
 if [ -n "$SSH_CONNECTION" ]; then
   export EDITOR="vi"
 else
-  # export EDITOR="subl -w"
   export EDITOR="nvim"
 fi
 
