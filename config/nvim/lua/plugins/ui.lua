@@ -26,6 +26,14 @@ return {
     end,
   },
   {
+    "akinsho/bufferline.nvim",
+    keys = {
+      { "<leader>bl", false },
+      { "<leader>b<Left>", "<cmd>BufferLineCloseLeft", desc = "Delete buffers to the left" },
+      { "<leader>b<Right>", "<cmd>BufferLineCloseRight", desc = "Delete buffers to the right" },
+    },
+  },
+  {
     "utilyre/barbecue.nvim",
     name = "barbecue",
     version = "*",
