@@ -29,13 +29,13 @@ vim.keymap.set("n", "<C-S-Tab>", ":bp<CR>", { desc = "Prev buffer", silent = tru
 
 vim.keymap.set("i", "<S-CR>", "<C-o><S-o>", { desc = "Open line above" })
 
--- vim.keymap.set({"n", "x", "v"}, "<Home>", function()
---   local column = col('.')
---   normal! ^
---   if column == col('.') then
---     normal! 0
---   end
--- end, { desc = "Move to beginning of line", remap = true })
+vim.keymap.set({ "n", "x", "i", "v" }, "<Home>", function()
+  local column = vim.fn.col(".")
+  vim.cmd("normal! ^")
+  if column == vim.fn.col(".") then
+    vim.cmd("normal! 0")
+  end
+end, { desc = "Move to beginning of line", remap = true })
 
 -- Resize windows
 vim.keymap.set("n", "<A-S-u>", "<cmd>resize +10<cr>", { desc = "Increase window height" })
