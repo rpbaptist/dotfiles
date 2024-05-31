@@ -22,6 +22,8 @@ vim.keymap.set({ "n", "x", "v" }, "<Down>", "j", { remap = true })
 vim.keymap.set({ "n", "x", "v" }, "<Left>", "h", { remap = true })
 vim.keymap.set({ "n", "x", "v" }, "<Right>", "l", { remap = true })
 
+vim.keymap.set({ "n", "x", "v" }, "<leader>d", '"_d', { desc = "Delete" })
+
 vim.keymap.set("n", "<C-Tab>", ":bn<CR>", { desc = "Next buffer", silent = true })
 vim.keymap.set("n", "<C-S-Tab>", ":bp<CR>", { desc = "Prev buffer", silent = true })
 
