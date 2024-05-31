@@ -69,7 +69,7 @@ alias mps='mix phx.server'
 
 # aliases
 
-alias fd="fdfind"
+# alias fd="fdfind"
 
 alias dot="cd $HOME/.dotfiles"
 
