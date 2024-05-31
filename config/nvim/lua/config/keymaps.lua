@@ -16,8 +16,6 @@ vim.keymap.del("n", "<C-h>")
 vim.keymap.del("n", "<C-j>")
 vim.keymap.del("n", "<C-l>")
 
--- vim.keymap.del("n", "<leader>`")
-
 -- Bind arrow keys to VIM nav
 vim.keymap.set({ "n", "x", "v" }, "<Up>", "k", { remap = true })
 vim.keymap.set({ "n", "x", "v" }, "<Down>", "j", { remap = true })

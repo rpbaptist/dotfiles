@@ -23,6 +23,8 @@ return {
     },
     keys = {
       { "<leader>gs", "<cmd>Neogit<cr>", desc = "(neo)Git status" },
+      { "<leader>gc", "<cmd>Neogit commit<cr>", desc = "(neo)Git commit" },
+      { "<leader>gl", "<cmd>Neogit log<cr>", desc = "(neo)Git log" },
     },
   },
 }

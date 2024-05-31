@@ -43,6 +43,7 @@ return {
     },
     keys = {
       { "<leader>gs", false },
+      { "<leader>gc", false },
       { "<leader>gf", "<cmd>Telescope git_status<cr>", desc = "Git files" },
     },
   },
