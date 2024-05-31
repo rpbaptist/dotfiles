@@ -1,3 +1,4 @@
+.gitconfig
 .tags
 .tags-tmp
 .tags_lock/*
@@ -9,3 +10,4 @@
 .obsidian
 .projections.json
 .rtx.toml
+
