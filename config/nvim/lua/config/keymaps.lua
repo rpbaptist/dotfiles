@@ -27,6 +27,8 @@ vim.keymap.set({ "n", "x", "v" }, "<Right>", "l", { remap = true })
 vim.keymap.set("n", "<C-Tab>", ":bn<CR>", { desc = "Next buffer", silent = true })
 vim.keymap.set("n", "<C-S-Tab>", ":bp<CR>", { desc = "Prev buffer", silent = true })
 
+vim.keymap.set("i", "<S-CR>", "<C-o><S-o>", { desc = "Open line above" })
+
 -- vim.keymap.set({"n", "x", "v"}, "<Home>", function()
 --   local column = col('.')
 --   normal! ^
