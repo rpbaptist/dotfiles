@@ -7,7 +7,5 @@
 .envrc
 .rake_tasks
 .mix_tasks
-.obsidian
-.projections.json
 .rtx.toml
 
