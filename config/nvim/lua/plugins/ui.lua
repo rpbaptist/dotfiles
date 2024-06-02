@@ -1,5 +1,11 @@
 return {
   {
+    "nvimdev/dashboard-nvim",
+    opts = function()
+      io.stdout:write("\x1b]1337;SetUserVar=in_editor=MQo\007")
+    end,
+  },
+  {
     "echasnovski/mini.animate",
     event = "VeryLazy",
     -- speed up scroll duration
