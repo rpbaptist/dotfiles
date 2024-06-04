@@ -2,13 +2,15 @@ return {
   { "folke/tokyonight.nvim", enabled = false },
   { "catppuccin/nvim", enabled = false },
   { "nvim-pack/nvim-spectre", enabled = false },
+  -- { "nvim-treesitter/playground", dependencies = { "nvim-treesitter/nvim-treesitter" } },
   {
     "ellisonleao/gruvbox.nvim",
     opts = {
       contrast = "hard",
-      bold = false,
       overrides = {
+        Function = { fg = "#8ec07c", bold = false }, -- light aqua instead of yellow
         Special = { fg = "#83a598" }, -- light blue instead of orange
+        Structure = { fg = "#fabd2f" }, -- light yellow instead of light aqua
       },
     },
   },
