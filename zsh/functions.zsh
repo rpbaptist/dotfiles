@@ -106,6 +106,7 @@ function find-note() {
 }
 
 function notes() {
+  cd $NOTES_PATH
   if [ -z "$1" ]
   then
     $EDITOR -n "$NOTES_PATH"
