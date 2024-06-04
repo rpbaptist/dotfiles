@@ -27,6 +27,7 @@ vim.keymap.set({ "n", "x", "v" }, "<leader>d", '"_d', { desc = "Delete" })
 vim.keymap.set("n", "<C-Tab>", ":bn<CR>", { desc = "Next buffer", silent = true })
 vim.keymap.set("n", "<C-S-Tab>", ":bp<CR>", { desc = "Prev buffer", silent = true })
 
+vim.keymap.set("i", "<C-CR>", "<C-o>o", { desc = "Open line below" })
 vim.keymap.set("i", "<S-CR>", "<C-o><S-o>", { desc = "Open line above" })
 
 vim.keymap.set({ "n", "x", "i", "v" }, "<Home>", function()
@@ -36,14 +37,6 @@ vim.keymap.set({ "n", "x", "i", "v" }, "<Home>", function()
     vim.cmd("normal! 0")
   end
 end, { desc = "Move to beginning of line", remap = true })
-
--- Resize windows
-vim.keymap.set("n", "<A-S-u>", "<cmd>resize +10<cr>", { desc = "Increase window height" })
-vim.keymap.set("n", "<A-S-e>", "<cmd>resize -10<cr>", { desc = "Decrease window height" })
-vim.keymap.set("n", "<A-S-n>", "<cmd>vertical resize -10<cr>", { desc = "Decrease window width" })
-vim.keymap.set("n", "<A-S-i>", "<cmd>vertical resize +10<cr>", { desc = "Increase window width" })
-
--- vim.keymap.set("n", "<leader>p", ":Telescope possession list", { desc = "Session list", silent = true })
 
 vim.keymap.set({ "n", "x", "v" }, "<leader>fP", function()
   local path = vim.fn.expand("%:p")
