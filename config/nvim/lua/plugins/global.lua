@@ -2,12 +2,20 @@ return {
   { "folke/tokyonight.nvim", enabled = false },
   { "catppuccin/nvim", enabled = false },
   { "nvim-pack/nvim-spectre", enabled = false },
-  -- add gruvbox
-  { "luisiacc/gruvbox-baby" },
+  {
+    "ellisonleao/gruvbox.nvim",
+    opts = {
+      contrast = "hard",
+      bold = false,
+      overrides = {
+        Special = { fg = "#83a598" }, -- light blue instead of orange
+      },
+    },
+  },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "gruvbox-baby",
+      colorscheme = "gruvbox",
     },
   },
   {
