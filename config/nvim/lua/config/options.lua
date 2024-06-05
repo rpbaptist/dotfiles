@@ -9,6 +9,7 @@ vim.env.PATH = vim.env.HOME .. "/.local/share/mise/shims:" .. vim.env.PATH
 vim.opt.relativenumber = false
 vim.opt.clipboard = "unnamedplus"
 vim.opt.textwidth = 120
+vim.opt.inccommand = "nosplit"
 
 vim.g.lazygit_config = false
 
