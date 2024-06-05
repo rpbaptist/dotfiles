@@ -23,6 +23,9 @@ vim.keymap.set({ "n", "x", "v" }, "<Left>", "h", { remap = true })
 vim.keymap.set({ "n", "x", "v" }, "<Right>", "l", { remap = true })
 
 vim.keymap.set({ "n", "x", "v" }, "<leader>d", '"_d', { desc = "Delete" })
+vim.keymap.set({ "n", "x", "v" }, "c", '"_c', { desc = "Change without cut" })
+vim.keymap.set({ "n", "x", "v" }, "x", '"_x', { desc = "Delete without cut" })
+vim.keymap.set({ "n", "x", "v" }, "X", '"_X', { desc = "Delete without cut" })
 
 vim.keymap.set("n", "<C-Tab>", ":bn<CR>", { desc = "Next buffer", silent = true })
 vim.keymap.set("n", "<C-S-Tab>", ":bp<CR>", { desc = "Prev buffer", silent = true })
