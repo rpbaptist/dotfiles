@@ -13,7 +13,7 @@ return {
           if not entry then
             cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })
           end
-          cmp.confirm({ beahvior = cmp.ConfirmBehavior.Replace })
+          cmp.confirm({ behavior = cmp.ConfirmBehavior.Replace })
         else
           fallback()
         end
