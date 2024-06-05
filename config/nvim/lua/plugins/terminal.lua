@@ -58,4 +58,24 @@ return {
       }
     end,
   },
+  {
+    "akinsho/toggleterm.nvim",
+    lazy = true,
+    cmd = {
+      "ToggleTerm",
+      "TermExec",
+    },
+    opts = {
+      direction = "float",
+      shade_terminals = false,
+      float_opts = {
+        border = "single",
+      },
+    },
+    keys = {
+      { "<c-/>", "<cmd>ToggleTerm<cr>", desc = "Toggle terminal float" },
+      -- { "<c-/>t", "<cmd>ToggleTerm direction=tab<cr>", desc = "Toggle terminal tab" },
+      -- { "<c-/>e", "<cmd>ToggleTerm direction=horizontal<cr>", desc = "Toggle terminal horizontal" },
+    },
+  },
 }
