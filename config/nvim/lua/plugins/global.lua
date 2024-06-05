@@ -2,9 +2,10 @@ return {
   { "folke/tokyonight.nvim", enabled = false },
   { "catppuccin/nvim", enabled = false },
   { "nvim-pack/nvim-spectre", enabled = false },
-  -- { "nvim-treesitter/playground", dependencies = { "nvim-treesitter/nvim-treesitter" } },
   {
     "ellisonleao/gruvbox.nvim",
+    lazy = false,
+    priority = 1000,
     opts = {
       contrast = "hard",
       overrides = {
@@ -55,7 +56,6 @@ return {
       { "<leader>bl", "<cmd>Telescope buffers<cr>", desc = "List buffers" },
     },
   },
-  -- { "mg979/vim-visual-multi" },
   {
     "nvim-treesitter/nvim-treesitter",
     opts = function(_, opts)
