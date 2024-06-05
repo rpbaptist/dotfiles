@@ -1,7 +1,7 @@
 return {
   {
     "mrjones2014/smart-splits.nvim",
-    lazy = false,
+    lazy = true,
     build = "./kitty/install-kittens.bash",
     opts = {
       at_edge = "stop",

@@ -5,6 +5,7 @@ return {
   -- { "nvim-treesitter/playground", dependencies = { "nvim-treesitter/nvim-treesitter" } },
   {
     "ellisonleao/gruvbox.nvim",
+    lazy = true,
     opts = {
       contrast = "hard",
       overrides = {
@@ -24,6 +25,7 @@ return {
     "echasnovski/mini.move",
     opts = {
 
+      lazy = true,
       mappings = {
         up = "<C-S-Up>",
         down = "<C-S-Down>",
@@ -55,7 +57,7 @@ return {
       { "<leader>bl", "<cmd>Telescope buffers<cr>", desc = "List buffers" },
     },
   },
-  { "mg979/vim-visual-multi" },
+  -- { "mg979/vim-visual-multi" },
   {
     "nvim-treesitter/nvim-treesitter",
     opts = function(_, opts)

@@ -33,6 +33,7 @@ return {
   },
   {
     "akinsho/bufferline.nvim",
+    lazy = true,
     keys = {
       { "<leader>bl", false },
       { "<leader>b<Left>", "<cmd>BufferLineCloseLeft", desc = "Delete buffers to the left" },
@@ -43,6 +44,7 @@ return {
     "utilyre/barbecue.nvim",
     name = "barbecue",
     version = "*",
+    lazy = true,
     dependencies = {
       "SmiteshP/nvim-navic",
       "nvim-tree/nvim-web-devicons", -- optional dependency
@@ -51,6 +53,7 @@ return {
   },
   {
     "nvim-lualine/lualine.nvim",
+    lazy = true,
     opts = function()
       return {
         sections = {
@@ -63,6 +66,7 @@ return {
   },
   {
     "rcarriga/nvim-notify",
+    lazy = true,
     opts = {
       timeout = 8000,
       render = "wrapped-compact",

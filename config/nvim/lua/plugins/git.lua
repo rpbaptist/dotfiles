@@ -2,6 +2,7 @@ return {
   {
 
     "sindrets/diffview.nvim",
+    lazy = true,
     cmd = "DiffviewOpen",
     keys = {
       { "<leader>gd", "<cmd>DiffviewOpen<cr>", desc = "Git diffview open" },
@@ -14,6 +15,7 @@ return {
       "sindrets/diffview.nvim", -- optional - Diff integration
       "nvim-telescope/telescope.nvim", --
     },
+    lazy = true,
     cmd = "Neogit",
     opts = {
       kind = "tab",
