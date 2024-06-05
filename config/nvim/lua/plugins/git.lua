@@ -16,9 +16,9 @@ return {
     },
     cmd = "Neogit",
     opts = {
-      kind = "split",
+      kind = "tab",
       commit_editor = {
-        kind = "replace",
+        kind = "split",
       },
     },
     keys = {
