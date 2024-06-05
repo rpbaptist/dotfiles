@@ -1,7 +1,7 @@
 return {
   {
     "tpope/vim-projectionist",
-    lazy = false,
+    lazy = true,
     cmd = {
       "A",
       "AS",

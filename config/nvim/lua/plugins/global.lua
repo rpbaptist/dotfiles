@@ -5,7 +5,6 @@ return {
   -- { "nvim-treesitter/playground", dependencies = { "nvim-treesitter/nvim-treesitter" } },
   {
     "ellisonleao/gruvbox.nvim",
-    lazy = true,
     opts = {
       contrast = "hard",
       overrides = {
@@ -24,7 +23,6 @@ return {
   {
     "echasnovski/mini.move",
     opts = {
-
       lazy = true,
       mappings = {
         up = "<C-S-Up>",
