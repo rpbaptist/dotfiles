@@ -20,7 +20,7 @@ return {
     opts = {
       kind = "tab",
       commit_editor = {
-        kind = "split",
+        kind = "tab",
       },
     },
     keys = {
