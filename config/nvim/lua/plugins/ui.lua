@@ -75,4 +75,11 @@ return {
       end,
     },
   },
+  {
+    "Tummetott/reticle.nvim",
+    event = "VeryLazy",
+    opts = {
+      always_highlight_number = true,
+    },
+  },
 }
