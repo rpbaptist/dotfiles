@@ -2,11 +2,16 @@
 disable_tools = ['redis', 'postgres']
 
 [tools]
-elixir = 'latest'
-erlang = 'latest'
-node = "20.5.1"
-nodejs = 'latest'
-python = 'latest'
-rust = 'latest'
+elixir = "latest"
+erlang = "latest"
+node = "latest"
+nodejs = "latest"
+python = "latest"
+rust = "latest"
 usage = "latest"
-go = "1.22.3"
+go = "latest"
+"cargo:eza" = "latest"
+"cargo:bat" = "latest"
+"cargo:htop" = "latest"
+"cargo:ripgrep" = "latest"
+
