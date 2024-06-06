@@ -3,21 +3,31 @@
 alias zshenv="$EDITOR ~/.zshenv"
 alias zshrc="$EDITOR ~/.zshrc"
 
-alias ls="ls --color=auto"
-alias la='ls -lAFh'   #long list,show almost all,show type,human readable
-alias lr='ls -tRFh'   #sorted by date,recursive,show type,human readable
-alias lt='ls -ltFh'   #long list,sorted by date,show type,human readable
-alias ll='ls -l'      #long list
-alias ltr='ls -ltrFh'   #long list,sorted by date,show type,human readable
-alias latr='ls -altrFh'   #long list,sorted by date,show type,human readable
-alias ldot='ls -ld .*'
-alias lS='ls -1FSsh'
-alias lart='ls -1Fcart'
-alias lrt='ls -1Fcrt'
-alias lsr='ls -lARFh' #Recursive list of files and directories
-alias lsn='ls -1'     #A column contains name of files and directories
+# alias ls="ls --color=auto"
+# alias la='ls -lAFh'   #long list,show almost all,show type,human readable
+# alias lr='ls -tRFh'   #sorted by date,recursive,show type,human readable
+# alias lt='ls -ltFh'   #long list,sorted by date,show type,human readable
+# alias ll='ls -l'      #long list
+# alias ltr='ls -ltrFh'   #long list,sorted by date,show type,human readable
+# alias latr='ls -altrFh'   #long list,sorted by date,show type,human readable
+# alias ldot='ls -ld .*'
+# alias lS='ls -1FSsh'
+# alias lart='ls -1Fcart'
+# alias lrt='ls -1Fcrt'
+# alias lsr='ls -lARFh' #Recursive list of files and directories
+# alias lsn='ls -1'     #A column contains name of files and directories
 
-alias ff='find . -type f -name'
+# alias ff='find . -type f -name'
+
+# File system
+alias ls='eza -h --group-directories-first --icons'
+alias ll='eza -lh --group-directories-first --icons'
+alias la='ll -a'
+alias lt='eza -lh --sort accessed --icons'
+alias lta='lt -a'
+alias ltr='lt -r'
+alias ltra='ltr -a'
+alias tree='eza --tree --level=2 --long --icons --git'
 
 alias sudo="sudo "
 alias sl="subl"

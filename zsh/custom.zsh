@@ -13,5 +13,5 @@ source-plugin "git"
 source-plugin "ubuntu"
 
 source "$ZSH/title.zsh"
-source "$ZSH/functions.zsh"
 source "$ZSH/aliases.zsh"
+source "$ZSH/functions.zsh"

@@ -97,8 +97,13 @@ function gcfr() {
   git commit --fixup "$1" && git rebase -i "$1^"
 }
 
-function wgfast() {
-  sudo wg-quick "$1" "$WG_CONFIG_FILE"
+function ff() {
+  if [ -z "$1" ]
+  then
+    fzf --preview 'batcat --style=numbers --color=always {}'
+  else
+    fzf --preview 'batcat --style=numbers --color=always {}' -q "$1" 
+   fi
 }
 
 function find-note() {
