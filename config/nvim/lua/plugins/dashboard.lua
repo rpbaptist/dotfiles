@@ -32,7 +32,7 @@ return {
           {
             action = "Telescope persisted",
             desc = " Select session",
-            icon = " ",
+            icon = " ",
             key = "b",
           },
           {
