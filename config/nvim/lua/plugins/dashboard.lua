@@ -24,7 +24,7 @@ return {
             key = "g",
           },
           {
-            action = "SessionLoadLast",
+            action = "SessionLoad",
             desc = " Restore last session",
             icon = " ",
             key = "s",
