@@ -2,20 +2,14 @@ return {
   {
     "nvimdev/dashboard-nvim",
     lazy = false,
-    opts = function(_, opts)
-      table.insert(opts.config, {
+    opts = {
+      config = {
         center = {
           {
             action = LazyVim.telescope("files"),
             desc = " Find File",
             icon = " ",
             key = "f",
-          },
-          {
-            action = "ene | startinsert",
-            desc = " New File",
-            icon = " ",
-            key = "n",
           },
           {
             action = "Telescope oldfiles",
@@ -30,16 +24,22 @@ return {
             key = "g",
           },
           {
+            action = "SessionLoadLast",
+            desc = " Restore last session",
+            icon = " ",
+            key = "s",
+          },
+          {
+            action = "Telescope persisted",
+            desc = " Select session",
+            icon = " ",
+            key = "b",
+          },
+          {
             action = [[lua LazyVim.telescope.config_files()()]],
             desc = " Config",
             icon = " ",
             key = "c",
-          },
-          {
-            action = 'lua require("persistence").load()',
-            desc = " Restore Session",
-            icon = " ",
-            key = "s",
           },
           {
             action = "LazyExtras",
@@ -62,8 +62,7 @@ return {
             key = "q",
           },
         },
-      })
-      return opts
-    end,
+      },
+    },
   },
 }
