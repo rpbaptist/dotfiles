@@ -3,7 +3,11 @@ return {
   {
     "olimorris/persisted.nvim",
     lazy = false, -- make sure the plugin is always loaded at startup
-    opts = {},
+    opts = {
+      should_autosave = function()
+        return vim.bo.filetype ~= "dashboard"
+      end,
+    },
     cmd = {
       "SessionDelete",
       "SessionLoad",
