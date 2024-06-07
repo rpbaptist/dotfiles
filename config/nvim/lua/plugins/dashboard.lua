@@ -24,7 +24,13 @@ return {
             key = "g",
           },
           {
-            action = "SessionLoad",
+            action = function()
+              if vim.g.persisted_exists then
+                vim.api.nvim_input("<cmd>SessionLoad<cr>")
+              else
+                vim.api.nvim_input("<cmd>SessionLoadLast<cr>")
+              end
+            end,
             desc = " Restore last session",
             icon = " ",
             key = "s",

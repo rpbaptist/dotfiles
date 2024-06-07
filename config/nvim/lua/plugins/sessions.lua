@@ -7,6 +7,10 @@ return {
       should_autosave = function()
         return vim.bo.filetype ~= "dashboard"
       end,
+      allowed_dirs = {
+        "~/.dotfiles",
+        "~/code",
+      }
     },
     cmd = {
       "SessionDelete",
