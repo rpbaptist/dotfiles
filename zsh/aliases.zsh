@@ -20,10 +20,10 @@ alias zshrc="$EDITOR ~/.zshrc"
 # alias ff='find . -type f -name'
 
 # File system
-alias ls='eza -h --group-directories-first --icons'
-alias ll='eza -lh --group-directories-first --icons'
+alias ls='eza --group-directories-first --icons'
+alias ll='eza -l --group-directories-first --icons'
 alias la='ll -a'
-alias lt='eza -lh --sort accessed --icons'
+alias lt='eza -l --sort accessed --icons'
 alias lta='lt -a'
 alias ltr='lt -r'
 alias ltra='ltr -a'
