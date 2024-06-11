@@ -1,6 +1,7 @@
 [user]
 	name = Richard Baptist
 	email = code@richardbaptist.nl
+	signingkey = /home/richard/.ssh/richard_ed25519
 [checkout]
   defaultRemote=origin
 [color]
@@ -19,7 +20,7 @@
 [rebase]
 	autosquash = true
 [commit]
-	gpgsign = false
+	gpgsign = true
 [pager]
   branch = false
 [pull]
@@ -40,3 +41,5 @@
 	repo = /home/richard/.zsh/repos/trapd00r/LS_COLORS
 	repo = /home/richard/.zsh/repos/zsh-users/zsh-syntax-highlighting
 	repo = /home/richard/.zsh/repos/znap
+[gpg]
+	format = ssh
