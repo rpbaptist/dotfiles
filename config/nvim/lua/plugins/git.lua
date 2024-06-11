@@ -9,24 +9,22 @@ return {
     },
   },
   {
-    "NeogitOrg/neogit",
-    dependencies = {
-      "nvim-lua/plenary.nvim", -- required
-      "sindrets/diffview.nvim", -- optional - Diff integration
-      "nvim-telescope/telescope.nvim", --
-    },
-    lazy = true,
-    cmd = "Neogit",
+    "SuperBo/fugit2.nvim",
     opts = {
-      kind = "tab",
-      commit_editor = {
-        kind = "tab",
-      },
+      libgit2_path = "libgit2.so.1.7",
+      external_diffview = true,
     },
+    event = "VeryLazy",
+    dependencies = {
+      "MunifTanjim/nui.nvim",
+      "nvim-tree/nvim-web-devicons",
+      "nvim-lua/plenary.nvim",
+    },
+    cmd = { "Fugit2", "Fugit2Diff", "Fugit2Graph" },
     keys = {
-      { "<leader>gs", "<cmd>Neogit<cr>", desc = "(neo)Git status" },
-      { "<leader>gc", "<cmd>Neogit commit<cr>", desc = "(neo)Git commit" },
-      { "<leader>gl", "<cmd>Neogit log<cr>", desc = "(neo)Git log" },
+      { "<leader>gs", "<cmd>Fugit2<cr>", desc = "Git status" },
+      -- { "<leader>gc", "<cmd>Neogit commit<cr>", desc = "Git commit" },
+      { "<leader>gl", "<cmd>Fugit2Graph<cr>", desc = "Git log" },
     },
   },
   {
