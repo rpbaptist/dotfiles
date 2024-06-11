@@ -1,7 +1,7 @@
 return {
   {
     "mrjones2014/smart-splits.nvim",
-    commit = "2179ec0d26aacd4f40c766c79f6ebc83b7001e48",
+    commit = "",
     build = "./kitty/install-kittens.bash",
     opts = {
       at_edge = "stop",
@@ -21,10 +21,34 @@ return {
         { "<C-A-u>", splits.move_cursor_up, desc = "Move up" },
         { "<C-A-e>", splits.move_cursor_down, desc = "Move down" },
 
-        { "<A-S-n>", splits.resize_left, desc = "Resize left" },
-        { "<A-S-i>", splits.resize_right, desc = "Resize right" },
-        { "<A-S-u>", splits.resize_up, desc = "Resize up" },
-        { "<A-S-e>", splits.resize_down, desc = "Resize down" },
+        {
+          "<A-S-n>",
+          function()
+            splits.resize_left(5)
+          end,
+          desc = "Resize left",
+        },
+        {
+          "<A-S-i>",
+          function()
+            splits.resize_right(5)
+          end,
+          desc = "Resize right",
+        },
+        {
+          "<A-S-u>",
+          function()
+            splits.resize_up(5)
+          end,
+          desc = "Resize up",
+        },
+        {
+          "<A-S-e>",
+          function()
+            splits.resize_down(5)
+          end,
+          desc = "Resize down",
+        },
 
         {
           "<C-A-S-n>",
