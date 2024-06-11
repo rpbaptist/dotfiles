@@ -1,7 +1,6 @@
 return {
   {
     "mrjones2014/smart-splits.nvim",
-    commit = "",
     build = "./kitty/install-kittens.bash",
     opts = {
       at_edge = "stop",
