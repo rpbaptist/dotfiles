@@ -71,7 +71,6 @@ alias gclean='git reset --hard && git clean -fd'
 
 # mix
 
-alias mf="git ls-files --other --modified --exclude-standard | xargs mix format"
 alias mt='mix test'
 alias mtw='mix test.watch'
 alias mpr='mix phx.routes'

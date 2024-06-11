@@ -106,6 +106,15 @@ function ff() {
    fi
 }
 
+function mf() {
+  if [ -z "$1" ]
+  then
+    git ls-files --other --modified --exclude-standard | xargs mix format
+  else
+    mix format "$1"
+  fi
+}
+
 function find-note() {
   find "$NOTES_PATH" -type f -name "*.md" | awk -F "$NOTES_PATH/" '{print $2}' | fzf -q "$1"
 }
