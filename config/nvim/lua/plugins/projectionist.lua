@@ -1,6 +1,5 @@
 return {
   "tpope/vim-projectionist",
-  event = "VeryLazy",
   cmd = {
     "A",
     "AS",
