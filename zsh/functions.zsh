@@ -100,9 +100,9 @@ function gcfr() {
 function ff() {
   if [ -z "$1" ]
   then
-    fzf --preview 'batcat --style=numbers --color=always {}'
+    fzf --preview 'bat--style=numbers --color=always {}'
   else
-    fzf --preview 'batcat --style=numbers --color=always {}' -q "$1" 
+    fzf --preview 'bat--style=numbers --color=always {}' -q "$1" 
    fi
 }
 
@@ -116,7 +116,7 @@ function mf() {
 }
 
 function find-note() {
-  find "$NOTES_PATH" -type f -name "*.md" | awk -F "$NOTES_PATH/" '{print $2}' | fzf -q "$1"
+  find "$NOTES_PATH" -type f -name "*.md" | awk -F "$NOTES_PATH/" '{print $2}' | fzf --preview 'bat--style=numbers --color=always {}' -q "$1" 
 }
 
 function notes() {
