@@ -134,7 +134,15 @@ function notes() {
 function note() {
   local file
   file="$(find-note "$1")"
-  $EDITOR "$NOTES_PATH/$file"
+  cd "$NOTES_PATH"
+  if [ -z "$file" ]
+  then 
+    mkdir -p $( dirname "$1")
+    touch "$1"
+    $EDITOR "$NOTES_PATH/$1"
+  else
+    $EDITOR "$NOTES_PATH/$file"
+  fi
 }
 
 # function shorthand-find-function() {
