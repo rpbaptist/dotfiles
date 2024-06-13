@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Prevent Ubuntu form performing useless overhead
+# Prevent Ubuntu from performing useless overhead
 skip_global_compinit=1
 
 setopt nobeep
