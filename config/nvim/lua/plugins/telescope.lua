@@ -9,6 +9,11 @@ return {
       require("telescope").load_extension("possession")
     end,
   },
+  opts = {
+    defaults = {
+      file_ignore_patterns = { "lib/eor/*", "test/eor/*" },
+    },
+  },
   keys = {
     { "<leader>gs", false },
     { "<leader>gc", false },
