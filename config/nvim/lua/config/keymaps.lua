@@ -34,6 +34,15 @@ vim.keymap.set("n", "<C-S-Tab>", ":bp<CR>", { desc = "Prev buffer", silent = tru
 vim.keymap.set("i", "<C-CR>", "<C-o>o", { desc = "Open line below" })
 vim.keymap.set("i", "<S-CR>", "<C-o><S-o>", { desc = "Open line above" })
 
+vim.keymap.set("i", "<Tab>", "<C-i>", { desc = "Indent" })
+vim.keymap.set("n", "i", function()
+  if string.match(vim.api.nvim_get_current_line(), "%g") == nil then
+    return "cc"
+  else
+    return "i"
+  end
+end, { expr = true })
+
 vim.keymap.set({ "n", "x", "i", "v" }, "<Home>", function()
   local column = vim.fn.col(".")
   vim.cmd("normal! ^")
