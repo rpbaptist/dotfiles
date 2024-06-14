@@ -12,6 +12,9 @@ return {
         Number = { fg = "#fe8019" }, -- light orange instead of purple
         Special = { fg = "#83a598" }, -- light blue instead of orange
         Structure = { fg = "#fabd2f" }, -- light yellow instead of light aqua
+        GitSignsAdd = { fg = "#8ec07c" },
+        GitSignsChange = { fg = "#d79921" },
+        GitSignsDelete = { fg = "#fb4934" },
       },
     },
   },
