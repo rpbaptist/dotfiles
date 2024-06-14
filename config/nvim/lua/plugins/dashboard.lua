@@ -5,31 +5,25 @@ return {
     config = {
       center = {
         {
-          action = LazyVim.pick("files"),
+          action = "lua LazyVim.pick()()",
           desc = " Find File",
           icon = " ",
           key = "f",
         },
         {
-          action = "Telescope oldfiles",
+          action = 'lua LazyVim.pick("oldfiles")()',
           desc = " Recent Files",
           icon = " ",
           key = "r",
         },
         {
-          action = "Telescope live_grep",
+          action = 'lua LazyVim.pick("live_grep")()',
           desc = " Find Text",
           icon = " ",
           key = "g",
         },
         {
-          action = function()
-            if vim.g.persisted_exists then
-              vim.api.nvim_input("<cmd>SessionLoad<cr>")
-            else
-              vim.api.nvim_input("<cmd>SessionLoadLast<cr>")
-            end
-          end,
+          action = "SessionLoad",
           desc = " Restore last session",
           icon = " ",
           key = "s",
@@ -41,7 +35,7 @@ return {
           key = "b",
         },
         {
-          action = [[lua LazyVim.telescope.config_files()()]],
+          action = "lua LazyVim.pick.config_files()()",
           desc = " Config",
           icon = " ",
           key = "c",
