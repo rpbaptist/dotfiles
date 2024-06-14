@@ -6,7 +6,6 @@ return {
     local cmp = require("cmp")
 
     opts.mapping = cmp.mapping.preset.insert({
-      -- ["<Tab>"] = cmp.mapping.confirm({ select = true }),
       ["<Tab>"] = cmp.mapping(function(fallback)
         if cmp.visible() then
           local entry = cmp.get_selected_entry()
@@ -18,7 +17,6 @@ return {
           fallback()
         end
       end, { "i", "s", "c" }),
-      -- ["<S-Tab>"] = cmp.confirm({ beahvior = cmp.ConfirmBehavior.Replace }),
       ["<Esc>"] = cmp.mapping.abort(),
     })
   end,
