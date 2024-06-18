@@ -8,7 +8,14 @@ return {
       windowCreationCommand = "split",
     },
     keys = {
-      { "<leader>sr", "<cmd>GrugFar<cr>", desc = "Replace" },
+      { "<leader>sR", "<cmd>GrugFar<cr>", desc = "Replace all files" },
+      {
+        "<leader>sr",
+        function()
+          require("grug-far").grug_far({ prefills = { flags = vim.fn.expand("%") } })
+        end,
+        desc = "Replace in current buffer",
+      },
     },
   },
 }

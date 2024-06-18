@@ -17,6 +17,7 @@ return {
   keys = {
     { "<leader>gs", false },
     { "<leader>gc", false },
+    { "<leader>sR", false },
     { "<leader>gf", "<cmd>Telescope git_status<cr>", desc = "Git files" },
     { "<leader>bl", "<cmd>Telescope buffers<cr>", desc = "List buffers" },
   },
