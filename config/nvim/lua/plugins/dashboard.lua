@@ -23,13 +23,13 @@ return {
           key = "g",
         },
         {
-          action = "SessionLoad",
+          action = "PossessionLoadCwd",
           desc = " Restore last session",
           icon = " ",
           key = "s",
         },
         {
-          action = "Telescope persisted",
+          action = "Telescope possession list",
           desc = " Select session",
           icon = " ",
           key = "b",
