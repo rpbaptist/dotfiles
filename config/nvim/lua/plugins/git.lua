@@ -23,8 +23,6 @@ return {
     cmd = { "Fugit2", "Fugit2Diff", "Fugit2Graph" },
     keys = {
       { "<leader>gs", "<cmd>Fugit2<cr>", desc = "Git status" },
-      -- { "<leader>gc", "<cmd>Neogit commit<cr>", desc = "Git commit" },
-      { "<leader>gl", "<cmd>Fugit2Graph<cr>", desc = "Git log" },
     },
   },
   {

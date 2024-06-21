@@ -28,12 +28,12 @@ return {
           icon = " ",
           key = "s",
         },
-        {
-          action = "Telescope possession list",
-          desc = " Select session",
-          icon = " ",
-          key = "b",
-        },
+        -- {
+        --   action = "Telescope possession list",
+        --   desc = " Select session",
+        --   icon = " ",
+        --   key = "b",
+        -- },
         {
           action = "lua LazyVim.pick.config_files()()",
           desc = " Config",
