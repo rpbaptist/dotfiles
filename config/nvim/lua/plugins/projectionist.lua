@@ -8,6 +8,6 @@ return {
     "AV",
   },
   keys = {
-    { "<leader>tf", "<cmd>AV<cr>", desc = "Jump to test file" },
+    { "<leader>tf", "<cmd>A<cr>", desc = "Jump to test file" },
   },
 }
