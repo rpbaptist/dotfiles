@@ -15,6 +15,12 @@ vim.keymap.del({ "n", "i", "v" }, "<A-k>")
 vim.keymap.del("n", "<C-h>")
 vim.keymap.del("n", "<C-j>")
 vim.keymap.del("n", "<C-l>")
+vim.keymap.del("n", "<C-k>")
+vim.keymap.del("n", "<S-h>")
+vim.keymap.del("n", "<S-l>")
+
+vim.keymap.set({ "n", "v" }, "<C-b>", "<C-u><C-u>")
+vim.keymap.set({ "n", "v" }, "<PageUp>", "<C-u><C-u>")
 
 -- Bind arrow keys to VIM nav
 vim.keymap.set({ "n", "x", "v" }, "<Up>", "k", { remap = true })
@@ -33,6 +39,9 @@ vim.keymap.set("n", "<C-S-Tab>", ":bp<CR>", { desc = "Prev buffer", silent = tru
 
 vim.keymap.set("i", "<C-CR>", "<C-o>o", { desc = "Open line below" })
 vim.keymap.set("i", "<S-CR>", "<C-o><S-o>", { desc = "Open line above" })
+
+vim.keymap.set({ "n", "i" }, "<C-BS>", "<C-o>db", { desc = "Delete backspace" })
+vim.keymap.set("v", "p", "P", { remap = true })
 
 vim.keymap.set("i", "<Tab>", "<C-i>", { desc = "Indent" })
 vim.keymap.set("n", "i", function()
