@@ -19,6 +19,7 @@ return {
         DiffDelete = { fg = "#fbf1c7", bg = "#fb4934" },
         DiffChange = { fg = "#fabd2f" },
         DiffText = { fg = "#3c3836", bg = "#fbf1c7" },
+        FlashLabel = { fg = "#1d2021", bg = "#83a598" },
       },
     },
   },
