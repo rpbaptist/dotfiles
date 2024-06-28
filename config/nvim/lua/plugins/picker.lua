@@ -24,6 +24,10 @@ return {
 },
   { "ibhagwan/fzf-lua",
     opts = {
+    defaults = {
+        file_ignore_patterns = { "lib/eor/*", "test/eor/*" },
+        no_header = true
+      },
     },
     keys = {
 
