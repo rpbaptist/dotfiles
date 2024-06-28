@@ -43,3 +43,5 @@
 	repo = /home/richard/.zsh/repos/znap
 [gpg]
 	format = ssh
+[delta]
+  syntax-theme = gruvbox-dark
