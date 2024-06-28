@@ -51,15 +51,17 @@ return {
   },
   {
     "nvim-lualine/lualine.nvim",
-    opts = function()
-      return {
-        sections = {
-          lualine_x = { "encoding", "filetype" },
-          lualine_y = { "progress" },
-          lualine_z = { "location" },
-        },
-      }
-    end,
+    opts = {
+      sections = {
+        lualine_c = { {
+          "filename",
+          path = 1,
+        } },
+        lualine_x = { "encoding", "filetype" },
+        lualine_y = { "progress" },
+        lualine_z = { "location" },
+      },
+    },
   },
   {
     "rcarriga/nvim-notify",
