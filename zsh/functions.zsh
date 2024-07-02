@@ -100,9 +100,9 @@ function gcfr() {
 function ff() {
   if [ -z "$1" ]
   then
-    fzf --preview 'bat--style=numbers --color=always {}'
+    fzf --preview 'bat --style=numbers --color=always {}'
   else
-    fzf --preview 'bat--style=numbers --color=always {}' -q "$1" 
+    fzf --preview 'bat --style=numbers --color=always {}' -q "$1" 
    fi
 }
 
