@@ -1,5 +1,6 @@
 [settings]
 disable_tools = ['redis', 'postgres']
+experimental = true
 
 [tools]
 elixir = "latest"
@@ -12,6 +13,4 @@ usage = "latest"
 go = "latest"
 "cargo:eza" = "latest"
 "cargo:bat" = "latest"
-"cargo:htop" = "latest"
 "cargo:ripgrep" = "latest"
-
