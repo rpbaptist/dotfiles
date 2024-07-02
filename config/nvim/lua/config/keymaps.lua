@@ -41,7 +41,7 @@ vim.keymap.set("i", "<C-CR>", "<C-o>o", { desc = "Open line below" })
 vim.keymap.set("i", "<S-CR>", "<C-o><S-o>", { desc = "Open line above" })
 
 vim.keymap.set({ "n", "i" }, "<C-BS>", "<C-o>db", { desc = "Delete backspace" })
-vim.keymap.set("v", "p", "P", { remap = true })
+vim.keymap.set("v", "p", "<s-p>", { remap = true })
 
 vim.keymap.set("i", "<Tab>", "<C-i>", { desc = "Indent" })
 vim.keymap.set("n", "i", function()
