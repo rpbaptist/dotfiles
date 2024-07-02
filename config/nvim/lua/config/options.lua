@@ -17,3 +17,5 @@ vim.g.kitty_navigator_no_mappings = 1
 vim.g.kitty_navigator_password = "nvimwindows"
 
 vim.g.maplocalleader = ","
+
+vim.o.background = "dark"
