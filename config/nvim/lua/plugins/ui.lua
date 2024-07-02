@@ -57,9 +57,15 @@ return {
           "filename",
           path = 1,
         } },
-        lualine_x = { "encoding", "filetype" },
+        lualine_x = {
+          "encoding",
+          { "filetype", icon_only = true },
+        },
         lualine_y = { "progress" },
-        lualine_z = { "location" },
+        lualine_z = {
+          "location",
+          "selectioncount",
+        },
       },
     },
   },
