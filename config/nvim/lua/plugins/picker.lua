@@ -5,14 +5,15 @@ return {
     opts = {
       defaults = {
         file_ignore_patterns = { "lib/eor/*", "test/eor/*" },
-        no_header = true
+        no_header = true,
       },
     },
     keys = {
 
-      { "<leader>gb", false },
+      -- { "<leader>gb", false },
       { "<leader>gc", false },
       { "<leader>gs", false },
+      -- { "<leader>sG", false },
       { "<leader>gb", "<cmd>FzfLua git_bcommits<cr>", desc = "Git blame" },
       { "<leader>gl", "<cmd>FzfLua git_commits<cr>", desc = "Git log" },
       { "<leader>go", "<cmd>FzfLua git_branches<cr>", desc = "Git checkout" },
