@@ -17,7 +17,7 @@ return {
     event = "VeryLazy",
     dependencies = {
       "MunifTanjim/nui.nvim",
-      "nvim-tree/nvim-web-devicons",
+      -- "nvim-tree/nvim-web-devicons",
       "nvim-lua/plenary.nvim",
     },
     cmd = { "Fugit2", "Fugit2Diff", "Fugit2Graph" },
