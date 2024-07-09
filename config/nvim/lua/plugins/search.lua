@@ -1,6 +1,16 @@
 return {
   { "nvim-pack/nvim-spectre", enabled = false },
   {
+    "folke/flash.nvim",
+    opts = {
+      modes = {
+        search = {
+          enabled = true,
+        },
+      },
+    },
+  },
+  {
     "MagicDuck/grug-far.nvim",
     lazy = true,
     cmd = "GrugFar",
