@@ -28,11 +28,14 @@ vim.keymap.set({ "n", "x", "v" }, "<Down>", "j", { remap = true })
 vim.keymap.set({ "n", "x", "v" }, "<Left>", "h", { remap = true })
 vim.keymap.set({ "n", "x", "v" }, "<Right>", "l", { remap = true })
 
+-- True delete
 vim.keymap.set({ "n", "x", "v" }, "<leader>d", '"_d', { desc = "Delete" })
+vim.keymap.set({ "n", "x", "v" }, "<leader>D", '"_D', { desc = "Delete" })
 vim.keymap.set({ "n", "x", "v" }, "c", '"_c', { desc = "Change without cut" })
 vim.keymap.set({ "n", "x", "v" }, "C", '"_C', { desc = "Change without cut" })
 vim.keymap.set({ "n", "x", "v" }, "x", '"_x', { desc = "Delete without cut" })
 vim.keymap.set({ "n", "x", "v" }, "X", '"_X', { desc = "Delete without cut" })
+vim.keymap.set("v", "p", "<s-p>", { remap = true })
 
 vim.keymap.set("n", "<C-Tab>", ":bn<CR>", { desc = "Next buffer", silent = true })
 vim.keymap.set("n", "<C-S-Tab>", ":bp<CR>", { desc = "Prev buffer", silent = true })
@@ -41,7 +44,6 @@ vim.keymap.set("i", "<C-CR>", "<C-o>o", { desc = "Open line below" })
 vim.keymap.set("i", "<S-CR>", "<C-o><S-o>", { desc = "Open line above" })
 
 vim.keymap.set({ "n", "i" }, "<C-BS>", "<C-o>db", { desc = "Delete backspace" })
-vim.keymap.set("v", "p", "<s-p>", { remap = true })
 
 vim.keymap.set("i", "<Tab>", "<C-i>", { desc = "Indent" })
 vim.keymap.set("n", "i", function()
