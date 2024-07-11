@@ -4,6 +4,6 @@ return {
   cmd = "Oil",
   opts = {},
   keys = {
-    { "<leader>fo", "<cmd>Oil<cr>", desc = "Open parent directory" },
+    { "<leader>fO", "<cmd>Oil<cr>", desc = "Open dir in Oil" },
   },
 }
