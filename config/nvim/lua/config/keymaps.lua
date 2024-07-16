@@ -19,6 +19,8 @@ vim.keymap.del("n", "<C-k>")
 vim.keymap.del("n", "<S-h>")
 vim.keymap.del("n", "<S-l>")
 
+vim.keymap.del("n", "<leader>ft")
+
 vim.keymap.set({ "n", "v" }, "<C-b>", "<C-u><C-u>")
 vim.keymap.set({ "n", "v" }, "<PageUp>", "<C-u><C-u>")
 
@@ -37,8 +39,9 @@ vim.keymap.set({ "n", "x", "v" }, "x", '"_x', { desc = "Delete without cut" })
 vim.keymap.set({ "n", "x", "v" }, "X", '"_X', { desc = "Delete without cut" })
 vim.keymap.set("v", "p", "<s-p>", { remap = true })
 
-vim.keymap.set("n", "<C-Tab>", ":bn<CR>", { desc = "Next buffer", silent = true })
-vim.keymap.set("n", "<C-S-Tab>", ":bp<CR>", { desc = "Prev buffer", silent = true })
+-- Tab control
+vim.keymap.set("n", "<C-Tab>", "<cmd>tabnext<CR>", { desc = "Next tab", silent = true })
+vim.keymap.set("n", "<C-S-Tab>", "<cmd>tabprevious<CR>", { desc = "Next buffer", silent = true })
 
 vim.keymap.set("i", "<C-CR>", "<C-o>o", { desc = "Open line below" })
 vim.keymap.set("i", "<S-CR>", "<C-o><S-o>", { desc = "Open line above" })

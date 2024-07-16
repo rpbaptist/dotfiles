@@ -33,14 +33,6 @@ return {
     end,
   },
   {
-    "akinsho/bufferline.nvim",
-    keys = {
-      { "<leader>bl", false },
-      { "<leader>b<Left>", "<cmd>BufferLineCloseLeft", desc = "Delete buffers to the left" },
-      { "<leader>b<Right>", "<cmd>BufferLineCloseRight", desc = "Delete buffers to the right" },
-    },
-  },
-  {
     "utilyre/barbecue.nvim",
     name = "barbecue",
     version = "*",
@@ -57,23 +49,22 @@ return {
     opts = {
       line = function(line)
         local theme = {
-          fill = "TabLineFill",
-          head = "TabLine",
-          current_tab = "TabLineSel",
-          tab = "TabLine",
+          head = { bg = "#1d2021" },
+          fill = { bg = "#282828" },
+          current_tab = { fg = "#282828", bg = "#d5c4a1", style = "bold" },
+          tab = { fg = "#bdae93", bg = "#504945" },
           win = "TabLine",
-          tail = "TabLine",
+          tail = { bg = "#1d2021" },
         }
         return {
           {
             { hl = theme.head },
-            line.sep("", theme.head, theme.fill),
+            line.sep(" ", theme.head, theme.fill),
           },
           line.tabs().foreach(function(tab)
             local hl = tab.is_current() and theme.current_tab or theme.tab
             return {
               line.sep("", hl, theme.fill),
-              tab.is_current() and "" or "",
               tab.number(),
               tab.name(),
               line.sep("", hl, theme.fill),
@@ -83,8 +74,8 @@ return {
           end),
           line.spacer(),
           {
-            line.sep("", theme.tail, theme.fill),
-            { "  ", hl = theme.tail },
+            -- line.sep(" ", theme.tail, theme.fill),
+            { hl = theme.tail },
           },
           hl = theme.fill,
         }
