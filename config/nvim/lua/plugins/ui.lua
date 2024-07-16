@@ -1,4 +1,5 @@
 return {
+  { "akinsho/bufferline.nvim", enabled = false },
   {
     "nvimdev/dashboard-nvim",
     opts = function()
@@ -46,7 +47,10 @@ return {
     dependencies = {
       "SmiteshP/nvim-navic",
     },
-    opts = {},
+    opts = {
+      -- attach_navic = false,
+      show_modified = true,
+    },
   },
   {
     "nvim-lualine/lualine.nvim",
