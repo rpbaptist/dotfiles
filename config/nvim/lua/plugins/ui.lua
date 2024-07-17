@@ -71,7 +71,17 @@ return {
     },
   },
   {
+    "SmiteshP/nvim-navic",
+    opts = {
+      depth_limit_indicator = "…",
+      separator = "  ",
+      highlight = true,
+      depth_limit = 0,
+    },
+  },
+  {
     "nvim-lualine/lualine.nvim",
+    depencencies = { "SmiteshP/nvim-navic" },
     opts = {
       sections = {
         lualine_c = {
@@ -96,17 +106,21 @@ return {
             icon_only = true,
             separator = "",
             icon = { align = "left" },
-            color = { bg = "#504945" },
+            color = { bg = "#32302f" },
             padding = { left = 2, right = 1 },
           },
           {
             "filename",
-            color = { fg = "#fbdbb2", bg = "#504945" },
+            color = { fg = "#ebdbb2", bg = "#32302f" },
+            separator = "",
             symbols = {
               modified = " ",
               readonly = "󰌾 ",
               newfile = " ",
             },
+          },
+          {
+            "navic",
           },
         },
       },
@@ -123,6 +137,7 @@ return {
           {
             "filename",
             color = { fg = "#bdae93", bg = "#32302f" },
+            separator = "",
             symbols = {
               modified = " ",
               readonly = "󰌾 ",
