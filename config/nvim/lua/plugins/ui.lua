@@ -33,18 +33,6 @@ return {
     end,
   },
   {
-    "utilyre/barbecue.nvim",
-    name = "barbecue",
-    version = "*",
-    dependencies = {
-      "SmiteshP/nvim-navic",
-    },
-    opts = {
-      -- attach_navic = false,
-      show_modified = true,
-    },
-  },
-  {
     "nanozuki/tabby.nvim",
     opts = {
       line = function(line)
@@ -93,16 +81,54 @@ return {
           },
         },
         lualine_x = {
-          {
-            "filetype",
-            icon_only = true,
-            colored = true,
-          },
+          "searchcount",
+          "selectioncount",
         },
         lualine_y = { "progress" },
         lualine_z = {
           "location",
-          "selectioncount",
+        },
+      },
+      winbar = {
+        lualine_c = {
+          {
+            "filetype",
+            icon_only = true,
+            separator = "",
+            icon = { align = "left" },
+            color = { bg = "#504945" },
+            padding = { left = 2, right = 1 },
+          },
+          {
+            "filename",
+            color = { fg = "#fbdbb2", bg = "#504945" },
+            symbols = {
+              modified = " ",
+              readonly = "󰌾 ",
+              newfile = " ",
+            },
+          },
+        },
+      },
+      inactive_winbar = {
+        lualine_c = {
+          {
+            "filetype",
+            icon_only = true,
+            separator = "",
+            icon = { align = "left" },
+            color = { bg = "#32302f" },
+            padding = { left = 2, right = 1 },
+          },
+          {
+            "filename",
+            color = { fg = "#bdae93", bg = "#32302f" },
+            symbols = {
+              modified = " ",
+              readonly = "󰌾 ",
+              newfile = " ",
+            },
+          },
         },
       },
     },
