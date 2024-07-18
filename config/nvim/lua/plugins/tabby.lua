@@ -17,10 +17,11 @@ return {
         },
         line.tabs().foreach(function(tab)
           local hl = tab.is_current() and theme.current_tab or theme.tab
+          local tabname = tab.is_current() and "" or tab.name()
           local tab_node = {
             line.sep("", hl, theme.fill),
             tab.number(),
-            tab.name(),
+            tabname,
             line.sep("", hl, theme.fill),
             hl = hl,
             margin = " ",
