@@ -46,7 +46,7 @@ return {
         }
         return {
           {
-            { hl = theme.head },
+            theme.head,
             line.sep(" ", theme.head, theme.fill),
           },
           line.tabs().foreach(function(tab)
@@ -61,10 +61,6 @@ return {
             }
           end),
           line.spacer(),
-          {
-            -- line.sep(" ", theme.tail, theme.fill),
-            { hl = theme.tail },
-          },
           hl = theme.fill,
         }
       end,
@@ -127,9 +123,7 @@ return {
               newfile = " ",
             },
           },
-          {
-            "navic",
-          },
+          "navic",
         },
       },
       inactive_winbar = {
