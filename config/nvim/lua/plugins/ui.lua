@@ -83,6 +83,11 @@ return {
     "nvim-lualine/lualine.nvim",
     depencencies = { "SmiteshP/nvim-navic" },
     opts = {
+      options = {
+        disabled_filetypes = {
+          winbar = { "dashboard", "neo-tree" },
+        },
+      },
       sections = {
         lualine_c = {
           {
