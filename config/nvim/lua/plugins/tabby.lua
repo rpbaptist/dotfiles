@@ -10,32 +10,23 @@ return {
       }
       return {
         line.tabs().foreach(function(tab)
-          if tab.is_current() then
-            return {
-              line.sep("", theme.current_tab, theme.fill),
-              " ",
-              tab.number(),
-              line.sep("", theme.current_tab, theme.fill),
-              hl = theme.current_tab,
+          local hl = tab.is_current() and theme.current_tab or theme.tab
+          local icon = tab.is_current() and " " or " "
+          return {
+            {
+              line.sep("", hl, theme.fill),
+              icon,
+              line.sep(" ", hl, theme.win),
+              hl = hl,
               margin = " ",
-            }
-          else
-            local tab_node = {
-              line.sep("", theme.tab, theme.fill),
-              " ",
-              tab.number(),
-              line.sep(" ", theme.tab, theme.win),
-              hl = theme.tab,
-              margin = " ",
-            }
-            local wins_node = {
+            },
+            {
               tab.name(),
               line.sep("", theme.win, theme.fill),
               hl = theme.win,
               margin = " ",
-            }
-            return { tab_node, wins_node }
-          end
+            },
+          }
         end),
         line.spacer(),
         hl = theme.fill,
