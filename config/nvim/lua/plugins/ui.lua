@@ -81,7 +81,10 @@ return {
   },
   {
     "nvim-lualine/lualine.nvim",
-    depencencies = { "SmiteshP/nvim-navic" },
+    depencencies = {
+      "SmiteshP/nvim-navic",
+      "chrisgrieser/nvim-recorder",
+    },
     opts = {
       options = {
         disabled_filetypes = {
@@ -96,13 +99,13 @@ return {
           },
         },
         lualine_x = {
+          { require("recorder").displaySlots },
+          { require("recorder").recordingStatus },
           "searchcount",
           "selectioncount",
         },
         lualine_y = { "progress" },
-        lualine_z = {
-          "location",
-        },
+        lualine_z = { "location" },
       },
       winbar = {
         lualine_c = {
@@ -157,9 +160,8 @@ return {
     "rcarriga/nvim-notify",
     lazy = true,
     opts = {
-      timeout = 8000,
+      timeout = 5000,
       render = "wrapped-compact",
-      top_down = false,
       max_height = function()
         return math.floor(vim.o.lines * 0.75)
       end,
