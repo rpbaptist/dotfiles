@@ -3,30 +3,39 @@ return {
   opts = {
     line = function(line)
       local theme = {
-        head = { bg = "#1d2021" },
-        fill = { bg = "#1d2021" },
-        current_tab = { fg = "#ebdbb2", bg = "#504945" },
-        tab = { fg = "#bdae93", bg = "#3c3836" },
-        win = "TabLine",
-        tail = { bg = "#1d2021" },
+        fill = "TabLineFill",
+        current_tab = "TabLineSel",
+        tab = "TabLine",
+        win = "TabLineWin",
       }
       return {
-        {
-          theme.head,
-          line.sep(" ", theme.head, theme.fill),
-        },
         line.tabs().foreach(function(tab)
-          local hl = tab.is_current() and theme.current_tab or theme.tab
-          local tabname = tab.is_current() and "" or tab.name()
-          local tab_node = {
-            line.sep("", hl, theme.fill),
-            tab.number(),
-            tabname,
-            line.sep("", hl, theme.fill),
-            hl = hl,
-            margin = " ",
-          }
-          return tab_node
+          if tab.is_current() then
+            return {
+              line.sep("", theme.current_tab, theme.fill),
+              " ",
+              tab.number(),
+              line.sep("", theme.current_tab, theme.fill),
+              hl = theme.current_tab,
+              margin = " ",
+            }
+          else
+            local tab_node = {
+              line.sep("", theme.tab, theme.fill),
+              " ",
+              tab.number(),
+              line.sep(" ", theme.tab, theme.win),
+              hl = theme.tab,
+              margin = " ",
+            }
+            local wins_node = {
+              tab.name(),
+              line.sep("", theme.win, theme.fill),
+              hl = theme.win,
+              margin = " ",
+            }
+            return { tab_node, wins_node }
+          end
         end),
         line.spacer(),
         hl = theme.fill,
