@@ -10,8 +10,14 @@ input type:touchpad {
       natural_scroll enabled
 }
 
+bindgesture swipe:right workspace prev
+bindgesture swipe:left workspace next
+# bindgesture swipe:left exec ~/.config/sway/scripts/advance_workspace.sh
+bindgesture swipe:up move scratchpad
+bindgesture swipe:down scratchpad show
+
 # Read `man 5 sway-input` for more information about this section.
-#
+
 input type:keyboard {
   repeat_delay 225
   repeat_rate 38
@@ -25,7 +31,13 @@ input "18003:1:foostan_Corne_Keyboard" {
 mouse_warping none
 focus_follows_mouse no
 
+# input type:keyboard xkb_layout "us"
+input type:keyboard xkb_numlock enabled
+
 exec_always {
    'swaymsg input type:keyboard xkb_layout "$(localectl status | grep "X11 Layout" | sed -e "s/^.*X11 Layout://")"'
    'swaymsg input type:keyboard xkb_variant "$(localectl status | grep "X11 Variant" | sed -e "s/^.*X11 Variant://")"'
 }
+
+
+

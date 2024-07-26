@@ -4,13 +4,14 @@
 indicator-caps-lock
 ignore-empty-password
 # datestr=%A
-image=$HOME/.config/sway/wallpapers/cyberpunk_city.jpg
+image=$HOME/.config/swaylock/swaylock.png
 scaling=fill
-font=Source Code Pro
-font-size=18
+font=UbuntuMono
+font-size=20
+
 
 # Ring
-indicator-radius=115
+indicator-radius=360
 # line-uses-ring
 line-color=#a89984
 text-color=#ebdbb2
@@ -23,3 +24,4 @@ key-hl-color=#458588
 separator-color=#282828
 layout-text-color=#d5c4a1
 line-wrong-color=#cc241d
+

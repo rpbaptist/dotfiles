@@ -73,9 +73,6 @@ source "$ZSH/custom.zsh"
 
 fpath+=($ZSH/completions)
 
-znap fpath _glab      "glab      completion  -s zsh"
-znap fpath _kubectl   "kubectl   completion  zsh"
-znap fpath _remotectl "remotectl completion  zsh"
 znap fpath _mise      "mise      completion  zsh"
 znap fpath _starship  "starship  completions zsh"
 
