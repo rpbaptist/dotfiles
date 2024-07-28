@@ -7,12 +7,12 @@ height=200
 padding=10
 margin=10
 progress-color=over #ebdbb2
-icon-path=/usr/share/icons/Arc-X-D
+; icon-path=/usr/share/icons/Arc-X-D
 max-icon-size=70
 layer=overlay
 
 border-size=3
-border-radius=3
+border-radius=5
 border-color=#a89984
 
 default-timeout=5000
