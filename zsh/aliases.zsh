@@ -82,6 +82,4 @@ alias mps='mix phx.server'
 
 alias dot="cd $HOME/.dotfiles"
 
-alias rtx=mise
 
-alias bat="batcat"
