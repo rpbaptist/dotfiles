@@ -64,6 +64,7 @@ znap source zsh-users/zsh-autosuggestions
 
 znap eval dircolors "dircolors $HOME/.dircolors"
 znap eval mise "mise activate zsh"
+znap eval mise "ssh-agent">/dev/null
 
 # Don't try to ssh to hosts file
 zstyle ":completion:*" hosts off
