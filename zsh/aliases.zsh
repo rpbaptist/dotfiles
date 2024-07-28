@@ -20,14 +20,14 @@ alias zshrc="$EDITOR ~/.zshrc"
 # alias ff='find . -type f -name'
 
 # File system
-alias ls='eza --group-directories-first --icons'
-alias ll='eza -l --group-directories-first --icons'
+alias ls='eza --group-directories-first --icons=always'
+alias ll='eza -l --group-directories-first --icons=always'
 alias la='ll -a'
-alias lt='eza -l --sort accessed --icons'
+alias lt='eza -l --sort accessed --icons=always'
 alias lta='lt -a'
 alias ltr='lt -r'
 alias ltra='ltr -a'
-alias tree='eza --tree --level=2 --long --icons --git'
+alias tree='eza --tree --level=2 --long --icons=always --git'
 
 alias sudo="sudo "
 alias sl="subl"
