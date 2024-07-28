@@ -3,14 +3,10 @@ disable_tools = ['redis', 'postgres']
 experimental = true
 
 [tools]
-elixir = "latest"
-erlang = "latest"
-node = "latest"
-nodejs = "latest"
-rust = "latest"
-usage = "latest"
-go = "latest"
-"cargo:eza" = "latest"
-"cargo:bat" = "latest"
-"cargo:ripgrep" = "latest"
-lua = "5.1.5"
+# elixir = "latest"
+# erlang = "latest"
+# node = "latest"
+# nodejs = "latest"
+# usage = "latest"
+# go = "latest"
+# lua = "5.1.5"
