@@ -64,7 +64,6 @@ znap source zsh-users/zsh-autosuggestions
 
 znap eval dircolors "dircolors $HOME/.dircolors"
 znap eval mise "mise activate zsh"
-# znap eval ssh-agent "ssh-agent"
 
 # Don't try to ssh to hosts file
 zstyle ":completion:*" hosts off
@@ -83,4 +82,13 @@ ZSH_HIGHLIGHT_STYLES[path]='fg=#83A598'
 ZSH_HIGHLIGHT_STYLES[arg0]='fg=green'
 
 znap source zsh-users/zsh-syntax-highlighting
+
+if ! pgrep -u "$USER" ssh-agent > /dev/null; then
+    ssh-agent -t 1h > "$XDG_RUNTIME_DIR/ssh-agent.env"
+fi
+if [[ ! -f "$SSH_AUTH_SOCK" ]]; then
+    source "$XDG_RUNTIME_DIR/ssh-agent.env" >/dev/null
+fi
+
+znap eval keychain "keychain --eval --quiet --noask $HOME/.ssh/richard_ed25519"
 
