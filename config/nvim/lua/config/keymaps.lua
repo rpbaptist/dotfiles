@@ -80,3 +80,38 @@ vim.keymap.set({ "n", "x", "v" }, "<leader>fp", function()
   vim.fn.setreg("+", path .. ":" .. line)
   vim.notify("Copied " .. path .. ":" .. line .. " to clipboard")
 end, { desc = "Copy relative file path" })
+
+function TestCurrentFile()
+  local current_file = vim.fn.expand("%:p")
+  local cmd = 'IexTests.test("' .. current_file .. '")'
+  vim.cmd("TermExec cmd=" .. cmd .. "")
+end
+
+function TestCurrentLine()
+  local current_file = vim.fn.expand("%:p")
+  local current_line = vim.fn.line(".")
+  local cmd = 'IexTests.test("' .. current_file .. '", ' .. current_line .. ")"
+  vim.cmd("TermExec cmd='" .. cmd .. "'")
+end
+
+function TestCurrentDirectory()
+  local file_dir = vim.fn.expand("%:p:h")
+  local cmd = 'IexTests.test("' .. file_dir .. '")'
+  vim.cmd("TermExec cmd=" .. cmd .. "")
+end
+
+function WatchCurrentFile()
+  local current_file = vim.fn.expand("%:p")
+  local cmd = 'IexTests.test_watch("' .. current_file .. '")'
+  vim.cmd("TermExec cmd=" .. cmd .. "")
+end
+
+function StopWatchingCurrentFile()
+  vim.cmd('TermExec cmd="IexTests.stop_watch()"')
+end
+
+vim.keymap.set("n", "<leader>tt", ":lua TestCurrentFile()<CR>", { desc = "Test current file" })
+vim.keymap.set("n", "<leader>tl", ":lua TestCurrentLine()<CR>", { desc = "Test current line" })
+vim.keymap.set("n", "<leader>td", ":lua TestCurrentDirectory()<CR>", { desc = "Test current file directory" })
+vim.keymap.set("n", "<leader>tww", ":lua WatchCurrentFile()<CR>", { desc = "Watch current file" })
+vim.keymap.set("n", "<leader>tws", ":lua StopWatchingCurrentFile()<CR>", { desc = "Stop watching current file" })
