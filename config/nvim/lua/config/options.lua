@@ -10,6 +10,7 @@ vim.opt.relativenumber = false
 vim.opt.clipboard = "unnamedplus"
 vim.opt.textwidth = 120
 vim.opt.inccommand = "nosplit"
+vim.opt.termguicolors = true
 
 vim.g.lazygit_config = false
 
