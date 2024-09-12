@@ -8,9 +8,9 @@ return {
     "AV",
   },
   keys = {
-    { "<leader>tff", "<cmd>A<cr>", desc = "Jump to test file" },
-    { "<leader>tfe", "<cmd>AS<cr>", desc = "Open test file in hsplit" },
-    { "<leader>tfi", "<cmd>AV<cr>", desc = "Open test file in vsplit" },
-    { "<leader>tf<Tab>", "<cmd>AT<cr>", desc = "Open test file in tab" },
+    { "<leader>tjj", "<cmd>A<cr>", desc = "Open file in current window" },
+    { "<leader>tje", "<cmd>AS<cr>", desc = "Open test file in hsplit" },
+    { "<leader>tji", "<cmd>AV<cr>", desc = "Open test file in vsplit" },
+    { "<leader>tj<Tab>", "<cmd>AT<cr>", desc = "Open test file in tab" },
   },
 }
