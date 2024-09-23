@@ -7,6 +7,11 @@ return {
         file_ignore_patterns = { "lib/eor/*", "test/eor/*" },
         no_header = true,
       },
+      winopts = {
+        default = {
+          preview = "bat_native",
+        },
+      },
     },
     keys = {
       { "<leader>gc", false },
