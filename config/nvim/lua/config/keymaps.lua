@@ -69,49 +69,61 @@ end, { desc = "Move to beginning of line", remap = true })
 
 vim.keymap.set({ "n", "x", "v" }, "<leader>fP", function()
   local path = vim.fn.expand("%:p")
-  local line = vim.fn.line(".")
-  vim.fn.setreg("+", path .. ":" .. line)
-  vim.notify("Copied " .. path .. ":" .. line .. " to clipboard")
+  vim.fn.setreg("+", path)
+  vim.notify("Copied " .. path .. " to clipboard")
 end, { desc = "Copy absolute file path" })
 
 vim.keymap.set({ "n", "x", "v" }, "<leader>fp", function()
   local path = vim.fn.expand("%:.")
+  vim.fn.setreg("+", path)
+  vim.notify("Copied " .. path .. " to clipboard")
+end, { desc = "Copy relative file path" })
+
+vim.keymap.set({ "n", "x", "v" }, "<leader>fL", function()
+  local path = vim.fn.expand("%:p")
   local line = vim.fn.line(".")
   vim.fn.setreg("+", path .. ":" .. line)
   vim.notify("Copied " .. path .. ":" .. line .. " to clipboard")
-end, { desc = "Copy relative file path" })
+end, { desc = "Copy absolute file path with line" })
 
-function TestCurrentFile()
-  local current_file = vim.fn.expand("%:p")
-  local cmd = 'IexTests.test("' .. current_file .. '")'
-  vim.cmd("TermExec cmd=" .. cmd .. "")
-end
+vim.keymap.set({ "n", "x", "v" }, "<leader>fl", function()
+  local path = vim.fn.expand("%:.")
+  local line = vim.fn.line(".")
+  vim.fn.setreg("+", path .. ":" .. line)
+  vim.notify("Copied " .. path .. ":" .. line .. " to clipboard")
+end, { desc = "Copy relative file path with line" })
 
-function TestCurrentLine()
-  local current_file = vim.fn.expand("%:p")
-  local current_line = vim.fn.line(".")
-  local cmd = 'IexTests.test("' .. current_file .. '", ' .. current_line .. ")"
-  vim.cmd("TermExec cmd='" .. cmd .. "'")
-end
-
-function TestCurrentDirectory()
-  local file_dir = vim.fn.expand("%:p:h")
-  local cmd = 'IexTests.test("' .. file_dir .. '")'
-  vim.cmd("TermExec cmd=" .. cmd .. "")
-end
-
-function WatchCurrentFile()
-  local current_file = vim.fn.expand("%:p")
-  local cmd = 'IexTests.test_watch("' .. current_file .. '")'
-  vim.cmd("TermExec cmd=" .. cmd .. "")
-end
-
-function StopWatchingCurrentFile()
-  vim.cmd('TermExec cmd="IexTests.stop_watch()"')
-end
-
-vim.keymap.set("n", "<leader>tt", ":lua TestCurrentFile()<CR>", { desc = "Test current file" })
-vim.keymap.set("n", "<leader>tl", ":lua TestCurrentLine()<CR>", { desc = "Test current line" })
-vim.keymap.set("n", "<leader>td", ":lua TestCurrentDirectory()<CR>", { desc = "Test current file directory" })
-vim.keymap.set("n", "<leader>tww", ":lua WatchCurrentFile()<CR>", { desc = "Watch current file" })
-vim.keymap.set("n", "<leader>tws", ":lua StopWatchingCurrentFile()<CR>", { desc = "Stop watching current file" })
+-- function TestCurrentFile()
+--   local current_file = vim.fn.expand("%:p")
+--   local cmd = 'IexTests.test("' .. current_file .. '")'
+--   vim.cmd("TermExec cmd=" .. cmd .. "")
+-- end
+--
+-- function TestCurrentLine()
+--   local current_file = vim.fn.expand("%:p")
+--   local current_line = vim.fn.line(".")
+--   local cmd = 'IexTests.test("' .. current_file .. '", ' .. current_line .. ")"
+--   vim.cmd("TermExec cmd='" .. cmd .. "'")
+-- end
+--
+-- function TestCurrentDirectory()
+--   local file_dir = vim.fn.expand("%:p:h")
+--   local cmd = 'IexTests.test("' .. file_dir .. '")'
+--   vim.cmd("TermExec cmd=" .. cmd .. "")
+-- end
+--
+-- function WatchCurrentFile()
+--   local current_file = vim.fn.expand("%:p")
+--   local cmd = 'IexTests.test_watch("' .. current_file .. '")'
+--   vim.cmd("TermExec cmd=" .. cmd .. "")
+-- end
+--
+-- function StopWatchingCurrentFile()
+--   vim.cmd('TermExec cmd="IexTests.stop_watch()"')
+-- end
+--
+-- vim.keymap.set("n", "<leader>tt", ":lua TestCurrentFile()<CR>", { desc = "Test current file" })
+-- vim.keymap.set("n", "<leader>tl", ":lua TestCurrentLine()<CR>", { desc = "Test current line" })
+-- vim.keymap.set("n", "<leader>td", ":lua TestCurrentDirectory()<CR>", { desc = "Test current file directory" })
+-- vim.keymap.set("n", "<leader>tww", ":lua WatchCurrentFile()<CR>", { desc = "Watch current file" })
+-- vim.keymap.set("n", "<leader>tws", ":lua StopWatchingCurrentFile()<CR>", { desc = "Stop watching current file" })

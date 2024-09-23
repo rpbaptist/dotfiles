@@ -1,6 +1,9 @@
 return {
   "folke/which-key.nvim",
   opts = function(_, opts)
-    table.insert(opts.spec, { "<leader>tj", group = "Jump to test file" })
+    vim.list_extend(opts.spec, {
+      { "<leader>tj", group = "Jump to test file" },
+      { "<leader>a", group = "AI" },
+    })
   end,
 }
