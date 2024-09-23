@@ -5,10 +5,15 @@ return {
   version = false, -- set this if you want to always pull the latest change
   opts = {
     provider = "copilot",
-    auto_suggestions_provider = "copilot",
+    -- auto_suggestions_provider = "copilot",
     behaviour = {
-      auto_suggestions = true,
+      -- auto_suggestions = true,
       support_paste_from_clipboard = true,
+    },
+    mappings = {
+      suggestion = {
+        -- accept = "<Tab>",
+      },
     },
   },
   keys = {},
