@@ -11,6 +11,7 @@ vim.opt.clipboard = "unnamedplus"
 vim.opt.textwidth = 120
 vim.opt.inccommand = "nosplit"
 vim.opt.termguicolors = true
+vim.opt.swapfile = false
 
 vim.g.lazygit_config = false
 
@@ -20,3 +21,12 @@ vim.g.kitty_navigator_password = "nvimwindows"
 vim.g.maplocalleader = ","
 
 vim.o.background = "dark"
+
+-- vim.diagnostic.enable(false)
+
+require("lazyvim.util").toggle.diagnostics()
+
+if vim.env.VSCODE then
+  vim.g.vscode = true
+end
+
