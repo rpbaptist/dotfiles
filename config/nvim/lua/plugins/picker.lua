@@ -3,14 +3,18 @@ return {
   {
     "ibhagwan/fzf-lua",
     opts = {
+      "fzf-native",
       defaults = {
         file_ignore_patterns = { "lib/eor/*", "test/eor/*" },
         no_header = true,
       },
       winopts = {
         default = {
-          preview = "bat_native",
+          preview = "bat",
         },
+      },
+      fzf_opts = {
+        ["--layout"] = "reverse-list",
       },
     },
     keys = {
