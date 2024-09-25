@@ -21,7 +21,7 @@ vim.g.kitty_navigator_password = "nvimwindows"
 vim.g.maplocalleader = ","
 
 vim.o.background = "dark"
-
+vim.opt.laststatus = 3
 -- vim.diagnostic.enable(false)
 
 require("lazyvim.util").toggle.diagnostics()
@@ -29,4 +29,3 @@ require("lazyvim.util").toggle.diagnostics()
 if vim.env.VSCODE then
   vim.g.vscode = true
 end
-
