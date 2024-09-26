@@ -127,7 +127,7 @@ function notes() {
   else
     local file
     file="$(find-note "$1")"
-    $EDITOR -n -a "$NOTES_PATH" "$NOTES_PATH/$file"
+    $EDITOR -n "$NOTES_PATH" "$NOTES_PATH/$file"
   fi
 }
 
