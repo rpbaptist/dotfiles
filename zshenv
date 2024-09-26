@@ -47,3 +47,5 @@ export XCURSOR_SIZE=16
 
 export NNN_OPTS="C"
 export GTK_THEME=Gruvbox-Dark-BL-LB
+
+export XDG_DATA_DIRS=${XDG_DATA_DIRS}:${HOME}.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share
