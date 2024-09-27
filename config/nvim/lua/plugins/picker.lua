@@ -8,14 +8,6 @@ return {
         file_ignore_patterns = { "lib/eor/*", "test/eor/*" },
         no_header = true,
       },
-      winopts = {
-        default = {
-          preview = "bat",
-        },
-      },
-      fzf_opts = {
-        ["--layout"] = "reverse-list",
-      },
     },
     keys = {
       { "<leader>gc", false },
