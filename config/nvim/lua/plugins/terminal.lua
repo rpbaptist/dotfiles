@@ -98,8 +98,8 @@ return {
     },
     keys = {
       { "<c-/>", "<cmd>ToggleTerm<cr>", desc = "Toggle terminal float" },
-      -- { "<c-/>t", "<cmd>ToggleTerm direction=tab<cr>", desc = "Toggle terminal tab" },
-      -- { "<c-/>e", "<cmd>ToggleTerm direction=horizontal<cr>", desc = "Toggle terminal horizontal" },
+      { "<c-/>e", "<cmd>ToggleTerm direction=horizontal<cr>", desc = "Toggle terminal horizontal" },
+      { "<c-/>i", "<cmd>ToggleTerm direction=vertical<cr>", desc = "Toggle terminal vertical" },
     },
   },
 }
