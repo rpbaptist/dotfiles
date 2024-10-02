@@ -4,6 +4,7 @@ return {
     vim.list_extend(opts.spec, {
       { "<leader>tj", group = "Jump to test file" },
       { "<leader>a", group = "AI" },
+      { "<leader>m", group = "Trailblazer" },
     })
   end,
 }
