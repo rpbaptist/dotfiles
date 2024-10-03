@@ -24,11 +24,12 @@ vim.keymap.del("n", "<leader>ft")
 vim.keymap.set({ "n", "v" }, "<C-b>", "<C-u><C-u>")
 vim.keymap.set({ "n", "v" }, "<PageUp>", "<C-u><C-u>")
 
+vim.keymap.set("n", "<A-v>", "<C-v>")
 -- Bind arrow keys to VIM nav
-vim.keymap.set({ "n", "x", "v" }, "<Up>", "k", { remap = true })
-vim.keymap.set({ "n", "x", "v" }, "<Down>", "j", { remap = true })
-vim.keymap.set({ "n", "x", "v" }, "<Left>", "h", { remap = true })
-vim.keymap.set({ "n", "x", "v" }, "<Right>", "l", { remap = true })
+-- vim.keymap.set({ "n", "x", "v" }, "<Up>", "k", { remap = true })
+-- vim.keymap.set({ "n", "x", "v" }, "<Down>", "j", { remap = true })
+-- vim.keymap.set({ "n", "x", "v" }, "<Left>", "h", { remap = true })
+-- vim.keymap.set({ "n", "x", "v" }, "<Right>", "l", { remap = true })
 
 -- True delete
 vim.keymap.set({ "n", "x", "v" }, "<leader>d", '"_d', { desc = "Delete" })
