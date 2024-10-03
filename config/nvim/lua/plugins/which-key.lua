@@ -5,6 +5,7 @@ return {
       { "<leader>tj", group = "Jump to test file" },
       { "<leader>a", group = "AI" },
       { "<leader>m", group = "Trailblazer" },
+      { "<leader>r", group = "Macro recorder" },
     })
   end,
 }
