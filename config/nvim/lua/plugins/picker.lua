@@ -5,7 +5,11 @@ return {
     opts = {
       "fzf-native",
       defaults = {
-        file_ignore_patterns = { "lib/eor/*", "test/eor/*" },
+        file_ignore_patterns = {
+          "lib/eor/*",
+          "test/eor/*",
+          "**/eor/*",
+        },
         no_header = true,
       },
     },
