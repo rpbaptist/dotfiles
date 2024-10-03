@@ -15,6 +15,15 @@ return {
         -- accept = "<Tab>",
       },
     },
+    hints = {
+      enabled = false,
+    },
+    highlights = {
+      diff = {
+        current = "DiffChange",
+        incoming = "DiffAdd",
+      },
+    },
   },
   keys = {},
   -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
