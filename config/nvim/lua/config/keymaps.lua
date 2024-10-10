@@ -49,8 +49,6 @@ vim.keymap.set("i", "<S-CR>", "<C-o><S-o>", { desc = "Open line above" })
 
 vim.keymap.set({ "n", "i" }, "<C-BS>", "<C-o>db", { desc = "Delete backspace" })
 
-vim.keymap.set("n", "<leader>fo", "<cmd>Neotree focus<cr>", { desc = "Neotree focus" })
-
 vim.keymap.set("i", "<Tab>", "<C-i>", { desc = "Indent" })
 vim.keymap.set("n", "i", function()
   if string.match(vim.api.nvim_get_current_line(), "%g") == nil then
