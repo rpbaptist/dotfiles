@@ -10,12 +10,17 @@ return {
           "test/eor/*",
           "**/eor/*",
         },
-        no_header = true,
+        grep = {
+          rg_glob = true,
+        },
+        -- no_header = true,
       },
     },
     keys = {
       { "<leader>gc", false },
       { "<leader>gs", false },
+      { "<leader>sg", false },
+      { "<leader>sg", "<cmd>FzfLua live_grep_glob<cr>", desc = "grep with glob (root dir)" },
       { "<leader>gb", "<cmd>FzfLua git_bcommits<cr>", desc = "Git blame" },
       { "<leader>gl", "<cmd>FzfLua git_commits<cr>", desc = "Git log" },
       { "<leader>go", "<cmd>FzfLua git_branches<cr>", desc = "Git checkout" },
