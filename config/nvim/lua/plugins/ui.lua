@@ -45,7 +45,6 @@ return {
     "nvim-lualine/lualine.nvim",
     depencencies = {
       "SmiteshP/nvim-navic",
-      "chrisgrieser/nvim-recorder",
     },
     opts = {
       options = {
@@ -61,8 +60,6 @@ return {
           },
         },
         lualine_x = {
-          { require("recorder").displaySlots },
-          { require("recorder").recordingStatus },
           "searchcount",
           "selectioncount",
         },
