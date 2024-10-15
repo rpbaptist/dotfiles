@@ -22,9 +22,6 @@ vim.g.maplocalleader = ","
 
 vim.o.background = "dark"
 vim.opt.laststatus = 3
--- vim.diagnostic.enable(false)
-
-vim.wo.relativenumber = true
 
 require("lazyvim.util").toggle.diagnostics()
 
