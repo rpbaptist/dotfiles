@@ -9,7 +9,7 @@ return {
       local mouse_scrolled = false
       return {
         resize = {
-          timing = animate.gen_timing.linear({ duration = 100, unit = "total" }),
+          enable = false,
         },
         scroll = {
           timing = animate.gen_timing.linear({ duration = 80, unit = "total" }),
