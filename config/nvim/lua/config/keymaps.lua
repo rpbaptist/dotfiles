@@ -25,11 +25,6 @@ vim.keymap.set({ "n", "v" }, "<C-b>", "<C-u><C-u>")
 vim.keymap.set({ "n", "v" }, "<PageUp>", "<C-u><C-u>")
 
 vim.keymap.set("n", "<A-v>", "<C-v>")
--- Bind arrow keys to VIM nav
--- vim.keymap.set({ "n", "x", "v" }, "<Up>", "k", { remap = true })
--- vim.keymap.set({ "n", "x", "v" }, "<Down>", "j", { remap = true })
--- vim.keymap.set({ "n", "x", "v" }, "<Left>", "h", { remap = true })
--- vim.keymap.set({ "n", "x", "v" }, "<Right>", "l", { remap = true })
 
 -- True delete
 vim.keymap.set({ "n", "x", "v" }, "<leader>d", '"_d', { desc = "Delete" })
@@ -41,9 +36,9 @@ vim.keymap.set({ "n", "x", "v" }, "X", '"_X', { desc = "Delete without cut" })
 vim.keymap.set("v", "p", "<s-p>", { remap = true })
 
 -- Tab control
-vim.keymap.set("n", "<C-Tab>", "<cmd>tabnext<CR>", { desc = "Next tab", silent = true })
-vim.keymap.set("n", "<C-S-Tab>", "<cmd>tabprevious<CR>", { desc = "Next buffer", silent = true })
-
+-- vim.keymap.set("n", "<C-Tab>", "<cmd>tabnext<CR>", { desc = "Next tab", silent = true })
+-- vim.keymap.set("n", "<C-S-Tab>", "<cmd>tabprevious<CR>", { desc = "Next buffer", silent = true })
+--
 vim.keymap.set("i", "<C-CR>", "<C-o>o", { desc = "Open line below" })
 vim.keymap.set("i", "<S-CR>", "<C-o><S-o>", { desc = "Open line above" })
 
