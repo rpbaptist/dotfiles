@@ -26,6 +26,7 @@ return {
       { "<leader>go", "<cmd>FzfLua git_branches<cr>", desc = "Git checkout" },
       { "<leader>gf", "<cmd>FzfLua git_status<cr>", desc = "Git files" },
       { "<leader>bl", "<cmd>FzfLua buffers<cr>", desc = "List buffers" },
+      { "<leader>D", "<cmd>FzfLua spell_suggest<cr>", desc = "Spell suggestions" },
       { "<leader><Tab>l", "<cmd>FzfLua tabs<cr>", desc = "List tabs" },
       {
         "<leader>sG",

@@ -27,8 +27,8 @@ vim.keymap.set({ "n", "v" }, "<PageUp>", "<C-u><C-u>")
 vim.keymap.set("n", "<A-v>", "<C-v>")
 
 -- True delete
-vim.keymap.set({ "n", "x", "v" }, "<leader>d", '"_d', { desc = "Delete" })
-vim.keymap.set({ "n", "x", "v" }, "<leader>D", '"_D', { desc = "Delete" })
+vim.keymap.set({ "n", "x", "v" }, "<leader>d", '"_d', { desc = "Delete without cut" })
+vim.keymap.set({ "n", "x", "v" }, "D", '"_D', { desc = "Delete until end of line" })
 vim.keymap.set({ "n", "x", "v" }, "c", '"_c', { desc = "Change without cut" })
 vim.keymap.set({ "n", "x", "v" }, "C", '"_C', { desc = "Change without cut" })
 vim.keymap.set({ "n", "x", "v" }, "x", '"_x', { desc = "Delete without cut" })
