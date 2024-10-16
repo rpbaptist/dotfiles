@@ -36,9 +36,9 @@ vim.keymap.set({ "n", "x", "v" }, "X", '"_X', { desc = "Delete without cut" })
 vim.keymap.set("v", "p", "<s-p>", { remap = true })
 
 -- Tab control
--- vim.keymap.set("n", "<C-Tab>", "<cmd>tabnext<CR>", { desc = "Next tab", silent = true })
--- vim.keymap.set("n", "<C-S-Tab>", "<cmd>tabprevious<CR>", { desc = "Next buffer", silent = true })
---
+vim.keymap.set("n", "]<Tab>", "<cmd>tabnext<CR>", { desc = "Next tab", silent = true })
+vim.keymap.set("n", "[<Tab>", "<cmd>tabprevious<CR>", { desc = "Previous tab", silent = true })
+
 vim.keymap.set("i", "<C-CR>", "<C-o>o", { desc = "Open line below" })
 vim.keymap.set("i", "<S-CR>", "<C-o><S-o>", { desc = "Open line above" })
 
