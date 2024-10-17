@@ -38,6 +38,7 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
   --color info:#83a598,prompt:#bdae93,spinner:#fabd2f,pointer:#83a598,marker:#fe8019,header:#665c54'
 
 unset QT_STYLE_OVERRIDE
+export QT_QPA_PLATFORM="wayland"
 # export QT_QPA_PLATFORMTHEME="qt5ct"
 export QT_STYLE_OVERRIDE="kvantum"
 
