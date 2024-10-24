@@ -2,6 +2,9 @@ return {
   { "nvim-neo-tree/neo-tree.nvim", enabled = false },
   {
     "echasnovski/mini.files",
+    priority = 1,
+    lazy = false,
+    event = "VimEnter",
     opts = {
       windows = {
         width_focus = 60,
