@@ -9,6 +9,7 @@ return {
           "lib/eor/*",
           "test/eor/*",
           "**/eor/*",
+          "deps/*",
         },
         grep = {
           rg_glob = true,
