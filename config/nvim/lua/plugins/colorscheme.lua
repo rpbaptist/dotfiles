@@ -10,8 +10,8 @@ return {
       overrides = {
         Function = { fg = "#8ec07c", bold = false }, -- light aqua instead of yellow
         Number = { fg = "#fe8019" }, -- light orange instead of purple
-        Special = { fg = "#83a598" }, -- light blue instead of orange
-        Structure = { fg = "#fabd2f" }, -- light yellow instead of light aqua
+        Delimiter = { fg = "#d3869b" }, -- light blue instead of orange
+        ["@module"] = { fg = "#fabd2f" }, -- light yellow instead of light aqua
         GitSignsAdd = { fg = "#8ec07c" },
         GitSignsChange = { fg = "#d79921" },
         GitSignsDelete = { fg = "#fb4934" },
@@ -59,18 +59,6 @@ return {
         TabLineSel = { fg = "#fbf1c7", bg = "#504945" },
         TabLineFill = { bg = "#1d2021" },
         TabLineWin = { fg = "#a89984", bg = "#3c3836" },
-        AvanteTitle = { fg = "#8ec07c" },
-        AvanteSubtitle = { fg = "#83a598" },
-        AvanteThirdTitle = { fg = "#458588", bg = "#504945" },
-        AvanteReversedTitle = { fg = "#689d6a" },
-        AvanteConflictCurrent = { link = "DiffText" },
-        AvanteConflictAncestor = { fg = "#fbf1c7", bg = "#458588" },
-        AvanteConflictIncoming = { link = "DiffAdd" },
-        AvanteReversedSubTitle = { fg = "#d3869b" },
-        AvanteReversedThirdTitle = { fg = "#458588", bg = "#1d2021" },
-        AvanteConflictCurrentLabel = { fg = "#98971a", bg = "#fbf1c7" },
-        AvanteConflictAncestorLabel = { fg = "#d5c4a1", bg = "#458588" },
-        AvanteConflictIncomingLabel = { bg = "#fbf1c7", fg = "#8ec07c" },
         ["@markup.heading.1.markdown"] = { fg = "#fb4934", bg = "", bold = true },
         ["@markup.heading.2.markdown"] = { fg = "#fabd2f", bg = "", bold = true },
         ["@markup.heading.3.markdown"] = { fg = "#b8bb26", bg = "", bold = true },
