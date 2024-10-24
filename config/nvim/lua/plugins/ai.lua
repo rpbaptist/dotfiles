@@ -8,13 +8,17 @@ return {
   },
   {
     "olimorris/codecompanion.nvim",
+    lazy = false,
     dependencies = {
       "nvim-lua/plenary.nvim",
       "nvim-treesitter/nvim-treesitter",
       "hrsh7th/nvim-cmp", -- Optional: For using slash commands and variables in the chat buffer
-      { "stevearc/dressing.nvim", opts = {} }, -- Optional: Improves `vim.ui.select`
+      "stevearc/dressing.nvim", -- Optional: Improves `vim.ui.select`
     },
     opts = {
+      opts = {
+        log_level = "DEBUG",
+      },
       strategies = {
         chat = { adapter = "copilot" },
         inline = { adapter = "copilot" },
@@ -40,8 +44,10 @@ return {
       display = {
         chat = {
           window = {
-            width = 0.35,
+            width = 0.33,
           },
+          start_in_insert_mode = true,
+          show_settings = true,
         },
       },
     },

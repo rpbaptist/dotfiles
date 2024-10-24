@@ -15,7 +15,7 @@ return {
         GitSignsAdd = { fg = "#8ec07c" },
         GitSignsChange = { fg = "#d79921" },
         GitSignsDelete = { fg = "#fb4934" },
-        DiffAdd = { fg = "#fbf1c7", bg = "#689d6a" },
+        DiffAdd = { fg = "#fbf1c7", bg = "#98971a" },
         DiffChange = { fg = "#fabd2f" },
         DiffText = { fg = "#32302f", bg = "#fbf1c7" },
         FlashLabel = { fg = "#1d2021", bg = "#83a598" },
