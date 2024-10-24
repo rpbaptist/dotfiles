@@ -19,9 +19,6 @@ return {
     opts = {
       libgit2_path = "libgit2.so.1.7",
       external_diffview = true,
-      -- rocks = {
-      --   hererocks = false,
-      -- },
     },
     keys = {
       { "<leader>gs", "<cmd>Fugit2<cr>", desc = "Git status" },
