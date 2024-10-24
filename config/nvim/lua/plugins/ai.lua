@@ -8,7 +8,6 @@ return {
   },
   {
     "olimorris/codecompanion.nvim",
-    lazy = false,
     dependencies = {
       "nvim-lua/plenary.nvim",
       "nvim-treesitter/nvim-treesitter",
@@ -16,9 +15,6 @@ return {
       "stevearc/dressing.nvim", -- Optional: Improves `vim.ui.select`
     },
     opts = {
-      opts = {
-        log_level = "DEBUG",
-      },
       strategies = {
         chat = { adapter = "copilot" },
         inline = { adapter = "copilot" },
@@ -47,7 +43,6 @@ return {
             width = 0.33,
           },
           start_in_insert_mode = true,
-          show_settings = true,
         },
       },
     },
